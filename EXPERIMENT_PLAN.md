@@ -229,7 +229,7 @@ episode 至少包括 dataset/id/method/model/task、全部轨迹、final_answer�
 6. 完成 ALFWorld Act/ReAct 134 games，随后完成 WebShop Act/ReAct 500 instructions；各阶段结束并核验后提交实现与汇总。
 7. 生成两张主表、成本统计、配对区间、代表性轨迹和限制分析，更新本文结果章节并提交 `docs(results): report ReAct reproduction outcomes and limitations`。
 
-首次提交必须在方案确认之后；后续有意义的实现或实验阶段完成且核验后再提交，不逐次 API 调用提交。提交信息使用英文并遵循 `type(scope): description`。不创建远程仓库、不推送、不修改无关目录。
+首次提交必须在方案确认之后；后续有意义的实现或实验阶段完成且核验后再提交，不逐次 API 调用提交。提交信息使用英文并遵循 `type(scope): description`。远端使用已创建的 GitHub private 仓库 `GeYugong/react-reproduction`，重要阶段完成并提交后同步 `origin/main`；不修改无关目录。
 
 ## 11. 当前准备状态与开跑条件
 

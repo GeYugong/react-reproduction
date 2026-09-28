@@ -8,3 +8,5 @@
 - [评估样本清单](data/eval_manifest.json)、[原始论文](paper/Yao_et_al_2023_ReAct.pdf)。
 
 当前状态：方案已确认，进入作者代码适配与环境联调；正式实验尚未开始。
+
+远端：[GeYugong/react-reproduction](https://github.com/GeYugong/react-reproduction)，private，跟踪分支 `origin/main`。
