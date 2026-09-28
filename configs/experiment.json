@@ -1,7 +1,7 @@
 {
   "schema_version": 1,
-  "status": "approved_preparing",
-  "formal_runs_enabled": false,
+  "status": "hotpotqa_formal_ready",
+  "formal_runs_enabled": true,
   "model": {
     "id": "qwen-3.8-27b",
     "base_url": "https://aigw.saurlax.com/v1",
@@ -19,7 +19,7 @@
     },
     "unexpected_reasoning_policy": "stop_batch_and_record_protocol_failure",
     "synthetic_protocol_passed": true,
-    "native_reasoning_evidence": "No extra reasoning observed in five synthetic fixtures; internal computation and missing token telemetry remain unverified",
+    "native_reasoning_evidence": "207 pilot responses passed with enable_thinking=false and reasoning_effort=none; absent telemetry remains unknown",
     "excluded_models": {
       "glm-5.3-flash": "Native reasoning disable controls unreliable; explicitly excluded",
       "glm-5.3": "Native reasoning observed"
@@ -162,5 +162,8 @@
       "environment_and_prompt_artifacts_frozen",
       "pilot_completed_on_disjoint_samples"
     ]
-  }
+  },
+  "formal_ready_datasets": [
+    "hotpotqa"
+  ]
 }

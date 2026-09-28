@@ -7,6 +7,6 @@
 - [过程记录](records/worklog.jsonl)、[API 预检](records/api_preflight.jsonl)、[来源清单](records/source_manifest.json)。
 - [评估样本清单](data/eval_manifest.json)、[原始论文](paper/Yao_et_al_2023_ReAct.pdf)。
 
-当前状态：HotpotQA 20 道独立样本的四方法联调已启动，使用 Qwen；正式评估尚未开始。进度见 `records/hotpot-pilot-qwen-v3.json`。
+当前状态：HotpotQA 联调已验收，开始 Qwen 正式 500 题四方法阶段；同时验证 CoT-SC 和 FEVER。验收见 `records/pilot_audit.json`，正式进度见 `records/hotpot-formal-qwen-v1.json`。
 
 远端：[GeYugong/react-reproduction](https://github.com/GeYugong/react-reproduction)，private，跟踪分支 `origin/main`。

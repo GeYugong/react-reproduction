@@ -1,0 +1,32 @@
+{
+  "run_id": "hotpot-pilot-qwen-v3",
+  "phase": "pilot",
+  "status": "completed",
+  "completed": 80,
+  "planned": 80,
+  "last": {
+    "index": 6961,
+    "method": "cot",
+    "correct": false,
+    "termination": "invalid_answer"
+  },
+  "updated_at_utc": "2026-09-28T17:07:42.794681+00:00",
+  "per_method": {
+    "react": {
+      "n": 20,
+      "correct": 9
+    },
+    "act": {
+      "n": 20,
+      "correct": 9
+    },
+    "standard": {
+      "n": 20,
+      "correct": 6
+    },
+    "cot": {
+      "n": 20,
+      "correct": 3
+    }
+  }
+}

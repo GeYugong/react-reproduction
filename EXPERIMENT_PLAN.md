@@ -259,3 +259,9 @@ episode 至少包括 dataset/id/method/model/task、全部轨迹、final_answer�
 ### 当前联调运行
 
 命令：`.venv-qa/bin/python scripts/run_qa.py --dataset hotpotqa --phase pilot --methods react act standard cot --limit 20 --run-id hotpot-pilot-qwen-v3`。完整记录位于 `runs/raw/hotpot-pilot-qwen-v3/`；进度见 `records/hotpot-pilot-qwen-v3.json`。每次请求缓存键包含样本、方法、采样序号或决策步和完整请求体，重跑时校验配置与源文件指纹。进程异常保留已经完成的 episode，并单独记录停止原因。
+
+### 联调验收与首个正式阶段
+
+HotpotQA v3 联调 80/80 条完成，207 次请求全部 HTTP 200，额外原生推理未观察到。ReAct 9/20、Act 9/20、Standard 6/20、CoT 3/20，仅作为联调记录，不作正式结论。两条 CoT 的 invalid_answer 均因 512-token 上限截断且原文无 Answer 标记；保留失败，不修改解析或上限。全部题号与正式集互斥、评分复算、日志用量、文本检索和 hybrid 路由边界检查通过。验收与归档见 `records/pilot_audit.json`。
+
+按原参数启动 `hotpot-formal-qwen-v1`，500 题 × Standard / CoT / Act / ReAct；并发另一路顺序验证 HotpotQA 的 2 题 × 21 次 CoT-SC 以及 FEVER 20 题四方法。全局最多两个串行生成进程。CoT-SC 与 FEVER 正式阶段需各自联调核验后启动。所有原始轨迹和失败均保留，当前联调原始文件及引用百科页面已打包到私有仓库形成远端副本。

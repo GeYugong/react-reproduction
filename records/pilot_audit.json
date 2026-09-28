@@ -1,0 +1,64 @@
+{
+  "recorded_at_utc": "2026-09-28T19:47:10.444792+00:00",
+  "run_id": "hotpot-pilot-qwen-v3",
+  "status": "passed",
+  "episodes": 80,
+  "requests": 207,
+  "extra_reasoning_observed": 0,
+  "missing_usage": 0,
+  "invalid_answers": [
+    {
+      "index": 6157,
+      "method": "cot",
+      "finish_reason": "length",
+      "completion_tokens": 512,
+      "contains_answer_marker": false
+    },
+    {
+      "index": 6961,
+      "method": "cot",
+      "finish_reason": "length",
+      "completion_tokens": 512,
+      "contains_answer_marker": false
+    }
+  ],
+  "invalid_answer_diagnosis": "Both CoT cases reached the frozen 512-token cap before any Answer marker; retain as failures, no parser change or additional calls.",
+  "per_method": {
+    "react": {
+      "n": 20,
+      "correct": 9
+    },
+    "act": {
+      "n": 20,
+      "correct": 9
+    },
+    "standard": {
+      "n": 20,
+      "correct": 6
+    },
+    "cot": {
+      "n": 20,
+      "correct": 3
+    }
+  },
+  "usage": {
+    "prompt_tokens": 287263,
+    "completion_tokens": 7633,
+    "total_tokens": 295143
+  },
+  "finish_reasons": {
+    "stop": 203,
+    "length": 4
+  },
+  "wiki_cached_pages": 76,
+  "cost_status": "pending_reconciliation",
+  "actual_cost_cny": null,
+  "archive": {
+    "path": "artifacts/hotpot-pilot-qwen-v3.zip",
+    "bytes": 5687251,
+    "sha256": "ea655c4633214a0023492008da33ac58c1fa685e44d938b860055974983b2c08",
+    "files": 366,
+    "backup_destination": "private GitHub repository"
+  },
+  "formal_decision": "Proceed with HotpotQA base methods unchanged; separately validate 21-sample CoT-SC and FEVER before their formal dispatch."
+}

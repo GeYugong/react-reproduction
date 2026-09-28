@@ -179,6 +179,14 @@ def vote(answers, dataset):
     return next(a for a,n in valid if counts[n] == maximum), maximum
 
 
+def hybrid_choices(cot_sc, react):
+    """Route only by valid vote count and completion, never by gold or score."""
+    return {
+        "cot_sc_to_react": react if (cot_sc.get("majority_count") or 0) <= 10 else cot_sc,
+        "react_to_cot_sc": react if react["termination"] == "valid_finish" else cot_sc,
+    }
+
+
 def run_episode(client, env, prompt, dataset, method, index, limit, journal):
     question = env.reset(idx=index)
     context = prompt + question + "\n"
@@ -240,6 +248,8 @@ def main():
     config = json.loads((ROOT / "configs/experiment.json").read_text(encoding="utf-8"))
     if args.phase == "formal" and not config["formal_runs_enabled"]:
         raise RuntimeError("Formal runs are not enabled")
+    if args.phase == "formal" and args.dataset not in config.get("formal_ready_datasets", []):
+        raise RuntimeError("Dataset pilot has not been approved")
     manifest = json.loads((ROOT / "data/eval_manifest.json").read_text(encoding="utf-8"))["datasets"][args.dataset]
     source = ROOT / manifest["source_file"]
     assert digest(source.read_bytes()) == manifest["source_sha256"]
