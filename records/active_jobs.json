@@ -1,0 +1,26 @@
+{
+  "recorded_at_utc": "2026-09-28T19:49:20.137984+00:00",
+  "host": "local WSL Ubuntu",
+  "jobs": [
+    {
+      "run_id": "hotpot-formal-qwen-v1",
+      "role": "HotpotQA 500 x 4 formal methods",
+      "pid_at_check": 634,
+      "status": "running"
+    },
+    {
+      "run_id": "hotpot-sc-pilot-qwen-v1",
+      "role": "Two pilot questions, 21 independent CoT samples each",
+      "pid_at_check": 743,
+      "status": "running",
+      "on_success": "Same existing shell starts fever-pilot-qwen-v1 (20 questions x 4 methods); do not duplicate"
+    },
+    {
+      "role": "ALFWorld official text data download and extraction",
+      "pid_at_check": 775,
+      "status": "running",
+      "progress": "records/alfworld_data_preparation.json"
+    }
+  ],
+  "restart_note": "PIDs are observations only; recheck command lines and progress timestamps before taking action. Keep current frozen runner/config intact while formal batch is in progress to preserve resume fingerprint."
+}
