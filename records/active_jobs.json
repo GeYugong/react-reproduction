@@ -1,26 +1,35 @@
 {
-  "recorded_at_utc": "2026-09-28T19:49:20.137984+00:00",
-  "host": "local WSL Ubuntu",
+  "recorded_at_utc": "2026-09-28T21:50:48.724161+00:00",
   "jobs": [
     {
       "run_id": "hotpot-formal-qwen-v1",
-      "role": "HotpotQA 500 x 4 formal methods",
-      "pid_at_check": 634,
-      "status": "running"
+      "status": "running",
+      "last_confirmed_completed": 1005,
+      "planned": 2000
     },
     {
-      "run_id": "hotpot-sc-pilot-qwen-v1",
-      "role": "Two pilot questions, 21 independent CoT samples each",
-      "pid_at_check": 743,
+      "run_id": "hotpot-sc-formal-qwen-v1",
       "status": "running",
-      "on_success": "Same existing shell starts fever-pilot-qwen-v1 (20 questions x 4 methods); do not duplicate"
+      "planned": 500,
+      "samples_per_question": 21
     },
     {
-      "role": "ALFWorld official text data download and extraction",
-      "pid_at_check": 775,
-      "status": "running",
-      "progress": "records/alfworld_data_preparation.json"
+      "script": "scripts/prepare_webshop_mirror.py",
+      "status": "started",
+      "progress": "records/webshop_mirror_preparation.json",
+      "reason": "Original Drive download failed; Windows independent probe returned HTTP 404. Pinned mirror with published full-corpus hashes."
     }
   ],
-  "restart_note": "PIDs are observations only; recheck command lines and progress timestamps before taking action. Keep current frozen runner/config intact while formal batch is in progress to preserve resume fingerprint."
+  "completed_pilots": [
+    "hotpot-pilot-qwen-v3",
+    "hotpot-sc-pilot-qwen-v1",
+    "fever-pilot-qwen-v1"
+  ],
+  "next_steps": [
+    "Keep at most two model processes; do not duplicate running batches",
+    "When a slot is free, dispatch FEVER using a per-run approved config without invalidating active HotpotQA resume fingerprints",
+    "Implement ALFWorld runner from author notebook; use verified 134 game inventory",
+    "Verify full WebShop data and install remaining server/index dependencies"
+  ],
+  "frozen_runtime_warning": "Do not change scripts/run_qa.py or configs/experiment.json during active runs; current restart checks hash both."
 }

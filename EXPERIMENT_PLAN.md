@@ -265,3 +265,11 @@ episode 至少包括 dataset/id/method/model/task、全部轨迹、final_answer�
 HotpotQA v3 联调 80/80 条完成，207 次请求全部 HTTP 200，额外原生推理未观察到。ReAct 9/20、Act 9/20、Standard 6/20、CoT 3/20，仅作为联调记录，不作正式结论。两条 CoT 的 invalid_answer 均因 512-token 上限截断且原文无 Answer 标记；保留失败，不修改解析或上限。全部题号与正式集互斥、评分复算、日志用量、文本检索和 hybrid 路由边界检查通过。验收与归档见 `records/pilot_audit.json`。
 
 按原参数启动 `hotpot-formal-qwen-v1`，500 题 × Standard / CoT / Act / ReAct；并发另一路顺序验证 HotpotQA 的 2 题 × 21 次 CoT-SC 以及 FEVER 20 题四方法。全局最多两个串行生成进程。CoT-SC 与 FEVER 正式阶段需各自联调核验后启动。所有原始轨迹和失败均保留，当前联调原始文件及引用百科页面已打包到私有仓库形成远端副本。
+
+### 第二次自动检查
+
+HotpotQA 正式 Standard 与 CoT 各 500 条已完成，Act/ReAct 阶段继续运行，当前不对中间分数作结论。CoT-SC 联调确认两题各 21 次独立请求，42 次均成功，投票复算一致；已启动同一正式 500 题的 CoT-SC。FEVER 20 题四方法联调的 142 次请求均成功，无额外原生推理，评分复算通过；等待模型并发槽空闲后运行正式批次。附加验收见 `records/additional_pilot_audit.json`，原始材料已归档。
+
+ALFWorld 三份官方文本数据归档已下载并校验，作者环境筛选后恰为 134 个 unseen games，排序清单及哈希写入样本清单。首次 reset 与 look 动作通过，不包含模型调用，仍需实现与联调模型执行循环。WebShop 创建独立 Python 3.8.20 下载环境（原方案 3.8.13 的补丁版本更新），按作者 setup.sh 的完整数据 ID 下载，尚未完成搜索索引与服务依赖。
+
+WebShop 原始 Google Drive 完整商品文件无法匿名下载：gdown 失败，独立 Windows HTTP 请求为 404。保留失败记录，使用 [HongbangYuan/webshop 固定修订镜像](https://huggingface.co/datasets/HongbangYuan/webshop/tree/0129d4a81dbdb827e76afd20a1e2c38b61098613) 恢复数据下载；两个大文件的 SHA-256 与另一镜像维护者[公开来源说明](https://huggingface.co/datasets/sparklabutah/timewarp-env-data/blob/main/README.md)一致。完整文件约 5.48 GB 与 186 MB，下载后核验大小和 SHA-256。原始 Drive 字节当前无法独立比对，镜像来源作为复现限制披露；不能将该核验写作直接验证作者原始下载。

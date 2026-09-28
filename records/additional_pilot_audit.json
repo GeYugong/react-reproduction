@@ -1,0 +1,41 @@
+{
+  "recorded_at_utc": "2026-09-28T21:47:34.092294+00:00",
+  "runs": {
+    "hotpot-sc-pilot-qwen-v1": {
+      "status": "passed",
+      "episodes": 2,
+      "requests": 42,
+      "reasoning_anomalies": 0,
+      "scores_recomputed": true,
+      "usage": {
+        "prompt_tokens": 23205,
+        "completion_tokens": 4191,
+        "total_tokens": 27396
+      },
+      "archive": {
+        "path": "artifacts/hotpot-sc-pilot-qwen-v1.zip",
+        "sha256": "e1915b9fa2fb03a3a7f00fa8e30414f388e0a2338596e59c0ff87232ce99604e",
+        "bytes": 88969
+      },
+      "cost_status": "pending_reconciliation"
+    },
+    "fever-pilot-qwen-v1": {
+      "status": "passed",
+      "episodes": 80,
+      "requests": 142,
+      "reasoning_anomalies": 0,
+      "scores_recomputed": true,
+      "usage": {
+        "prompt_tokens": 105710,
+        "completion_tokens": 3941,
+        "total_tokens": 109654
+      },
+      "archive": {
+        "path": "artifacts/fever-pilot-qwen-v1.zip",
+        "sha256": "134899e0deca9270aa60a7527d0287a2e8ff74a5002b9958d504a9a3acc01ead",
+        "bytes": 4992739
+      },
+      "cost_status": "pending_reconciliation"
+    }
+  }
+}

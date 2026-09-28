@@ -1,0 +1,20 @@
+{
+  "run_id": "hotpot-sc-pilot-qwen-v1",
+  "phase": "pilot",
+  "status": "completed",
+  "completed": 2,
+  "planned": 2,
+  "last": {
+    "index": 6157,
+    "method": "cot_sc",
+    "correct": true,
+    "termination": "answer"
+  },
+  "updated_at_utc": "2026-09-28T19:56:00.820250+00:00",
+  "per_method": {
+    "cot_sc": {
+      "n": 2,
+      "correct": 2
+    }
+  }
+}

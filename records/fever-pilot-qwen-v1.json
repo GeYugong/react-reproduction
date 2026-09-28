@@ -1,0 +1,32 @@
+{
+  "run_id": "fever-pilot-qwen-v1",
+  "phase": "pilot",
+  "status": "completed",
+  "completed": 80,
+  "planned": 80,
+  "last": {
+    "index": 9104,
+    "method": "cot",
+    "correct": false,
+    "termination": "answer"
+  },
+  "updated_at_utc": "2026-09-28T20:27:58.699088+00:00",
+  "per_method": {
+    "react": {
+      "n": 20,
+      "correct": 8
+    },
+    "act": {
+      "n": 20,
+      "correct": 12
+    },
+    "standard": {
+      "n": 20,
+      "correct": 11
+    },
+    "cot": {
+      "n": 20,
+      "correct": 8
+    }
+  }
+}

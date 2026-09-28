@@ -28,12 +28,12 @@
   "alfworld": {
     "url": "https://github.com/alfworld/alfworld",
     "commit": "aaba6870f86c5be6a08a491f32a50b906227bc3e",
-    "status": "remote_revision_recorded_not_installed"
+    "status": "text_dependencies_data_and_first_reset_step_verified"
   },
   "webshop": {
     "url": "https://github.com/princeton-nlp/WebShop",
     "commit": "64fa2a5c15c7daa698b9ac93f5bb5437b634c9bd",
-    "status": "remote_revision_recorded_not_installed"
+    "status": "cloned_python38_download_environment_ready"
   },
   "paper": {
     "path": "paper/Yao_et_al_2023_ReAct.pdf",

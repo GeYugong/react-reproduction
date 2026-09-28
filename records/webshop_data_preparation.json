@@ -1,0 +1,10 @@
+{
+  "status": "stopped",
+  "source": "vendor/WebShop/setup.sh -d all",
+  "files": [],
+  "python": "3.8.20 (patch update from original 3.8.13)",
+  "current_file": "items_shuffle.json",
+  "updated_at_utc": "2026-09-28T21:50:48.051316+00:00",
+  "error_type": "FileURLRetrievalError",
+  "error": "Failed to retrieve file url:\n\n\tCannot retrieve the public link of the file. You may need to change\n\tthe permission to 'Anyone with the link', or have had many accesses.\n\tCheck FAQ in https://github.com/wkentaro/gdown?tab=readme-ov-file#faq.\n\nYou may still be able to access the file from the browser:\n\n\thttps://drive.google.com/uc?id=1A2whVgOO0euk5O13n2iYDM0bQRkkRduB\n\nbut Gdown can't. Please check connections and permissions."
+}
