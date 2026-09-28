@@ -15,9 +15,10 @@ import urllib.request
 
 ROOT = Path(__file__).resolve().parents[1]
 BASE_URL = "https://aigw.saurlax.com"
-ALLOWED_MODELS = {"qwen-3.8-27b", "deepseek-v4-flash", "glm-5.3-flash", "glm-5.3", "step-3.7-flash", "grok-4.6"}
+ALLOWED_MODELS = {"qwen-3.8-27b", "deepseek-v4-flash", "glm-5.3-flash", "glm-5.3", "step-3.7-flash", "step-5-preview", "grok-4.6"}
 LOG = ROOT / "records" / "api_preflight.jsonl"
 REASONING_EFFORT = None
+STREAM = False
 
 
 def scrub(value):
@@ -43,7 +44,8 @@ def request(label, path, payload=None):
     body = None if payload is None else json.dumps(payload).encode("utf-8")
     req = urllib.request.Request(
         BASE_URL + path, data=body,
-        headers={"Authorization": "Bearer " + key, "Content-Type": "application/json"},
+        headers={"Authorization": "Bearer " + key, "Content-Type": "application/json",
+                 "User-Agent": "ReAct-Reproduction/0.1"},
     )
     started = dt.datetime.now(dt.timezone.utc).isoformat()
     begin = time.monotonic()
@@ -63,7 +65,27 @@ def request(label, path, payload=None):
     try:
         response = json.loads(raw)
     except json.JSONDecodeError:
-        response = {"non_json_response": raw[:2000]}
+        if raw.startswith("data:") or "\ndata:" in raw:
+            chunks = []
+            for line in raw.splitlines():
+                if line.startswith("data:") and line[5:].strip() != "[DONE]":
+                    try:
+                        chunks.append(json.loads(line[5:].strip()))
+                    except json.JSONDecodeError:
+                        pass
+            content, reasoning, model, usage, finish = "", "", None, None, None
+            for chunk in chunks:
+                model = chunk.get("model") or model
+                usage = chunk.get("usage") or usage
+                for choice in chunk.get("choices", []):
+                    delta = choice.get("delta", {})
+                    content += delta.get("content") or ""
+                    reasoning += delta.get("reasoning_content") or delta.get("reasoning") or ""
+                    finish = choice.get("finish_reason") or finish
+            response = {"model": model, "usage": usage, "sse_chunks": chunks,
+                        "choices": [{"message": {"content": content, "reasoning_content": reasoning}, "finish_reason": finish}]}
+        else:
+            response = {"non_json_response": raw[:2000]}
     record = scrub({
         "timestamp_utc": started,
         "phase": "plan_preflight",
@@ -94,7 +116,9 @@ def request(label, path, payload=None):
 
 def payload(model, messages, temperature=0, stop=None):
     result = {"model": model, "messages": messages, "temperature": temperature,
-              "max_tokens": 128, "stream": False}
+              "max_tokens": 128, "stream": STREAM}
+    if STREAM:
+        result["stream_options"] = {"include_usage": True}
     if model.startswith("qwen"):
         result["enable_thinking"] = False
     elif model.startswith(("deepseek", "glm", "step")):
@@ -107,13 +131,15 @@ def payload(model, messages, temperature=0, stop=None):
 
 
 def main():
-    global REASONING_EFFORT
+    global REASONING_EFFORT, STREAM
     parser = argparse.ArgumentParser()
     parser.add_argument("mode", choices=["metadata", "ping", "protocol"])
-    parser.add_argument("--model", choices=sorted(ALLOWED_MODELS), default="glm-5.3-flash")
+    parser.add_argument("--model", choices=sorted(ALLOWED_MODELS), default="qwen-3.8-27b")
     parser.add_argument("--reasoning-effort", choices=["none", "low"])
+    parser.add_argument("--stream", action="store_true")
     args = parser.parse_args()
     REASONING_EFFORT = args.reasoning_effort
+    STREAM = args.stream
     if args.mode == "metadata":
         request("model_catalog", "/v1/models")
         request("pricing_access", "/api/model-marketplace")

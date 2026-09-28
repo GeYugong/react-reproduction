@@ -1,0 +1,41 @@
+{
+  "source_repository": "https://github.com/ysymyth/ReAct",
+  "source_commit": "6bdb3a1fd38b8188fc7ba4102969fe483df8fdc9",
+  "license": "src/react_reproduction/author/LICENSE",
+  "adaptations": {
+    "wikienv.py": "HTTP injection for cached audited requests; original search and lookup semantics retained.",
+    "wrappers.py": "Parameterize FEVER data directory; original answer normalization and scoring retained.",
+    "qa.py": "Adapt hotpotqa.ipynb webthink loop for shared Act/ReAct execution and complete logs.",
+    "alfworld.py": "Adapt alfworld.ipynb alfworld_run loop; preserve sparse thoughts and 49 decisions.",
+    "webshop.py": "Extract notebook webshopEnv and HTML observation parser; adapt HTTP injection and runner."
+  },
+  "prompts": {
+    "prompts/alfworld.json": {
+      "sha256": "543db9ac10afbfbecbfae0c5b3ca0aac3c3016488f3a6989b2f6a8337888d686",
+      "source": "prompts/alfworld.json"
+    },
+    "prompts/alfworld_3prompts.json": {
+      "sha256": "a10976b4ae99f4802aa9e621933bb71065ae103f2bd273a24466ab1005fbc45a",
+      "source": "prompts/alfworld_3prompts.json"
+    },
+    "prompts/fever.json": {
+      "sha256": "bfd7793d8766e020a817c8a56b2228f230298fb161f9fa87fa543b4b38d46c03",
+      "source": "prompts/fever.json"
+    },
+    "prompts/prompts_naive.json": {
+      "sha256": "f35e8c17bbd620b90857712484c51005f5440641a37cff0b042b82ac7f3d71b5",
+      "source": "prompts/prompts_naive.json"
+    },
+    "prompts/webshop.json": {
+      "sha256": "2d665de5dc99cb69a03c9045e69641f78ab0fdc83300ccb33657f4643299aa9f",
+      "source": "WebShop.ipynb prompt1/prompt1_actonly"
+    }
+  },
+  "adaptation_status": "planned_not_implemented",
+  "current_artifacts": "Author wikienv.py and wrappers.py copied unchanged; prompt files copied or extracted from notebook literals.",
+  "author_file_hashes": {
+    "wikienv.py": "0de8f4429b3c94bbb0cf826171109faee2b8f04863bcc032cac1dbb4f4fccb30",
+    "wrappers.py": "60fb59bf1ae615c18f0db86f4ad2beb67bd2419d74b87a57f6bb18eb28e58d5a",
+    "LICENSE": "cd2d341de1d3781e993e9859b1a36e8bfe12c84507c0a52f21c0220743af475b"
+  }
+}

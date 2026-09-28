@@ -14,7 +14,7 @@
 
 ### 2.1 模型选择
 
-方案中的唯一主模型选定为网关 ID **`glm-5.3-flash`**，接口为 `https://aigw.saurlax.com/v1/chat/completions`。所有正式方法均使用该 ID，不进行跨模型拼表，不使用 `auto`，不允许在请求失败后自动切换模型。
+方案中的唯一主模型改为网关 ID **`qwen-3.8-27b`**，接口为 `https://aigw.saurlax.com/v1/chat/completions`。所有正式方法均使用该 ID，不进行跨模型拼表，不使用 `auto`，不允许在请求失败后自动切换模型。
 
 选择依据为接口可用性和文本协议兼容性，不依据评估集成绩选择模型。预检使用虚构档案查询与字符串输出任务，未调用正式 benchmark。原始请求、响应、状态码和 token 用量见 `records/api_preflight.jsonl`。
 
@@ -24,16 +24,18 @@
 
 | 候选模型 | 观察 | 处理 |
 | --- | --- | --- |
-| `qwen-3.8-27b` | 非流式简单请求返回 HTTP 403，响应为 `error code: 1010` | 不作为当前主模型 |
-| `deepseek-v4-flash` | 返回 HTTP 400，错误提及 `Codex Responses` 仅支持流式 | 上游映射存疑；未为绕过此错误改用流式生成 |
-| `glm-5.3-flash` | 简单回复、文本 Search / Finish、多轮反馈、Act 格式、停止词与温度参数请求成功 | 选定为方案主模型，仍有下述执行门槛 |
-| `glm-5.3` | 请求成功，但出现额外推理、Act 前缀缺失和停止词探测正文为空 | 不作为当前主模型 |
-| `step-3.7-flash` | 简单回复成功，但协议预检在输出上限内只有额外推理，没有可执行动作 | 不作为当前主模型 |
-| `grok-4.6` | 简单请求返回 HTTP 403 | 不作为当前主模型 |
+| `qwen-3.8-27b` | 默认客户端请求曾返回 403；设置 `User-Agent: ReAct-Reproduction/0.1` 后简单请求及五项文本协议测试均为 200，未观察到额外推理 | 当前主模型；使用 `enable_thinking: false`，继续独立联调 |
+| `deepseek-v4-flash` | 返回 HTTP 400，错误提及 `Codex Responses` 仅支持流式 | 上游映射存疑，排除 |
+| `glm-5.3-flash` | 两种推理关闭参数均未稳定生效 | 已明确排除，不再作为主模型或自动回退模型 |
+| `glm-5.3` | 出现额外推理、Act 前缀缺失和停止词正文为空 | 排除 |
+| `step-3.7-flash` / `step-5-preview` | 输出上限内仍出现额外推理，未稳定产生可执行正文 | 排除 |
+| `grok-4.6` | 设置 User-Agent 后流式请求成功，但报告 50 个 reasoning token | 排除 |
 
-**关键未解决项：原生推理关闭尚未验证成功。** GLM 在 `thinking: {"type": "disabled"}` 下仍有响应包含 `reasoning_content`；加上 `reasoning_effort: "none"` 后仍观察到同类情况。部分请求没有额外推理，不能据此宣称关闭已生效。Step 还出现非空推理字段与 `reasoning_tokens=0` 同时存在，说明计数不能单独用作判据。
+**Qwen 已通过合成任务的协议预检，尚未完成 benchmark 联调。** 五项检查包括 Search、基于外部 Observation 的 Finish、无 Thought 的 Act、温度 0.7 请求和停止词截断。温度检查只证明接口接受参数，不能证明服务端采样分布正确。预检请求均显式发送 `enable_thinking: false`。响应未提供原生 reasoning token 明细时记录为未知，不能据此证明模型内部完全不推理。
 
-主实验要求在独立联调样本上确认控制有效；正式批次遇到非空额外推理字段或非零原生 reasoning token，暂停并记录协议异常。若网关始终无法关闭，必须先修订研究问题为“相同原生推理设置下，显式 Thought 文本的增量效果”，更新方案后再运行；不能直接沿用“只行动 / 只推理”的强解释。额外推理字段只保存至审计日志，不拼入后续任务上下文。
+主实验继续核验独立联调样本。正式批次若出现非空额外推理字段或非零原生 reasoning token，暂停并记录协议异常。GLM 不再用于后续实验，也不通过改变研究问题来保留 GLM。模型协议和实际非 GPT 上游映射属于不同核验事项；当前成功响应只证实网关返回的 Qwen 别名，不能证明不可变权重身份。
+
+部分 Qwen 响应的 `total_tokens` 与输入、输出 token 之和不一致；逐字段保留原值并标记差异，不能自行补成原生推理用量或用其推算实付价格。
 
 另外，模型列表不提供价格；网关模型广场 API 使用该 Key 返回 401。有效费率与实付金额尚未取得，成功预检已经产生 token 用量，费用标记为待对账，不能记为零。当前经费不设金额上限，价格缺失不再作为停机条件；方案审阅和模型协议核验仍须完成。
 
@@ -199,7 +201,7 @@ react/
 └── vendor/                     # 可重建的上游代码缓存
 ```
 
-`src/`、`prompts/`、`results/`、`runs/raw/` 是后续实现结构，当前未声称已建成。原始运行文件与下载数据不直接塞入 Git；每批必须登记产物路径、大小、SHA-256、完成状态和备份位置。Git 忽略不等于删除，原始轨迹必须完整保留，并至少有一份独立副本后才视为已归档。
+`src/` 已归档作者环境与评分源文件，`prompts/` 已提取作者提示；执行器适配和结果目录尚待完成。原始运行文件与下载数据不直接塞入 Git；每批必须登记产物路径、大小、SHA-256、完成状态和备份位置。Git 忽略不等于删除，原始轨迹必须完整保留，并至少有一份独立副本后才视为已归档。
 
 ### 9.1 每次运行
 
@@ -233,13 +235,13 @@ episode 至少包括 dataset/id/method/model/task、全部轨迹、final_answer�
 
 ## 11. 当前准备状态与开跑条件
 
-已完成：独立 Git 仓库、官方源代码核对和修订固定、HotpotQA/FEVER 评估清单、非 GPT 候选接口预检、主模型选择及本方案草稿。方案已确认并进入首次提交与实现阶段；正式 runner、环境安装、正式 benchmark 和结果分析尚待完成。
+已完成：独立 Git 仓库、官方源代码核对和修订固定、HotpotQA/FEVER 评估清单、非 GPT 候选接口预检、主模型选择及本方案草稿。方案已提交并同步私有远端，作者环境源文件和提示已归档。WSL 的 QA 与 ALFWorld 独立 Python 3.11 环境依赖安装完成，版本见 `configs/*-requirements.lock`；ALFWorld 游戏数据与 WebShop 环境尚未就绪，依赖安装成功不等于环境联调通过。正式 runner、benchmark 和结果分析尚待完成。
 
 正式运行前必须全部满足：
 
 - 方案审阅通过并形成 Git 提交。
-- 主模型 `glm-5.3-flash` 的非 GPT 上游路由得到核验。
-- 原生推理控制通过独立预检，或研究问题经明确修订并重新冻结。
+- 主模型 `qwen-3.8-27b` 的非 GPT 上游路由得到核验。
+- Qwen 原生推理控制在独立联调中继续通过，未出现额外推理协议异常。
 - 用量台账能够记录全部请求及 token，价格和账单缺失时明确标记待对账。
 - 四个环境及完整数据安装通过，提示和所有任务清单可按哈希重建。
 - 独立样本联调完成，输出格式、评分、缓存、hybrid 路由和费用核算通过检查。
@@ -248,6 +250,6 @@ episode 至少包括 dataset/id/method/model/task、全部轨迹、final_answer�
 
 - Yao et al., *ReAct: Synergizing Reasoning and Acting in Language Models*, ICLR 2023，arXiv:2210.03629v3。第 3–6 页方法和知识任务，第 7–8 页交互任务，第 10 页可复现性声明，附录 C 提示示例。原文与文件哈希已归档。
 - [ReAct 官方代码](https://github.com/ysymyth/ReAct/tree/6bdb3a1fd38b8188fc7ba4102969fe483df8fdc9)，已在本地核对源文件和数据。
-- [ALFWorld 官方代码](https://github.com/alfworld/alfworld/tree/aaba6870f86c5be6a08a491f32a50b906227bc3e)，本次记录远端修订，尚未安装。
+- [ALFWorld 官方代码](https://github.com/alfworld/alfworld/tree/aaba6870f86c5be6a08a491f32a50b906227bc3e)，已克隆指定修订并安装文本环境依赖，游戏数据及运行验证尚待完成。
 - [WebShop 官方代码](https://github.com/princeton-nlp/WebShop/tree/64fa2a5c15c7daa698b9ac93f5bb5437b634c9bd)，核对完整数据、环境安装和会话目标映射要求，尚未安装。
 - 网关接口的实际证据以 `records/api_preflight.jsonl` 为准；模型名称与计费状态不能仅依赖公开网页或模型自述。

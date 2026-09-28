@@ -3,23 +3,26 @@
   "status": "approved_preparing",
   "formal_runs_enabled": false,
   "model": {
-    "id": "glm-5.3-flash",
+    "id": "qwen-3.8-27b",
     "base_url": "https://aigw.saurlax.com/v1",
     "endpoint": "chat/completions",
     "allowed_formal_models": [
-      "glm-5.3-flash"
+      "qwen-3.8-27b"
     ],
     "allow_automatic_fallback": false,
     "identity_level": "gateway_alias_not_immutable_weight_snapshot",
     "upstream_mapping_verified": false,
     "native_reasoning_disabled_verified": false,
     "requested_controls": {
-      "thinking": {
-        "type": "disabled"
-      },
-      "reasoning_effort": "none"
+      "enable_thinking": false
     },
-    "unexpected_reasoning_policy": "stop_batch_and_record_protocol_failure"
+    "unexpected_reasoning_policy": "stop_batch_and_record_protocol_failure",
+    "synthetic_protocol_passed": true,
+    "native_reasoning_evidence": "No extra reasoning observed in five synthetic fixtures; internal computation and missing token telemetry remain unverified",
+    "excluded_models": {
+      "glm-5.3-flash": "Native reasoning disable controls unreliable; explicitly excluded",
+      "glm-5.3": "Native reasoning observed"
+    }
   },
   "generation": {
     "default_temperature": 0,
