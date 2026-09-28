@@ -140,7 +140,7 @@ class FeverWrapper(gym.Wrapper):
   def __init__(self, env, split):
     super().__init__(env)
     
-    data_path = f"./data/{FEVER_SPLIT_FILE[split]}"
+    data_path = f"{DATA_DIR}/{FEVER_SPLIT_FILE[split]}"
     with open(data_path, "r") as json_file:
       json_list = list(json_file)
 

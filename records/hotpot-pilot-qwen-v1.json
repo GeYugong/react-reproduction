@@ -1,0 +1,8 @@
+{
+  "run_id": "hotpot-pilot-qwen-v1",
+  "status": "stopped",
+  "completed": 0,
+  "error_type": "ProtocolError",
+  "error": "Unexpected native reasoning; batch stopped",
+  "updated_at_utc": "2026-09-28T16:44:03.662948+00:00"
+}

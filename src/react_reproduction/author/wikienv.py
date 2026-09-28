@@ -19,11 +19,12 @@ class textSpace(gym.spaces.Space):
 
 class WikiEnv(gym.Env):
 
-  def __init__(self):
+  def __init__(self, http_get=None):
     """
       Initialize the environment.
     """
     super().__init__()
+    self.http_get = http_get or requests.get
     self.page = None  # current Wikipedia page
     self.obs = None  # current observation
     self.lookup_keyword = None  # current lookup keyword
@@ -99,7 +100,7 @@ class WikiEnv(gym.Env):
     entity_ = entity.replace(" ", "+")
     search_url = f"https://en.wikipedia.org/w/index.php?search={entity_}"
     old_time = time.time()
-    response_text = requests.get(search_url).text
+    response_text = self.http_get(search_url).text
     self.search_time += time.time() - old_time
     self.num_searches += 1
     soup = BeautifulSoup(response_text, features="html.parser")

@@ -1,23 +1,23 @@
 {
-  "recorded_at_utc": "2026-09-28T16:35:08.030849+00:00",
-  "api_requests": 32,
-  "generation_requests": 30,
+  "recorded_at_utc": "2026-09-28T16:45:54.632832+00:00",
+  "api_requests": 34,
+  "generation_requests": 32,
   "models": {
     "qwen-3.8-27b": {
-      "requests": 8,
+      "requests": 10,
       "http_status_counts": {
         "403": 2,
-        "200": 6
+        "200": 8
       },
       "native_reasoning_observed_responses": 0,
       "missing_usage_responses": 2,
-      "missing_reasoning_token_field_responses": 8,
+      "missing_reasoning_token_field_responses": 10,
       "returned_models": [
         "qwen-3.8-27b"
       ],
-      "known_prompt_tokens_sum": 376,
-      "known_completion_tokens_sum": 97,
-      "reported_total_tokens_sum": 475,
+      "known_prompt_tokens_sum": 3650,
+      "known_completion_tokens_sum": 179,
+      "reported_total_tokens_sum": 3831,
       "token_arithmetic_mismatches": 1
     },
     "deepseek-v4-flash": {

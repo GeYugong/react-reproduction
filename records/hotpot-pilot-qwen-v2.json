@@ -1,0 +1,15 @@
+{
+  "run_id": "hotpot-pilot-qwen-v2",
+  "phase": "pilot",
+  "status": "interrupted_for_parser_fix",
+  "completed": 3,
+  "planned": 80,
+  "last": {
+    "index": 1571,
+    "method": "react",
+    "correct": false,
+    "termination": "valid_finish"
+  },
+  "updated_at_utc": "2026-09-28T16:46:14.904371+00:00",
+  "reason": "Chat output beginning with Action was incorrectly concatenated to Thought prefix; retained for pilot diagnostics, excluded from clean pilot results"
+}

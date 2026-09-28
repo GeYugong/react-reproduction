@@ -7,6 +7,6 @@
 - [过程记录](records/worklog.jsonl)、[API 预检](records/api_preflight.jsonl)、[来源清单](records/source_manifest.json)。
 - [评估样本清单](data/eval_manifest.json)、[原始论文](paper/Yao_et_al_2023_ReAct.pdf)。
 
-当前状态：方案已确认，进入作者代码适配与环境联调；正式实验尚未开始。
+当前状态：HotpotQA 20 道独立样本的四方法联调已启动，使用 Qwen；正式评估尚未开始。进度见 `records/hotpot-pilot-qwen-v3.json`。
 
 远端：[GeYugong/react-reproduction](https://github.com/GeYugong/react-reproduction)，private，跟踪分支 `origin/main`。

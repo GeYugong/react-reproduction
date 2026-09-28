@@ -18,20 +18,22 @@
 
 选择依据为接口可用性和文本协议兼容性，不依据评估集成绩选择模型。预检使用虚构档案查询与字符串输出任务，未调用正式 benchmark。原始请求、响应、状态码和 token 用量见 `records/api_preflight.jsonl`。
 
-当前冻结的是网关别名，不是可校验权重哈希的模型快照。响应中的模型名称不足以独立证明实际权重身份。正式运行前核验该别名的非 GPT 上游映射及是否存在动态降级；保存核验依据。若网关不能提供不可变版本，报告明确标注 API 版本不可完全冻结这一限制，记录实验窗口与所有响应模型标识。
+当前冻结的是网关别名，不是可校验权重哈希的模型快照。响应中的模型名称不足以独立证明实际权重身份。按网关目录中的非 GPT 别名运行，禁止自动模型回退，并逐请求核对返回模型名；实际权重身份和网关内部路由不可独立验证时，明确列为限制，不阻塞已授权的实验。若网关不能提供不可变版本，报告明确标注 API 版本不可完全冻结这一限制，记录实验窗口与所有响应模型标识。
 
 ### 2.2 已观察到的接口情况
 
 | 候选模型 | 观察 | 处理 |
 | --- | --- | --- |
-| `qwen-3.8-27b` | 默认客户端请求曾返回 403；设置 `User-Agent: ReAct-Reproduction/0.1` 后简单请求及五项文本协议测试均为 200，未观察到额外推理 | 当前主模型；使用 `enable_thinking: false`，继续独立联调 |
+| `qwen-3.8-27b` | 默认客户端请求曾返回 403；设置 `User-Agent: ReAct-Reproduction/0.1` 后简单请求及五项文本协议测试均为 200，未观察到额外推理 | 当前主模型；使用 `enable_thinking: false` 与 `reasoning_effort: "none"`，独立联调已启动 |
 | `deepseek-v4-flash` | 返回 HTTP 400，错误提及 `Codex Responses` 仅支持流式 | 上游映射存疑，排除 |
 | `glm-5.3-flash` | 两种推理关闭参数均未稳定生效 | 已明确排除，不再作为主模型或自动回退模型 |
 | `glm-5.3` | 出现额外推理、Act 前缀缺失和停止词正文为空 | 排除 |
 | `step-3.7-flash` / `step-5-preview` | 输出上限内仍出现额外推理，未稳定产生可执行正文 | 排除 |
 | `grok-4.6` | 设置 User-Agent 后流式请求成功，但报告 50 个 reasoning token | 排除 |
 
-**Qwen 已通过合成任务的协议预检，尚未完成 benchmark 联调。** 五项检查包括 Search、基于外部 Observation 的 Finish、无 Thought 的 Act、温度 0.7 请求和停止词截断。温度检查只证明接口接受参数，不能证明服务端采样分布正确。预检请求均显式发送 `enable_thinking: false`。响应未提供原生 reasoning token 明细时记录为未知，不能据此证明模型内部完全不推理。
+**Qwen 已通过合成协议预检，HotpotQA 独立样本联调正在运行。** 五项检查包括 Search、基于外部 Observation 的 Finish、无 Thought 的 Act、温度 0.7 请求和停止词截断。温度检查只证明接口接受参数，不能证明服务端采样分布正确。预检请求均显式发送 `enable_thinking: false`。响应未提供原生 reasoning token 明细时记录为未知，不能据此证明模型内部完全不推理。
+
+首次真实联调中，单独 `enable_thinking: false` 未阻止原生推理，第一请求的 256 个输出 token 均被报告为 reasoning，批次 v1 停止且没有完成题目。用相同联调输入补充 `reasoning_effort: "none"` 后返回正常文本动作；v2 采用两项控制共同运行。控制修订只使用独立联调题，不使用正式评估成绩。
 
 主实验继续核验独立联调样本。正式批次若出现非空额外推理字段或非零原生 reasoning token，暂停并记录协议异常。GLM 不再用于后续实验，也不通过改变研究问题来保留 GLM。模型协议和实际非 GPT 上游映射属于不同核验事项；当前成功响应只证实网关返回的 Qwen 别名，不能证明不可变权重身份。
 
@@ -235,15 +237,15 @@ episode 至少包括 dataset/id/method/model/task、全部轨迹、final_answer�
 
 ## 11. 当前准备状态与开跑条件
 
-已完成：独立 Git 仓库、官方源代码核对和修订固定、HotpotQA/FEVER 评估清单、非 GPT 候选接口预检、主模型选择及本方案草稿。方案已提交并同步私有远端，作者环境源文件和提示已归档。WSL 的 QA 与 ALFWorld 独立 Python 3.11 环境依赖安装完成，版本见 `configs/*-requirements.lock`；ALFWorld 游戏数据与 WebShop 环境尚未就绪，依赖安装成功不等于环境联调通过。正式 runner、benchmark 和结果分析尚待完成。
+已完成：独立 Git 仓库、官方源代码核对和修订固定、HotpotQA/FEVER 评估清单、非 GPT 候选接口预检、主模型选择及本方案草稿。方案已提交并同步私有远端，作者环境源文件和提示已归档。WSL 的 QA 与 ALFWorld 独立 Python 3.11 环境依赖安装完成，版本见 `configs/*-requirements.lock`；ALFWorld 游戏数据与 WebShop 环境尚未就绪，依赖安装成功不等于环境联调通过。QA runner 已实现并启动 `hotpot-pilot-qwen-v3`：20 道独立样本 × ReAct / Act / Standard / CoT。正式 500 题和另外三个 benchmark 尚未开始，结果分析尚待完成。
 
 正式运行前必须全部满足：
 
 - 方案审阅通过并形成 Git 提交。
-- 主模型 `qwen-3.8-27b` 的非 GPT 上游路由得到核验。
+- 请求固定为 `qwen-3.8-27b`，返回别名一致，无自动回退；无法独立验证实际上游身份的限制已记录。
 - Qwen 原生推理控制在独立联调中继续通过，未出现额外推理协议异常。
 - 用量台账能够记录全部请求及 token，价格和账单缺失时明确标记待对账。
-- 四个环境及完整数据安装通过，提示和所有任务清单可按哈希重建。
+- 当前批次对应的环境与数据安装通过，提示和任务清单可按哈希重建；其他 benchmark 的安装不阻塞已就绪批次。
 - 独立样本联调完成，输出格式、评分、缓存、hybrid 路由和费用核算通过检查。
 
 ## 12. 依据
@@ -253,3 +255,7 @@ episode 至少包括 dataset/id/method/model/task、全部轨迹、final_answer�
 - [ALFWorld 官方代码](https://github.com/alfworld/alfworld/tree/aaba6870f86c5be6a08a491f32a50b906227bc3e)，已克隆指定修订并安装文本环境依赖，游戏数据及运行验证尚待完成。
 - [WebShop 官方代码](https://github.com/princeton-nlp/WebShop/tree/64fa2a5c15c7daa698b9ac93f5bb5437b634c9bd)，核对完整数据、环境安装和会话目标映射要求，尚未安装。
 - 网关接口的实际证据以 `records/api_preflight.jsonl` 为准；模型名称与计费状态不能仅依赖公开网页或模型自述。
+
+### 当前联调运行
+
+命令：`.venv-qa/bin/python scripts/run_qa.py --dataset hotpotqa --phase pilot --methods react act standard cot --limit 20 --run-id hotpot-pilot-qwen-v3`。完整记录位于 `runs/raw/hotpot-pilot-qwen-v3/`；进度见 `records/hotpot-pilot-qwen-v3.json`。每次请求缓存键包含样本、方法、采样序号或决策步和完整请求体，重跑时校验配置与源文件指纹。进程异常保留已经完成的 episode，并单独记录停止原因。

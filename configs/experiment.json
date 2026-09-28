@@ -14,7 +14,8 @@
     "upstream_mapping_verified": false,
     "native_reasoning_disabled_verified": false,
     "requested_controls": {
-      "enable_thinking": false
+      "enable_thinking": false,
+      "reasoning_effort": "none"
     },
     "unexpected_reasoning_policy": "stop_batch_and_record_protocol_failure",
     "synthetic_protocol_passed": true,
@@ -22,7 +23,8 @@
     "excluded_models": {
       "glm-5.3-flash": "Native reasoning disable controls unreliable; explicitly excluded",
       "glm-5.3": "Native reasoning observed"
-    }
+    },
+    "mapping_policy": "Record gateway alias and response model; immutable upstream verification remains a limitation, not a pilot dispatch blocker"
   },
   "generation": {
     "default_temperature": 0,
@@ -155,7 +157,6 @@
     "first_commit_subject": "docs(plan): define ReAct mainline reproduction protocol",
     "required_before_formal_dispatch": [
       "plan_approved_and_committed",
-      "upstream_non_gpt_mapping_verified",
       "native_reasoning_control_verified",
       "usage_ledger_verified",
       "environment_and_prompt_artifacts_frozen",

@@ -31,8 +31,8 @@
       "source": "WebShop.ipynb prompt1/prompt1_actonly"
     }
   },
-  "adaptation_status": "planned_not_implemented",
-  "current_artifacts": "Author wikienv.py and wrappers.py copied unchanged; prompt files copied or extracted from notebook literals.",
+  "adaptation_status": "QA adapter implemented; ALFWorld and WebShop runners pending",
+  "current_artifacts": "WikiEnv HTTP injection and FEVER data directory patched. scripts/run_qa.py adapts notebook loop; unchanged prompt text.",
   "author_file_hashes": {
     "wikienv.py": "0de8f4429b3c94bbb0cf826171109faee2b8f04863bcc032cac1dbb4f4fccb30",
     "wrappers.py": "60fb59bf1ae615c18f0db86f4ad2beb67bd2419d74b87a57f6bb18eb28e58d5a",
