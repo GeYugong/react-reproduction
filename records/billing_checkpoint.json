@@ -1,0 +1,43 @@
+{
+  "recorded_at_utc": "2026-09-28T23:50:38.147612+00:00",
+  "cost_status": "pending_reconciliation",
+  "actual_cost_cny": null,
+  "runs": {
+    "hotpot-formal-qwen-v1": {
+      "http_responses": {
+        "200": 1470,
+        "402": 1
+      },
+      "known_usage": {
+        "prompt_tokens": 1007983,
+        "completion_tokens": 58982,
+        "total_tokens": 1067545
+      },
+      "missing_usage_responses": 1,
+      "completed_episodes": 1102,
+      "archive": {
+        "path": "artifacts\\hotpot-formal-qwen-v1-billing-checkpoint.zip",
+        "bytes": 24838607,
+        "sha256": "92086f3dda4492e6c61b1d28a7de0d17bb04c495d4c8d8ea1c2704e181dc182e"
+      }
+    },
+    "hotpot-sc-formal-qwen-v1": {
+      "http_responses": {
+        "200": 706,
+        "402": 1
+      },
+      "known_usage": {
+        "prompt_tokens": 392932,
+        "completion_tokens": 82419,
+        "total_tokens": 475351
+      },
+      "missing_usage_responses": 1,
+      "completed_episodes": 33,
+      "archive": {
+        "path": "artifacts\\hotpot-sc-formal-qwen-v1-billing-checkpoint.zip",
+        "bytes": 1410929,
+        "sha256": "a6f30e04e27e3db1613d607fe69e870ab09379441b2fa4b60147b2d84b046059"
+      }
+    }
+  }
+}

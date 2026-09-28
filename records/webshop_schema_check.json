@@ -1,0 +1,11 @@
+{
+  "status": "full_json_parsed",
+  "recorded_at_utc": "2026-09-28T23:53:01.188757+00:00",
+  "product_count": 1181436,
+  "unique_asins": 1181436,
+  "missing_asin": 0,
+  "attribute_entries": 1181436,
+  "human_instruction_products": 10136,
+  "human_file_matches_pinned_author_file": true,
+  "goals_and_search_index": "pending_official_environment_initialization"
+}

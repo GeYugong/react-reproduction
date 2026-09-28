@@ -1,0 +1,8 @@
+{
+  "run_id": "hotpot-formal-qwen-v1",
+  "status": "stopped",
+  "completed": 1102,
+  "error_type": "HTTPError",
+  "error": "402 Client Error: Payment Required for url: https://aigw.saurlax.com/v1/chat/completions",
+  "updated_at_utc": "2026-09-28T23:43:58.364804+00:00"
+}

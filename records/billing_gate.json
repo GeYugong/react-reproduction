@@ -1,0 +1,13 @@
+{
+  "status": "requires_user_billing_action",
+  "recorded_at_utc": "2026-09-28T23:50:38.147612+00:00",
+  "http_status": 402,
+  "gateway_code": "payment_required",
+  "gateway_param": "quota",
+  "message": "Payment required to access this resource. Visit your billing tab.",
+  "action": "No repeated paid probes. Await user confirmation that gateway billing/quota is restored; resume same run IDs with cached successful calls.",
+  "affected_runs": [
+    "hotpot-formal-qwen-v1",
+    "hotpot-sc-formal-qwen-v1"
+  ]
+}
