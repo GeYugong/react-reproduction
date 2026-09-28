@@ -1,0 +1,92 @@
+{
+  "recorded_at_utc": "2026-09-28T16:17:16.342210+00:00",
+  "api_requests": 23,
+  "generation_requests": 21,
+  "models": {
+    "qwen-3.8-27b": {
+      "requests": 1,
+      "http_status_counts": {
+        "403": 1
+      },
+      "nonempty_reasoning_responses": 0,
+      "missing_usage_responses": 1,
+      "returned_models": [],
+      "known_prompt_tokens_sum": 0,
+      "known_completion_tokens_sum": 0,
+      "known_reported_reasoning_tokens_sum": 0
+    },
+    "deepseek-v4-flash": {
+      "requests": 1,
+      "http_status_counts": {
+        "400": 1
+      },
+      "nonempty_reasoning_responses": 0,
+      "missing_usage_responses": 1,
+      "returned_models": [],
+      "known_prompt_tokens_sum": 0,
+      "known_completion_tokens_sum": 0,
+      "known_reported_reasoning_tokens_sum": 0
+    },
+    "glm-5.3-flash": {
+      "requests": 11,
+      "http_status_counts": {
+        "200": 11
+      },
+      "nonempty_reasoning_responses": 6,
+      "missing_usage_responses": 0,
+      "returned_models": [
+        "glm-5.3-flash"
+      ],
+      "known_prompt_tokens_sum": 672,
+      "known_completion_tokens_sum": 403,
+      "known_reported_reasoning_tokens_sum": 243
+    },
+    "step-3.7-flash": {
+      "requests": 2,
+      "http_status_counts": {
+        "200": 2
+      },
+      "nonempty_reasoning_responses": 2,
+      "missing_usage_responses": 0,
+      "returned_models": [
+        "step-3.7-flash"
+      ],
+      "known_prompt_tokens_sum": 104,
+      "known_completion_tokens_sum": 169,
+      "known_reported_reasoning_tokens_sum": 0
+    },
+    "grok-4.6": {
+      "requests": 1,
+      "http_status_counts": {
+        "403": 1
+      },
+      "nonempty_reasoning_responses": 0,
+      "missing_usage_responses": 1,
+      "returned_models": [],
+      "known_prompt_tokens_sum": 0,
+      "known_completion_tokens_sum": 0,
+      "known_reported_reasoning_tokens_sum": 0
+    },
+    "glm-5.3": {
+      "requests": 5,
+      "http_status_counts": {
+        "200": 5
+      },
+      "nonempty_reasoning_responses": 4,
+      "missing_usage_responses": 0,
+      "returned_models": [
+        "glm-5.3"
+      ],
+      "known_prompt_tokens_sum": 332,
+      "known_completion_tokens_sum": 109,
+      "known_reported_reasoning_tokens_sum": 31
+    }
+  },
+  "selected_main_model": "glm-5.3-flash",
+  "selection_basis": "text protocol compatibility; no benchmark scores used",
+  "native_reasoning_disable_verified": false,
+  "actual_cost_cny": null,
+  "cost_status": "pending_effective_gateway_rates_or_invoice",
+  "monetary_cap_cny": null,
+  "benchmark_episodes_run": 0
+}

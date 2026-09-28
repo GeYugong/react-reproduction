@@ -1,0 +1,71 @@
+{
+  "recorded_at_utc": "2026-09-28T16:08:14.738667+00:00",
+  "react": {
+    "url": "https://github.com/ysymyth/ReAct",
+    "commit": "6bdb3a1fd38b8188fc7ba4102969fe483df8fdc9",
+    "local_path": "vendor/ReAct",
+    "license": "MIT",
+    "files": {
+      "FEVER.ipynb": "c526674c187775f05238695258d02710422349a6dcc1abe49d07632103493c37",
+      "LICENSE": "cd2d341de1d3781e993e9859b1a36e8bfe12c84507c0a52f21c0220743af475b",
+      "README.md": "bdc517929b01acf7ba60a4a91693a9bb30e0b165824704088936959c0ad81d79",
+      "WebShop.ipynb": "fb8704ec5528e43589924ab33d14eb7f97e82f7cd9da5c02b0295a9be30f9ca6",
+      "alfworld.ipynb": "bf13b2d204e89d2a078eec19d44b03ebbebb55114322d2573fa070b78316645b",
+      "base_config.yaml": "d95e445ae3b3fc1f277a6ebd613678bf2c46a39a4975d8a12a85d642e8d40016",
+      "data/hotpot_dev_v1_simplified.json": "05001dcdeb2b2b2243a88f23daaf8de9237494cd387e13bc25854d3e031101d3",
+      "data/hotpot_test_v1_simplified.json": "8b31dc77c4e366ed3f55c439e4fd9748be7c0fc6b46bb2e859c66d1a477108ba",
+      "data/hotpot_train_v1.1_simplified.json": "39cceef6f332af585cc7eb4ca302982b7c9b26a589a392770b68be41c9c3c37e",
+      "data/paper_dev.jsonl": "41158707810008747946bf23471e82df53e77a513524b9e3ec1c2e674ef5ef8c",
+      "hotpotqa.ipynb": "4c42f4818b721eab15023261c8de41da70f31f60c6fa181d33a743f45b8382f3",
+      "prompts/alfworld.json": "543db9ac10afbfbecbfae0c5b3ca0aac3c3016488f3a6989b2f6a8337888d686",
+      "prompts/alfworld_3prompts.json": "a10976b4ae99f4802aa9e621933bb71065ae103f2bd273a24466ab1005fbc45a",
+      "prompts/fever.json": "bfd7793d8766e020a817c8a56b2228f230298fb161f9fa87fa543b4b38d46c03",
+      "prompts/prompts_naive.json": "f35e8c17bbd620b90857712484c51005f5440641a37cff0b042b82ac7f3d71b5",
+      "wikienv.py": "0de8f4429b3c94bbb0cf826171109faee2b8f04863bcc032cac1dbb4f4fccb30",
+      "wrappers.py": "60fb59bf1ae615c18f0db86f4ad2beb67bd2419d74b87a57f6bb18eb28e58d5a"
+    }
+  },
+  "alfworld": {
+    "url": "https://github.com/alfworld/alfworld",
+    "commit": "aaba6870f86c5be6a08a491f32a50b906227bc3e",
+    "status": "remote_revision_recorded_not_installed"
+  },
+  "webshop": {
+    "url": "https://github.com/princeton-nlp/WebShop",
+    "commit": "64fa2a5c15c7daa698b9ac93f5bb5437b634c9bd",
+    "status": "remote_revision_recorded_not_installed"
+  },
+  "paper": {
+    "path": "paper/Yao_et_al_2023_ReAct.pdf",
+    "source": "https://arxiv.org/pdf/2210.03629",
+    "version": "2210.03629v3",
+    "sha256": "f285b0971ae4a790e402fb93966bed3adde2cf0a04977d08b2b40d6ab0cace69"
+  },
+  "verified_code_differences": [
+    {
+      "source": "FEVER.ipynb",
+      "finding": "Samples from range(7405), although paper_dev.jsonl contains 9999 records.",
+      "decision": "Sample 500 from all 9999 records with seed 233; disclose deviation from notebook."
+    },
+    {
+      "source": "FEVER.ipynb",
+      "finding": "Uses range(1, 8), whereas the paper's hybrid fallback uses 5 FEVER steps.",
+      "decision": "Use 5 steps for FEVER Act/ReAct and hybrid gating."
+    },
+    {
+      "source": "alfworld.ipynb",
+      "finding": "range(1, 50) permits 49 model decisions, including think actions.",
+      "decision": "Count both thoughts and environment actions in the 49-decision limit."
+    },
+    {
+      "source": "WebShop.ipynb",
+      "finding": "range(15) includes initial reset; only 14 generated decisions are executed. A final generated action is discarded.",
+      "decision": "Execute at most 14 model decisions; omit the discarded final API call."
+    },
+    {
+      "source": "WebShop.ipynb",
+      "finding": "Slices prompt tail by character count using 6400-len(init_prompt).",
+      "decision": "Preserve this prompt-window rule for the main comparison; retain full raw history separately."
+    }
+  ]
+}
