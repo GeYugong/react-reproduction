@@ -1,13 +1,13 @@
 {
   "schema_version": 1,
-  "status": "qwen36_full_restart_pilot",
-  "formal_runs_enabled": false,
+  "status": "hotpotqa_formal_ready",
+  "formal_runs_enabled": true,
   "model": {
-    "id": "qwen3.6-35b-a3b",
+    "id": "qwen-3.8-27b",
     "base_url": "https://aigw.saurlax.com/v1",
     "endpoint": "chat/completions",
     "allowed_formal_models": [
-      "qwen3.6-35b-a3b"
+      "qwen-3.8-27b"
     ],
     "allow_automatic_fallback": false,
     "identity_level": "gateway_alias_not_immutable_weight_snapshot",
@@ -18,12 +18,11 @@
       "reasoning_effort": "none"
     },
     "unexpected_reasoning_policy": "stop_batch_and_record_protocol_failure",
-    "synthetic_protocol_passed": false,
-    "native_reasoning_evidence": "No extra reasoning in initial real-prompt and synthetic calls; real pilot validation pending; absent reasoning telemetry remains unknown",
+    "synthetic_protocol_passed": true,
+    "native_reasoning_evidence": "207 pilot responses passed with enable_thinking=false and reasoning_effort=none; absent telemetry remains unknown",
     "excluded_models": {
       "glm-5.3-flash": "Native reasoning disable controls unreliable; explicitly excluded",
-      "glm-5.3": "Native reasoning observed",
-      "qwen-3.8-27b": "Retired by user request; all methods restarted with replacement model"
+      "glm-5.3": "Native reasoning observed"
     },
     "mapping_policy": "Record gateway alias and response model; immutable upstream verification remains a limitation, not a pilot dispatch blocker"
   },
@@ -164,6 +163,7 @@
       "pilot_completed_on_disjoint_samples"
     ]
   },
-  "formal_ready_datasets": [],
-  "campaign_id": "qwen36-restart-20260929"
+  "formal_ready_datasets": [
+    "hotpotqa"
+  ]
 }

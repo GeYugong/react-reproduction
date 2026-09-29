@@ -1,7 +1,7 @@
 {
-  "recorded_at_utc": "2026-09-28T16:45:54.632832+00:00",
-  "api_requests": 34,
-  "generation_requests": 32,
+  "recorded_at_utc": "2026-09-29T03:57:25.628020+00:00",
+  "api_requests": 46,
+  "generation_requests": 42,
   "models": {
     "qwen-3.8-27b": {
       "requests": 10,
@@ -21,13 +21,14 @@
       "token_arithmetic_mismatches": 1
     },
     "deepseek-v4-flash": {
-      "requests": 1,
+      "requests": 2,
       "http_status_counts": {
-        "400": 1
+        "400": 1,
+        "402": 1
       },
       "native_reasoning_observed_responses": 0,
-      "missing_usage_responses": 1,
-      "missing_reasoning_token_field_responses": 1,
+      "missing_usage_responses": 2,
+      "missing_reasoning_token_field_responses": 2,
       "returned_models": [],
       "known_prompt_tokens_sum": 0,
       "known_completion_tokens_sum": 0,
@@ -51,36 +52,36 @@
       "token_arithmetic_mismatches": 0
     },
     "step-3.7-flash": {
-      "requests": 2,
+      "requests": 3,
       "http_status_counts": {
-        "200": 2
+        "200": 3
       },
-      "native_reasoning_observed_responses": 2,
+      "native_reasoning_observed_responses": 3,
       "missing_usage_responses": 0,
       "missing_reasoning_token_field_responses": 0,
       "returned_models": [
         "step-3.7-flash"
       ],
-      "known_prompt_tokens_sum": 104,
-      "known_completion_tokens_sum": 169,
-      "reported_total_tokens_sum": 273,
+      "known_prompt_tokens_sum": 1628,
+      "known_completion_tokens_sum": 425,
+      "reported_total_tokens_sum": 2053,
       "token_arithmetic_mismatches": 0
     },
     "grok-4.6": {
-      "requests": 2,
+      "requests": 3,
       "http_status_counts": {
         "403": 1,
-        "200": 1
+        "200": 2
       },
-      "native_reasoning_observed_responses": 1,
+      "native_reasoning_observed_responses": 2,
       "missing_usage_responses": 1,
       "missing_reasoning_token_field_responses": 1,
       "returned_models": [
         "grok-4.6-build"
       ],
-      "known_prompt_tokens_sum": 211,
-      "known_completion_tokens_sum": 51,
-      "reported_total_tokens_sum": 262,
+      "known_prompt_tokens_sum": 1901,
+      "known_completion_tokens_sum": 651,
+      "reported_total_tokens_sum": 2552,
       "token_arithmetic_mismatches": 0
     },
     "glm-5.3": {
@@ -100,47 +101,63 @@
       "token_arithmetic_mismatches": 0
     },
     "step-5-preview": {
-      "requests": 1,
+      "requests": 2,
       "http_status_counts": {
-        "200": 1
+        "200": 2
       },
-      "native_reasoning_observed_responses": 1,
+      "native_reasoning_observed_responses": 2,
       "missing_usage_responses": 0,
       "missing_reasoning_token_field_responses": 0,
       "returned_models": [
         "step-5-preview"
       ],
-      "known_prompt_tokens_sum": 85,
-      "known_completion_tokens_sum": 128,
-      "reported_total_tokens_sum": 213,
+      "known_prompt_tokens_sum": 1608,
+      "known_completion_tokens_sum": 384,
+      "reported_total_tokens_sum": 1992,
+      "token_arithmetic_mismatches": 0
+    },
+    "qwen3.6-35b-a3b": {
+      "requests": 6,
+      "http_status_counts": {
+        "200": 6
+      },
+      "native_reasoning_observed_responses": 0,
+      "missing_usage_responses": 0,
+      "missing_reasoning_token_field_responses": 6,
+      "returned_models": [
+        "qwen3.6-35b-a3b"
+      ],
+      "known_prompt_tokens_sum": 1991,
+      "known_completion_tokens_sum": 143,
+      "reported_total_tokens_sum": 2134,
       "token_arithmetic_mismatches": 0
     }
   },
-  "selected_main_model": "qwen-3.8-27b",
+  "selected_main_model": "qwen3.6-35b-a3b",
   "selection_basis": "synthetic protocol compatibility, without benchmark scores",
   "protocol_checks": {
     "react_search": {
-      "passed": true,
-      "evidence_timestamp_utc": "2026-09-28T16:29:49.750585+00:00"
+      "passed": false,
+      "evidence_timestamp_utc": "2026-09-29T03:52:28.961173+00:00"
     },
     "react_finish": {
-      "passed": true,
-      "evidence_timestamp_utc": "2026-09-28T16:29:52.073086+00:00"
+      "passed": false,
+      "evidence_timestamp_utc": "2026-09-29T03:52:33.183980+00:00"
     },
     "act_format": {
       "passed": true,
-      "evidence_timestamp_utc": "2026-09-28T16:29:56.111736+00:00"
+      "evidence_timestamp_utc": "2026-09-29T03:52:38.837754+00:00"
     },
     "sampling_parameter": {
       "passed": true,
-      "evidence_timestamp_utc": "2026-09-28T16:29:58.589688+00:00"
+      "evidence_timestamp_utc": "2026-09-29T03:52:42.109640+00:00"
     },
     "stop_parameter": {
       "passed": true,
-      "evidence_timestamp_utc": "2026-09-28T16:30:02.628470+00:00"
+      "evidence_timestamp_utc": "2026-09-29T03:52:44.916173+00:00"
     }
   },
-  "synthetic_protocol_passed": true,
+  "synthetic_protocol_passed": false,
   "native_reasoning_disable_verified": false,
   "native_reasoning_evidence_scope": "enable_thinking=false; no extra reasoning observed in selected successful fixtures; missing telemetry is unknown, not zero",
   "upstream_mapping_verified": false,

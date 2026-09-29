@@ -7,6 +7,6 @@
 - [过程记录](records/worklog.jsonl)、[API 预检](records/api_preflight.jsonl)、[来源清单](records/source_manifest.json)。
 - [评估样本清单](data/eval_manifest.json)、[原始论文](paper/Yao_et_al_2023_ReAct.pdf)。
 
-当前状态：正式 QA 因网关 402 quota 暂停，断点已保存；等待额度恢复，环境准备继续。见 `records/billing_gate.json` 与 `records/active_jobs.json`。
+当前状态：按新模型 `qwen3.6-35b-a3b` 全量重启，旧 Qwen 3.8 结果仅保留审计。HotpotQA / FEVER 新联调通过后自动进入各自正式 500 题；见 `records/model_restart.json` 和 `records/active_jobs.json`。
 
 远端：[GeYugong/react-reproduction](https://github.com/GeYugong/react-reproduction)，private，跟踪分支 `origin/main`。

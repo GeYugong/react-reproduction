@@ -1,0 +1,21 @@
+{
+  "recorded_at_utc": "2026-09-29T03:54:02.407832+00:00",
+  "event": "full_restart_authorized",
+  "old_model": "qwen-3.8-27b",
+  "new_model": "qwen3.6-35b-a3b",
+  "source_context": "User requested full model replacement after sharing gateway operator discussion; per-model unlimited quota claims not independently verified",
+  "retired_runs": [
+    "hotpot-formal-qwen-v1",
+    "hotpot-sc-formal-qwen-v1"
+  ],
+  "policy": "All four benchmarks and all model methods restart in fresh run directories; no old model outputs or votes imported. Dataset IDs, official prompts, environment versions and downloaded public resources reused.",
+  "old_config": "configs/archive/experiment-qwen38.json",
+  "old_code_commit": "3c4e49e1fdd6311b3754f9c1eb45d3e3682f8dc7",
+  "candidate_findings": {
+    "grok-4.6": "HTTP 200; native reasoning and ignored stop/output limit observed, excluded",
+    "deepseek-v4-flash": "HTTP 402 upstream subscription quota exceeded",
+    "step-3.7-flash": "HTTP 200; reasoning-only response at token limit",
+    "step-5-preview": "HTTP 200; reasoning-only response at token limit",
+    "qwen3.6-35b-a3b": "Real pilot first-step request HTTP 200 with valid text action and no extra reasoning; fixed Act, temperature and stop fixtures passed. Synthetic Search/Finish used named arguments; no semantic repair; validate on real pilot."
+  }
+}

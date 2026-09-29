@@ -15,7 +15,7 @@ import urllib.request
 
 ROOT = Path(__file__).resolve().parents[1]
 BASE_URL = "https://aigw.saurlax.com"
-ALLOWED_MODELS = {"qwen-3.8-27b", "deepseek-v4-flash", "glm-5.3-flash", "glm-5.3", "step-3.7-flash", "step-5-preview", "grok-4.6"}
+ALLOWED_MODELS = {"qwen-3.8-27b", "qwen3.6-35b-a3b", "deepseek-v4-flash", "glm-5.3-flash", "glm-5.3", "step-3.7-flash", "step-5-preview", "grok-4.6"}
 LOG = ROOT / "records" / "api_preflight.jsonl"
 REASONING_EFFORT = None
 STREAM = False
@@ -134,7 +134,7 @@ def main():
     global REASONING_EFFORT, STREAM
     parser = argparse.ArgumentParser()
     parser.add_argument("mode", choices=["metadata", "ping", "protocol"])
-    parser.add_argument("--model", choices=sorted(ALLOWED_MODELS), default="qwen-3.8-27b")
+    parser.add_argument("--model", choices=sorted(ALLOWED_MODELS), default="qwen3.6-35b-a3b")
     parser.add_argument("--reasoning-effort", choices=["none", "low"])
     parser.add_argument("--stream", action="store_true")
     args = parser.parse_args()

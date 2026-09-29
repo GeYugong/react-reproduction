@@ -64,8 +64,8 @@ class Client:
         self.config, self.folder, self.journal = config, folder, journal
         self.key = os.environ["AIGW_API_KEY"]
         self.model = config["model"]["id"]
-        if self.model != "qwen-3.8-27b":
-            raise ProtocolError("Only the frozen Qwen model is permitted")
+        if self.model not in config['model']['allowed_formal_models'] or self.model not in {'qwen3.6-35b-a3b', 'qwen-3.8-27b'}:
+            raise ProtocolError("Model is outside the frozen non-GPT allowlist")
 
     def generate(self, prompt, method, call_id, stop=None):
         cfg = self.config["generation"]
@@ -242,10 +242,11 @@ def main():
     parser.add_argument("--methods", nargs="+", default=["react", "act", "standard", "cot"], choices=["react","act","standard","cot","cot_sc"])
     parser.add_argument("--limit", type=int, default=20)
     parser.add_argument("--run-id", required=True)
+    parser.add_argument("--config", type=Path, default=ROOT / "configs/experiment.json")
     args = parser.parse_args()
     if not re.fullmatch(r"[A-Za-z0-9_-]+",args.run_id):
         raise ValueError("Invalid run ID")
-    config = json.loads((ROOT / "configs/experiment.json").read_text(encoding="utf-8"))
+    config = json.loads(args.config.read_text(encoding="utf-8"))
     if args.phase == "formal" and not config["formal_runs_enabled"]:
         raise RuntimeError("Formal runs are not enabled")
     if args.phase == "formal" and args.dataset not in config.get("formal_ready_datasets", []):

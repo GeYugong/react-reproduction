@@ -1,17 +1,41 @@
 {
-  "recorded_at_utc": "2026-09-29T01:55:10.020004+00:00",
-  "api_status": "blocked_by_gateway_billing",
-  "billing_gate": "records/billing_gate.json",
-  "paid_processes_running": false,
-  "completed_formal_episodes": {
-    "hotpot-formal-qwen-v1": 1102,
-    "hotpot-sc-formal-qwen-v1": 33
-  },
-  "resume_policy": "Await user confirmation of restored quota; resume original commands and run IDs with unchanged run_qa.py and experiment.json to reuse cache. No repeated 402 probes.",
-  "offline_tasks": [
-    "Java 11 verified under envs/java; no global environment changed",
-    "Dependency install process will launch scripts/build_webshop_index.py on success; inspect actual process and logs before restarting",
-    "After documents are available, run scripts/check_webshop_export.py to compare first 1000 documents with exact author conversion loop",
-    "Full index and server goal mapping remain to be validated"
+  "recorded_at_utc": "2026-09-29T03:57:25.731353+00:00",
+  "campaign_id": "qwen36-restart-20260929",
+  "model": "qwen3.6-35b-a3b",
+  "old_model_policy": "All Qwen 3.8 runs retired; never resume or import their outputs into this campaign",
+  "jobs": [
+    {
+      "dataset": "hotpotqa",
+      "controller": "scripts/run_restart_campaign.py",
+      "status": "ready_to_start",
+      "progress": "records/hotpotqa-qwen36-campaign.json",
+      "pilot_config": "configs/hotpotqa-qwen36-pilot.json",
+      "stages": [
+        "20 questions x four methods",
+        "2 questions x 21 CoT samples",
+        "automatic protocol/score/vote audit",
+        "500 questions x five generated methods"
+      ]
+    },
+    {
+      "dataset": "fever",
+      "controller": "scripts/run_restart_campaign.py",
+      "status": "ready_to_start",
+      "progress": "records/fever-qwen36-campaign.json",
+      "pilot_config": "configs/fever-qwen36-pilot.json",
+      "stages": [
+        "20 questions x four methods",
+        "2 questions x 21 CoT samples",
+        "automatic protocol/score/vote audit",
+        "500 questions x five generated methods"
+      ]
+    }
+  ],
+  "concurrency_cap": 2,
+  "later_stages": [
+    "offline new-model hybrids",
+    "new-model ALFWorld pilot and 134-game Act/ReAct",
+    "WebShop index acceptance and environment checks then new-model 500-goal Act/ReAct",
+    "full audit, paired statistics, cost and final report"
   ]
 }
