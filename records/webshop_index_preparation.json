@@ -1,0 +1,209 @@
+{
+  "status": "index_built_search_smoke_passed",
+  "source": "vendor/WebShop/search_engine/convert_product_file_format.py",
+  "adapter": "Original engine.load_products in chunks of 1000; unchanged document text construction and Lucene flags.",
+  "catalog": "full",
+  "product_count": 1181430,
+  "input_count": 1181436,
+  "java_home": "/mnt/d/0code/Research/feng/react/envs/java/jdk-11.0.32.1+1",
+  "updated_at_utc": "2026-09-29T04:13:11.127188+00:00",
+  "documents_sha256": "1660454a689d68f2b52dcc786e20ade2ea83f5c4a16aa3b596535b9c72ba1c7b",
+  "documents_bytes": 6817762903,
+  "index_command": [
+    "/mnt/d/0code/Research/feng/react/.venv-webshop/bin/python",
+    "-m",
+    "pyserini.index.lucene",
+    "--collection",
+    "JsonCollection",
+    "--input",
+    "/mnt/d/0code/Research/feng/react/data/cache/webshop-search/resources",
+    "--index",
+    "/mnt/d/0code/Research/feng/react/data/cache/webshop-search/indexes",
+    "--generator",
+    "DefaultLuceneDocumentGenerator",
+    "--threads",
+    "1",
+    "--storePositions",
+    "--storeDocvectors",
+    "--storeRaw"
+  ],
+  "reused_existing_index": true,
+  "indexed_documents": 1181370,
+  "empty_document_ids": [
+    "B09RF8TXMR",
+    "B003Y7PIWG",
+    "B000B78BNU",
+    "B01MAYM80E",
+    "B01IA99NQO",
+    "B01M9JC3UK",
+    "B07DWFN3K4",
+    "B0106A5ZGW",
+    "B079ZB8BX3",
+    "B08SGS78MV",
+    "B003TBTKD0",
+    "B079Z912HY",
+    "B09B6H9YCF",
+    "B00522AXFS",
+    "B09MY27TTK",
+    "B099QMYC32",
+    "B08CV6ZJCG",
+    "B01N3Y2FF9",
+    "B079MFQGH3",
+    "B078L4YPN1",
+    "B084GSQJKB",
+    "B07XQFLYKQ",
+    "B09G9D56JW",
+    "B079RGMZ7W",
+    "B07167M4RX",
+    "B09FXXTVK4",
+    "B004DQQCPY",
+    "B00504545C",
+    "B08519VK6C",
+    "B0108WVMA6",
+    "B0058EDHUS",
+    "B09G9DKC87",
+    "B09PVCCVL7",
+    "B089DLS787",
+    "B003WUGL9Y",
+    "B09PPR5Q7N",
+    "B007MPW9QY",
+    "B07KJXWW22",
+    "B07MNTMVGD",
+    "B0009C7ORG",
+    "B07KY1TDJM",
+    "B07VPRG4S6",
+    "B09NBVSYKP",
+    "B01BKQRZT6",
+    "B0764FMB5R",
+    "B07YXFB4RT",
+    "B087FGFLCP",
+    "B00CQT12PA",
+    "B073SYNR2L",
+    "B0756LMZP5",
+    "B09834QRB2",
+    "B07FLB3QV5",
+    "B085W857N3",
+    "B08R23QQXD",
+    "B01N0Z6S6Q",
+    "B09G9CX7DK",
+    "B084GSPKWY",
+    "B0044XTZUK",
+    "B07XC1SJD3",
+    "B08FRHBYCY"
+  ],
+  "index_counters": {
+    "indexed": 1181370,
+    "unindexable": 0,
+    "empty": 60,
+    "skipped": 0,
+    "errors": 0
+  },
+  "index_files": [
+    {
+      "name": "_0.fdm",
+      "bytes": 3604,
+      "sha256": "8b79be9a17b961b2f138af3eaaeeb299a21959b1392b8f86bcb72554eb457802"
+    },
+    {
+      "name": "_0.fdt",
+      "bytes": 2755105392,
+      "sha256": "cbf32f1fd897fbc03b658ea0903d8c4e76a42375ca7b30353ee33470379740e0"
+    },
+    {
+      "name": "_0.fdx",
+      "bytes": 292621,
+      "sha256": "fd75febd991beb18fd7650a6374b46bf518885e33e97e3cac97f2be2e4f6244c"
+    },
+    {
+      "name": "_0.fnm",
+      "bytes": 334,
+      "sha256": "9de8fd4c0028883bb1241ad615a99ed34d9483201022ece1e106a36103c83750"
+    },
+    {
+      "name": "_0.nvd",
+      "bytes": 1181429,
+      "sha256": "37cbb886c6a0b5ff40fa9bd8c695b7d3bcba9f195ac2c0eb2316f6186745ae27"
+    },
+    {
+      "name": "_0.nvm",
+      "bytes": 103,
+      "sha256": "196021bfee0367d9245d141b520552b3cc2cad94b619fb44ef079b7b7157611c"
+    },
+    {
+      "name": "_0.si",
+      "bytes": 572,
+      "sha256": "f6dae6bf3dff0eb8f04790fbdc655978be60bfb1c2ef26461ba1b9c466ad6b13"
+    },
+    {
+      "name": "_0.tvd",
+      "bytes": 538516300,
+      "sha256": "e151f02facd9c1d19d477381b041e04b64b40180336ef323859471ca7b66eb5d"
+    },
+    {
+      "name": "_0.tvm",
+      "bytes": 3272,
+      "sha256": "efc65de333ab3f599f19c697d98c7ddd6d63f623a276196b99708eef9b2010ff"
+    },
+    {
+      "name": "_0.tvx",
+      "bytes": 228027,
+      "sha256": "afa304bfeb333d065c481154a4eadc3082d8b08e201f0e6eb6191da4483c01f0"
+    },
+    {
+      "name": "_0_Lucene80_0.dvd",
+      "bytes": 9770544,
+      "sha256": "53562bda8b391187b5b30fcc60aaff7c202ef8dfe54cfa3d56792b267a8663da"
+    },
+    {
+      "name": "_0_Lucene80_0.dvm",
+      "bytes": 272,
+      "sha256": "ea8f2f81c62c8cc0d2f6a730e1665becec191ea8ac9d43fc91009cad50bf3178"
+    },
+    {
+      "name": "_0_Lucene84_0.doc",
+      "bytes": 133193644,
+      "sha256": "96177ddbbbc9d769dd2a9ed6f6ec33c101c0194048c08dd48bc0af553c2e4baa"
+    },
+    {
+      "name": "_0_Lucene84_0.pos",
+      "bytes": 141375938,
+      "sha256": "cead055f167f6ae7ee3ce4d197eee7041de722fd325cf47bd6aa6a628a7faaa8"
+    },
+    {
+      "name": "_0_Lucene84_0.tim",
+      "bytes": 21731449,
+      "sha256": "6b40da1fa89424850192d6cae66459b963fabe85d01a1aaf84785e222d1c742f"
+    },
+    {
+      "name": "_0_Lucene84_0.tip",
+      "bytes": 577296,
+      "sha256": "617aa0bb8662990e56454648f4f018f2151e4bf887d07c2d9121ed76d827c891"
+    },
+    {
+      "name": "_0_Lucene84_0.tmd",
+      "bytes": 318,
+      "sha256": "1198b733ba50f195dc3fa83888e09513900444e0220b9933fecd3ef69a019cb6"
+    },
+    {
+      "name": "segments_1",
+      "bytes": 154,
+      "sha256": "c8d6d5ea4f447685bb0ac999bee6274545d6eda689303f0dec28c6a7b83813a0"
+    },
+    {
+      "name": "write.lock",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    }
+  ],
+  "acceptance": "All exported documents accounted for; only whitespace-only contents omitted by original Lucene generator. No product removed from the environment.",
+  "log_path": "data/cache/webshop-index.stdout.log",
+  "log_sha256": "6d447faf670646f4ec28ac24f5a0175521ebed016697f22eff7e5b1bbc1a94ef",
+  "smoke_query": "apple cinnamon",
+  "smoke_docids": [
+    "B09PZ2WLSL",
+    "B01MQENMDG",
+    "B082FZ1J22",
+    "B003SW5TM6",
+    "B00GSQ6FQS"
+  ]
+}

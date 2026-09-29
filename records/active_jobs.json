@@ -1,5 +1,5 @@
 {
-  "recorded_at_utc": "2026-09-29T03:59:18.447462+00:00",
+  "recorded_at_utc": "2026-09-29T04:40:51.125576+00:00",
   "campaign_id": "qwen36-restart-20260929",
   "model": "qwen3.6-35b-a3b",
   "old_model_policy": "All Qwen 3.8 runs retired; never resume or import their outputs into this campaign",
@@ -7,7 +7,7 @@
     {
       "dataset": "hotpotqa",
       "controller": "scripts/run_restart_campaign.py",
-      "status": "running_pilot",
+      "status": "pilot",
       "progress": "records/hotpotqa-qwen36-campaign.json",
       "pilot_config": "configs/hotpotqa-qwen36-pilot.json",
       "stages": [
@@ -16,12 +16,17 @@
         "automatic protocol/score/vote audit",
         "500 questions x five generated methods"
       ],
-      "active_run_id": "hotpotqa-pilot-qwen36-v1"
+      "active_run_id": "hotpotqa-pilot-qwen36-v1",
+      "logs": [
+        "data/cache/hotpotqa-qwen36-campaign.stdout.log",
+        "data/cache/hotpotqa-qwen36-campaign.stderr.log"
+      ],
+      "current_config": "/mnt/d/0code/Research/feng/react/configs/hotpotqa-qwen36-pilot.json"
     },
     {
       "dataset": "fever",
       "controller": "scripts/run_restart_campaign.py",
-      "status": "running_pilot",
+      "status": "formal",
       "progress": "records/fever-qwen36-campaign.json",
       "pilot_config": "configs/fever-qwen36-pilot.json",
       "stages": [
@@ -30,7 +35,12 @@
         "automatic protocol/score/vote audit",
         "500 questions x five generated methods"
       ],
-      "active_run_id": "fever-pilot-qwen36-v1"
+      "active_run_id": "fever-formal-qwen36-v1",
+      "logs": [
+        "data/cache/fever-qwen36-campaign.stdout.log",
+        "data/cache/fever-qwen36-campaign.stderr.log"
+      ],
+      "current_config": "/mnt/d/0code/Research/feng/react/configs/fever-qwen36-formal.json"
     }
   ],
   "concurrency_cap": 2,
@@ -39,5 +49,14 @@
     "new-model ALFWorld pilot and 134-game Act/ReAct",
     "WebShop index acceptance and environment checks then new-model 500-goal Act/ReAct",
     "full audit, paired statistics, cost and final report"
-  ]
+  ],
+  "environment_preparation": {
+    "webshop_index": "accepted_existing_index",
+    "webshop_store": "completed",
+    "webshop_runtime": "records/webshop_runtime_check.json",
+    "webshop_service": "records/webshop_service.json",
+    "webshop_generator_python": ".venv-webshop/bin/python",
+    "alfworld_dry_run": "records/alfworld-dry-pilot-qwen36-v1.json",
+    "interactive_model_pilots": "waiting for a model slot; no API calls made"
+  }
 }

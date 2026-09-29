@@ -1,0 +1,7 @@
+{
+  "status": "passed",
+  "recorded_at_utc": "2026-09-29T04:05:41.267449+00:00",
+  "checked_documents": 1000,
+  "reference": "Unmodified author load_products and exact converter AST loop on first 1000 raw products",
+  "covers": "All document fields including nested product and retrieval contents; full corpus hash/count checked separately"
+}

@@ -234,7 +234,9 @@ episode 至少包括 dataset/id/method/model/task、全部轨迹、final_answer�
 
 同时最多两个模型生成进程。每个数据集的冻结配置单独保存，后续阶段配置更新不改变已运行批次。全部正式输出重新生成，hybrid 仅由同一新模型的 CoT-SC 与 ReAct 离线组合。
 
-ALFWorld 已准备 134 个 unseen games 和作者执行循环，仍需新模型联调与正式运行。WebShop 已完成全数据下载和清单检查；全索引记录 60 条 empty 导致旧的总数断言失败，需要核验作者索引规则和修正验收，之后完成环境与新模型运行。
+FEVER 已完成 80 条四方法联调和两题各 21 次 CoT-SC，经完整审计后自动启动 `fever-formal-qwen36-v1`，包括同一 500 题的五种生成方法及后续两个离线 hybrid。HotpotQA 独立联调继续运行。`configs/experiment.json` 是本轮基础模板，正式开跑状态以数据集独立冻结配置与运行记录为准，不能因基础模板仍标记 pilot 而中断已验收批次。
+
+ALFWorld 已准备 134 个 unseen games 和作者执行循环，仍需新模型联调与正式运行。WebShop 完整商品索引、磁盘商品存储、固定目标和本地服务均已通过环境验收；60 条空白检索文本只从索引省略，仍保留在环境中。交互任务待模型并发槽空闲后启动新模型联调。
 
 后续历史章节保存旧阶段的事实，仅作为过程审计，不代表本轮新模型的完成状态。最新进度以 `records/model_restart.json`、`records/active_jobs.json` 和 `*-qwen36-campaign.json` 为准。
 
@@ -242,8 +244,8 @@ ALFWorld 已准备 134 个 unseen games 和作者执行循环，仍需新模型�
 
 - Yao et al., *ReAct: Synergizing Reasoning and Acting in Language Models*, ICLR 2023，arXiv:2210.03629v3。第 3–6 页方法和知识任务，第 7–8 页交互任务，第 10 页可复现性声明，附录 C 提示示例。原文与文件哈希已归档。
 - [ReAct 官方代码](https://github.com/ysymyth/ReAct/tree/6bdb3a1fd38b8188fc7ba4102969fe483df8fdc9)，已在本地核对源文件和数据。
-- [ALFWorld 官方代码](https://github.com/alfworld/alfworld/tree/aaba6870f86c5be6a08a491f32a50b906227bc3e)，已克隆指定修订并安装文本环境依赖，游戏数据及运行验证尚待完成。
-- [WebShop 官方代码](https://github.com/princeton-nlp/WebShop/tree/64fa2a5c15c7daa698b9ac93f5bb5437b634c9bd)，核对完整数据、环境安装和会话目标映射要求，尚未安装。
+- [ALFWorld 官方代码](https://github.com/alfworld/alfworld/tree/aaba6870f86c5be6a08a491f32a50b906227bc3e)，文本环境、游戏数据及无模型 reset 检查完成，模型结果另行核验。
+- [WebShop 官方代码](https://github.com/princeton-nlp/WebShop/tree/64fa2a5c15c7daa698b9ac93f5bb5437b634c9bd)，完整数据、依赖和索引已准备；服务与模型运行按各自验收记录推进。
 - 网关接口的实际证据以 `records/api_preflight.jsonl` 为准；模型名称与计费状态不能仅依赖公开网页或模型自述。
 
 ### 当前联调运行
@@ -279,3 +281,19 @@ WebShop 原始 Google Drive 完整商品文件无法匿名下载：gdown 失败�
 ### 全量换模重启
 
 新模型方案已获准执行，无需重复方案审批。模型和全量重新生成策略见第 2、11 节；每两小时自动任务已同步更新，禁止恢复旧 Qwen 3.8 主线。新 run_id 独立缓存，旧模型产物保留但不参与任何新主表。
+
+### 新模型轨迹复查与 WebShop 索引验收
+
+新模型联调过程中增加独立离线审计：重新解析模型输出、复算评分与投票、只读已冻结 Wikipedia HTML 回放全部已完成环境动作，比较 observation 和环境状态；递归检查响应中的 reasoning/thinking 字段及内容标记。checkpoint 审计只覆盖当时已经完成的轨迹，不标为整批验收。原生推理遥测缺失仍记为未知，不能将字段缺失当作零 token 或上游计算已被独立证明关闭。
+
+WebShop 的 1,181,436 条原始商品经作者清洗导出 1,181,430 条文档。Lucene 实际入索引 1,181,370 条，其余 60 条全部为空白 contents；empty=60，errors、unindexable、skipped 均为 0。扫描全量导出并核对哈希、检查 60 个空白 ASIN 未入索引、验证检索返回后，原索引通过验收，无需重建。首次失败保留在 `records/webshop_index_initial_failure.json`，当前验收包含所有索引文件哈希。前 1,000 条导出文档与作者原始转换循环逐字段一致。
+
+服务存储采用 JSONL 字节偏移与 SQLite 查找表，避免完整商品对象同时驻留内存；仍保留全部 1,181,430 个商品，包括 60 个不可检索空文本商品。价格通过作者 `generate_product_prices` 按完整商品顺序一次生成，生成前固定种子 42；目标使用作者 `get_goals`，按原始种子 233 打乱。0–499 对应作者 test 范围，500、501 为独立联调目标。价格、完整目标及排序哈希冻结后由所有方法共享，不能按成绩重新生成。该固定价格种子是相对原 Flask 入口未固定初始价格随机性的明确适配。
+
+spaCy 3.3.0 / Pydantic 1.8.2 首次导入因 typing-extensions 4.13.2 的兼容问题失败，按 [spaCy 官方问题记录](https://github.com/explosion/spaCy/issues/12659) 将后者固定为 4.5.0；保留原 traceback 和恢复日志，实际依赖锁随环境更新。服务准备完成不等同于 WebShop 模型实验完成。
+
+WebShop 服务验收完成：1,181,430 个商品、12,087 条目标，前 1,000 个商品对象和随机价格与作者函数一致；500、501 两个联调目标在 Act/ReAct 独立会话中的初始 observation 相同。搜索、详情、子页面、选项和购买路径通过，零奖励和满奖励与作者评分函数一致。满奖励使用后端已知目标测试，仅验证奖励接口，不属于模型轨迹或 benchmark 成绩。完整目标、偏移/价格数据库及原始验收材料归档为 `artifacts/webshop-environment-v1.zip`，大型可重建商品 JSONL 和 Lucene 文件另存哈希。
+
+WebShop 服务与生成均使用 `.venv-webshop/bin/python`，保持作者 BeautifulSoup 4.11.1；共享 API 模块所需 Gym 固定为作者 0.24.0，未使用其 `gym.make`。服务入口为 `scripts/serve_webshop.py`，仅监听 127.0.0.1:3000，健康状态记录于 `records/webshop_service.json`。模型执行器保留 14 次已执行决策和 6,400 字符上下文规则，拒绝 Act 中的 think，并完整保存 HTTP、上下文截断与状态变化。ALFWorld 相应保留 49 次决策并拒绝 Act 中的 think，两个任务的模型联调配置分别冻结，尚未产生新模型正式成绩。
+
+新模型 FEVER 四方法联调共 146 次成功响应，21 次 CoT-SC 联调共 42 次，评分、完整样本覆盖、输出解析、投票和环境回放通过。所有 CoT 输出均有可解析的答案；一处模型生成的 Observation 未被用作环境反馈。基础联调和 SC 原始材料分别独立归档。没有观察到原生推理异常，缺失的遥测仍保持未知。

@@ -1,0 +1,61 @@
+{
+  "dataset": "fever",
+  "campaign_id": "qwen36-restart-20260929",
+  "status": "formal",
+  "updated_at_utc": "2026-09-29T04:37:30.572216+00:00",
+  "audits": [
+    {
+      "run_id": "fever-pilot-qwen36-v1",
+      "status": "passed",
+      "episodes": 80,
+      "model": "qwen3.6-35b-a3b",
+      "terminations": {
+        "step_limit": 4,
+        "answer": 40,
+        "valid_finish": 36
+      },
+      "requests": 146,
+      "usage": {
+        "prompt_tokens": 109642,
+        "completion_tokens": 4950,
+        "total_tokens": 114592
+      }
+    },
+    {
+      "run_id": "fever-sc-pilot-qwen36-v1",
+      "status": "passed",
+      "episodes": 2,
+      "model": "qwen3.6-35b-a3b",
+      "terminations": {
+        "answer": 2
+      },
+      "requests": 42,
+      "usage": {
+        "prompt_tokens": 9954,
+        "completion_tokens": 1698,
+        "total_tokens": 11652
+      }
+    }
+  ],
+  "active_run_id": "fever-formal-qwen36-v1",
+  "command": [
+    "/mnt/d/0code/Research/feng/react/.venv-qa/bin/python",
+    "/mnt/d/0code/Research/feng/react/scripts/run_qa.py",
+    "--dataset",
+    "fever",
+    "--phase",
+    "formal",
+    "--methods",
+    "standard",
+    "cot",
+    "act",
+    "react",
+    "cot_sc",
+    "--limit",
+    "500",
+    "--run-id",
+    "fever-formal-qwen36-v1",
+    "--config",
+    "/mnt/d/0code/Research/feng/react/configs/fever-qwen36-formal.json"
+  ]
+}

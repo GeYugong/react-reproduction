@@ -1,0 +1,17 @@
+{
+  "recorded_at_utc": "2026-09-29T04:39:46.771696+00:00",
+  "status": "healthy",
+  "url": "http://127.0.0.1:3000",
+  "http_status": 200,
+  "health": {
+    "database_sha256": "b4c80c0a615058863ffae329df50b0fa3b5863bbccabf599973a1145aef4bf94",
+    "goals": 12087,
+    "goals_sha256": "ffb38a6033c9a03d80ada1a3669675f06e14ec27121397f4b5c39216247bef91",
+    "products": 1181430,
+    "status": "ready"
+  },
+  "logs": [
+    "data/cache/webshop-server.stdout.log",
+    "data/cache/webshop-server.stderr.log"
+  ]
+}

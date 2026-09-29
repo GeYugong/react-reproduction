@@ -1,0 +1,32 @@
+{
+  "status": "stopped",
+  "source": "vendor/WebShop/search_engine/convert_product_file_format.py",
+  "adapter": "Original engine.load_products in chunks of 1000; unchanged document text construction and Lucene flags.",
+  "catalog": "full",
+  "product_count": 1181430,
+  "input_count": 1181436,
+  "java_home": "/mnt/d/0code/Research/feng/react/envs/java/jdk-11.0.32.1+1",
+  "updated_at_utc": "2026-09-29T02:14:38.479386+00:00",
+  "documents_sha256": "1660454a689d68f2b52dcc786e20ade2ea83f5c4a16aa3b596535b9c72ba1c7b",
+  "documents_bytes": 6817762903,
+  "index_command": [
+    "/mnt/d/0code/Research/feng/react/.venv-webshop/bin/python",
+    "-m",
+    "pyserini.index.lucene",
+    "--collection",
+    "JsonCollection",
+    "--input",
+    "/mnt/d/0code/Research/feng/react/data/cache/webshop-search/resources",
+    "--index",
+    "/mnt/d/0code/Research/feng/react/data/cache/webshop-search/indexes",
+    "--generator",
+    "DefaultLuceneDocumentGenerator",
+    "--threads",
+    "1",
+    "--storePositions",
+    "--storeDocvectors",
+    "--storeRaw"
+  ],
+  "error_type": "AssertionError",
+  "error": ""
+}

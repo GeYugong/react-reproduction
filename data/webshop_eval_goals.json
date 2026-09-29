@@ -1,0 +1,3036 @@
+{
+  "source_manifest": {
+    "status": "completed",
+    "products": 1181430,
+    "price_seed": 42,
+    "goal_shuffle_seed": 233,
+    "started_at_utc": "2026-09-29T04:11:00.848261+00:00",
+    "goals": 12087,
+    "products_with_instructions": 10136,
+    "documents_sha256": "1660454a689d68f2b52dcc786e20ade2ea83f5c4a16aa3b596535b9c72ba1c7b",
+    "goals_sha256": "ffb38a6033c9a03d80ada1a3669675f06e14ec27121397f4b5c39216247bef91",
+    "database_sha256": "b4c80c0a615058863ffae329df50b0fa3b5863bbccabf599973a1145aef4bf94",
+    "completed_at_utc": "2026-09-29T04:34:25.169934+00:00",
+    "source": "Original generate_product_prices and get_goals; seed 42 added before prices for reproducibility; original goal shuffle seed 233 retained",
+    "formal_indices": [
+      0,
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9,
+      10,
+      11,
+      12,
+      13,
+      14,
+      15,
+      16,
+      17,
+      18,
+      19,
+      20,
+      21,
+      22,
+      23,
+      24,
+      25,
+      26,
+      27,
+      28,
+      29,
+      30,
+      31,
+      32,
+      33,
+      34,
+      35,
+      36,
+      37,
+      38,
+      39,
+      40,
+      41,
+      42,
+      43,
+      44,
+      45,
+      46,
+      47,
+      48,
+      49,
+      50,
+      51,
+      52,
+      53,
+      54,
+      55,
+      56,
+      57,
+      58,
+      59,
+      60,
+      61,
+      62,
+      63,
+      64,
+      65,
+      66,
+      67,
+      68,
+      69,
+      70,
+      71,
+      72,
+      73,
+      74,
+      75,
+      76,
+      77,
+      78,
+      79,
+      80,
+      81,
+      82,
+      83,
+      84,
+      85,
+      86,
+      87,
+      88,
+      89,
+      90,
+      91,
+      92,
+      93,
+      94,
+      95,
+      96,
+      97,
+      98,
+      99,
+      100,
+      101,
+      102,
+      103,
+      104,
+      105,
+      106,
+      107,
+      108,
+      109,
+      110,
+      111,
+      112,
+      113,
+      114,
+      115,
+      116,
+      117,
+      118,
+      119,
+      120,
+      121,
+      122,
+      123,
+      124,
+      125,
+      126,
+      127,
+      128,
+      129,
+      130,
+      131,
+      132,
+      133,
+      134,
+      135,
+      136,
+      137,
+      138,
+      139,
+      140,
+      141,
+      142,
+      143,
+      144,
+      145,
+      146,
+      147,
+      148,
+      149,
+      150,
+      151,
+      152,
+      153,
+      154,
+      155,
+      156,
+      157,
+      158,
+      159,
+      160,
+      161,
+      162,
+      163,
+      164,
+      165,
+      166,
+      167,
+      168,
+      169,
+      170,
+      171,
+      172,
+      173,
+      174,
+      175,
+      176,
+      177,
+      178,
+      179,
+      180,
+      181,
+      182,
+      183,
+      184,
+      185,
+      186,
+      187,
+      188,
+      189,
+      190,
+      191,
+      192,
+      193,
+      194,
+      195,
+      196,
+      197,
+      198,
+      199,
+      200,
+      201,
+      202,
+      203,
+      204,
+      205,
+      206,
+      207,
+      208,
+      209,
+      210,
+      211,
+      212,
+      213,
+      214,
+      215,
+      216,
+      217,
+      218,
+      219,
+      220,
+      221,
+      222,
+      223,
+      224,
+      225,
+      226,
+      227,
+      228,
+      229,
+      230,
+      231,
+      232,
+      233,
+      234,
+      235,
+      236,
+      237,
+      238,
+      239,
+      240,
+      241,
+      242,
+      243,
+      244,
+      245,
+      246,
+      247,
+      248,
+      249,
+      250,
+      251,
+      252,
+      253,
+      254,
+      255,
+      256,
+      257,
+      258,
+      259,
+      260,
+      261,
+      262,
+      263,
+      264,
+      265,
+      266,
+      267,
+      268,
+      269,
+      270,
+      271,
+      272,
+      273,
+      274,
+      275,
+      276,
+      277,
+      278,
+      279,
+      280,
+      281,
+      282,
+      283,
+      284,
+      285,
+      286,
+      287,
+      288,
+      289,
+      290,
+      291,
+      292,
+      293,
+      294,
+      295,
+      296,
+      297,
+      298,
+      299,
+      300,
+      301,
+      302,
+      303,
+      304,
+      305,
+      306,
+      307,
+      308,
+      309,
+      310,
+      311,
+      312,
+      313,
+      314,
+      315,
+      316,
+      317,
+      318,
+      319,
+      320,
+      321,
+      322,
+      323,
+      324,
+      325,
+      326,
+      327,
+      328,
+      329,
+      330,
+      331,
+      332,
+      333,
+      334,
+      335,
+      336,
+      337,
+      338,
+      339,
+      340,
+      341,
+      342,
+      343,
+      344,
+      345,
+      346,
+      347,
+      348,
+      349,
+      350,
+      351,
+      352,
+      353,
+      354,
+      355,
+      356,
+      357,
+      358,
+      359,
+      360,
+      361,
+      362,
+      363,
+      364,
+      365,
+      366,
+      367,
+      368,
+      369,
+      370,
+      371,
+      372,
+      373,
+      374,
+      375,
+      376,
+      377,
+      378,
+      379,
+      380,
+      381,
+      382,
+      383,
+      384,
+      385,
+      386,
+      387,
+      388,
+      389,
+      390,
+      391,
+      392,
+      393,
+      394,
+      395,
+      396,
+      397,
+      398,
+      399,
+      400,
+      401,
+      402,
+      403,
+      404,
+      405,
+      406,
+      407,
+      408,
+      409,
+      410,
+      411,
+      412,
+      413,
+      414,
+      415,
+      416,
+      417,
+      418,
+      419,
+      420,
+      421,
+      422,
+      423,
+      424,
+      425,
+      426,
+      427,
+      428,
+      429,
+      430,
+      431,
+      432,
+      433,
+      434,
+      435,
+      436,
+      437,
+      438,
+      439,
+      440,
+      441,
+      442,
+      443,
+      444,
+      445,
+      446,
+      447,
+      448,
+      449,
+      450,
+      451,
+      452,
+      453,
+      454,
+      455,
+      456,
+      457,
+      458,
+      459,
+      460,
+      461,
+      462,
+      463,
+      464,
+      465,
+      466,
+      467,
+      468,
+      469,
+      470,
+      471,
+      472,
+      473,
+      474,
+      475,
+      476,
+      477,
+      478,
+      479,
+      480,
+      481,
+      482,
+      483,
+      484,
+      485,
+      486,
+      487,
+      488,
+      489,
+      490,
+      491,
+      492,
+      493,
+      494,
+      495,
+      496,
+      497,
+      498,
+      499
+    ],
+    "pilot_indices": [
+      500,
+      501
+    ]
+  },
+  "formal": [
+    {
+      "goal_index": 0,
+      "goal_sha256": "673c5b9b51fa66264efb4a679080e1e9b9c73954d5b1787d409dbc1492c39994",
+      "instruction_text": "i need a long clip-in hair extension which is natural looking, and price lower than 30.00 dollars"
+    },
+    {
+      "goal_index": 1,
+      "goal_sha256": "cb861fed9592252d590e8497ddb23cf8f65cce6c9c0336d75032798a4a4b3907",
+      "instruction_text": "i want a noise cancelling cosycost usb microphone, and price lower than 60.00 dollars"
+    },
+    {
+      "goal_index": 2,
+      "goal_sha256": "8a930e44af604fe114f8cb0f349d1aa17d1774deae3e0c8fdb1712f56320a20e",
+      "instruction_text": "i'm looking for hair treatments that are sulfate and paraben free and are of high quality too. i need it in bottle for with 60 capsules, and price lower than 60.00 dollars"
+    },
+    {
+      "goal_index": 3,
+      "goal_sha256": "91ff782ac833944de7106f31e39897574b4f9d0acf27423c9350a932668a5c65",
+      "instruction_text": "i need gluten free vegetarian smoked peppered bacon - 4 ounce (pack of 2), and price lower than 40.00 dollars"
+    },
+    {
+      "goal_index": 4,
+      "goal_sha256": "68ad7faa89a5b14a4f7f73d22053daf9f5affcaa8a079d3d9a5dffc812ab5fc1",
+      "instruction_text": "find me a high speed dual style package with  12\" power amplifier car subwoofer, and price lower than 190.00 dollars"
+    },
+    {
+      "goal_index": 5,
+      "goal_sha256": "f5d5df541d30b76112728935f5d563073c4c8bcf0f3cc611baa9f6ecd8b057f3",
+      "instruction_text": "i'm looking for a space-saving ottoman bench to match my blue living room. pick that one that's 100x45x45cm, and price lower than 430.00 dollars"
+    },
+    {
+      "goal_index": 6,
+      "goal_sha256": "195b68b18fd2ce14b885e890f47c37098534b4d49e5ebcd1fb3dd8e411b218fa",
+      "instruction_text": "i'm looking for a queen size bedspread set in the color redwood, and price lower than 70.00 dollars"
+    },
+    {
+      "goal_index": 7,
+      "goal_sha256": "9aad5f03a77905e1df04fc284a88507b9742659972be291781ac8a1f7ffc8593",
+      "instruction_text": "i'm looking for a styling cream that is cruelty free and for short hair, and price lower than 30.00 dollars"
+    },
+    {
+      "goal_index": 8,
+      "goal_sha256": "e70b3b733ce7f69a45e1d53cd71d2d5b7dd4fb7e92e828f7b08150fe3b7000c0",
+      "instruction_text": "i want to find xx-large black workout sweatpants with a relaxed fit, and price lower than 50.00 dollars"
+    },
+    {
+      "goal_index": 9,
+      "goal_sha256": "08219af104da2151fc2cf31f1a892d44cc09390ebf3f4827d1e291cdf1a7ce36",
+      "instruction_text": "i am looking for a grey sectional sofa for my living room"
+    },
+    {
+      "goal_index": 10,
+      "goal_sha256": "73010199ffc8b42dcd480f73c82d7a24966f17818974d81973b16526ef395c3c",
+      "instruction_text": "i would like a bundle of crackers, spicy beef and cheese which is shelf stable. it also needs to be keto and gluten free, and price lower than 40.00 dollars"
+    },
+    {
+      "goal_index": 11,
+      "goal_sha256": "856f39fc83e7cc1ad0ebc5ba76056acd758e023f726c498267150586429c788c",
+      "instruction_text": "i am looking to buy a woman's us size 5 high heel shoe with a rubber sole and color patent-beige, and price lower than 90.00 dollars"
+    },
+    {
+      "goal_index": 12,
+      "goal_sha256": "82c2346e58b1ea4456c7577e6931fb303e5704c14d613797dc101b846c40df05",
+      "instruction_text": "i am looking for a remote control for an lg blu-ray dvd home theater system, and price lower than 70.00 dollars"
+    },
+    {
+      "goal_index": 13,
+      "goal_sha256": "e3ce7167ed04fa513f4191fef853b2553e0cf4efb23bb65f0c4141694322e12b",
+      "instruction_text": "i need a long lasting 6.76 fl oz bottle of l'eau d'issey, and price lower than 100.00 dollars"
+    },
+    {
+      "goal_index": 14,
+      "goal_sha256": "d3188bf4ed18aaf2564651211cb69c708513712320b8dcfbe3a18d555f2b24a2",
+      "instruction_text": "i am looking for dairy free and apple variety pack of chips, and price lower than 40.00 dollars"
+    },
+    {
+      "goal_index": 15,
+      "goal_sha256": "2ce9ae65bfd811a862647fc6fe2ff43105ac864328d13e2f82f8d7abe4b3dc70",
+      "instruction_text": "i need a gingko light and 20\"x20\" pillow cover that is hand painted, and price lower than 50.00 dollars"
+    },
+    {
+      "goal_index": 16,
+      "goal_sha256": "64139319bc9763da4c5752fab2b655e9e4f544b4e039ddb4901fb67afc53389d",
+      "instruction_text": "i'm looking for lead free luxury scented candle which last for 25+ hours, it should be in tin voyager, and price lower than 50.00 dollars"
+    },
+    {
+      "goal_index": 17,
+      "goal_sha256": "5ea2a9dff9eb9948605792945fe35221d769383851b9eb66840a24ff15580b12",
+      "instruction_text": "i am looking for mn4 color foundation for my sensitive skin, and price lower than 40.00 dollars"
+    },
+    {
+      "goal_index": 18,
+      "goal_sha256": "e6e6a337d34ff744527d4407f709bbf41e94e04ce7c1a3e07155b667159a7985",
+      "instruction_text": "i want double horn bluetooth wireless speakers which is portable and easy to carry, and price lower than 50.00 dollars"
+    },
+    {
+      "goal_index": 19,
+      "goal_sha256": "945181f254c7b08fb1268fc0a6c2aee50da90f8cd7f97543351de467cb3590fc",
+      "instruction_text": "i am looking for a high power sound column subwoofer, that uses bluetooth and is also a 3d surround sound system, and price lower than 660.00 dollars"
+    },
+    {
+      "goal_index": 20,
+      "goal_sha256": "b9df6ae0db380ed85723139daf7df3ababc70bbfc4d6212c39890d916919f416",
+      "instruction_text": "i need a six pack of manual toothbrushes that are good for sensitive teeth, and price lower than 40.00 dollars"
+    },
+    {
+      "goal_index": 21,
+      "goal_sha256": "be7c14282af12ffd5c164b7477f5e1ef5bdd9975beeb263bc42b9c1a3533ebc2",
+      "instruction_text": "can you find me a shelf stable potato side dish?  i want something that i can cook in the microwave, and price lower than 50.00 dollars"
+    },
+    {
+      "goal_index": 22,
+      "goal_sha256": "742cd596c339bf4d61870d4cb40bc95b8a51f781035d813a2191eb561cda1a15",
+      "instruction_text": "i need a highspeed hdmi cable that is purple, and price lower than 80.00 dollars"
+    },
+    {
+      "goal_index": 23,
+      "goal_sha256": "bceb92a338ad1b6681106117b7fe9863898d0d22c8a92ab1714d6e9834bae5fd",
+      "instruction_text": "i'm looking for machine wasable savannan burlap placemat with compatible table runner with dahlia flower print table set of 6 pcs. also choose color golden circlesan4455 with size 13x70inch+13x19inch*4, and price lower than 60.00 dollars"
+    },
+    {
+      "goal_index": 24,
+      "goal_sha256": "8bd4141b742b524fa5e4fb4b549eabae3cd8a5bc46485c294681429166c6260b",
+      "instruction_text": "i am looking for a high speed 3 foot red usb cable, and price lower than 50.00 dollars"
+    },
+    {
+      "goal_index": 25,
+      "goal_sha256": "05f6a710afca5588f468726a20a56dfc15c93f5ec039e3ffbeeef9441bbd2dbb",
+      "instruction_text": "i'm looking for a great river organic milling flour, and price lower than 60.00 dollars"
+    },
+    {
+      "goal_index": 26,
+      "goal_sha256": "618ce73972de1d966cbffccbec8cbd5a6763637c9e2995c2a25b4168d549ed5d",
+      "instruction_text": "i would like a 20m digital 4g lte coaxial cable that's male to female, and price lower than 60.00 dollars"
+    },
+    {
+      "goal_index": 27,
+      "goal_sha256": "a4a4024e434f9d8629f6e025bf9d413f7dc7eae0f03ed5878aa3186ac3c85221",
+      "instruction_text": "i need high quality pillow covers in color a-8 and it should be fade resistant, and price lower than 60.00 dollars"
+    },
+    {
+      "goal_index": 28,
+      "goal_sha256": "30ed0b786e0ae18fcb3cad155abae71a92a8163559f07377106c0308b3594805",
+      "instruction_text": "i am looking for an oral hygiene toothbrush. it should be easy to carry, and price lower than 30.00 dollars"
+    },
+    {
+      "goal_index": 29,
+      "goal_sha256": "63b2161acff5fec59c1ce32159ea05fe74712cd9cf31105bace3b77ebb9bf51f",
+      "instruction_text": "i need a long lasting fragrance gift set for women, and price lower than 90.00 dollars"
+    },
+    {
+      "goal_index": 30,
+      "goal_sha256": "4e8103d4a4478810801326117ddb73c89c908d52efe11c2ab63d9548c52c013b",
+      "instruction_text": "i need gluten free popcorn, and price lower than 130.00 dollars"
+    },
+    {
+      "goal_index": 31,
+      "goal_sha256": "a38c86c191f35a465fd1f2db2e3c1f06c133ab3032920292a7de8e3dc9722977",
+      "instruction_text": "i am looking for  gluten free black rock salt made by himalayan . and i choose the 2.8 ounce pack with himalayan pink salt coarse grind, and price lower than 20.00 dollars"
+    },
+    {
+      "goal_index": 32,
+      "goal_sha256": "502da2d72489848427ea70c10194c1f39ab9544d856000ea088e13a89536e71c",
+      "instruction_text": "i am looking for a black fast wireless universal charging stand, and price lower than 40.00 dollars"
+    },
+    {
+      "goal_index": 33,
+      "goal_sha256": "7ace1ae5a3c3579eedc52db28564fc8eb3d7ad8ab37a1447e2344fba300213ba",
+      "instruction_text": "i need a set of leak proof, bpa free jars, and price lower than 40.00 dollars"
+    },
+    {
+      "goal_index": 34,
+      "goal_sha256": "a7607b104358ef36394126c2f417018f5767d880ff2c1e3eab562087d7663db3",
+      "instruction_text": "i'm looking for  made a cookies for birthday parties, and price lower than 50.00 dollars"
+    },
+    {
+      "goal_index": 35,
+      "goal_sha256": "ce28324cf75b5f424dcabd1ba404aa44c4dba5718041fcb641b0947ce9274f33",
+      "instruction_text": "i am searching for a gold color smart watch bands compatible for apple and any one of the sizes 38mm | 40mm | 41mm, and price lower than 30.00 dollars"
+    },
+    {
+      "goal_index": 36,
+      "goal_sha256": "9b48cf48a4fa61576ee559bd93886bc6bfddd0480720840880e1883d7fb73a81",
+      "instruction_text": "i'm looking for a single pack of old style, brown hair dye, and price lower than 30.00 dollars"
+    },
+    {
+      "goal_index": 37,
+      "goal_sha256": "4d11ca6c615ef2cd2fd1afad76320d15dc1d207208f3e032cc85485aacf3df96",
+      "instruction_text": "i am looking for a pendant light to go in my dining room with dimmer switch, and price lower than 120.00 dollars"
+    },
+    {
+      "goal_index": 38,
+      "goal_sha256": "6471b74690bad1aaf5718965a20046c47e12d59b347633becdd4038a44aee530",
+      "instruction_text": "i am searching for a high gloss tv stand with additional storage space. also, choose an ob color, and price lower than 170.00 dollars"
+    },
+    {
+      "goal_index": 39,
+      "goal_sha256": "ed37dcff76697643f5bfe01fc118a1aa5294d3c991cf4cfe80f5b2dc644ce383",
+      "instruction_text": "i want to buy a pair of but lifting grey skinny jean shorts, and price lower than 20.00 dollars"
+    },
+    {
+      "goal_index": 40,
+      "goal_sha256": "0a94ec822cf0b6a664cab2a43a8a16d81686e0198e7bd13e9011ac85de2a57a0",
+      "instruction_text": "i need a futon and chaise set that is made with faux leather. and i would prefer the navy linen color, and price lower than 140.00 dollars"
+    },
+    {
+      "goal_index": 41,
+      "goal_sha256": "aa0bfd288f03a45a69ed9cc4ef69a76d78a8436253be90eaa9d2941704fe7a3b",
+      "instruction_text": "i'm trying to find white bluetooth speakers that are not only water resistant but also come with stereo sound, and price lower than 70.00 dollars"
+    },
+    {
+      "goal_index": 42,
+      "goal_sha256": "2fb7a87f6659db5a031b412fac5cebc08720ec9cb12cb52a81ca3c24456e671e",
+      "instruction_text": "i would like a 8 fluid ounce bottle of tea tree lotion, and price lower than 30.00 dollars"
+    },
+    {
+      "goal_index": 43,
+      "goal_sha256": "76a7f8a1e5e24d21ebb25021baae7a1592b3be50a212b26f19272a932d9e0a13",
+      "instruction_text": "i'm looking for some black high heeled sandals for my mom. she wears size 5.5, and price lower than 70.00 dollars"
+    },
+    {
+      "goal_index": 44,
+      "goal_sha256": "dcfd18d93362e355105181dfa0043d11304ef866e2239f29f50c70b34c642e08",
+      "instruction_text": "i'm looking for a silicon exfoliating body scrubber which would be easy to use, and price lower than 30.00 dollars"
+    },
+    {
+      "goal_index": 45,
+      "goal_sha256": "183a510e94c72d56616f39d8bc7737170e8c68020a981fb2b8db3775f7d03651",
+      "instruction_text": "i am looking for some easy to install gold plated banana plugs for speaker wire, and price lower than 40.00 dollars"
+    },
+    {
+      "goal_index": 46,
+      "goal_sha256": "f8f8bb336e5621a4f880418cf97a24d0d96886c4972c60f8516a816a18829a9b",
+      "instruction_text": "i'm looking for hair extensions for natural hair and straight hair so need to buy it, and price lower than 30.00 dollars"
+    },
+    {
+      "goal_index": 47,
+      "goal_sha256": "0e77ba382fc7132f4ed2d4d5872c630a1b508957c35cf43318b6f68610ffdd72",
+      "instruction_text": "i want capri sun pacific cooler mixed fruit naturally flavored juice drinks, and price lower than 20.00 dollars"
+    },
+    {
+      "goal_index": 48,
+      "goal_sha256": "7341829977990425861c7b9a3b44d387c04a4a0801b6f3a1ad488a2fe8505f4a",
+      "instruction_text": "find me a motion detection high definition outdoor camera with 1080p hd definition, and price lower than 180.00 dollars"
+    },
+    {
+      "goal_index": 49,
+      "goal_sha256": "2e0b8262fef9e46db83148d5bf7f78c371d4f3f09d518eaf02c82bb62aced519",
+      "instruction_text": "i need an engineered wood end table, and price lower than 160.00 dollars"
+    },
+    {
+      "goal_index": 50,
+      "goal_sha256": "24885ddd8f5f1186e1cbbb4f613204f67cefdab9d2a323fea5c890f5fc24d0e6",
+      "instruction_text": "i want to find a women's gift set that contains long-lasting edt spray and body cream, and price lower than 110.00 dollars"
+    },
+    {
+      "goal_index": 51,
+      "goal_sha256": "45b7bee278a7d026929bb93995a558fefd1f771135fa63f5e28aab3316a88ad7",
+      "instruction_text": "locate the ambesonne harbour stripe throw pillow cover, 18 x 18 inch, double sided.  i want the salmon brown color, and price lower than 50.00 dollars"
+    },
+    {
+      "goal_index": 52,
+      "goal_sha256": "29ac2fb91c96b30c57d405d5c11b3f80218e63a4a9a2767a9585e9e94c52bdd9",
+      "instruction_text": "i want a body wash that is dermatologist tested. it should have a cucumber and aloe scent, and price lower than 40.00 dollars"
+    },
+    {
+      "goal_index": 53,
+      "goal_sha256": "14c851baf0279b864430bd683868721977cc22cdcabce08a8ba02c4f64deb25f",
+      "instruction_text": "i need a beige or green shower brush with a long handle, and price lower than 40.00 dollars"
+    },
+    {
+      "goal_index": 54,
+      "goal_sha256": "2ba72882e42e02914ed7656d72b18caf5573157911eb13c4cac31168dee9efdd",
+      "instruction_text": "i would like a 16.9 fluid ounce amber bottle that could be used in a hair salon, and price lower than 40.00 dollars"
+    },
+    {
+      "goal_index": 55,
+      "goal_sha256": "f1ddd3acebb423ecd4b769107b6a9990bd855c2fb956ca71b7ce5d961ab03f71",
+      "instruction_text": "im looking for a black alarm clock radio that displays the temperature and uses a usb port, and price lower than 100.00 dollars"
+    },
+    {
+      "goal_index": 56,
+      "goal_sha256": "6932922e1b1a6225b57922b60f2172b6d16416de81213d754e18a0ed77a7660b",
+      "instruction_text": "i'm looking for a high performance paint contrast projector, and price lower than 250.00 dollars"
+    },
+    {
+      "goal_index": 57,
+      "goal_sha256": "5e64c08406539bc06503214f9f8a5adac9d973131729a34063c50f378f8a8c3a",
+      "instruction_text": "i need some kosher sea salt, and price lower than 30.00 dollars"
+    },
+    {
+      "goal_index": 58,
+      "goal_sha256": "d422fc7447350b4ec51f61e4d9bd0d75e53660abdcf6bf92dbf9e010619221e1",
+      "instruction_text": "can i get a 2 light bath vanity lighting set with nickel finish?, and price lower than 160.00 dollars"
+    },
+    {
+      "goal_index": 59,
+      "goal_sha256": "07bd758bc1f5a129dcfda7aab301871fc2ea960394b297ff5efeeae4728d890b",
+      "instruction_text": "i am looking for non gmo sesame pretzels that come in a 12 pack, and price lower than 130.00 dollars"
+    },
+    {
+      "goal_index": 60,
+      "goal_sha256": "465b1850b029685c9bd880028e330866489c2a6d78b24e035558f95242143bbb",
+      "instruction_text": "i want to find a yellow manual toothbrush suitable for 7-14 year old kids with sensitive teeth, and price lower than 30.00 dollars"
+    },
+    {
+      "goal_index": 61,
+      "goal_sha256": "05ae48d086ce65cbadd174a833127c150c70b826359c6df2d58cc30eb6b37616",
+      "instruction_text": "hey i need some new press on nails.  get me babalal cat eye ones that aren't toxic and make sure the color you get is purple, and price lower than 30.00 dollars"
+    },
+    {
+      "goal_index": 62,
+      "goal_sha256": "e9b6204a6f20b838a64833aba10af9a8b3400c24ba9705450bb257f73fae5836",
+      "instruction_text": "i am looking for dell ultra small desktop computer with core i5 , 16gb ram , 256gb ssd and windows 10 pro, and price lower than 220.00 dollars"
+    },
+    {
+      "goal_index": 63,
+      "goal_sha256": "934caa1b2133394d39657a2de315d757391c95aff15234ef439a291bb67fca3a",
+      "instruction_text": "i am looking for a kahuna colored capri pant that has a relaxed fit and is in a size 20 plus, and price lower than 60.00 dollars"
+    },
+    {
+      "goal_index": 64,
+      "goal_sha256": "3a9e6a3088f20adcb5bbdfd9c69338ac6547c0beb6531fc0777fda43001f1136",
+      "instruction_text": "get a tongue cleaner that is easy clean and use, and is also stainless steel, and price lower than 40.00 dollars"
+    },
+    {
+      "goal_index": 65,
+      "goal_sha256": "79d45558114b3e04232424a19053720694d9b30ffe61eccee47061c9467c471c",
+      "instruction_text": "i nee all natural but no artificial ingredients savory and spicy sauce, 3 pack with sweet kick mustard flavor, and price lower than 140.00 dollars"
+    },
+    {
+      "goal_index": 66,
+      "goal_sha256": "1f1efe8e43abffaa7d211068956f964d19507c7f06a7932aef8eb973981458fd",
+      "instruction_text": "i am looking for some alcohol free skin care, and price lower than 80.00 dollars"
+    },
+    {
+      "goal_index": 67,
+      "goal_sha256": "4723310bef9f34948ce74316724c28552c53843c71cbeaaae1af42dc8ff409f3",
+      "instruction_text": "i need a stainless steel gua sha set that includes the roller and box, and price lower than 100.00 dollars"
+    },
+    {
+      "goal_index": 68,
+      "goal_sha256": "490c73b564e6b994c804cbc2c397703b4335f1c8b927e2fe839c879e30cbcb66",
+      "instruction_text": "i would like a pair of brown size 7 shoes with a rubber sole, and price lower than 60.00 dollars"
+    },
+    {
+      "goal_index": 69,
+      "goal_sha256": "00ebaf865676fd779f64237ef9e0e4076eac873de1b30950e05c34989c06b445",
+      "instruction_text": "i need a 30 pair pack of skin care masks for eyes and wrinkles, and price lower than 30.00 dollars"
+    },
+    {
+      "goal_index": 70,
+      "goal_sha256": "de4d06d033f12e0dc899079955eb28aa9c5e96dd57893343cad56b1e01a0c2e3",
+      "instruction_text": "i need a purple braces brush that is easy to carry, and price lower than 40.00 dollars"
+    },
+    {
+      "goal_index": 71,
+      "goal_sha256": "5b186ddd33a68905c1229c29ac47563856619f8142ee4134b3032bad0781389d",
+      "instruction_text": "i'm looking for a long lasting foundation that has spf50+.  also, choose the color no. 21, and price lower than 40.00 dollars"
+    },
+    {
+      "goal_index": 72,
+      "goal_sha256": "bd96aa16b8f528290b3777af3892304abd6bbff942b5f3a531b9c45bae9bd452",
+      "instruction_text": "i am looking for easy spirit traveltime529 mule shoes with arch support, rubber soles and in size 7.5 wide, and price lower than 110.00 dollars"
+    },
+    {
+      "goal_index": 73,
+      "goal_sha256": "e10d3d4d1236b6bb88eb4f3162266630a27e21a72a18cea5d2ac54e69f2b79d1",
+      "instruction_text": "find me the fomiyes 4pcs silicone travel bottles that are easy to carry, and price lower than 50.00 dollars"
+    },
+    {
+      "goal_index": 74,
+      "goal_sha256": "80997d5f21132f90b2ca9beab563e1ef82393584fabdff0a9a9b8813babdfd57",
+      "instruction_text": "i would like a pink ottoman with a solid wooden frame, and price lower than 350.00 dollars"
+    },
+    {
+      "goal_index": 75,
+      "goal_sha256": "1ce1c5940582e5f93d4876224b7bbdbeabf2a98d3b464ded2016cdb9afedcf23",
+      "instruction_text": "i would like a three pack of 4 fluid ounce green envy hair dye, and price lower than 60.00 dollars"
+    },
+    {
+      "goal_index": 76,
+      "goal_sha256": "2cce430f1186e47a5359a8241bb09cdaff4766b95ee120850d8c14d84c055e26",
+      "instruction_text": "i want a mid century console sofa table, and price lower than 70.00 dollars"
+    },
+    {
+      "goal_index": 77,
+      "goal_sha256": "f1f7ca0bd306e9db2f3ebc9660ac1b9be5a398566e56a7bc7de6a818453f6b82",
+      "instruction_text": "i would like a pink cosmetic bag that is easy to clean, and price lower than 50.00 dollars"
+    },
+    {
+      "goal_index": 78,
+      "goal_sha256": "f53d0f3d92f9ac21d659aec89f7151f5fd09ac3182cd2190ada1e7476a499969",
+      "instruction_text": "i am looking for a grey  mules & clogs for day comfert, and price lower than 60.00 dollars"
+    },
+    {
+      "goal_index": 79,
+      "goal_sha256": "29940bb323ea160c0bbbc378450daafd822c4e173932078d7a2d7dbe75176d05",
+      "instruction_text": "i would like to get a 24 pack of 7.5 ounce bottles of non-gmo classic tonic, and price lower than 60.00 dollars"
+    },
+    {
+      "goal_index": 80,
+      "goal_sha256": "ad4da00e7b724a580a59edf87cc3ce5233baf6a55fdd2c2ffb02272874efc26f",
+      "instruction_text": "i need a 9.5 rubber soled hiking shoe made of light weight vinyl acetate, and price lower than 120.00 dollars"
+    },
+    {
+      "goal_index": 81,
+      "goal_sha256": "c46561422a676a021ed96adbaa5314d08e58e2f766dfe34a464cd8fcb7cff026",
+      "instruction_text": "i need a french vanilla soy wax candle, and price lower than 40.00 dollars"
+    },
+    {
+      "goal_index": 82,
+      "goal_sha256": "f89a755c247260111f8db684de2a48d39e9177aac8e859a20d87d2cc078c6e24",
+      "instruction_text": "i would like a black brown to tan hairpiece made from synthetic hair, and price lower than 30.00 dollars"
+    },
+    {
+      "goal_index": 83,
+      "goal_sha256": "9658f20e5457f335f278e1dc71663fc76960cd6dd6458ef3e58c4a82d781209a",
+      "instruction_text": "i need a slim fit gray colored coat that has long sleeves. it should be in x-large size, and price lower than 60.00 dollars"
+    },
+    {
+      "goal_index": 84,
+      "goal_sha256": "322428155cba1a5d173e1e0ce0a3195f5afbd7f086da8a5e9e21f547d00c29c5",
+      "instruction_text": "i would like to have a plug and play high speed usb flash drive that is blue and black, the quantity should be 3 of 32g or 2 of 64g, and price lower than 40.00 dollars"
+    },
+    {
+      "goal_index": 85,
+      "goal_sha256": "4d1df15515a7fdcacc199b2e25fab596e119fd207588b51c9d959d51982db6db",
+      "instruction_text": "i need a chocolate coated wafers with a 4.41 ounce size. and i choose the caramel flavor, and price lower than 60.00 dollars"
+    },
+    {
+      "goal_index": 86,
+      "goal_sha256": "6afb6eaf0ce2d3f4144a763d63a52e9b4c58b6f2acc7f7da2145ee1f9a9d259b",
+      "instruction_text": "i need high speed hdmi cables that are 10 feet long and in a 5 pack, and price lower than 80.00 dollars"
+    },
+    {
+      "goal_index": 87,
+      "goal_sha256": "fc505553ec213b61ade8f5b580fb22878b4b88c88956ab94f7ff9e690ddefe68",
+      "instruction_text": "i want yellow machine washable batmerry summer bright decorative pillow covers, and price lower than 40.00 dollars"
+    },
+    {
+      "goal_index": 88,
+      "goal_sha256": "90a39e6232b1d0110048671d2c1aa755a78ca59d163ee3921de73b568b104481",
+      "instruction_text": "i'm looking for women's bootcut pants in the brand of tapata, and price lower than 80.00 dollars"
+    },
+    {
+      "goal_index": 89,
+      "goal_sha256": "87d922112bd242c481af426750929394462b4123668498f040f61ece64eec8b5",
+      "instruction_text": "i need khaki steel toe shoes in size 11 women, and price lower than 50.00 dollars"
+    },
+    {
+      "goal_index": 90,
+      "goal_sha256": "2b1c735f2d95b7bd28588737768c1fa4d3654c7b87989151d85839b12e7b7a5a",
+      "instruction_text": "i would like a 7 piece king comforter set decorated with flowers and is machine washable, and price lower than 90.00 dollars"
+    },
+    {
+      "goal_index": 91,
+      "goal_sha256": "3d0133f028e5259ee2a3ec5ae88937b06993c04011db828c4e053a71db5697e5",
+      "instruction_text": "im looking for a earbud headphones for stereo sound quality of style je-04b which will be more comfortable for me to use without disturbing others , and price lower than 50.00 dollars"
+    },
+    {
+      "goal_index": 92,
+      "goal_sha256": "858477dca69d13fd854e7f1c53491856ffe590b4417003ef7ed1f05a1ad94e8d",
+      "instruction_text": "i would like a blue 2.95 foot wire pendent light for my living room, and price lower than 210.00 dollars"
+    },
+    {
+      "goal_index": 93,
+      "goal_sha256": "7ffe6d50b8ea4f0390e061d8c69fb92e636e8b8a0a8f00f0bc636a02d5ec919f",
+      "instruction_text": "i am looking for wireless bluetooth speakers in the color a, and price lower than 130.00 dollars"
+    },
+    {
+      "goal_index": 94,
+      "goal_sha256": "06ec04e30c1fce73f755e243cba50e75f74f46912665b96c5d86a77dd5a41171",
+      "instruction_text": "i am looking for a x- large casual dresses with long sleeves, and price lower than 50.00 dollars"
+    },
+    {
+      "goal_index": 95,
+      "goal_sha256": "631ca6bb11bd24d2dd233becfc1e99b815f3bef551a38c18076c35cbf5e77078",
+      "instruction_text": "i would like to have a kosher gelato, and price lower than 140.00 dollars"
+    },
+    {
+      "goal_index": 96,
+      "goal_sha256": "32cd3b2075acf3a9c801808dcb59feae573cce3316b6257ba70bc070a562b9fb",
+      "instruction_text": "i want to find a pink women's quilted puffy vest that i can machine wash. the size needs to be extra large, and price lower than 70.00 dollars"
+    },
+    {
+      "goal_index": 97,
+      "goal_sha256": "4d766a9fb52fd12dd7e3a25a92015f706f626c7a2dc19c398520313da070036c",
+      "instruction_text": "looking for light weight fitbit versa bands for men women also choose size large, and price lower than 50.00 dollars"
+    },
+    {
+      "goal_index": 98,
+      "goal_sha256": "8f7699d2ff31d061c0880d43b3a29f93ed7cc3b500087e372803c6eb35aeacbc",
+      "instruction_text": "i need a fragrance free facial wash, and price lower than 50.00 dollars"
+    },
+    {
+      "goal_index": 99,
+      "goal_sha256": "1fb86f3bafabfd0950b120254bc290030bc3b359bee552e847d12a514231a6b6",
+      "instruction_text": "i would like to buy a 14 inch rose gold throw pillow cover for my living room, and price lower than 40.00 dollars"
+    },
+    {
+      "goal_index": 100,
+      "goal_sha256": "fab5bc2b83be8ef4950c0dc805eb474e6a2fc041dd43421b3ecb0b321df48c84",
+      "instruction_text": "i want a rca cable that is high def, and price lower than 40.00 dollars"
+    },
+    {
+      "goal_index": 101,
+      "goal_sha256": "e55e96f89145b85ededccbf68b32d032a25f6c42442e46514bf4c4df20f220f6",
+      "instruction_text": "i want mivofun 11pcs cute dinosaur cake toppers for a baby shower, and price lower than 40.00 dollars"
+    },
+    {
+      "goal_index": 102,
+      "goal_sha256": "d9ae3520ad7279b1581f44a90a7e76db2d96bd0b45d519c23dca229b6fbe468c",
+      "instruction_text": "i am in need of elastic waist winter active running joggers pants of small size and dark grey color, and price lower than 70.00 dollars"
+    },
+    {
+      "goal_index": 103,
+      "goal_sha256": "6af4a42c3fb5a6d28e18cf297ae397e8d70f27d0618ebfdc113aed6ff409ade1",
+      "instruction_text": "i am looking for a 32gb 1tb ssd pcle nvme m.2 size intel core minis"
+    },
+    {
+      "goal_index": 104,
+      "goal_sha256": "95a9756e5529594d76160eb9473d462d4e2f9bf0281148902737560b3a4b7e3b",
+      "instruction_text": "looking for an easy to deliver vintage barbecue sauce needle sleeve white women's halloween t-shirt by tomorrow? forgot to machine wash, and price lower than 50.00 dollars"
+    },
+    {
+      "goal_index": 105,
+      "goal_sha256": "468cdec6b62579f43a21d0517e89f8b70da1e79ea5739e0ca3f04901c43a3bc4",
+      "instruction_text": "i'm looking for black colored high quality hair removal cream it easy to use, and price lower than 40.00 dollars"
+    },
+    {
+      "goal_index": 106,
+      "goal_sha256": "507dc981cfb4dcceea32bde3eec414e74ca33c7ce096fbf6ac8d1a7062a09f01",
+      "instruction_text": "i am looking for a white platform bed that is easy to assemble, and price lower than 310.00 dollars"
+    },
+    {
+      "goal_index": 107,
+      "goal_sha256": "69a202610418dc11cc2a48b6cde577011ca7bd37f03a6475b22868dd27cd0a73",
+      "instruction_text": "i am looking for shoes that are grey and light blue with a rubber sole in a size 11-11.5 women, and price lower than 50.00 dollars"
+    },
+    {
+      "goal_index": 108,
+      "goal_sha256": "ea07fd9380d9cddcca5270c97c1cb0b0218cc8f7521f809942941aab18bf8f36",
+      "instruction_text": "i am looking for open toe sandals with an ankle strap. i want it in size 10, and price lower than 40.00 dollars"
+    },
+    {
+      "goal_index": 109,
+      "goal_sha256": "fd5bd39098e33abda96596ef223b5f0ddc1fccdac0cd3d58b5051a8ba86922f0",
+      "instruction_text": "i need a wall lamp with clear glass, and price lower than 200.00 dollars"
+    },
+    {
+      "goal_index": 110,
+      "goal_sha256": "750273426471d07e3982694323374749658ddaab86eda34936019dfa10570b0e",
+      "instruction_text": "i want a black and high quality cenglings womens cowl neck sweatshirt, and price lower than 40.00 dollars"
+    },
+    {
+      "goal_index": 111,
+      "goal_sha256": "e4cdafa2f9d70af49a8c487c38948c517e2a07ec6b4db5d94cf461ba2b65e37d",
+      "instruction_text": "i need a s20 tv sound bar that comes with a wireless bluetooth speaker, and price lower than 90.00 dollars"
+    },
+    {
+      "goal_index": 112,
+      "goal_sha256": "812a5d983906684c46eb2bb8d33ccc66f991995a5d2762b81b6020dfd4c9333f",
+      "instruction_text": "i am looking for a headphones case that is apple compatible and is navy blue colored, and price lower than 40.00 dollars"
+    },
+    {
+      "goal_index": 113,
+      "goal_sha256": "e2416ba82a806d569c977ac72f4cfd267b5568884e0cd800c09e75c1c5c1c887",
+      "instruction_text": "i need a pair of low rise yellow briefs in a large, and price lower than 20.00 dollars"
+    },
+    {
+      "goal_index": 114,
+      "goal_sha256": "f40b70de8a07d6c0662fa7b0a053def1ef5f4cd25ab25444225ed71754008a6c",
+      "instruction_text": "i want a easy install roller sades window tretment  size w45*h56 in color pastel blue, and price lower than 100.00 dollars"
+    },
+    {
+      "goal_index": 115,
+      "goal_sha256": "86357ddb745a9341967734e838f4b9f680e0d1c362009c3549e9a2f138e09b58",
+      "instruction_text": "i'd like to find a large pink tankini swimsuit that's loose-fitting, and price lower than 50.00 dollars"
+    },
+    {
+      "goal_index": 116,
+      "goal_sha256": "b631381018d39623c036056ee6f994c66ebae0f64e310eccacdf5bf37b34ccea",
+      "instruction_text": "i'm looking for a mini pc intel core desktop computer which supports with windows 11, and price lower than 750.00 dollars"
+    },
+    {
+      "goal_index": 117,
+      "goal_sha256": "2d596811838b7bb67945325bb08cb5d48fa5c43696b98f391c6e26766c95b671",
+      "instruction_text": "i'm looking for headphones are color it was wireless charging it was outside of noise cancellation, and price lower than 210.00 dollars"
+    },
+    {
+      "goal_index": 118,
+      "goal_sha256": "a129784ec0464848d37b0efc3f299c3cf5ce258b8f57fa2c813a6a7ac2b534b2",
+      "instruction_text": "i need a hair elastic for my hair extensions, and price lower than 70.00 dollars"
+    },
+    {
+      "goal_index": 119,
+      "goal_sha256": "26b3b0c7af6d45823348051b40d0821b8da00c1bc3f7c6ed46a8879697e412ae",
+      "instruction_text": "i want to find a loofah back scrubber with a long handle, and price lower than 40.00 dollars"
+    },
+    {
+      "goal_index": 120,
+      "goal_sha256": "0457173ec9494f93b8886b354c0be25984ebdfaede45312d2b424a8d55956762",
+      "instruction_text": "i am looking for a satin brass and frosted hallway light fixtures, and price lower than 70.00 dollars"
+    },
+    {
+      "goal_index": 121,
+      "goal_sha256": "6d45ab3494eb49b56fd1bb156eb66b00618608dcfcdeb13ca9a3f1acbbb541e8",
+      "instruction_text": "i need an oval soft rug that is easy to clean. also, it should be in eggplant purple color, and price lower than 290.00 dollars"
+    },
+    {
+      "goal_index": 122,
+      "goal_sha256": "2ece832589342f4dd278c369f4aad9d63ed1d7967bc4b092f3f0adfe9c48645d",
+      "instruction_text": "i need a gold plated hdmi adapter that is capable of 4k, and price lower than 40.00 dollars"
+    },
+    {
+      "goal_index": 123,
+      "goal_sha256": "b5719023a82a9caf587992af7d00f08bed14bf801785fb8fdc9310d833b3964c",
+      "instruction_text": "i need a smartwatch case that is compatible with apple and is in a size 45 mm, and price lower than 40.00 dollars"
+    },
+    {
+      "goal_index": 124,
+      "goal_sha256": "bab4a75a993ab6ba2791bd6c4f7b01f2b0101d8adda13d1c0e62591e6314017a",
+      "instruction_text": "i want to buy a box of savory fava bean snacks that are non-gmo.  find the pack that has 21 bags, and price lower than 130.00 dollars"
+    },
+    {
+      "goal_index": 125,
+      "goal_sha256": "2bafd04f0ee77b1cf7ddb173fa366a4bff4a10e1b9c69c6501f579dc422fe36b",
+      "instruction_text": "i need a leak proof travel bottle that is reusable and comes in 6 pack, and price lower than 50.00 dollars"
+    },
+    {
+      "goal_index": 126,
+      "goal_sha256": "6fa6b61aaa6b5100b88a63f029aecdfb7a983787943409f15c3a2a038536671b",
+      "instruction_text": "i am looking for the perfect gift, with quality ingredients like jack daniel's pecan, and price lower than 50.00 dollars"
+    },
+    {
+      "goal_index": 127,
+      "goal_sha256": "57b92d3d05603d14f6ae32e151935df0aacbc366098db4736c140a58099293ff",
+      "instruction_text": "i want to buy a skin cream which is fragrance free and it is for smoothing eye contour, and price lower than 60.00 dollars"
+    },
+    {
+      "goal_index": 128,
+      "goal_sha256": "1ee4b39cbdb62f47e73b03b4d2807fea8d045c79290aaf2f0e4595567486d8f6",
+      "instruction_text": "i want a 10 ounce bottle of low calorie fries seasonings, and price lower than 50.00 dollars"
+    },
+    {
+      "goal_index": 129,
+      "goal_sha256": "1261f4e3e2a26031aea32ed8cf154ab0cc015125025db0ff243af1fae2eb376b",
+      "instruction_text": "i need some teeth whitening that also freshens breath, and price lower than 30.00 dollars"
+    },
+    {
+      "goal_index": 130,
+      "goal_sha256": "a95dc0715bf99bb966baec207e4a94b993e133e6498b5ba8d31fcf1d17fbe6cf",
+      "instruction_text": "i'd like to find a pair of size-12 men's waterproof sneakers. it should have ethylene vinyl and ideally i want the color to be breen, and price lower than 150.00 dollars"
+    },
+    {
+      "goal_index": 131,
+      "goal_sha256": "e4b4da47de78c8977822045eec6b70d3a438bf699fbe9271d93af148a3c6c58e",
+      "instruction_text": "i am looking for super soft and fleece throw blanket in multi 10 color, and price lower than 70.00 dollars"
+    },
+    {
+      "goal_index": 132,
+      "goal_sha256": "19c3ba2852f863e6f3a4e578235853f6fc93f2652a6a16f452627a520308ef61",
+      "instruction_text": "find me a non alcoholic and zero sugar mocktail, and price lower than 60.00 dollars"
+    },
+    {
+      "goal_index": 133,
+      "goal_sha256": "16ae3133131e836f93dbc4313ea38aea73aced5ed6edc9b1dbd875da318dcef6",
+      "instruction_text": "i am interested in hand crafted hors d'oeuvres, and price lower than 440.00 dollars"
+    },
+    {
+      "goal_index": 134,
+      "goal_sha256": "227512621eaf5434a18c2e84b662353b804c034e2bbf8585b72a06be588f5a79",
+      "instruction_text": "i want a 512gb samsung galaxy tab s7 with usb port, and price lower than 770.00 dollars"
+    },
+    {
+      "goal_index": 135,
+      "goal_sha256": "9289ffb368d6307a94cedda5d2aff74ca090c0362892f6670722f1de605877bc",
+      "instruction_text": "i would like a xlarge plus red camellia fleece jacket that can be machine washed, and price lower than 120.00 dollars"
+    },
+    {
+      "goal_index": 136,
+      "goal_sha256": "b531c3ccf82871afa51086e9db428ca0b99691db181dc596969886a39514a463",
+      "instruction_text": "i am looking for an easy to clean jewelry box with 10 slots, and price lower than 50.00 dollars"
+    },
+    {
+      "goal_index": 137,
+      "goal_sha256": "5103f457e580371d84c49897a836ed06c569c84d1698c6cd4173a7d48929bdde",
+      "instruction_text": "i am looking for fuchsia colored comfortable fit levi's bomber jacket for women, and price lower than 110.00 dollars"
+    },
+    {
+      "goal_index": 138,
+      "goal_sha256": "66d021ee0e336231d2aa04dfbac863ae8e09535570870aa4a76a53537c1e9e75",
+      "instruction_text": "i am looking for a double sided white apron for shaving and trimming, and price lower than 50.00 dollars"
+    },
+    {
+      "goal_index": 139,
+      "goal_sha256": "44514be76ef80a5c4980b80df1a9e130ab07f67821b6f9410a4a56742e5b93fe",
+      "instruction_text": "i am looking for dark denim color ethylene vinyl ultra train of size 10, 3rd generation for  men, and price lower than 180.00 dollars"
+    },
+    {
+      "goal_index": 140,
+      "goal_sha256": "990ed6e59177b26b4af8de142f693c2914166698fd8efa2b8ef265024e33a122",
+      "instruction_text": "i'm looking for some women's sneakers with rubber soles.  make sure they are fabric and in a size 6.5, and price lower than 200.00 dollars"
+    },
+    {
+      "goal_index": 141,
+      "goal_sha256": "1dc37b9041c85765719bbadca4e6b0a87e0fbb05641bb4afa45f294df00fe6d1",
+      "instruction_text": "i want something that will let me use my cell phone hands free and has the kansas city chiefs' logo on it. it should allow for wireless charging, and price lower than 50.00 dollars"
+    },
+    {
+      "goal_index": 142,
+      "goal_sha256": "82e1e5862b062ba3c61b5084ff9f82fc293e1bb8cc1b5dcd25e2b18a7b05f49f",
+      "instruction_text": "i am looking for red storage benches that are made of engineered wood and are 90 by 40 by 45, and price lower than 130.00 dollars"
+    },
+    {
+      "goal_index": 143,
+      "goal_sha256": "b69001d6bbcf0d3a4c3fc99c45ebcdd52b85f3fca016f7d42af14184d8cc5d00",
+      "instruction_text": "i am looking for a high resolution background of size 9x6ftpolyester, and price lower than 80.00 dollars"
+    },
+    {
+      "goal_index": 144,
+      "goal_sha256": "3cfa01550a7d41bba80b00e5d82fdc3b3504dd5a6d11b9779560db57cbffd467",
+      "instruction_text": "i am looking for a 4 light vanity light with a contemporary design, and price lower than 160.00 dollars"
+    },
+    {
+      "goal_index": 145,
+      "goal_sha256": "e58f71df6b71a6f24eb9a988eae32f5675ef58c5e6148e5d20877516297698ea",
+      "instruction_text": "i'm looking to buy a high resolution marine animal themed backdrop. the size should be 12x10ft, and price lower than 110.00 dollars"
+    },
+    {
+      "goal_index": 146,
+      "goal_sha256": "08b632010f9e676d0338f6ba1c16627b9991609aeeaf351e7fc44da8f0390910",
+      "instruction_text": "i would like a 34 piece set of some long lasting press on nails, and price lower than 40.00 dollars"
+    },
+    {
+      "goal_index": 147,
+      "goal_sha256": "26d7b362b56df911446836ed422f23729d3c329e759a48a6e4d338f2b72c181b",
+      "instruction_text": "i'm looking for 8.12 fluid ounces of sulfate-free shampoo that helps prevent hair loss, and price lower than 60.00 dollars"
+    },
+    {
+      "goal_index": 148,
+      "goal_sha256": "fd1966f28c082d5420b4bb4f6a6d55f544b5da58f6a117525d86585c2972dc19",
+      "instruction_text": "i am looking for a square area rug that is grey and ivory and measures 2 feet by 2 inch by 17 feet, and price lower than 140.00 dollars"
+    },
+    {
+      "goal_index": 149,
+      "goal_sha256": "7ac53e33fcf8edb2b8b7e1474433287da2854b529bb5c8879d91f4c6e71f8e3d",
+      "instruction_text": "i would like a cruelty-free coconut scented shampoo, and price lower than 50.00 dollars"
+    },
+    {
+      "goal_index": 150,
+      "goal_sha256": "74df612875440be017ca06a83b80bd815e31795a40aa84a2f5cd9f9cf7aad905",
+      "instruction_text": "i would like a extra round 53mm brush for hair styling, and price lower than 50.00 dollars"
+    },
+    {
+      "goal_index": 151,
+      "goal_sha256": "9680904c2eb6b738e2df72152aba275dc083417e7da91952b7e68ef8b9620a8c",
+      "instruction_text": "i want machine washable dream catcher light proof curtains that is 55\" w x 45\" l, and price lower than 70.00 dollars"
+    },
+    {
+      "goal_index": 152,
+      "goal_sha256": "f49e476e9421ea7cf9275250bf1e7f7f21a8e534eba3335e94a62223a408b230",
+      "instruction_text": "find cookies made with high fructose, and price lower than 50.00 dollars"
+    },
+    {
+      "goal_index": 153,
+      "goal_sha256": "dcb9ae507e99a7ef4b3b9da7ac4eea271198308aca24e5ce186598e0349c0d40",
+      "instruction_text": "i'm looking for a black 2-ounce makeup storage jar that is leak proof and easy to use, and price lower than 20.00 dollars"
+    },
+    {
+      "goal_index": 154,
+      "goal_sha256": "7e41c1021733f7419f04e5c3a061fef2e3d37fce9dec0bf37b17ce49297e78e6",
+      "instruction_text": "i need a fleece jacket that is regular fit size 3x in the color of sea salt, and price lower than 100.00 dollars"
+    },
+    {
+      "goal_index": 155,
+      "goal_sha256": "32ccc61c83e1995a1b65f7965aa09464890c3c61d3c7b02532a6002dc2f9e083",
+      "instruction_text": "i'm looking for 20 inch double sided tape hair extensions of balayage color, and price lower than 60.00 dollars"
+    },
+    {
+      "goal_index": 156,
+      "goal_sha256": "41aa1cd64de573d4cb44866e63bfcc7699684dcfc399bbd8388ef5052488fde4",
+      "instruction_text": "i'm looking for a sturdy and solid dummy camera that's portable and made of stainless steel. also, choose the one that's easy to install, and price lower than 60.00 dollars"
+    },
+    {
+      "goal_index": 157,
+      "goal_sha256": "c8f3be1b4b7465fdabc0e3ad6b1bcf3f563ce6b142a3a0a9001727f5f4513983",
+      "instruction_text": "i am looking for ladies large size black06 colored jeans with straight leg fit, and price lower than 130.00 dollars"
+    },
+    {
+      "goal_index": 158,
+      "goal_sha256": "72f0ab6d82f321f02dea709587a8909d484b2a39720a8f4954d8e7b4b3563601",
+      "instruction_text": "show me flip flops that are unisex and made of ethylene vinyl. i am a size 6, and price lower than 60.00 dollars"
+    },
+    {
+      "goal_index": 159,
+      "goal_sha256": "48eab6faaf5d1a2d708b0dcd06e7e815b225c34070727ec3392694ea77ee1bec",
+      "instruction_text": "i am looking for a cruelty free shampoo for a hair salon. also choose 250ml pack and copper style, and price lower than 40.00 dollars"
+    },
+    {
+      "goal_index": 160,
+      "goal_sha256": "02265cb7e544422a6f7d688cfd35a11c858d3e1facc825f8babf5c25ba8f7cbd",
+      "instruction_text": "i am looking for a blue, fast charging usb cord that is compatible with apple and is 16 feet long, and price lower than 50.00 dollars"
+    },
+    {
+      "goal_index": 161,
+      "goal_sha256": "0ae812dc7aa8bccaaae80b61a38935ecd4814e487689996ce027617e11b9d64d",
+      "instruction_text": "i would like a blue long sleeved sweatshirt that is the size 4x-large, and price lower than 50.00 dollars"
+    },
+    {
+      "goal_index": 162,
+      "goal_sha256": "c44aa872027e4f6f972e2f1c5ecaf17879d15a5272879f4dbee518d2256ea9f1",
+      "instruction_text": "i want to find gluten free maple syrup that comes in a 32 fluid ounce bottle, and price lower than 170.00 dollars"
+    },
+    {
+      "goal_index": 163,
+      "goal_sha256": "70bd2fb86519898af1940c77fafb39c45781c9c96c9a42468f5d15321477b8e5",
+      "instruction_text": "i am looking for  a lace closure water booties & socks of red color, and price lower than 70.00 dollars"
+    },
+    {
+      "goal_index": 164,
+      "goal_sha256": "5129dc88e01fc6ddb83c6bb12eac7ea8c343222a3afa4e7121729ed908f43672",
+      "instruction_text": "i'm looking for breastfeeding shits maternity cloths double layer postpartum shirt, and price lower than 80.00 dollars"
+    },
+    {
+      "goal_index": 165,
+      "goal_sha256": "8e51d2b5f4aadf8e0210260de5c762fa7be2eb754d577cd2c62f8d37b321e742",
+      "instruction_text": "look for a pair of open toed sandals with an ankle strap. i want them in beige, size 8, and price lower than 130.00 dollars"
+    },
+    {
+      "goal_index": 166,
+      "goal_sha256": "d0d5749e6c126d1973646e40ff33bb63a158d4cf660ee780d2ceda05c9eb1b19",
+      "instruction_text": "i would like a large gray pair of leggings with a high waist, and price lower than 40.00 dollars"
+    },
+    {
+      "goal_index": 167,
+      "goal_sha256": "753286e3e59dfe89a61a2280acce31489afa7037030536a54d5982a63bac9c2f",
+      "instruction_text": "i need ten 12 foot high speed hdmi male to male cables, and price lower than 60.00 dollars"
+    },
+    {
+      "goal_index": 168,
+      "goal_sha256": "053146d2ad8478d5c916918b587b2cc483285c9fba019902a6a26923ddcd34a2",
+      "instruction_text": "i'm looking for navy colored large sized jackets it can use for winter warm, and price lower than 40.00 dollars"
+    },
+    {
+      "goal_index": 169,
+      "goal_sha256": "827dae5f9dbce6b1a5d5e26082dac7e1be1b2a925e6ccb1735032ad4cdb8d058",
+      "instruction_text": "i would like a anti perspirant, and price lower than 100.00 dollars"
+    },
+    {
+      "goal_index": 170,
+      "goal_sha256": "ab8fedeee1d0e652211c8dd95939edd0e3f50982122fc9c4245927fe0424b346",
+      "instruction_text": "i need an alcohol free hair fragrance that is island vanilla scent, and price lower than 40.00 dollars"
+    },
+    {
+      "goal_index": 171,
+      "goal_sha256": "ca6849ba8faf41f34981e0299676475a3443ae8782fe369e58a30853db34b324",
+      "instruction_text": "i want long lasting wrangler mens smoke storm cowboy cut jeans, and price lower than 60.00 dollars"
+    },
+    {
+      "goal_index": 172,
+      "goal_sha256": "9e2606532f6fb3159d06ec6a237de769d6770ab34536d34152e672befaa62c80",
+      "instruction_text": "i am looking for a sugar free energy drink of zero ultra flavor, and price lower than 130.00 dollars"
+    },
+    {
+      "goal_index": 173,
+      "goal_sha256": "228a02d8cc81b317ae099f0d67166ee2c911e33af9183298450e6df5203c50e3",
+      "instruction_text": "i'm looking for a car amp/speaker combo with 8 gauge amp wiring kit with four 450 watt kickers cs series with 2 way car coaxials and a 4 channel bluetooth amp included, and price lower than 230.00 dollars"
+    },
+    {
+      "goal_index": 174,
+      "goal_sha256": "ad09fea3b6e626b8706a49800dc248c8cafbbedf4e67834a515a979604be4399",
+      "instruction_text": "i'm looking for 2 pcs detangling hair brush for natural hair. also it's color should be in green-black, and price lower than 30.00 dollars"
+    },
+    {
+      "goal_index": 175,
+      "goal_sha256": "a29b35c4d25ada64d0282a341b083ee842021b5ac5bd00b9313783a8f1388841",
+      "instruction_text": "i want cheese pretzelhaus soft individually wrapped bavarian baked pretzels, and price lower than 60.00 dollars"
+    },
+    {
+      "goal_index": 176,
+      "goal_sha256": "da3c5fbe1ba97b44e0ff7d7018df582e0a2fa3170906d57942d954caace885e6",
+      "instruction_text": "i want to find a height-adjustable desk chair in the color petal green, and price lower than 120.00 dollars"
+    },
+    {
+      "goal_index": 177,
+      "goal_sha256": "d6cfbc927bee3aa930e8f32aed8a0af1574f97936599528483b4f9a99454b060",
+      "instruction_text": "i'm looking for wall art for hanging through the wall, and price lower than 40.00 dollars"
+    },
+    {
+      "goal_index": 178,
+      "goal_sha256": "39210def27cbd4def04021f84a4e3a02ed1299a5668f4852d0553fab58ab8253",
+      "instruction_text": "i need 15 pounds of non gmo beans, and price lower than 120.00 dollars"
+    },
+    {
+      "goal_index": 179,
+      "goal_sha256": "6fc158628178bccac25915a94f53e895b7156a677aeebdde4de258ca4499e67b",
+      "instruction_text": "i want mitchum roll-on anti-perspirant, and price lower than 140.00 dollars"
+    },
+    {
+      "goal_index": 180,
+      "goal_sha256": "5dac921117cb3d95c3a70bff24fec35540958103478a3a790f0bae44ee468f7b",
+      "instruction_text": "i'm looking for a lip pencil high pigmented for long lasting and melrose place color, and price lower than 50.00 dollars"
+    },
+    {
+      "goal_index": 181,
+      "goal_sha256": "908682b5988b756a2625b6af70c25be28ad27ee68b4ccdc239ec58fcd09dbdba",
+      "instruction_text": "i need a cosmetic bag that is easy to carry and is leopard print, and price lower than 70.00 dollars"
+    },
+    {
+      "goal_index": 182,
+      "goal_sha256": "65f7b8e66af107dec640252df549aaed4e22d52b2553405b4af2406cfc96034c",
+      "instruction_text": "i'm looking for d17(dedicated right, back) high performance 3-way tower speaker made with carbon fiber"
+    },
+    {
+      "goal_index": 183,
+      "goal_sha256": "0250d72202a2f2f4f4e21d7f690eb51a8c402cbee2bd28cf1cfd0774e130e0a4",
+      "instruction_text": "i would like a 3.52 ounce packet of kat a kat seasoning that's easy to use, and price lower than 50.00 dollars"
+    },
+    {
+      "goal_index": 184,
+      "goal_sha256": "597af81dd4eab197c2db3971912d0c8993465507119e617fdd3cb45049ed0c02",
+      "instruction_text": "i am looking to buy a paraben free makeup remover containing hyaluronic acid, and price lower than 130.00 dollars"
+    },
+    {
+      "goal_index": 185,
+      "goal_sha256": "c32930b0255b8ba5cff85653d718a09ca17c92e63bf7f6c582e78ab0e664571a",
+      "instruction_text": "i am looking for x-large mint green snow boots that have a rubber outsole, and price lower than 40.00 dollars"
+    },
+    {
+      "goal_index": 186,
+      "goal_sha256": "7e42693db5950cf9573b6b34017765376e6ecafc407ee2bd01a93fc4893ca1f1",
+      "instruction_text": "i am looking for a short sleeve top for a teenage girl. it should in xx-large size, and price lower than 30.00 dollars"
+    },
+    {
+      "goal_index": 187,
+      "goal_sha256": "4a10e7984091b38f4072b9ff6243c402a0afd237824c9afc51cbfc73263b5686",
+      "instruction_text": "i'm looking for a dining room table that's made out of solid wood and easy to assemble, and price lower than 240.00 dollars"
+    },
+    {
+      "goal_index": 188,
+      "goal_sha256": "db4a64add1440e6ddd5114127ed32d393b264448b80456d7694ac3f2ca27aa14",
+      "instruction_text": "i am looking for a wall mounted mid-century sconce that preferably has a plug in 2 pack, and price lower than 180.00 dollars"
+    },
+    {
+      "goal_index": 189,
+      "goal_sha256": "0bae8c48a7fc753ae2d5ed48a791a5bd61911eff5d72d1e9198e63190d3cd838",
+      "instruction_text": "i want to get a super soft blue fleece throw that's 50 inches by 63 inches, and price lower than 50.00 dollars"
+    },
+    {
+      "goal_index": 190,
+      "goal_sha256": "02d0d9c420b86d43d70e082cc872dadac298d43ca023825456234771e82a4a05",
+      "instruction_text": "i would like a ac adapter that has output protection, and price lower than 50.00 dollars"
+    },
+    {
+      "goal_index": 191,
+      "goal_sha256": "e3d51c2d4b6703fe7f871ef1896af494e78d3fb19717a745e73cc4b1f6924422",
+      "instruction_text": "storage ottoman bench with hinged lid which size 40*40*43cm, and price lower than 110.00 dollars"
+    },
+    {
+      "goal_index": 192,
+      "goal_sha256": "c2d4ff0e5533efebe0381c399d1f2207b641dd7a2bbe0312a82fe36d66ed403c",
+      "instruction_text": "i am interested in a non slip area rug that is 70 by 55 inch, and price lower than 40.00 dollars"
+    },
+    {
+      "goal_index": 193,
+      "goal_sha256": "e8b8b3aa214608c9fffd9a4759db302e42a6383f976df8ddb8f5047957fb529d",
+      "instruction_text": "i'm looking for an 8-pack of 8-inch portable hair extensions. the color needs to be wine red, and price lower than 40.00 dollars"
+    },
+    {
+      "goal_index": 194,
+      "goal_sha256": "0aee93ca482216f20b75d5d6ab7f49d19006db6afd0e951bc466b6021511460c",
+      "instruction_text": "i need a large sized coat with long sleeves, and price lower than 70.00 dollars"
+    },
+    {
+      "goal_index": 195,
+      "goal_sha256": "eb1b2a242c39cd147e94fcd19a7599ae258a5164fb0f199fdc7f69007e47a9f3",
+      "instruction_text": "i would like 36 packets of black tea bags that are usda certified organic, and price lower than 40.00 dollars"
+    },
+    {
+      "goal_index": 196,
+      "goal_sha256": "6acb2ae152b9fbfbb6c1e6c8b7a27663abc4e82b311217bf02af6155456c11d4",
+      "instruction_text": "i am looking for a high quality purple ice roller skin care tool kit, and price lower than 40.00 dollars"
+    },
+    {
+      "goal_index": 197,
+      "goal_sha256": "910f695e9edd4a7626c0ed3f755b2769e240a8d6a28388d289e37d8f78aa261b",
+      "instruction_text": "i am looking for a star wars the mandalorian t-shirt which is machine washable and is in the baby blue color, and price lower than 60.00 dollars"
+    },
+    {
+      "goal_index": 198,
+      "goal_sha256": "5dbf9b8a35ef3d609c7ddca61edf64164b537259353dc18cf30c773902986eb1",
+      "instruction_text": "i'm looking for rubber stole shoes for light wearing it was brown in color, and price lower than 80.00 dollars"
+    },
+    {
+      "goal_index": 199,
+      "goal_sha256": "2f836a982371c5dd6a274f65f3861538619fcb59c7de46d6d55f26dc7e7f8f86",
+      "instruction_text": "i would like some old fashioned summer sausage, and price lower than 40.00 dollars"
+    },
+    {
+      "goal_index": 200,
+      "goal_sha256": "c8ee7faaf7c9b951efea816f37a2d48db9952bb672160dc3029ae7dd058ae637",
+      "instruction_text": "i would like a small blue blazer that can be dry cleaned, and price lower than 100.00 dollars"
+    },
+    {
+      "goal_index": 201,
+      "goal_sha256": "8248954db8020e7dddc3ff68db41318d264a6e373134381d0bcda86013886278",
+      "instruction_text": "i'm looking for curtains for living room and it color was white, and price lower than 60.00 dollars"
+    },
+    {
+      "goal_index": 202,
+      "goal_sha256": "734a9fb4474ac0d846bba98c845a2e4cf21e98b401f974ecb5395a57a5527484",
+      "instruction_text": "i am looking for a ready to use cocktail mixer that is authentic michelada mix and is 33.8 fl oz, and price lower than 30.00 dollars"
+    },
+    {
+      "goal_index": 203,
+      "goal_sha256": "cadd06b70f3ecfecc6ff0238690e85d24da81b86832e92c56ca50030758ed244",
+      "instruction_text": "i want to find white blackout shades that are 66 inches in width and 66 inches in height. they need to be easy to install, and price lower than 110.00 dollars"
+    },
+    {
+      "goal_index": 204,
+      "goal_sha256": "0df02d426a9f73c057c490c4439cf4595bf71a623a8544680f7c6bb50d320025",
+      "instruction_text": "i am looking for men classic fit t-shirt. please choose black color, and price lower than 60.00 dollars"
+    },
+    {
+      "goal_index": 205,
+      "goal_sha256": "2ee724d9ea5fe6ef8bf1f26d85c00a55ecae03c9a18caaa031d873394117380a",
+      "instruction_text": "i need to buy a vanity light in brushed nickel with two lights, and price lower than 190.00 dollars"
+    },
+    {
+      "goal_index": 206,
+      "goal_sha256": "a268dc277e12f9986e2901dcf5301dc7cf0f749b62ac4d7252d5df0f6abad3ca",
+      "instruction_text": "i am looking for human hair toppers for hair loss. i would like something in a medium brown, and price lower than 120.00 dollars"
+    },
+    {
+      "goal_index": 207,
+      "goal_sha256": "63fe08732de304aa91198059ecd77391daac653965e48b8833008eb1533f41ca",
+      "instruction_text": "i need a ready to hang wall mirror in a champagne sunburst color, and price lower than 70.00 dollars"
+    },
+    {
+      "goal_index": 208,
+      "goal_sha256": "e596bd95564da8742db3f1ce6dd800278c3ac0a8bc60594cf43401c51d765114",
+      "instruction_text": "i need 3v long lasting and high performance batteries in a pack of 6, and price lower than 50.00 dollars"
+    },
+    {
+      "goal_index": 209,
+      "goal_sha256": "ce2b81ea0502984c9f976862aad8ba87228e32efd3342c14ef2d812f9de61c0a",
+      "instruction_text": "i am looking for a 6x9 ft backgrounds for digital photography, and price lower than 120.00 dollars"
+    },
+    {
+      "goal_index": 210,
+      "goal_sha256": "5a013c839cbaf9c5ab851950a46279a04f438f03713328d146127fc4919e670d",
+      "instruction_text": "i'm looking for a meals with zero added sugar and also free from gluten and bpa. also, choose applesauce flavored one, and price lower than 50.00 dollars"
+    },
+    {
+      "goal_index": 211,
+      "goal_sha256": "c386b619049d6b783685f6f114adda414dd0e15d46f3fd9edc485a3a02541eda",
+      "instruction_text": "i want to buy a mid-back drafting chair that has an adjustable height and lumbar support. look for a blue one, and price lower than 160.00 dollars"
+    },
+    {
+      "goal_index": 212,
+      "goal_sha256": "1b0450f7cb8c7233f17fcb50346656e9ad69eaf23edfc0e222bf6356ad88b60a",
+      "instruction_text": "i am looking for wireless bluetooth headphones that are easy to use, and price lower than 120.00 dollars"
+    },
+    {
+      "goal_index": 213,
+      "goal_sha256": "5e8cd0bb7b2ecfff54360db7c971f2166d0db6ecaf198de04461fbd75cd67925",
+      "instruction_text": "i want a 24w led light with high power lamp. it should mount on a wall, and price lower than 130.00 dollars"
+    },
+    {
+      "goal_index": 214,
+      "goal_sha256": "5280989147173e34e997ea2961e3fc3b4a32f49c1662eae7810392f4044ae23f",
+      "instruction_text": "i'm looking for a pair of water resistant brown pants, and price lower than 50.00 dollars"
+    },
+    {
+      "goal_index": 215,
+      "goal_sha256": "3495ee79231f6ec4b23ce74fee337835a3b95e9c3985366dff512478e4047b36",
+      "instruction_text": "i need a fluoride free toothpaste for fresh breath. i will need a pack of 4 in 3.5 ounce size, and price lower than 50.00 dollars"
+    },
+    {
+      "goal_index": 216,
+      "goal_sha256": "3e70c7729667566661fcfe723d7ae651450d31326ab8ad7c3eb58f8f71e2eb81",
+      "instruction_text": "i want to find a pack of nine low-carb cheese bites from trader joe's, and price lower than 40.00 dollars"
+    },
+    {
+      "goal_index": 217,
+      "goal_sha256": "a4c0a3c0116f10d82b2e48c8253cee359b9ea63fbc0d75036afdb565a83bdbe9",
+      "instruction_text": "i want to buy canvas prints for the living room preferably having airplanes on them, and price lower than 140.00 dollars"
+    },
+    {
+      "goal_index": 218,
+      "goal_sha256": "c1fb13f8991da8d59fa239e7222a44d41e8be7879cdad7b66100730155045fc3",
+      "instruction_text": "i would like a ready hang poster that has blue roads, and price lower than 180.00 dollars"
+    },
+    {
+      "goal_index": 219,
+      "goal_sha256": "da3ec0862f8119af9908838b258c7aa645d4ccb92009a58b2174cdd43521acf5",
+      "instruction_text": "i want to get a two pack vanity light with brushed nickel finish in color type 2, and price lower than 70.00 dollars"
+    },
+    {
+      "goal_index": 220,
+      "goal_sha256": "66287ccd28bd5237b16e85c7c11713b0b309a34bbe1b2630389d254535de2b65",
+      "instruction_text": "i would like a medium sized black sleep set that is light weight, and price lower than 50.00 dollars"
+    },
+    {
+      "goal_index": 221,
+      "goal_sha256": "ab9417b57abfc289d7826352455eb465da2cb677573c771b0b2440042a95bf04",
+      "instruction_text": "i need to buy a ready to hang art print that's sixteen by twenty-four inches. look for one that has women and palm leaves on it, and price lower than 40.00 dollars"
+    },
+    {
+      "goal_index": 222,
+      "goal_sha256": "afcced5936083e0d300758e5617a97725baf6cdaac0d3650fc74e951337cfd5d",
+      "instruction_text": "i want a monocular telescope for bird watching, and price lower than 120.00 dollars"
+    },
+    {
+      "goal_index": 223,
+      "goal_sha256": "9dcf08b7f3f8a19e3cc95a4b9f3ad707d842f8932b2bc1602d0ff75de765b374",
+      "instruction_text": "i'm looking for a topper for a birthday cake, and price lower than 20.00 dollars"
+    },
+    {
+      "goal_index": 224,
+      "goal_sha256": "2979a2171b042ff4a66250f07928803a557c7365cfab334e4e3c81c1d4960a81",
+      "instruction_text": "i want a juniper and fully assembled rivet decatur modern upholstered dining chair, and price lower than 320.00 dollars"
+    },
+    {
+      "goal_index": 225,
+      "goal_sha256": "8f6e693975c616fb8e4e69e259e6d10d532235cb8cc52c9d18eaa66f95f93c4e",
+      "instruction_text": "i am looking for a organic and gluten free almond nut butter with kosher certified. also choose chocolate favor and 4-pack size, and price lower than 70.00 dollars"
+    },
+    {
+      "goal_index": 226,
+      "goal_sha256": "18dc5a70e42f17e97fa70c8714579bd1defa5bc9c367a728f00c8222a1b58cd4",
+      "instruction_text": "i'm looking for a solid wood bookcase in espresso color. would prefer it to be in the size of 5-shelf, and price lower than 160.00 dollars"
+    },
+    {
+      "goal_index": 227,
+      "goal_sha256": "779caad33b017ba3623a8768581cb13a30375964d69a8c929fab4b16948389d4",
+      "instruction_text": "i am looking fort a travel size skincare kit with tea tree toner, and price lower than 30.00 dollars"
+    },
+    {
+      "goal_index": 228,
+      "goal_sha256": "0e6e680883a2e8811d722e31d395bf8167891d92b1accb6c928ba3559e38ba39",
+      "instruction_text": "i'm looking for cake toppers for a birthday party, and price lower than 50.00 dollars"
+    },
+    {
+      "goal_index": 229,
+      "goal_sha256": "88226db12bcdf39788601997c979e464a8c2c112c2975497a255798322d55534",
+      "instruction_text": "i am looking for red popcorn boxes for a baby shower, and price lower than 40.00 dollars"
+    },
+    {
+      "goal_index": 230,
+      "goal_sha256": "4704b97cff137d5279f257f8c4de56a5331a10a34cf2bcb826061dc73cfec879",
+      "instruction_text": "i am looking for resilient memory foam loveseat sofa"
+    },
+    {
+      "goal_index": 231,
+      "goal_sha256": "ee4564e6a6647be12f6cf456b5dc965603859213609a1e33b656004dd3bce9f7",
+      "instruction_text": "get me some twin-sized flat sheets in gray, and price lower than 60.00 dollars"
+    },
+    {
+      "goal_index": 232,
+      "goal_sha256": "d8047cf727c985d936926fa8d13502342c9cbd5e3994a26a82cad66d4fc6e94f",
+      "instruction_text": "i'm looking for a 10 pack of hydrating sheet masks with anti aging properties. i would like to select the spa hairband option, and price lower than 50.00 dollars"
+    },
+    {
+      "goal_index": 233,
+      "goal_sha256": "fbc5d2c83fd8bfa8f38e8bf333f41cd5f864eb28c2131087553f79ea1cc82372",
+      "instruction_text": "i am looking for a blue ottomans for living room, and price lower than 130.00 dollars"
+    },
+    {
+      "goal_index": 234,
+      "goal_sha256": "116c1a507f895bfb6743f53cf2ecb0eee9f707893ce9063188269db53018f42e",
+      "instruction_text": "i am looking for a straight leg jeans in sandblast light color. also in 40w x 34l size, and price lower than 190.00 dollars"
+    },
+    {
+      "goal_index": 235,
+      "goal_sha256": "8a39c768a7d305d278deb5197955bdfeca25a6cfc835f23b64661c08501b24d0",
+      "instruction_text": "i need a faux fur white andeworld swivel barrel chair for my living room, and price lower than 310.00 dollars"
+    },
+    {
+      "goal_index": 236,
+      "goal_sha256": "9f7e69b56eef1dc51d19994a961aa0d21dc5f87060de9a4850fbedfed864e534",
+      "instruction_text": "i need an evening gown in purple that is a size four, and price lower than 120.00 dollars"
+    },
+    {
+      "goal_index": 237,
+      "goal_sha256": "f1e562469c827624cb94c6b1f6c375403714a2cfca80afdf2e4273b9b7a5a566",
+      "instruction_text": "i am looking for a 12 ounce jar of raspberry preserve that is nut and gluten free, and price lower than 140.00 dollars"
+    },
+    {
+      "goal_index": 238,
+      "goal_sha256": "0bce0a183b82c2a25b7d27eee6e9f7711fd293f853378073938abc9e069797c0",
+      "instruction_text": "i want an officially licensed white marvel guardians of the galaxy retro logo tee, and price lower than 60.00 dollars"
+    },
+    {
+      "goal_index": 239,
+      "goal_sha256": "84ba52fd7ea8234cca902a07fb5ebcf9da0fa017b6882e5b4cf38b8fbeceda09",
+      "instruction_text": "i need some extra large butt lifting leggings in mint green, and price lower than 40.00 dollars"
+    },
+    {
+      "goal_index": 240,
+      "goal_sha256": "c85f0668ae8a549269bc65257d9dac0869be5ebc8215210e6aca787066642dff",
+      "instruction_text": "i want to buy some chunky red glitter. make sure it's non-toxic and eco-friendly, and price lower than 40.00 dollars"
+    },
+    {
+      "goal_index": 241,
+      "goal_sha256": "3f5ef6245c96e6b39b49252f6f29e4b0e5d335cf4c97c9336341ff9093dcc5d7",
+      "instruction_text": "i want a highly pigmented lip gloss that is in the color r901, and price lower than 40.00 dollars"
+    },
+    {
+      "goal_index": 242,
+      "goal_sha256": "92c5d027a5341ca08e6d53d4da08265d47c818aaf5f68ad5ef40bcb29dddbbc4",
+      "instruction_text": "i want a high quality tooth brush for my sensitive teeth. it should be pale yellow in color, and price lower than 40.00 dollars"
+    },
+    {
+      "goal_index": 243,
+      "goal_sha256": "d51effee465545bf60f8536337d64ebebe7b74be20756b1805e5ce9e324a34ec",
+      "instruction_text": "i want a pack of wall lamps for a living room, and price lower than 70.00 dollars"
+    },
+    {
+      "goal_index": 244,
+      "goal_sha256": "513c956f5cb632dd927cc01a893f9a75386de1e33903a087a1e2343cd45b9127",
+      "instruction_text": "i'm looking for an easy carry and light weight photography backdrop. also, choose the 7x5ft size, and price lower than 40.00 dollars"
+    },
+    {
+      "goal_index": 245,
+      "goal_sha256": "63cf09636935ca1dd570be4d4a1f2dff08ddb78b4c36952f895728b9d160ba9a",
+      "instruction_text": "i'm looking for a ottoman 6 seater sofa"
+    },
+    {
+      "goal_index": 246,
+      "goal_sha256": "e0c6c52121303f0e961ec8cb4fa2f7d3aee6ab636e17b38eb8f2b89ff5cf8b24",
+      "instruction_text": "i would like a solid wood sideboard, and price lower than 980.00 dollars"
+    },
+    {
+      "goal_index": 247,
+      "goal_sha256": "d791808a042513adcf670414cf52d8800926e0da89c02b3fc5243267ac7ab0e8",
+      "instruction_text": "i want a black 1080p hd mini projector, and price lower than 140.00 dollars"
+    },
+    {
+      "goal_index": 248,
+      "goal_sha256": "75fb26d0707c39367b1c0bf5ab50015d1f4ca532c4859ed5b76c9e61bddf7046",
+      "instruction_text": "please select a 1 pound, certified organic sea salt shaker in the flavor triple blend flakes, and price lower than 40.00 dollars"
+    },
+    {
+      "goal_index": 249,
+      "goal_sha256": "daed6b5fa9df769b5d0b8ddd76316366a3884caadfb1333a57918cf8a8e1c155",
+      "instruction_text": "get me some black lounge pants with an elastic waistband, and price lower than 20.00 dollars"
+    },
+    {
+      "goal_index": 250,
+      "goal_sha256": "0d26953d7485ba641af466b3868947650c34611086a5aecc57a7d04f735bbe8c",
+      "instruction_text": "i want a x-large short sleeve mayntop womens t-shirt, and price lower than 50.00 dollars"
+    },
+    {
+      "goal_index": 251,
+      "goal_sha256": "e305b9dce8b413ff555e6e94e1b1df48edf821c0b16d3a67bae9ae31c6e9acb0",
+      "instruction_text": "i'm looking for a queen size bed with a box spring, and price lower than 580.00 dollars"
+    },
+    {
+      "goal_index": 252,
+      "goal_sha256": "58fc1b57a7d0be478c4954ba33877b7533d1f65e7788adc472268d41c798d744",
+      "instruction_text": "i want to find a gold pendant light for my living room ceiling, and price lower than 60.00 dollars"
+    },
+    {
+      "goal_index": 253,
+      "goal_sha256": "275a1569b701defe47762f7dfbf0f0b4e5baa1a2212798c0210a89339e902ced",
+      "instruction_text": "i'm looking for an officially licensed minecraft alex with bow taking aim tshirt in youth size and heather grey color, and price lower than 50.00 dollars"
+    },
+    {
+      "goal_index": 254,
+      "goal_sha256": "c404edbd448ab882c273e46988b4eaf339a8b802afa34d0c2bc3d10ff704debe",
+      "instruction_text": "i need multicolored hair bands that are non toxic, and price lower than 40.00 dollars"
+    },
+    {
+      "goal_index": 255,
+      "goal_sha256": "de6cd2325d3893af81615137226dc11b50746004ba7d3912058daed9a310041d",
+      "instruction_text": "i need a 38mm smartwatch case with glass screen, and price lower than 40.00 dollars"
+    },
+    {
+      "goal_index": 256,
+      "goal_sha256": "39c17484aa7689b13311e62f6e155257673cfdc5b3b74b2ae2609c846ba82f82",
+      "instruction_text": "buy me some coffee brown hair dye. make sure it only contains natural ingredients, and price lower than 40.00 dollars"
+    },
+    {
+      "goal_index": 257,
+      "goal_sha256": "782ece8fbab2fbd2ee88eb2f66d1e8633bc875705630f2dfad4d17fce422c2b1",
+      "instruction_text": "i want a xx-large sousuoty short sleeve shirt, and price lower than 50.00 dollars"
+    },
+    {
+      "goal_index": 258,
+      "goal_sha256": "ca86bf56917b1d63e544213ca566f4f784ac3050eb9fdcfdc1edb3d456173185",
+      "instruction_text": "i'm looking for led tv stand for 70 inch, and price lower than 180.00 dollars"
+    },
+    {
+      "goal_index": 259,
+      "goal_sha256": "e17d6c0a5f21c3d8f13c4b696e44eded098634772028454751b5446c596d8b01",
+      "instruction_text": "i'm looking for some gluten free jelly with black sesames, and price lower than 50.00 dollars"
+    },
+    {
+      "goal_index": 260,
+      "goal_sha256": "630a2b5417a8859ec9dd51a9a7bfa29ab548b04171387a986f95cd26d3fabeed",
+      "instruction_text": "i'm looking for furniture to make my living room and dinning room so nice"
+    },
+    {
+      "goal_index": 261,
+      "goal_sha256": "54e737cac1025e569df8038476dcef93e804fd83923d57d73d9fdbec9e6acfad",
+      "instruction_text": "this brand eurofase 23271-036 zuma frosted tube glass with cast metal frame sconce wall mount lighting, 2-light 80 total watts, 13\"h x 5\"w, bronze finish for my living room, help me, and price lower than 120.00 dollars"
+    },
+    {
+      "goal_index": 262,
+      "goal_sha256": "ac8e9f398b766cbae2299f3737f317088b9de5388046d5191ec1fed40d415ed0",
+      "instruction_text": "i want a pair of black men's work shoes that are slip resistant. they must come in a size 9.5 and be extra wide, and price lower than 160.00 dollars"
+    },
+    {
+      "goal_index": 263,
+      "goal_sha256": "251eea2bbddb5da0f0c13aa2ff241d64f60243d1bcb69374dc624111d79b90be",
+      "instruction_text": "what xx-large short sleeved t-shirts do you have that are loose fitting and for teen girls?, and price lower than 40.00 dollars"
+    },
+    {
+      "goal_index": 264,
+      "goal_sha256": "697340bc5a559c7d185dba052348861fd3d13f0aa357bbcea768c708d8645374",
+      "instruction_text": "i am looking for spicy fried fish seasoning that is also suitable for vegetarians and easy to use, and price lower than 130.00 dollars"
+    },
+    {
+      "goal_index": 265,
+      "goal_sha256": "e42e8e6581dc2f6906aae37c943540ce4de66af4759ca8bd9190a456e4e69b34",
+      "instruction_text": "i would like some travel bottles for my cosmetics, and price lower than 20.00 dollars"
+    },
+    {
+      "goal_index": 266,
+      "goal_sha256": "7da6bc802c527f38c29b406b29f1247e8ad3df45114652b0d52c61c2b0ece8b4",
+      "instruction_text": "i would like a car in dash gps device that is easy to install, and price lower than 270.00 dollars"
+    },
+    {
+      "goal_index": 267,
+      "goal_sha256": "0b5d45cd031a6e066165634324927e4bb70bd90c6e7c5ddb4bac0272278b27af",
+      "instruction_text": "i am looking for a solid wood light golden brown stained bookcase, and price lower than 250.00 dollars"
+    },
+    {
+      "goal_index": 268,
+      "goal_sha256": "2a9f09af0e3d4b327a3506a7f60f87dc530b2b2d2a62a82e0f1b5c4886ce46c5",
+      "instruction_text": "i would like a 1 tb nvme with 64 gig quad core desktop mini, and price lower than 700.00 dollars"
+    },
+    {
+      "goal_index": 269,
+      "goal_sha256": "6a3e63137e4fa9aad7cd447ef7ed31a8d8ff815f57ad643f792c9b13f96fcdc1",
+      "instruction_text": "i'm looking for teeth cleansing for teeth whitening and the fresh breathe, and price lower than 40.00 dollars"
+    },
+    {
+      "goal_index": 270,
+      "goal_sha256": "7d1d647ce92ab2f8e72ae1e45fbe22ce7451e7241222e8a975c7650223861eb9",
+      "instruction_text": "i need white walking shoes with arch support, and price lower than 40.00 dollars"
+    },
+    {
+      "goal_index": 271,
+      "goal_sha256": "b4f07a1e07d7f7a0186aef2c6a7b517878d11a2221f4f705da408671ecef9910",
+      "instruction_text": "get me a forty pack of old-fashioned popcorn, and price lower than 90.00 dollars"
+    },
+    {
+      "goal_index": 272,
+      "goal_sha256": "1bcdb64424995d2a14b5dfc334aa1f536398f2d273c43ad7b51f6b3fea571105",
+      "instruction_text": "i need some colorful wall dividers to arrange my living room for a holiday, and price lower than 330.00 dollars"
+    },
+    {
+      "goal_index": 273,
+      "goal_sha256": "d4afeca3849c7f00dfcbf068afa2aebb909d2c34fc8bd038169056fa7483fbb6",
+      "instruction_text": "find a high protein puffed snack to be made on a brick oven, and price lower than 60.00 dollars"
+    },
+    {
+      "goal_index": 274,
+      "goal_sha256": "6ad44ff516825ed39439730633af5aff3ee6f77cfbc8551f8ecc3a3a3b99c4d6",
+      "instruction_text": "i’m looking for a large multi-pack of sweetener that contains no sugar; please pick the blue raspberry flavour, and price lower than 60.00 dollars"
+    },
+    {
+      "goal_index": 275,
+      "goal_sha256": "050818fa177d17ac3e8ccbfd9d0b7e0ee21e7adec68ee0b2ef09779ddf556194",
+      "instruction_text": "i'm looking for oil free hair conditioner that offers a cruelty free certification, and price lower than 40.00 dollars"
+    },
+    {
+      "goal_index": 276,
+      "goal_sha256": "f31f49da4b11991fbc9c100e7e5f8c6f7511e90014b8eb681223333ef4668ac8",
+      "instruction_text": "i want pink hair styling parting combs for braids, and price lower than 50.00 dollars"
+    },
+    {
+      "goal_index": 277,
+      "goal_sha256": "a9003fca9664f50401883d4ad18444769a40d8acc431ca14cd6f424a8bb4c387",
+      "instruction_text": "i am looking for a pack of 5 dark blonde hair dye touch up spray, and price lower than 130.00 dollars"
+    },
+    {
+      "goal_index": 278,
+      "goal_sha256": "cf1e943a6d76f424d5c4cd04bba2106d52e436e1037a07a2ec8cbd28d247e63c",
+      "instruction_text": "i'm looking for plug play electronics for computer components and need to buy it, and price lower than 190.00 dollars"
+    },
+    {
+      "goal_index": 279,
+      "goal_sha256": "d8c83923fb8dac2ca9d5f283bef35c61665dee135b435959b59f0fd2d4638cc9",
+      "instruction_text": "i need a blue sherpa wool sweatshirt, and price lower than 80.00 dollars"
+    },
+    {
+      "goal_index": 280,
+      "goal_sha256": "64c33d3ba3343f2392fc0c6820970978a979c936b10772c48e252da1ba4a0613",
+      "instruction_text": "buy me a 4x-large sized long sleeved shirt made from soft material in g05#black color, and price lower than 30.00 dollars"
+    },
+    {
+      "goal_index": 281,
+      "goal_sha256": "2ad3c50a28afa0af862da6948dcf4c73545b86ca3b06bccf434e239438913d1d",
+      "instruction_text": "i want to find eco-friendly candles made out of soy wax in the ms. coco color, and price lower than 40.00 dollars"
+    },
+    {
+      "goal_index": 282,
+      "goal_sha256": "63394c704a249057dfabfac2b556693ca7451ab0ec7987fbedbff852aa0ef1d7",
+      "instruction_text": "i need a gray vanity bench with metal legs, and price lower than 70.00 dollars"
+    },
+    {
+      "goal_index": 283,
+      "goal_sha256": "32334da26596c70347804c3d431358457c003baa321686c1c81dd0e47cc7efc2",
+      "instruction_text": "i need a gift basket with milk chocolate covered peanuts, and price lower than 130.00 dollars"
+    },
+    {
+      "goal_index": 284,
+      "goal_sha256": "d6ce37feb537cee0216befa9586670715606b7439902ad2e12f8010ce7e65a38",
+      "instruction_text": "i would like sesame seeds that are gluten free and ginger flavored as well as being .8 oz, and price lower than 20.00 dollars"
+    },
+    {
+      "goal_index": 285,
+      "goal_sha256": "18bceb5c6322c2b7e0e5765542eb349d7911129d03dc5c7646bb5f22a7788216",
+      "instruction_text": "i am interested in buying ground seeds which are gmo free, and fat free which have himalayan pink salt fine grind flavor and are in pack of 1 of 2.6 ounce, and price lower than 20.00 dollars"
+    },
+    {
+      "goal_index": 286,
+      "goal_sha256": "9dd0dc3460dc9db2628ed64071264caca56461259f95e4436c42495ef44c52ec",
+      "instruction_text": "i would like to buy men's briefs which is easy care and of stripe color and a unique design, and price lower than 50.00 dollars"
+    },
+    {
+      "goal_index": 287,
+      "goal_sha256": "7e0357e9faa63420d886622efb6e17cef4d92d48c8a658e3199795259ea1260f",
+      "instruction_text": "shop for a light weight windows desktop pc, and price lower than 190.00 dollars"
+    },
+    {
+      "goal_index": 288,
+      "goal_sha256": "161549cb30010b387402eda90c9eb3b18586ee0818a320b4ee7231ca33a32126",
+      "instruction_text": "i am looking for some hair pins that are rose gold, and price lower than 20.00 dollars"
+    },
+    {
+      "goal_index": 289,
+      "goal_sha256": "83d6911bbc73455473ffe61735265a640aa5cc120363ed00d78a84d5417f0a18",
+      "instruction_text": "i want to find a wooden table that i can put in my dining room, and price lower than 290.00 dollars"
+    },
+    {
+      "goal_index": 290,
+      "goal_sha256": "47dd49ce634d76362efa230690b71705cf458b71a1ac2310ce7f1b40fcc67d81",
+      "instruction_text": "i'm looking for a size 2.55 ounce anti aging hydra-nutrition day cream, and price lower than 40.00 dollars"
+    },
+    {
+      "goal_index": 291,
+      "goal_sha256": "377e34b7b63005760f78f6af7934aa7397e4e9552c548f9440da19487d31cb66",
+      "instruction_text": "i need a cinewhite projector screen that is ultra hd and light weight, and price lower than 380.00 dollars"
+    },
+    {
+      "goal_index": 292,
+      "goal_sha256": "b11452f4c5eac922cee675dba90385041e631bec51c72c17122bc37c51e9cb76",
+      "instruction_text": "i am looking for brown color classic fit t-shirt, and price lower than 40.00 dollars"
+    },
+    {
+      "goal_index": 293,
+      "goal_sha256": "be6b3dd741ab5e05a58264b43b3f37e83edd24d8b8b47856953c7815f3daeed5",
+      "instruction_text": "i need a high power amplifier adapter for home audio, and price lower than 260.00 dollars"
+    },
+    {
+      "goal_index": 294,
+      "goal_sha256": "5760323bb6d62615a7909db443510c83179c71caddcefd407824e57f4ba6996f",
+      "instruction_text": "i want a dongtai 1080p hd hot link remote surveillance camera, and price lower than 50.00 dollars"
+    },
+    {
+      "goal_index": 295,
+      "goal_sha256": "c500274afe72a668aa4ef8c4ef5a977b3b99d66e30ce5a2b016d834d321927cd",
+      "instruction_text": "i need hair extensions of 18 inch in #1 jet black color made of natural hair, and price lower than 80.00 dollars"
+    },
+    {
+      "goal_index": 296,
+      "goal_sha256": "af05187dac6521b755448ad369cb15e46af9b414ab20bac342f683cd6d303ec4",
+      "instruction_text": "i am looking for a fleece throw that is maroon and 50\" by 60\", and price lower than 50.00 dollars"
+    },
+    {
+      "goal_index": 297,
+      "goal_sha256": "c86ac32d0d481f4d0ae23a121a1649a3f8648311790649bee3b63141e82a413d",
+      "instruction_text": "i am looking for ca perfume club fragrance in the 0.17 fl oz travel size, and price lower than 40.00 dollars"
+    },
+    {
+      "goal_index": 298,
+      "goal_sha256": "b64ef9fde865a07cf98df4d3db20356a30c7d0db4efac400aaeb2c7e673d0081",
+      "instruction_text": "find me the soy free 3.5 ounce 4-pack of dang thai rice chips, and make sure they are the aged cheddar flavor.  i also need the ones in the resealable bags, and price lower than 60.00 dollars"
+    },
+    {
+      "goal_index": 299,
+      "goal_sha256": "51d86e037f568c79084eaabfeb9e3b8a56ec13e36e1bcaac393c6d99ff7717b9",
+      "instruction_text": "i need a 3 pack of ethique solid deodorant bar for men and women.  i want the oil-free variety, and price lower than 30.00 dollars"
+    },
+    {
+      "goal_index": 300,
+      "goal_sha256": "d06ca008e8d98e9738484296d2e2c5fc2da20f5edc14989e3a9b59bd8cd96f79",
+      "instruction_text": "i'm looking for a replacement remote with batteries included, and price lower than 40.00 dollars"
+    },
+    {
+      "goal_index": 301,
+      "goal_sha256": "5f68f4a4eaea5ce8115b1a4a2759c9b573d2400636c9181ac8425c21464c3725",
+      "instruction_text": "i would like a 6 ounce variety of grain free cacao granola, and price lower than 60.00 dollars"
+    },
+    {
+      "goal_index": 302,
+      "goal_sha256": "d9bfb0c103fea1de487d14a5831afc4c4d025e22acfb9851d6eb66a5d7168999",
+      "instruction_text": "i'm looking for a french vanilla zero calorie and zero sugarand flavor stevia energy, and price lower than 30.00 dollars"
+    },
+    {
+      "goal_index": 303,
+      "goal_sha256": "0e9a9824bcec1556d3f17810ca43580417024b2f4ab3e1a6d4016c187041439c",
+      "instruction_text": "i want to find a usb headset that's certifiably refurbished and has a plug to play, and price lower than 50.00 dollars"
+    },
+    {
+      "goal_index": 304,
+      "goal_sha256": "6b7383100fca40569b383289e43e4da29b09d870cefe8563bed2de341229c1bd",
+      "instruction_text": "i am looking for a men's long sleeve button down light blue shirt, and price lower than 40.00 dollars"
+    },
+    {
+      "goal_index": 305,
+      "goal_sha256": "753f0be401e6e7441d0ec8286c85227b186844f50d593251ea0c90bece584f0c",
+      "instruction_text": "i would like to get some medium grey shorts that i can machine wash, and price lower than 40.00 dollars"
+    },
+    {
+      "goal_index": 306,
+      "goal_sha256": "6d32aa7a87618796da5a34e6b93e1b45d56f07cc0004a7b4b3e2e2c3eb7844c0",
+      "instruction_text": "i am looking for some valentine's day cupcake toppers, and price lower than 40.00 dollars"
+    },
+    {
+      "goal_index": 307,
+      "goal_sha256": "f3f7914509faf4344b9c25f7682b06feeb41c12a1978370b016a79acf7d5400a",
+      "instruction_text": "i am looking for hands free, noise cancelling earphones in the color blue, and price lower than 30.00 dollars"
+    },
+    {
+      "goal_index": 308,
+      "goal_sha256": "85b3d6efc362f203736d7f5681f52fa5e1cdddeac628ca5c16925a1414519e57",
+      "instruction_text": "i would like to buy to some fat free non gmo original beef jerky, and price lower than 90.00 dollars"
+    },
+    {
+      "goal_index": 309,
+      "goal_sha256": "63e7f76203388ae7804b62b53ce2689b9350b79e0b55a377d81e714b0ca30cfd",
+      "instruction_text": "i need some cute heart-shaped glittery cupcake picks as a gift to bring to a baby shower, and price lower than 20.00 dollars"
+    },
+    {
+      "goal_index": 310,
+      "goal_sha256": "50ef2ef9a8c74fc69a5daaa1532b62fccdbe3459243832c8d4b4246563bf4fd4",
+      "instruction_text": "i need a black wall mouinted mirror for the living room, and price lower than 230.00 dollars"
+    },
+    {
+      "goal_index": 311,
+      "goal_sha256": "852f9aa9c54f07dc6a42ae67fe263243090ba2cf11043ba3a63c41ff7e009d3d",
+      "instruction_text": "i need a long sleeved sleep set in a 4x-large in the color mt7308, and price lower than 70.00 dollars"
+    },
+    {
+      "goal_index": 312,
+      "goal_sha256": "d8665e24537d2b9de0a386803dd30951adcf35eeeeed7c07f990dfeb9f134bd5",
+      "instruction_text": "i am looking for a high speed male to female hdmi cable, and price lower than 80.00 dollars"
+    },
+    {
+      "goal_index": 313,
+      "goal_sha256": "ac3b089a7f75b835ca995b9e1a0ed4cced04ff528be19e6b6f71b6cd027e0e6d",
+      "instruction_text": "i'm looking for a kids toothbrush for ages 6 to 12 that will help with teeth whitening and is easy to use, and price lower than 20.00 dollars"
+    },
+    {
+      "goal_index": 314,
+      "goal_sha256": "f3351ccd6ce411d6a904b0952bc3842a88ebbc9dabf4889ea75c16ad5d3384f9",
+      "instruction_text": "i need some whitening toothpaste, and price lower than 20.00 dollars"
+    },
+    {
+      "goal_index": 315,
+      "goal_sha256": "d4ed265f3aef446fb86a3f8b4d4815cec73b2842df7900bb56284d96afb344f4",
+      "instruction_text": "i need a tempered glass window film two pack in the color 91768059675860000 and 23.6 in by 23.6 in, and price lower than 130.00 dollars"
+    },
+    {
+      "goal_index": 316,
+      "goal_sha256": "bf70b139858475367f7aec4f2730a1e6265d4c1ead0333de0ac7f915c7502ccd",
+      "instruction_text": "i want degree men anti-perspirant, and price lower than 140.00 dollars"
+    },
+    {
+      "goal_index": 317,
+      "goal_sha256": "fc48f17dba92f4b28d9dfc77b7d20d561ce42e5fd2cc1dda97157edc71f4f368",
+      "instruction_text": "i need a blue portable bluetooth speaker that is easy to carry, and price lower than 110.00 dollars"
+    },
+    {
+      "goal_index": 318,
+      "goal_sha256": "8fa3aef4e1b5389ae9427170246c1c8bbe285f9ac8d57ee644361ee79e0af0df",
+      "instruction_text": "i want a q color long lasting lipstick made with natural ingredients, and price lower than 20.00 dollars"
+    },
+    {
+      "goal_index": 319,
+      "goal_sha256": "9acb050267dd56ac03d469d8313ec5b52c8cea9f62c567871a5fa6ea54bdc341",
+      "instruction_text": "i am looking for a large tunic that is 2-pink and short sleeve, and price lower than 50.00 dollars"
+    },
+    {
+      "goal_index": 320,
+      "goal_sha256": "35bf88be658abc175a13b869cdb3a5aaad345724dddb5c310ad487040ddc07ed",
+      "instruction_text": "i need a conditioner for damaged hair, and price lower than 40.00 dollars"
+    },
+    {
+      "goal_index": 321,
+      "goal_sha256": "a0d58f3b4fc9333281547e021fbde0fb1fc93a038fabd26828cd128a5b21a015",
+      "instruction_text": "i want a high quality nail drill machine, and price lower than 70.00 dollars"
+    },
+    {
+      "goal_index": 322,
+      "goal_sha256": "735f3fca540cce1241ad52f227fd3d52bc13cd80b7107995e25603975ae2c0c0",
+      "instruction_text": "i want to find a gold floor lamp with a glass shade and a nickel finish that i can use for my living room, and price lower than 270.00 dollars"
+    },
+    {
+      "goal_index": 323,
+      "goal_sha256": "fa1cb0a1eada12e17a54f827d988390ead34fb365ab4bb8b01f78d4ddcbce3ce",
+      "instruction_text": "i am looking for delicious flavor starkist chicken creations, chicken salad, 2.6 oz pouch,pack of 12  which is  soy free and gluten free easy to prepare, perfect fit for today’s active lifestyle. buffalo style flavor preferable, and price lower than 40.00 dollars"
+    },
+    {
+      "goal_index": 324,
+      "goal_sha256": "a3b41f1d77e8abe9573b853e8ad4b76b1653269d7ec7ef6aa8f7c35d16991df6",
+      "instruction_text": "i need some aaa batteries, and price lower than 40.00 dollars"
+    },
+    {
+      "goal_index": 325,
+      "goal_sha256": "6a44eec5743a0c651dbea4c5468c8c7ffa2ebe9031c195c2c19bb30e4994f260",
+      "instruction_text": "i want to find a pink front-button bra in a size 44 that is made of quality polyester, and price lower than 30.00 dollars"
+    },
+    {
+      "goal_index": 326,
+      "goal_sha256": "69a2fb4715fef44d390604d048397715e5531c599929238bb6802cae95399cb4",
+      "instruction_text": "i am looking for eco friendly candle wax. please choose vanilla lavender, and price lower than 70.00 dollars"
+    },
+    {
+      "goal_index": 327,
+      "goal_sha256": "e292045b3f5ed079f79b395bd4988e7ae54c0dd07b7b354f031af0877921ca77",
+      "instruction_text": "i need green cactus coasters for the living room that come in a pack of four, and price lower than 60.00 dollars"
+    },
+    {
+      "goal_index": 328,
+      "goal_sha256": "01b9cbc0df2f2628251510e9c2e9b9c21b24af5dd42598e143b88c11b08e3686",
+      "instruction_text": "i need to buy a loveseat for my living room. get one that's flat packed with a wood finish, and price lower than 240.00 dollars"
+    },
+    {
+      "goal_index": 329,
+      "goal_sha256": "db3992bf052e28ba1363e9d389625e5037f96e9a083360081b98d3fcd848d183",
+      "instruction_text": "i am looking for plant based,gluten free and sugar free seedbars.please choose mulberry cacao flavour, and price lower than 70.00 dollars"
+    },
+    {
+      "goal_index": 330,
+      "goal_sha256": "43a02c237b7a85cb767a85276534a28de65f9982ac5d27dc24a8cea969a433b2",
+      "instruction_text": "i am looking for fluoride free toothpaste that is made with coconut oil, and price lower than 30.00 dollars"
+    },
+    {
+      "goal_index": 331,
+      "goal_sha256": "a205cbf12a0c52c9e51ee0378543ef0af4ec658a21f3b0160fe06decc5433f0e",
+      "instruction_text": "i am looking for hands free and dark blue bluetooth stereo wireless music earphones headset, and price lower than 30.00 dollars"
+    },
+    {
+      "goal_index": 332,
+      "goal_sha256": "d522b1d4efa2b9c4e692ea2512258689d98feccfc65dc3ccdbd8f120bd3b10da",
+      "instruction_text": "i would like a fluoride free mouth wash made with natural ingredients, and price lower than 40.00 dollars"
+    },
+    {
+      "goal_index": 333,
+      "goal_sha256": "8c012ce0ea2bfde71ef72ff5cc163e7beb69abe3405c143398c0111e6693f778",
+      "instruction_text": "i want low carb chipmonk keto lemon poppyseed cookies, and price lower than 90.00 dollars"
+    },
+    {
+      "goal_index": 334,
+      "goal_sha256": "524eccfa32eeed2848cca9a07d9090cdf50d3c63adc26a1f68d2ca0da4cb2700",
+      "instruction_text": "i would like a 15 ounce package of blue stork it's a boy gift chocolate covered cookies, and price lower than 30.00 dollars"
+    },
+    {
+      "goal_index": 335,
+      "goal_sha256": "01bbd89073943dfc1b5184de8196086ee8a3b45025d5470a454fec8c23741675",
+      "instruction_text": "i need an old fashioned rope sausage without gluten, and price lower than 50.00 dollars"
+    },
+    {
+      "goal_index": 336,
+      "goal_sha256": "8371b4d5ece42c8f8dbf4282d11db700be49775bfe93a7c3b693889029ea94c5",
+      "instruction_text": "i need a yellow xx-large floral print tank sleeveless dress that is quick drying, and price lower than 30.00 dollars"
+    },
+    {
+      "goal_index": 337,
+      "goal_sha256": "7c9a5f50289b2c1aed8c6aa39fbb58d6241da0bd9a7c67e29c7ec75b150fecd3",
+      "instruction_text": "i want to find a high-resolution digital camera with an optical zoom feature, and price lower than 430.00 dollars"
+    },
+    {
+      "goal_index": 338,
+      "goal_sha256": "b79ee3c8d1b188cd078fae6951cf62223e21cd0879a85915d86324302a151272",
+      "instruction_text": "i would like some sugar free salted caramel truffles, and price lower than 40.00 dollars"
+    },
+    {
+      "goal_index": 339,
+      "goal_sha256": "3a0932edbd3fd25d2a3c44fd255bccb0b8950d547b3160b9e8479095c04603eb",
+      "instruction_text": "i am looking for black twin size bunk beds, and price lower than 650.00 dollars"
+    },
+    {
+      "goal_index": 340,
+      "goal_sha256": "c4068b6ab249baa4dff17e09f20b45adc9b05d9f8fe4a93eeb75857e57b617f8",
+      "instruction_text": "i would like a 20 foot long 4 pack of gold plated hdmi male to male cables, and price lower than 30.00 dollars"
+    },
+    {
+      "goal_index": 341,
+      "goal_sha256": "435f074afad578cc660d43ecbf7af77a6530d98dd99b8326dd7635aa85f7a8ea",
+      "instruction_text": "i'm interested in purchasing a black colored easy to apply bun maker, and price lower than 30.00 dollars"
+    },
+    {
+      "goal_index": 342,
+      "goal_sha256": "9c25a4fa49db7145323d2f7b8a9066700704bf005bf6adaaed53c1a3c582ba30",
+      "instruction_text": "chair with adjustable height, backrest and lumbar support, and price lower than 170.00 dollars"
+    },
+    {
+      "goal_index": 343,
+      "goal_sha256": "1dc14aebf6529eae8a0d2381e3c79fab916b19c2ac3b442974892e8547fd83a3",
+      "instruction_text": "get me a hand washable short sleeved loose fit top in army green color and 3x-large size, and price lower than 30.00 dollars"
+    },
+    {
+      "goal_index": 344,
+      "goal_sha256": "d3ede95fb056553b16b276e0ff502d48324a89e300147416af5f337afb879d7f",
+      "instruction_text": "i want to get cartoon themed cupcake toppers that i can use for a birthday party, and price lower than 40.00 dollars"
+    },
+    {
+      "goal_index": 345,
+      "goal_sha256": "fb5904b178039305c98b71e09c0f4fad66321109537484b94f4205587c0dcae8",
+      "instruction_text": "i am looking for a high performance 18 volt charger adapter for beats by dr dre, and price lower than 50.00 dollars"
+    },
+    {
+      "goal_index": 346,
+      "goal_sha256": "1acebcf541237212287d4e029c001c433ba3b344e91818c5135af2e365af4c9d",
+      "instruction_text": "i am looking for a milk chocolate of 1 pound size in a single pack for valentine day, and price lower than 60.00 dollars"
+    },
+    {
+      "goal_index": 347,
+      "goal_sha256": "e175f8e81d1d64b3dd4d66381b0f3e1df9c123c6d80ad0154b4337b5e199e979",
+      "instruction_text": "i want gray high speed philips usb type c cables, and price lower than 40.00 dollars"
+    },
+    {
+      "goal_index": 348,
+      "goal_sha256": "98550ad1d8b4882ade73c34845b574d8d17614554530f335edf7e1a1f10ef640",
+      "instruction_text": "i'd like to find a king-sized faux lather platform bed in the camel color, and price lower than 640.00 dollars"
+    },
+    {
+      "goal_index": 349,
+      "goal_sha256": "08e9f12d8f2969c2efc7a281c294a606a22948444c37ebeeb70c2c21bac6019f",
+      "instruction_text": "i am looking for 2 piece long sleeve blue#b color swimwear for women. also x-large one, and price lower than 40.00 dollars"
+    },
+    {
+      "goal_index": 350,
+      "goal_sha256": "685b0187fb8219ec6b2dc70811918bff8e5a2c24d72e6c219f9657c5cbb049ea",
+      "instruction_text": "show me some long lasting honeysuckle jasmine colored candles made from soy wax, and price lower than 40.00 dollars"
+    },
+    {
+      "goal_index": 351,
+      "goal_sha256": "5c0499f0929bf4dafdece3e08ed1d6fc65d86ea36c97dd08ba61b7724d9b0591",
+      "instruction_text": "i am looking for long sleeve men t-shirt.and please also choose the black one, and price lower than 50.00 dollars"
+    },
+    {
+      "goal_index": 352,
+      "goal_sha256": "220db6f870a85cee6be3f3d499b864eb4ad441aadb31f980c24a6f0a27e9e163",
+      "instruction_text": "i am looking for yellow color stool cover. it should be washable in machine, and price lower than 40.00 dollars"
+    },
+    {
+      "goal_index": 353,
+      "goal_sha256": "bc36f2e2755d8d978046b6b58b87df1fbfbece2b614b21d14a871672520c972b",
+      "instruction_text": "find a water resistant leather jacket, and price lower than 90.00 dollars"
+    },
+    {
+      "goal_index": 354,
+      "goal_sha256": "12efd87f303f83eb94aadd4c781867556995c6c73020903c132572ffbfcbc76d",
+      "instruction_text": "i need some cupcake toppers for a birthday party. get the ones with silver glitter, and price lower than 40.00 dollars"
+    },
+    {
+      "goal_index": 355,
+      "goal_sha256": "17196108e6e957e71f487dd8bd9d11141e49d8d8c05d664462882de52d52e2d3",
+      "instruction_text": "i am looking for slim jeans that are granite color and machine washable, and price lower than 110.00 dollars"
+    },
+    {
+      "goal_index": 356,
+      "goal_sha256": "44fd6dfeee1b68a3c4ad6e978cd41e9e13a9be08f608d2d0a101274744b359ff",
+      "instruction_text": "i am looking for a medium adult sized unisex hoodie which is machine washable. pick the navy blue one, and price lower than 50.00 dollars"
+    },
+    {
+      "goal_index": 357,
+      "goal_sha256": "7b9a656e126373e7be79eafd0dabdae7403b45b3c4f80ac6ce30ba31a723896b",
+      "instruction_text": "i like  traditional , old  and individually wrapped albert's chocolate ice cubes 60 count tray chocolate, and price lower than 50.00 dollars"
+    },
+    {
+      "goal_index": 358,
+      "goal_sha256": "d3d58a0b9f83aa0a5c5aab403cdf4f2fcfb4664225f5cb80197c098945ba7132",
+      "instruction_text": "i want tangerine colored crocs made with vinyl acetate for kids, and price lower than 120.00 dollars"
+    },
+    {
+      "goal_index": 359,
+      "goal_sha256": "17c4373e829b6b29bd122fba4e788f4bfd2e772ba45f6e32adcdd4c8bdfcfe38",
+      "instruction_text": "i would like a medium sized dress with a elastic waist, and price lower than 80.00 dollars"
+    },
+    {
+      "goal_index": 360,
+      "goal_sha256": "b252279296c651bd3d54be22d69d94385626bf60c87dcff6433993bbc9fc9647",
+      "instruction_text": "i am looking for small undershirts that i can machine wash, and price lower than 40.00 dollars"
+    },
+    {
+      "goal_index": 361,
+      "goal_sha256": "405799c1b90b8ee045ae57388808fcf76101978575659f7e22256f384d8c39ad",
+      "instruction_text": "i'm looking for a color b quick release thumb screw tripod, and price lower than 40.00 dollars"
+    },
+    {
+      "goal_index": 362,
+      "goal_sha256": "718d8ccf61fcf4660eac3407c1927262aa6e51c853f7d9fc6ca70354807cd975",
+      "instruction_text": "i am looking for a a2442(pro 14\" 2021 m1 pro | max touch id)  size of hard shell cases over, and price lower than 50.00 dollars"
+    },
+    {
+      "goal_index": 363,
+      "goal_sha256": "43aed82ddb6423bcf376f3525b9fb1a17e0467926884cd71b49c5c98921059f0",
+      "instruction_text": "i am interested in buying a blue colored noise cancelling headphones with wireless bluetooth available, and price lower than 30.00 dollars"
+    },
+    {
+      "goal_index": 364,
+      "goal_sha256": "e99c680fcd45e5b0b638be6c10f0abfddb385c8a715afff3e736b09ba6c7df16",
+      "instruction_text": "i need a valentine's day gift, and price lower than 60.00 dollars"
+    },
+    {
+      "goal_index": 365,
+      "goal_sha256": "7df9bdb29320cf97b084a9528164e40238e7da7158d8642bd5f8261155c7e337",
+      "instruction_text": "i want to purchase from men's clothing a pair of men's retro jeans with the relaxed fit and boot cut. needs to be long lasting, comfortable fitting and in a relaxed fit. must be a size 35 waist and 36 long in rockdale color, and price lower than 100.00 dollars"
+    },
+    {
+      "goal_index": 366,
+      "goal_sha256": "68620cd05711de9bd494176b4c4c7c744e3b9a0cbc9dccf9d3488315ea8c0ab7",
+      "instruction_text": "i want to get some red cupcake toppers that i can use for a birthday party, and price lower than 40.00 dollars"
+    },
+    {
+      "goal_index": 367,
+      "goal_sha256": "721debe8add74de0b0e968ff58c24dea60c928609170491d46f1ee4fc71ad6fb",
+      "instruction_text": "i'm hoping to find a purple, xx-large batman shirt that's officially licensed, and price lower than 50.00 dollars"
+    },
+    {
+      "goal_index": 368,
+      "goal_sha256": "aa57dfc394ea75c261764945ba49f6ebaa500beb70415365e753554c572e736c",
+      "instruction_text": "i'm looking for a 150 foot plug play hdmi cable, and price lower than 90.00 dollars"
+    },
+    {
+      "goal_index": 369,
+      "goal_sha256": "4a2684d525345d25d51bf66789e5bfbc3a98560fc5e42f03c1666a65cf5a7495",
+      "instruction_text": "i am looking for a high quality hair removal wax bottle, and price lower than 40.00 dollars"
+    },
+    {
+      "goal_index": 370,
+      "goal_sha256": "99419d7b2c876d21b54596ae204859b43b3cad5d7b8d1f1a520d80e49dec9b0f",
+      "instruction_text": "i am looking for 5.9 fl oz eau de parfum - fragrance mist for women, and price lower than 60.00 dollars"
+    },
+    {
+      "goal_index": 371,
+      "goal_sha256": "e9119d78938073dd28af500af44929817394e3d8a8567123ddb36d4b6bee28f6",
+      "instruction_text": "looking for babydoll mini bodysuit of quality polyester choose size xx large, and price lower than 40.00 dollars"
+    },
+    {
+      "goal_index": 372,
+      "goal_sha256": "2684eed901b0148f60909f4c83190eee341c75a19acc4e7d096a9d4b0deb67e9",
+      "instruction_text": "i want to find a heavy duty bar stool that is rein bay colored, and price lower than 230.00 dollars"
+    },
+    {
+      "goal_index": 373,
+      "goal_sha256": "3794d59a853d6681e731ef1b0cf3e2f03e7953d7579be0b5b36991b7e4514414",
+      "instruction_text": "i need a natural teeth whitening toothpaste, and price lower than 60.00 dollars"
+    },
+    {
+      "goal_index": 374,
+      "goal_sha256": "5f6457b5e6b54592ab5907363a93cb8a0c7239a525b351f552eabe1d997974a9",
+      "instruction_text": "i need a solid wood platform bed with wooden frame. pick something that is natural in color, and price lower than 180.00 dollars"
+    },
+    {
+      "goal_index": 375,
+      "goal_sha256": "7c81c028305367f7523682138e591c02122420121faa41c7a1fdd549232ba122",
+      "instruction_text": "i want an easy to use tongue cleaner for eliminating bad breath, and price lower than 40.00 dollars"
+    },
+    {
+      "goal_index": 376,
+      "goal_sha256": "00af3e719543a85fbc94e1baea6f5064291e30afd1edde1d34238f46defc86b8",
+      "instruction_text": "i am looking for a wireless bluetooth earpads, and price lower than 140.00 dollars"
+    },
+    {
+      "goal_index": 377,
+      "goal_sha256": "fd674550063245bc5196ced8c116d9df03abdc630836c5bdcba7de77e75b1448",
+      "instruction_text": "i am looking for high knee womens flat sandals of size 8, and price lower than 140.00 dollars"
+    },
+    {
+      "goal_index": 378,
+      "goal_sha256": "13a935845c0df8bddb2bb6303b72eb505dbdae637f9b744a2d8f82bac01191a1",
+      "instruction_text": "i want to find organic, low fat applesauce that is apple strawberry flavored. it should come in 4 ounce cups in a pack of 4, and price lower than 60.00 dollars"
+    },
+    {
+      "goal_index": 379,
+      "goal_sha256": "f4cd1f64b68f46bc3a2e8487219bcfd8ce10bdbd815a67234b6355d11060ea0a",
+      "instruction_text": "i want a clear glass mystic sand colored wall sconce. it will go in my living room, and price lower than 240.00 dollars"
+    },
+    {
+      "goal_index": 380,
+      "goal_sha256": "5f16f6680b6d022aca875a8443cf3ec3258257c565c06f478309a34e4471077e",
+      "instruction_text": "i am looking for flower fairy giel with pink wing elves pillow cover for living room, and price lower than 50.00 dollars"
+    },
+    {
+      "goal_index": 381,
+      "goal_sha256": "0b1af80396532ef951ce260251c67dfa054711099c53d40b8eda0cb367080d11",
+      "instruction_text": "i want to get to get long lasting foundation that is in color 380 rich ginger, and price lower than 20.00 dollars"
+    },
+    {
+      "goal_index": 382,
+      "goal_sha256": "20bf537b0979cf06ce318efc7ef8c3974b17d16627a5865049cfe454584cf721",
+      "instruction_text": "i would like to buy a bronze table lamp for my living room, and price lower than 130.00 dollars"
+    },
+    {
+      "goal_index": 383,
+      "goal_sha256": "89925a7d59e8e213a2eeebe00247610332cbc319ef322c8e08c857b5637fd37b",
+      "instruction_text": "i'm looking for bathing free accessories for fragrance free, and price lower than 50.00 dollars"
+    },
+    {
+      "goal_index": 384,
+      "goal_sha256": "50cf637b2f1aa36fb041c8b2fb4dcabd76fe0f729ab7fbf023a8a1a910dedb33",
+      "instruction_text": "i am looking for monoculars that are for bird watching, and price lower than 60.00 dollars"
+    },
+    {
+      "goal_index": 385,
+      "goal_sha256": "3994b5c7adcf44d7afd4de7cc5d0e46dcc47ec863cf95c3d3bd20d5bfb5d8938",
+      "instruction_text": "i would like a pair of black size 8.5 boots with a comfortable fit, and price lower than 140.00 dollars"
+    },
+    {
+      "goal_index": 386,
+      "goal_sha256": "f700fb7437b4a47ea6970ea7260ed93c0cfb77091191fba40f185f1108362296",
+      "instruction_text": "i'm looking for a tempered glass coffee table for my living room that has a wooden frame, and price lower than 230.00 dollars"
+    },
+    {
+      "goal_index": 387,
+      "goal_sha256": "f51c3c4bf2183aac7f4d9e4b3a0a19a646bf7bc74e59b8ae5ea08292a122af4a",
+      "instruction_text": "i'm looking for a router for i5 inter core processor. also, choose 8g ram, 128g ssd and 1td hdd with intel i3 3220, r9 b75 one, and price lower than 140.00 dollars"
+    },
+    {
+      "goal_index": 388,
+      "goal_sha256": "268d4dfafb558a1806700c5e502853cc8acbae9eecb3df8b329dc37826f0c124",
+      "instruction_text": "i'm looking for native american indian dream catcher feathers talisman, and price lower than 50.00 dollars"
+    },
+    {
+      "goal_index": 389,
+      "goal_sha256": "0370bf9834a0d04eb064ba6c3f54070dd30f151293f4924528c4b9a21373c1dc",
+      "instruction_text": "i am looking for large size soft material women's cardigans with pockets, and price lower than 70.00 dollars"
+    },
+    {
+      "goal_index": 390,
+      "goal_sha256": "f8d0cabc24b628af8b2d9bc871fd27d06eaefe72791ced4fdefd851a50aef57c",
+      "instruction_text": "i am looking for kernel season's popcorn season in 2.85 ounce packs of 6, and price lower than 40.00 dollars"
+    },
+    {
+      "goal_index": 391,
+      "goal_sha256": "a31ff0521415a3ddbc61634f9d729753df1acc385b551534ddd54dccfcae95d9",
+      "instruction_text": "i would like a lead free bracelet birthday cake jar candle, and price lower than 60.00 dollars"
+    },
+    {
+      "goal_index": 392,
+      "goal_sha256": "0ba8e652b73da2eecc9f043f9a2b919e6dcba9c35756f8a9623e3a81799dbce2",
+      "instruction_text": "i need some steel toed shoes that are chocolate colored and are a size 7, and price lower than 280.00 dollars"
+    },
+    {
+      "goal_index": 393,
+      "goal_sha256": "0437e902d3c3a32b8cafadc654e22eb135b9dd3c8e33d556a001ce1749c172ea",
+      "instruction_text": "i am looking for a pair of women's size 6.5 to 7 open toe sandals, and price lower than 30.00 dollars"
+    },
+    {
+      "goal_index": 394,
+      "goal_sha256": "18e5d564f268aef1ebd0d3a57c405a0419d5a6cbaaa4073785211f9b5c39227b",
+      "instruction_text": "i am looking for a cat with ears cupcake toppers for a baby shower, and price lower than 40.00 dollars"
+    },
+    {
+      "goal_index": 395,
+      "goal_sha256": "8ab35bde3c3728ba522ceeaabadb10050671fd23d5c3b20d2705f5f6b637cad1",
+      "instruction_text": "i am looking for white solid wood bunk beds with drawers, and price lower than 600.00 dollars"
+    },
+    {
+      "goal_index": 396,
+      "goal_sha256": "80b7f5b2fea98db216432b65dca371c1cf643c426e9539221f24bcb34e703712",
+      "instruction_text": "buy a one pack of permanent hair dye in espresso, and price lower than 30.00 dollars"
+    },
+    {
+      "goal_index": 397,
+      "goal_sha256": "3d7560e03b9f33e04cf94ad53dbb07a82119ec03d05c416b79c5591f5a34a2fe",
+      "instruction_text": "i want a bagel made from high quality ingredients, and price lower than 130.00 dollars"
+    },
+    {
+      "goal_index": 398,
+      "goal_sha256": "2af4bec067474cbb3d3ceef505da730e844d9f93f51558ee39e594e7cda88f1d",
+      "instruction_text": "i'm looking for strong box spring beds and i take dark gray color with king size beds, and price lower than 140.00 dollars"
+    },
+    {
+      "goal_index": 399,
+      "goal_sha256": "5f13dabd11c37c8d3e13c37aa90476e8beea541ebbe63dbeb59a868f2bf2e984",
+      "instruction_text": "i want to find individually wrapped, 2-ounce packs of omega-3 mix in a 14-count box, and price lower than 50.00 dollars"
+    },
+    {
+      "goal_index": 400,
+      "goal_sha256": "a8b925e728100632c17331327378112a7d06cb128bb95f669489200aad4b4783",
+      "instruction_text": "i am ordering grey  women faux fur slippers , and price lower than 70.00 dollars"
+    },
+    {
+      "goal_index": 401,
+      "goal_sha256": "757a6b7ef80075e248682e045a8343f00ec0a2e9f2b9b5c8bcc518fcfb322513",
+      "instruction_text": "i would like a pair of c clippers for hair cutting, and price lower than 450.00 dollars"
+    },
+    {
+      "goal_index": 402,
+      "goal_sha256": "c0d9bd934610c4982932ec6b9b39479b81835a11fcf754424fe88b6869f9a4ab",
+      "instruction_text": "i need a vanity light with a classic bronze finish, and price lower than 180.00 dollars"
+    },
+    {
+      "goal_index": 403,
+      "goal_sha256": "8ba608fefad693c080efa2644b6b38dd815ac1c216297e1c920e5984b1bab68c",
+      "instruction_text": "i'm looking for a black phone case that is apple compatible with a black screen, and price lower than 30.00 dollars"
+    },
+    {
+      "goal_index": 404,
+      "goal_sha256": "253da05b82c804b7c1f9537d51b8af98dae43f0a1394ad77ae7c5cd0ab7fd0d3",
+      "instruction_text": "i need a 1.0mm braces brush that is easy to clean, and price lower than 40.00 dollars"
+    },
+    {
+      "goal_index": 405,
+      "goal_sha256": "2a1d9e87abc6ce5be8d186de2a30d876b0c7056c5496602e3fc5f7c4176e497f",
+      "instruction_text": "i am looking for some gluten free yellow dog sweet shake flavored gourmet spice blends, and price lower than 50.00 dollars"
+    },
+    {
+      "goal_index": 406,
+      "goal_sha256": "1625e6ee807da1ead5b4e92743989c9319600a35e9627ba801f6e8aec917730e",
+      "instruction_text": "i'm looking for a long lasting 3.3 oz edt spray for men, and price lower than 50.00 dollars"
+    },
+    {
+      "goal_index": 407,
+      "goal_sha256": "0495c142cfdc58ffa0d65097bd040a7037ed3c4a948aafcac8df21929b7a1a09",
+      "instruction_text": "i'm looking for certified  organic for tea bags for peppermint leaf, and price lower than 50.00 dollars"
+    },
+    {
+      "goal_index": 408,
+      "goal_sha256": "0bf239dc011cebec3c0da45c571b5c7a522cc04b086ea68d204dd717383dd2de",
+      "instruction_text": "i'm looking for a hair roller for hair styling, it should be easy to use. also, choose 2.8 *2 inch pink colored one, and price lower than 40.00 dollars"
+    },
+    {
+      "goal_index": 409,
+      "goal_sha256": "ca72b42c4dd40889a803abe218b44899cbc13af0bb354e7da721a9d11af5153a",
+      "instruction_text": "i am looking for some machine washable curtains in the side 52\" by 63\", and price lower than 80.00 dollars"
+    },
+    {
+      "goal_index": 410,
+      "goal_sha256": "48607ee54b05f56e8de9a9415486f996c6d07433d7f85863bae6bf6a4b2f0518",
+      "instruction_text": "i'm looking for need to buy a cookie butter and it was gluten free and it contains high protein, and price lower than 40.00 dollars"
+    },
+    {
+      "goal_index": 411,
+      "goal_sha256": "fc9cdf7251e8fb8edc30cc88442814b22ebdee62c50b212115255f99127a1d79",
+      "instruction_text": "am looking for low rise lam kwongy sexy yoga shorts for women, blue color, and price lower than 140.00 dollars"
+    },
+    {
+      "goal_index": 412,
+      "goal_sha256": "542a7eadf4c257a3d876e9240c656beb14e81b734d3db8c200a1495857317ef0",
+      "instruction_text": "i am looking for a black iphone 12 max case with wireless charging, and price lower than 40.00 dollars"
+    },
+    {
+      "goal_index": 413,
+      "goal_sha256": "65107800e1627c3872e870c4956536424d0d88fc92c98e9682cc0a47c7b3b232",
+      "instruction_text": "i am interested in a grey solid wood nightstand, and price lower than 80.00 dollars"
+    },
+    {
+      "goal_index": 414,
+      "goal_sha256": "64cea5fb4e71ff9b62c8469ebeff8cb9381417e994fc666c51f99fe561afad47",
+      "instruction_text": "i will like to have a synthetic sole, memory foam cc corso como women's denice, size 5.5 and tan color, and price lower than 110.00 dollars"
+    },
+    {
+      "goal_index": 415,
+      "goal_sha256": "2f7ea92bb974c52bb970910eae37dc09cb166d3178d3b14d72b2f1105407168d",
+      "instruction_text": "i would like to get two assorted non-gmo powdered cheeses, and price lower than 50.00 dollars"
+    },
+    {
+      "goal_index": 416,
+      "goal_sha256": "3d0034c335a3698ff51a317e7fcfba8259b20dc1383b82bc37bf37e0c61ac28c",
+      "instruction_text": "i am looking for a super soft throw blanket that is at least 50 by 60 inches in size, and price lower than 40.00 dollars"
+    },
+    {
+      "goal_index": 417,
+      "goal_sha256": "a94649096a6e9d8b98c617172f1ad8f93f56602b11f40fe4ab35f426b3d77f0a",
+      "instruction_text": "i need some storage space that is white and grey and also tall, and price lower than 70.00 dollars"
+    },
+    {
+      "goal_index": 418,
+      "goal_sha256": "76c4e7a397cfdefc5dac7ca20a3f15080b989c118d9ca556884db10bdc8f2900",
+      "instruction_text": "i am looking for hair dye for permanent hair and choose 4 dark brown color in size 1 count pack of 3, and price lower than 20.00 dollars"
+    },
+    {
+      "goal_index": 419,
+      "goal_sha256": "4c9729c8f310ec9d8cdede7458bc11cf8022fca4d135fb0ea22fb9cfa4541e16",
+      "instruction_text": "i need a jet black hair piece for hair loss, and price lower than 90.00 dollars"
+    },
+    {
+      "goal_index": 420,
+      "goal_sha256": "c28a8b2e62ef8020b86b47ab83d7ae2c740fab45624ef9f2ebd5ff14873330e5",
+      "instruction_text": "i want to buy an x-large tall, long sleeve flannel shirt that is sea cliff blue plaid, and price lower than 60.00 dollars"
+    },
+    {
+      "goal_index": 421,
+      "goal_sha256": "1942c546320c063495171e4174e26872d6f3dbf029a1c76aa0c2e5505f11d36e",
+      "instruction_text": "i need some fully cooked canned meats with a long shelf life, and price lower than 130.00 dollars"
+    },
+    {
+      "goal_index": 422,
+      "goal_sha256": "bae7b93aaca060dd1751e5a1b3c2bda38b7379f57d6b2172d2b54bcc23b8268e",
+      "instruction_text": "i am looking for contemporary design privacy protected panel for living room, its size should be 52\" wide by 90\" length, and price lower than 40.00 dollars"
+    },
+    {
+      "goal_index": 423,
+      "goal_sha256": "68e094c393e3b409191513441930bf010ce80e34a3dcef8748a2e5650de86bcb",
+      "instruction_text": "i would like a 25.4 fluid ounce bottle of chocolate syrup made with non gmo organic candy cane mint, and price lower than 50.00 dollars"
+    },
+    {
+      "goal_index": 424,
+      "goal_sha256": "bd6e7e59f925f9bef5d873cde8096834694bb8c0af40955124963a70dea67f3b",
+      "instruction_text": "i am looking for synthetic black gray 101 color hair extensions wig hairpiece, and price lower than 40.00 dollars"
+    },
+    {
+      "goal_index": 425,
+      "goal_sha256": "8f7a21e315c128d0a6e5a6612d3994534a09d515e2cf2c1d60792c1f9fea5246",
+      "instruction_text": "i would like a high speed streaming media player that is easy to use, and price lower than 60.00 dollars"
+    },
+    {
+      "goal_index": 426,
+      "goal_sha256": "bf90852f58215aa03d309eb2ba1b3eed1c7ff3cd39e932db9d847c03ceaa49e3",
+      "instruction_text": "i would like a 14 ounce bag of roasted almonds and other nuts that are gluten free, and price lower than 100.00 dollars"
+    },
+    {
+      "goal_index": 427,
+      "goal_sha256": "3c6b687c974f855d57c4aa2f0e5ccb75d09f4704b20356b3a40bf362d41600ac",
+      "instruction_text": "i would like some blue non toxic bath brushes, and price lower than 50.00 dollars"
+    },
+    {
+      "goal_index": 428,
+      "goal_sha256": "f17a18502a944b3b9cc6ceefa9b4c93ac23245892bfa0111a4df90e72c1c7e0d",
+      "instruction_text": "i am looking for ataiwee women's wide width ballet flats which is well made of soft leather, flexible tpr out-sole, lightweight and comfortable. tan 1905019-5, 9 wide size preferable, and price lower than 70.00 dollars"
+    },
+    {
+      "goal_index": 429,
+      "goal_sha256": "00beee2bc9390a62a74d1d8fe513204da61058beed9460c38128b58ebb5be33c",
+      "instruction_text": "i want to find 5.3 ounces of plant-based organic hair dye in a dark chocolate color, and price lower than 30.00 dollars"
+    },
+    {
+      "goal_index": 430,
+      "goal_sha256": "309b99d013701dc96623b1fea907572f35f9e100f6f2e40473daa74c26cdeb78",
+      "instruction_text": "i am looking for 10 pounds of fine grain non gmo sea salt, and price lower than 50.00 dollars"
+    },
+    {
+      "goal_index": 431,
+      "goal_sha256": "8e0bc18795ef977eca4b0ddf20d8be658d26fda6425060ac13ce53b27560bec3",
+      "instruction_text": "i need a protective ac output cable cord, and price lower than 40.00 dollars"
+    },
+    {
+      "goal_index": 432,
+      "goal_sha256": "36d3faed86411038d0fbd65c1558327ca4512d980729965c5c787503293a5498",
+      "instruction_text": "i need a black wireless bluetooth speaker, and price lower than 60.00 dollars"
+    },
+    {
+      "goal_index": 433,
+      "goal_sha256": "c1be86558f1f9be97896747188d5989c350345836fed2671d3dc8e785f935310",
+      "instruction_text": "i am looking for a 3x-large long sleeved sweatshirt that is hooded for everyday wear, and price lower than 30.00 dollars"
+    },
+    {
+      "goal_index": 434,
+      "goal_sha256": "0d4729468743513972a2342ed64280b7b81d0d2150c225772bdb819e69c20474",
+      "instruction_text": "i'm looking for some mid-century style grey chairs, and price lower than 150.00 dollars"
+    },
+    {
+      "goal_index": 435,
+      "goal_sha256": "b67226efc3e099d52da338a0fbd15d1dfa92fc63cdf1dd0dc13c69be3aab47a5",
+      "instruction_text": "i'd like to find a 1-pack of hdmi and dp cables that are three feet long. they need to have gold plating, and price lower than 60.00 dollars"
+    },
+    {
+      "goal_index": 436,
+      "goal_sha256": "137423d73287f90d7360b8478747ecfed99880e229d8f6ffec2f74e2d6ef2481",
+      "instruction_text": "i want to find a pair of white and thyme men's blaster pants with an elastic waistband. the size needs to be 5x-large, and price lower than 110.00 dollars"
+    },
+    {
+      "goal_index": 437,
+      "goal_sha256": "344926406c493107994112189709553ffe913224d8dc11c6749a86daa987811b",
+      "instruction_text": "i am looking for a gluten free non gmo fig bar packet of 7. and i choose the variety pack, and price lower than 30.00 dollars"
+    },
+    {
+      "goal_index": 438,
+      "goal_sha256": "04cb3492695e385ea9bbaa59f19dca45ecc15e673101fb0aac68a2a1bdb0c1b5",
+      "instruction_text": "i want a solid wood table in dark cognac brown color for my living room, and price lower than 140.00 dollars"
+    },
+    {
+      "goal_index": 439,
+      "goal_sha256": "17f9b0d493bad1ee30500151e8ce2a59d026f7201b88f632b0071995d3a44a48",
+      "instruction_text": "i am looking for an easy to install computer table for my living room, and price lower than 80.00 dollars"
+    },
+    {
+      "goal_index": 440,
+      "goal_sha256": "40ad1160af623c788a85e0cabd882c100e3bfca0ebb57565424c4420ae8ab2b8",
+      "instruction_text": "i'm looking for a quick-release replacement fitness strap band; it should match my chic teal fitbit, and price lower than 50.00 dollars"
+    },
+    {
+      "goal_index": 441,
+      "goal_sha256": "86383d31de8cf4d68a6b17f554f841c5098efff97f2339a4bd814ba73f2acc27",
+      "instruction_text": "i am looking for mickey and minnie cupcake toppers for a birthday party, and price lower than 40.00 dollars"
+    },
+    {
+      "goal_index": 442,
+      "goal_sha256": "164a6e070d7037ca1fd96434c2dfae819881f77f7b0cfbc27d5c9edb1bf98862",
+      "instruction_text": "i need low rise jeans that are a 54w by 34l, and price lower than 70.00 dollars"
+    },
+    {
+      "goal_index": 443,
+      "goal_sha256": "5892ca170592dd9b700ffc85016943603a8220d0cc4db12e9778f3cd7749944b",
+      "instruction_text": "i'm looking for a high protein meat jerky which should be free from gluten, soy and dairy products, and price lower than 70.00 dollars"
+    },
+    {
+      "goal_index": 444,
+      "goal_sha256": "853a73428593e862b455a037b69ea610d15eb4bc329e5fb8839495e5f36f5b83",
+      "instruction_text": "i am looking for 150ft trishield rg11 aerial messenger - black type coaxial cable aluminum alloy, and price lower than 40.00 dollars"
+    },
+    {
+      "goal_index": 445,
+      "goal_sha256": "a3a792f2229eae69483163e38ab320050975c7ab02f0a8eb4a7eed47814869cc",
+      "instruction_text": "i'm looking for an xx-large plus elastic closure pants for women. the color can be steel, and price lower than 40.00 dollars"
+    },
+    {
+      "goal_index": 446,
+      "goal_sha256": "f6c0a7b07b6fbda4652eacf4e5b21ac891b31d064dae86d6725e71e1d67d1546",
+      "instruction_text": "i am looking for 140 feet of high speed coaxial cable, and price lower than 40.00 dollars"
+    },
+    {
+      "goal_index": 447,
+      "goal_sha256": "9cad41323a55882390b596f66aa105ab4371d1d0d21d45215e9257500cc2780d",
+      "instruction_text": "i'm looking for gluten free it was contain high protein and need to buy it, and price lower than 50.00 dollars"
+    },
+    {
+      "goal_index": 448,
+      "goal_sha256": "fe7ae3a5b206f71ee3e3ee43846699e0dbaa994b1a50dde7707402b938f66c1d",
+      "instruction_text": "i need a non gmo salad topper with glazed pecans, and price lower than 130.00 dollars"
+    },
+    {
+      "goal_index": 449,
+      "goal_sha256": "df90239c868a1c9dcd7ac00494cb5f07f23c0120d39528c85332306ffabfc01e",
+      "instruction_text": "entatial aluminum alloy ball head, camera tripod ball head. find and let me know, and price lower than 130.00 dollars"
+    },
+    {
+      "goal_index": 450,
+      "goal_sha256": "253477b98f26914c67b9c99b76c3b083107c8a33d8ff75857dcd1531593a5a54",
+      "instruction_text": "i am looking for a printed backdrop 07 colored lightweight backgrounds for digital photography. also, choose a  5x7 ft size, and price lower than 140.00 dollars"
+    },
+    {
+      "goal_index": 451,
+      "goal_sha256": "831a66c515809ac09b7bdcd73fbde2b195e5847aee6ad60c6c1b8d1e1ba16c37",
+      "instruction_text": "i need a deodorant anti perspirant in travel size for women, and price lower than 130.00 dollars"
+    },
+    {
+      "goal_index": 452,
+      "goal_sha256": "748793c55721a51a1c772ea54da5c4f8c95f2e32c1c1471c32288ea4bfe5e29b",
+      "instruction_text": "i want a tempered glass screen protector that i can use for my iphone se, and price lower than 40.00 dollars"
+    },
+    {
+      "goal_index": 453,
+      "goal_sha256": "1b2d4122e0986f041ee2a43bdfc508200d1097029718df49364e5c7acd1dd404",
+      "instruction_text": "i am looking for a mouth guard that is pink and non toxic, and price lower than 20.00 dollars"
+    },
+    {
+      "goal_index": 454,
+      "goal_sha256": "a29c30fc082e19409b28eb3b985a745a3b50cfce5cfd821cd0a5c9de016b6b03",
+      "instruction_text": "men's  eau de parfum long lasting for daily use, and price lower than 120.00 dollars"
+    },
+    {
+      "goal_index": 455,
+      "goal_sha256": "78ffcdd48b52e7c2c5b09b91922515ab5480313defdbd3a4cdce69856978b60b",
+      "instruction_text": "i need to find a box of trader joe seed crackers that support my gluten-free diet, and price lower than 20.00 dollars"
+    },
+    {
+      "goal_index": 456,
+      "goal_sha256": "ec307f98b729a0806e4fe88d47e3d86d83116a3567a139d0f480336f5fd8ce8b",
+      "instruction_text": "in the last order i bought the sauce from the brand orgânicville organic, caesar sauce, the taste is very good .no dairy, 8 fz i want to repeat this order , and price lower than 140.00 dollars"
+    },
+    {
+      "goal_index": 457,
+      "goal_sha256": "b2befd49afd477fe52e2c94b8a47beb67f1a1b197654cc250b3d251768bdeff6",
+      "instruction_text": "i would like to buy a cupcake topper which has a laser gold pattern and is suitable for birthday parties, and price lower than 30.00 dollars"
+    },
+    {
+      "goal_index": 458,
+      "goal_sha256": "aa3d96cdacdc9ce28842d37e7402dacc55be6677eb4353b06b95b01239b457d4",
+      "instruction_text": "i'm looking for long-lasting anti-perspirant that is unscented, and price lower than 70.00 dollars"
+    },
+    {
+      "goal_index": 459,
+      "goal_sha256": "8bb451fcb2a95c3eb69dc2247b6943c58ac2813b0aad4830778617575be6183c",
+      "instruction_text": "i am interested in buying a toothbrush that is easy to carry and useful for sensitive teeth, and price lower than 20.00 dollars"
+    },
+    {
+      "goal_index": 460,
+      "goal_sha256": "a2df61a8ddf23e44293312ae764e3162ca6fc8b85996ba922c6bd506583d95fd",
+      "instruction_text": "i am looking for black leather sole fashion sneakers that are in a size 5, and price lower than 110.00 dollars"
+    },
+    {
+      "goal_index": 461,
+      "goal_sha256": "7a638a151f3d3d9f1a8adae1cbbb4b1ae4a1076cdc895d1a18b1daee7ee0b8c5",
+      "instruction_text": "i am looking for some flats with memory foam in a size nine and the color picante, and price lower than 60.00 dollars"
+    },
+    {
+      "goal_index": 462,
+      "goal_sha256": "96a9e8c8fae8dc9a6edc5ed30a5040af7278e6687062cb4addc7a4670f74425f",
+      "instruction_text": "i am looking for a mini mak spotting scope smart phone adapter that is easy to use and comes with a carrying case, and price lower than 230.00 dollars"
+    },
+    {
+      "goal_index": 463,
+      "goal_sha256": "927cbb22841be8fe30963ed2b58ad6ccb3c1f3716f1dc74f113f0eb56fb0ed01",
+      "instruction_text": "i need to buy a smartwatch band for my apple watch. look for one in rose gold stainless steel mesh, and price lower than 50.00 dollars"
+    },
+    {
+      "goal_index": 464,
+      "goal_sha256": "f7ce69ec0bbaa0d4715f7476ec695343cbcb97c0b9c34126dddae0c8c241a37f",
+      "instruction_text": "i am looking for a hair growth treatment in the color 3pc, and price lower than 30.00 dollars"
+    },
+    {
+      "goal_index": 465,
+      "goal_sha256": "3d5940c83fb3a47159b8944dc782146811127e4b5f1fb08750a741083e5f2e81",
+      "instruction_text": "i need grey memory foam slippers with open toes, and price lower than 40.00 dollars"
+    },
+    {
+      "goal_index": 466,
+      "goal_sha256": "70a3923d7c3e411f141627fb233e626593688d4dc48cf7ac7b9e7b5227cd2114",
+      "instruction_text": "i'm looking for a two piece swimsuit in polyester spandex. i want the black one in x-large, and price lower than 50.00 dollars"
+    },
+    {
+      "goal_index": 467,
+      "goal_sha256": "787b3518ed16a1caf03d7f2fd245be28199a4b56b92608dbb8d1521caaf12e08",
+      "instruction_text": "i want to buy ballet shoes which have rubber sole in grey suede color and a size of 6, and price lower than 50.00 dollars"
+    },
+    {
+      "goal_index": 468,
+      "goal_sha256": "c15caa751aba11e47fa6d790e7c2821dfe46fed7e8f395c5fd33941c22259431",
+      "instruction_text": "i would like a standing shelf unit for my living room, and price lower than 230.00 dollars"
+    },
+    {
+      "goal_index": 469,
+      "goal_sha256": "9befe9e5d86e399afe536da5c405f97e99c18f3d755240ef291488a8461967f9",
+      "instruction_text": "i would like some black and golden jewlery for daily wear, and price lower than 70.00 dollars"
+    },
+    {
+      "goal_index": 470,
+      "goal_sha256": "543e1684be4fe98991038d262324dfc65f3f04eb2145dd0150074afdf15bacf9",
+      "instruction_text": "i want a hdmi cable with high speed and 1.5 feet size, and price lower than 70.00 dollars"
+    },
+    {
+      "goal_index": 471,
+      "goal_sha256": "31b98f3e23adf25346cb9b3f555fa3093ecf7e01a4ec738e1d87343127ee3e8d",
+      "instruction_text": "i mostly like designed house with grey color, and price lower than 120.00 dollars"
+    },
+    {
+      "goal_index": 472,
+      "goal_sha256": "ff0d74db42aed6b0a0f42fdb29d47adcfe9c094a1352c425535d19d7c1b8defa",
+      "instruction_text": "i just love the matilde vicenzi brand macaroons and i want to try the amaretto d'italia macaroons flavor. the quality of the ingredients is my requirement, if you find it let me know, and price lower than 30.00 dollars"
+    },
+    {
+      "goal_index": 473,
+      "goal_sha256": "3de029d782d65281b7df2bdebd979759c181e6b49a38be9c78af8d2145b0c4dc",
+      "instruction_text": "i am looking for wild caught, ready to eat sardines in a tomato sauce, and price lower than 40.00 dollars"
+    },
+    {
+      "goal_index": 474,
+      "goal_sha256": "c6cebed3db80d72fac610e1d4abd785cd8cb3d920b2c6973f2310a05a2259ca9",
+      "instruction_text": "buy me a cruelty free solid perfume with a flirt scent, and price lower than 50.00 dollars"
+    },
+    {
+      "goal_index": 475,
+      "goal_sha256": "f4ff863dd9609a97d67e20e071aaad05068972e25541717921ff34d651b6e625",
+      "instruction_text": "i am looking for navy color x-large womens long sleeve open front cardigan sweaters, and price lower than 70.00 dollars"
+    },
+    {
+      "goal_index": 476,
+      "goal_sha256": "19e46841143b9be1eeb87ea21c545814f6d129005409b5b3a363e8bbf85d40ab",
+      "instruction_text": "i want to find 24x24 inch dark blue decorative pillow covers that i can use in my living room, and price lower than 50.00 dollars"
+    },
+    {
+      "goal_index": 477,
+      "goal_sha256": "d38e8399a521e8a4d861a328834a66243d36ee38c81e65849b34ce5bb4333249",
+      "instruction_text": "i want a super soft fleece thrown for living for room size 50\"*40\", and price lower than 40.00 dollars"
+    },
+    {
+      "goal_index": 478,
+      "goal_sha256": "e2361833c13a7e3e251f24826cea1fdabd982134e9cac42ec944981b99130ff2",
+      "instruction_text": "i would like a stained glass wall lamp with a bronze finish, and price lower than 190.00 dollars"
+    },
+    {
+      "goal_index": 479,
+      "goal_sha256": "be7c909ea1548184a602856e57388de7ee8b5424323b4940ebd53b3fa9030686",
+      "instruction_text": "i need women's denim shorts in cotton spandex material with color jayne and size 9, and price lower than 60.00 dollars"
+    },
+    {
+      "goal_index": 480,
+      "goal_sha256": "26450826663659985aff1b38aa8d39cccaf4b48bb5bc7fc999b6b1d8644b241d",
+      "instruction_text": "i would like to buy a three pack of fine combs good for styling dry hair, and price lower than 40.00 dollars"
+    },
+    {
+      "goal_index": 481,
+      "goal_sha256": "7dff2567f27384a91a866656e347b2d3bb85b0a12225c85411d0a4eb67878a65",
+      "instruction_text": "i'm looking for a 6 foot long, high performance coaxial cable, and price lower than 40.00 dollars"
+    },
+    {
+      "goal_index": 482,
+      "goal_sha256": "af1628f92e4aa40662fb882f921dc7fc26aba709b4dce646767ac12bfd787f0a",
+      "instruction_text": "i need 16.5 inch dining room chair pads, and price lower than 50.00 dollars"
+    },
+    {
+      "goal_index": 483,
+      "goal_sha256": "04d942650b47e80f712186fd967dbade7c0b0e5fa7336645dfb9a28112e650a6",
+      "instruction_text": "get me a sixteen pack of apple cinnamon freeze dried banana chips, and price lower than 40.00 dollars"
+    },
+    {
+      "goal_index": 484,
+      "goal_sha256": "40315684bc774bde73b8f8f038d102d70648bfba564b33f4e38e333e43a5befc",
+      "instruction_text": "i'm looking for a small black t-shirt for women with alpaca design and manchine wash, and price lower than 50.00 dollars"
+    },
+    {
+      "goal_index": 485,
+      "goal_sha256": "4f3622bcdfca26c66f42ac984a96ccbb4efaadf1d28ca77df4eb09c6a32d10dc",
+      "instruction_text": "i am looking for a mesh laundry bag, and price lower than 50.00 dollars"
+    },
+    {
+      "goal_index": 486,
+      "goal_sha256": "85c919b44dd1c2e7fccf2fcb40cd279c63cec8f2d008fe2501c087880f25e658",
+      "instruction_text": "i would like a deep brown clog with a rubber sole for my size 8 foot, and price lower than 110.00 dollars"
+    },
+    {
+      "goal_index": 487,
+      "goal_sha256": "66f6a5ea2a1bc0aeda8d6244ddf0e73031391877f509c11be2ccbbba73a2efb8",
+      "instruction_text": "i am looking for a long handled body brush, and price lower than 60.00 dollars"
+    },
+    {
+      "goal_index": 488,
+      "goal_sha256": "b6f6c1c0a437f9a7fc9b6b32010f713089d5f04dbdc42a5060ee3349ecf61db7",
+      "instruction_text": "i would like to buy a white colored easy to assemble book case for my living room, and price lower than 210.00 dollars"
+    },
+    {
+      "goal_index": 489,
+      "goal_sha256": "82e1c8818fbc7aad4ce665ca604a5b2e8c46a55b2502b0fb4c429bf13cdfc5f7",
+      "instruction_text": "i'm looking for a high quality accessory bundle for my canon camera; speed and performance is essential, and price lower than 720.00 dollars"
+    },
+    {
+      "goal_index": 490,
+      "goal_sha256": "707edbdf8e6692ed957b831e695f01cb14be3b96be3a30dbcac8094277ce84ef",
+      "instruction_text": "i am looking for a wallet case with tempered glass protection. please select the rose gold color, and price lower than 50.00 dollars"
+    },
+    {
+      "goal_index": 491,
+      "goal_sha256": "9e3b11d77a3e5fc6ef67fa715e9c8bf52fb04706890e0fe339742391f6259534",
+      "instruction_text": "i am looking for a 5 pack of fully cooked and easy to prepare chicken breast strips, and price lower than 120.00 dollars"
+    },
+    {
+      "goal_index": 492,
+      "goal_sha256": "13ad12b9753c719c527b80fe148f401afc2af8a67795113ea5a43dc4a08b377a",
+      "instruction_text": "i want a king size twin bed with storage compartments"
+    },
+    {
+      "goal_index": 493,
+      "goal_sha256": "782fb76a9fd37a2ae7d5ca4fe07bf9fa7d58ef86e5bd4ac1f7466875ad76497e",
+      "instruction_text": "i'm looking for cellphone accessories for wireless charging, and price lower than 50.00 dollars"
+    },
+    {
+      "goal_index": 494,
+      "goal_sha256": "ce92f8562aedabb2baad4e21d59ed8c8086579908f194e445f38bd39ef4eb57e",
+      "instruction_text": "i am looking for light weight a34 color photo background, and price lower than 40.00 dollars"
+    },
+    {
+      "goal_index": 495,
+      "goal_sha256": "4461c106790f3a65f3f188360664780a9bf404f60993f2cf5475c870bc860c25",
+      "instruction_text": "i need roasted coffee beans that are dairy free and cinnamon bun flavored, and price lower than 40.00 dollars"
+    },
+    {
+      "goal_index": 496,
+      "goal_sha256": "ac8d2f7ff72a629fd218453ea13aba2851484635679a5fcb5f9f10604269d25e",
+      "instruction_text": "i need brown eco friendly nikahoo small storage baskets, and price lower than 50.00 dollars"
+    },
+    {
+      "goal_index": 497,
+      "goal_sha256": "d82b380910d90b64c71ccb48c9528c5644d1667610da731801bac42953f918a9",
+      "instruction_text": "i am looking for ultra hd motion detection surveillance dome camera color black size :6mp wdr 2.8 mm, and price lower than 200.00 dollars"
+    },
+    {
+      "goal_index": 498,
+      "goal_sha256": "9bde9c93c261605e9a87f4aa9bf5483031f65d77acd7f1b7d29d8e5d12299e37",
+      "instruction_text": "i'm looking for a universal remote control with batteries included, and price lower than 30.00 dollars"
+    },
+    {
+      "goal_index": 499,
+      "goal_sha256": "62c55b1dba510c301d19bc257dbfccfb3937e6c8b7c65bd75f9293911ea5133e",
+      "instruction_text": "i'm looking for 33.81 fl oz non-gmo gluten free monin raspberry syrup, and price lower than 50.00 dollars"
+    }
+  ],
+  "pilot": [
+    {
+      "goal_index": 500,
+      "goal_sha256": "c57455bd1cd69f7e1560344e65fd121351d3851679c818ff80393086af252103",
+      "instruction_text": "i need to find a small end table that is easy to assemble; pick a blue-coated steel frame that won't rust, and price lower than 70.00 dollars"
+    },
+    {
+      "goal_index": 501,
+      "goal_sha256": "d2e01c1c173c2c2f05f3c4c7cf43f83bfcc5a88f74f8109050c7eccef2873d91",
+      "instruction_text": "i need a heavy duty dust proof tempered glass for iphone 13 pro max 6.7 inch and its size is case+4 protectors with redblack color, and price lower than 50.00 dollars"
+    }
+  ]
+}

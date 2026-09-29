@@ -7,7 +7,8 @@
     "wrappers.py": "Parameterize FEVER data directory; original answer normalization and scoring retained.",
     "qa.py": "Adapt hotpotqa.ipynb webthink loop for shared Act/ReAct execution and complete logs.",
     "alfworld.py": "Adapt alfworld.ipynb alfworld_run loop; preserve sparse thoughts and 49 decisions.",
-    "webshop.py": "Extract notebook webshopEnv and HTML observation parser; adapt HTTP injection and runner."
+    "webshop.py": "Extract notebook webshopEnv and HTML observation parser; adapt HTTP injection and runner.",
+    "webshop_storage": "Original converted full JSONL products with read-only SQLite offset/price lookup; original price generator and human goal generator; seed 42 before prices and original seed 233 before goal shuffle."
   },
   "prompts": {
     "prompts/alfworld.json": {
@@ -31,11 +32,18 @@
       "source": "WebShop.ipynb prompt1/prompt1_actonly"
     }
   },
-  "adaptation_status": "QA adapter implemented; ALFWorld and WebShop runners pending",
-  "current_artifacts": "WikiEnv HTTP injection and FEVER data directory patched. scripts/run_qa.py adapts notebook loop; unchanged prompt text.",
+  "adaptation_status": "QA, ALFWorld and WebShop adapters implemented; new-model QA pilots running; interactive model pilots pending",
+  "current_artifacts": "scripts/run_qa.py, scripts/run_alfworld.py and scripts/run_webshop.py preserve pinned author loops. WebShop notebook environment extracted with injectable audited HTTP and loopback URL; original engine, templates, goal and reward modules imported from pinned vendor.",
   "author_file_hashes": {
     "wikienv.py": "0de8f4429b3c94bbb0cf826171109faee2b8f04863bcc032cac1dbb4f4fccb30",
     "wrappers.py": "60fb59bf1ae615c18f0db86f4ad2beb67bd2419d74b87a57f6bb18eb28e58d5a",
     "LICENSE": "cd2d341de1d3781e993e9859b1a36e8bfe12c84507c0a52f21c0220743af475b"
+  },
+  "adapted_source_hashes": {
+    "scripts/run_qa.py": "215d6277874034c4f4842a4792e3bdb7eaa3142fab8131d236cccbf9cf3285fd",
+    "scripts/run_alfworld.py": "7ae8bb7dbf97a84e18b94df1dd446f25b107bbac8fea784c186ec5cea5c7b743",
+    "scripts/run_webshop.py": "1d12375cbf8ce2290116e3d4c148f0a4ff3d33105d93b164119a014708a05233",
+    "scripts/webshop_runtime.py": "8bb67d8efccf19e9fba11d070a45b9c232f983978b5427d65d14f8eb3262521e",
+    "src/react_reproduction/author/webshop_env.py": "6beaf2b9837fdb9d9cad09bf6f00c966158bcc1418dd36d6df5d8476267067c1"
   }
 }

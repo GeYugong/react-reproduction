@@ -1,0 +1,14 @@
+{
+  "run_id": "fever-formal-qwen36-v1",
+  "phase": "formal",
+  "status": "running",
+  "completed": 23,
+  "planned": 2500,
+  "last": {
+    "index": 4597,
+    "method": "standard",
+    "correct": true,
+    "termination": "answer"
+  },
+  "updated_at_utc": "2026-09-29T04:41:54.948574+00:00"
+}

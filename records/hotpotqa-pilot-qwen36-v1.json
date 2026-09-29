@@ -1,0 +1,14 @@
+{
+  "run_id": "hotpotqa-pilot-qwen36-v1",
+  "phase": "pilot",
+  "status": "running",
+  "completed": 62,
+  "planned": 80,
+  "last": {
+    "index": 6157,
+    "method": "cot",
+    "correct": true,
+    "termination": "answer"
+  },
+  "updated_at_utc": "2026-09-29T04:41:56.850751+00:00"
+}

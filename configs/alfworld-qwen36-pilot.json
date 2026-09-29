@@ -1,0 +1,169 @@
+{
+  "schema_version": 1,
+  "status": "qwen36_full_restart_pilot",
+  "formal_runs_enabled": false,
+  "model": {
+    "id": "qwen3.6-35b-a3b",
+    "base_url": "https://aigw.saurlax.com/v1",
+    "endpoint": "chat/completions",
+    "allowed_formal_models": [
+      "qwen3.6-35b-a3b"
+    ],
+    "allow_automatic_fallback": false,
+    "identity_level": "gateway_alias_not_immutable_weight_snapshot",
+    "upstream_mapping_verified": false,
+    "native_reasoning_disabled_verified": false,
+    "requested_controls": {
+      "enable_thinking": false,
+      "reasoning_effort": "none"
+    },
+    "unexpected_reasoning_policy": "stop_batch_and_record_protocol_failure",
+    "synthetic_protocol_passed": false,
+    "native_reasoning_evidence": "No extra reasoning in initial real-prompt and synthetic calls; real pilot validation pending; absent reasoning telemetry remains unknown",
+    "excluded_models": {
+      "glm-5.3-flash": "Native reasoning disable controls unreliable; explicitly excluded",
+      "glm-5.3": "Native reasoning observed",
+      "qwen-3.8-27b": "Retired by user request; all methods restarted with replacement model"
+    },
+    "mapping_policy": "Record gateway alias and response model; immutable upstream verification remains a limitation, not a pilot dispatch blocker"
+  },
+  "generation": {
+    "default_temperature": 0,
+    "cot_sc_temperature": 0.7,
+    "cot_sc_samples": 21,
+    "top_p": 1,
+    "stream": false,
+    "max_output_tokens": {
+      "standard": 128,
+      "cot": 512,
+      "cot_sc": 512,
+      "act": 256,
+      "react": 256
+    },
+    "max_transport_retries": 2,
+    "automatic_semantic_repair_calls": 0,
+    "initial_concurrency": 1,
+    "formal_concurrency_cap": 2,
+    "request_timeout_seconds": 60,
+    "native_tool_calling": false,
+    "prompt_language": "en"
+  },
+  "datasets": {
+    "hotpotqa": {
+      "size": 500,
+      "population": 7405,
+      "seed": 233,
+      "few_shot": 6,
+      "max_decisions": 7,
+      "methods": [
+        "standard",
+        "cot",
+        "cot_sc",
+        "act",
+        "react",
+        "cot_sc_to_react",
+        "react_to_cot_sc"
+      ]
+    },
+    "fever": {
+      "size": 500,
+      "population": 9999,
+      "seed": 233,
+      "few_shot": 3,
+      "max_decisions": 5,
+      "methods": [
+        "standard",
+        "cot",
+        "cot_sc",
+        "act",
+        "react",
+        "cot_sc_to_react",
+        "react_to_cot_sc"
+      ]
+    },
+    "alfworld": {
+      "size": 134,
+      "few_shot": 2,
+      "prompt_order": [
+        1,
+        0
+      ],
+      "max_decisions": 49,
+      "count_thought_as_decision": true,
+      "methods": [
+        "act",
+        "react"
+      ]
+    },
+    "webshop": {
+      "size": 500,
+      "few_shot": 1,
+      "max_decisions": 14,
+      "reset_counts_as_decision": false,
+      "count_thought_as_decision": true,
+      "catalog": "full",
+      "goal_indices": "0..499",
+      "prompt_window_characters": 6400,
+      "methods": [
+        "act",
+        "react"
+      ]
+    }
+  },
+  "hybrids": {
+    "offline_composition": true,
+    "cot_sc_to_react": {
+      "fallback_if_valid_majority_count_less_than": 10.5
+    },
+    "react_to_cot_sc": {
+      "fallback_if": "no_valid_nonempty_finish_within_decision_limit"
+    },
+    "use_ground_truth_to_route": false,
+    "pass_previous_branch_context_to_fallback": false,
+    "vote_tie_rule": "earliest_sample_index_among_tied_normalized_valid_answers"
+  },
+  "budget": {
+    "currency": "CNY",
+    "hard_limit": null,
+    "normal_dispatch_ceiling": null,
+    "limit_policy": "no_monetary_cap",
+    "pricing_verified": false,
+    "input_per_million_cny": null,
+    "output_per_million_cny": null,
+    "cache_read_per_million_cny": null,
+    "cache_write_per_million_cny": null,
+    "per_request_cny": null,
+    "cny_per_billing_unit": null,
+    "unknown_cost_policy": "retain_usage_and_mark_actual_cost_pending_reconciliation",
+    "admission_rule": "no_monetary_limit; retain protocol_and_plan_approval_gates",
+    "hybrid_report_includes_logical_branch_costs": true
+  },
+  "evaluation": {
+    "hotpotqa_primary": "answer_em",
+    "hotpotqa_secondary": "answer_f1",
+    "fever_primary": "label_accuracy_not_fever_evidence_score",
+    "alfworld_primary": "environment_won_success_rate",
+    "webshop_primary": [
+      "100_times_mean_reward",
+      "100_times_mean_reward_equals_one"
+    ],
+    "paired_bootstrap_samples": 10000,
+    "bootstrap_seed": 233,
+    "confidence_level": 0.95,
+    "report_endpoint_failures_separately": true,
+    "never_drop_failed_tasks_silently": true
+  },
+  "review_gate": {
+    "plan_approved": true,
+    "first_commit_subject": "docs(plan): define ReAct mainline reproduction protocol",
+    "required_before_formal_dispatch": [
+      "plan_approved_and_committed",
+      "native_reasoning_control_verified",
+      "usage_ledger_verified",
+      "environment_and_prompt_artifacts_frozen",
+      "pilot_completed_on_disjoint_samples"
+    ]
+  },
+  "formal_ready_datasets": [],
+  "campaign_id": "qwen36-restart-20260929"
+}

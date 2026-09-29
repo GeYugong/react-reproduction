@@ -1,0 +1,31 @@
+{
+  "status": "passed",
+  "run_id": "fever-sc-pilot-qwen36-v1",
+  "model": "qwen3.6-35b-a3b",
+  "recorded_at_utc": "2026-09-29T04:38:03.338850+00:00",
+  "episodes": 2,
+  "planned": 2,
+  "api_successes_observed": 42,
+  "native_reasoning_fields_observed": {},
+  "native_reasoning_anomalies": 0,
+  "missing_telemetry_means_unknown": true,
+  "environment_steps_replayed": 0,
+  "wiki_reads_replayed": 0,
+  "model_observation_blocks_ignored": 0,
+  "invalid_answers": [],
+  "terminations": {
+    "answer": 2
+  },
+  "usage": {
+    "prompt_tokens": 9954,
+    "completion_tokens": 1698,
+    "total_tokens": 11652
+  },
+  "cost_status": "pending_reconciliation",
+  "actual_cost_cny": null,
+  "archive": {
+    "path": "artifacts/fever-sc-pilot-qwen36-v1.zip",
+    "bytes": 80323,
+    "sha256": "01f25c32d0f3b768d800d01c65e0e2471b98596e4c72e780d0f702252e2271f2"
+  }
+}

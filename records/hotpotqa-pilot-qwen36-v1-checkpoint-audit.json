@@ -1,0 +1,27 @@
+{
+  "status": "checkpoint_passed",
+  "run_id": "hotpotqa-pilot-qwen36-v1",
+  "model": "qwen3.6-35b-a3b",
+  "recorded_at_utc": "2026-09-29T04:12:38.414823+00:00",
+  "episodes": 14,
+  "planned": 80,
+  "api_successes_observed": 65,
+  "native_reasoning_fields_observed": {},
+  "native_reasoning_anomalies": 0,
+  "missing_telemetry_means_unknown": true,
+  "environment_steps_replayed": 62,
+  "wiki_reads_replayed": 48,
+  "model_observation_blocks_ignored": 0,
+  "invalid_answers": [],
+  "terminations": {
+    "valid_finish": 13,
+    "step_limit": 1
+  },
+  "usage": {
+    "prompt_tokens": 129136,
+    "completion_tokens": 4551,
+    "total_tokens": 133687
+  },
+  "cost_status": "pending_reconciliation",
+  "actual_cost_cny": null
+}

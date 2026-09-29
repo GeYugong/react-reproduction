@@ -1,0 +1,27 @@
+{
+  "dataset": "hotpotqa",
+  "campaign_id": "qwen36-restart-20260929",
+  "status": "pilot",
+  "updated_at_utc": "2026-09-29T03:58:07.821028+00:00",
+  "audits": [],
+  "active_run_id": "hotpotqa-pilot-qwen36-v1",
+  "command": [
+    "/mnt/d/0code/Research/feng/react/.venv-qa/bin/python",
+    "/mnt/d/0code/Research/feng/react/scripts/run_qa.py",
+    "--dataset",
+    "hotpotqa",
+    "--phase",
+    "pilot",
+    "--methods",
+    "react",
+    "act",
+    "standard",
+    "cot",
+    "--limit",
+    "20",
+    "--run-id",
+    "hotpotqa-pilot-qwen36-v1",
+    "--config",
+    "/mnt/d/0code/Research/feng/react/configs/hotpotqa-qwen36-pilot.json"
+  ]
+}

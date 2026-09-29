@@ -1,0 +1,27 @@
+{
+  "status": "checkpoint_passed",
+  "run_id": "fever-pilot-qwen36-v1",
+  "model": "qwen3.6-35b-a3b",
+  "recorded_at_utc": "2026-09-29T04:12:45.324721+00:00",
+  "episodes": 29,
+  "planned": 80,
+  "api_successes_observed": 72,
+  "native_reasoning_fields_observed": {},
+  "native_reasoning_anomalies": 0,
+  "missing_telemetry_means_unknown": true,
+  "environment_steps_replayed": 72,
+  "wiki_reads_replayed": 42,
+  "model_observation_blocks_ignored": 0,
+  "invalid_answers": [],
+  "terminations": {
+    "step_limit": 2,
+    "valid_finish": 27
+  },
+  "usage": {
+    "prompt_tokens": 72159,
+    "completion_tokens": 3452,
+    "total_tokens": 75611
+  },
+  "cost_status": "pending_reconciliation",
+  "actual_cost_cny": null
+}

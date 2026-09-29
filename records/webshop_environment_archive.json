@@ -1,0 +1,10 @@
+{
+  "recorded_at_utc": "2026-09-29T04:39:10.365820+00:00",
+  "archive": "artifacts/webshop-environment-v1.zip",
+  "bytes": 81176920,
+  "sha256": "6b9bfe0d4eeb0d2705f20f922ead9c1a7a69a299da3d622786f5b05c6b6a6927",
+  "files": 15,
+  "contents": "Frozen full-catalog offset and price database, all goals, HTTP checks, index and dependency evidence; not model results",
+  "rebuildable_resources": "Full product JSONL and Lucene files excluded; exact hashes and pinned rebuild sources retained",
+  "backup_destination": "private origin/main after commit and push"
+}
