@@ -1,5 +1,5 @@
 {
-  "recorded_at_utc": "2026-09-28T23:53:42.107206+00:00",
+  "recorded_at_utc": "2026-09-29T01:55:10.020004+00:00",
   "api_status": "blocked_by_gateway_billing",
   "billing_gate": "records/billing_gate.json",
   "paid_processes_running": false,
@@ -9,8 +9,9 @@
   },
   "resume_policy": "Await user confirmation of restored quota; resume original commands and run IDs with unchanged run_qa.py and experiment.json to reuse cache. No repeated 402 probes.",
   "offline_tasks": [
-    "WebShop schema validation process in progress; inspect records/webshop_schema_check.json and cache logs",
-    "ALFWorld runner implemented; dry reset and offline loop tests passed; model pilot awaits API restoration",
-    "WebShop server dependencies and spaCy model installed; Java and full search index still required"
+    "Java 11 verified under envs/java; no global environment changed",
+    "Dependency install process will launch scripts/build_webshop_index.py on success; inspect actual process and logs before restarting",
+    "After documents are available, run scripts/check_webshop_export.py to compare first 1000 documents with exact author conversion loop",
+    "Full index and server goal mapping remain to be validated"
   ]
 }

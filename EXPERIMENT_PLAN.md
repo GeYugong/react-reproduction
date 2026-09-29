@@ -279,3 +279,9 @@ WebShop 原始 Google Drive 完整商品文件无法匿名下载：gdown 失败�
 2026-09-28 23:43:58 UTC，两个正式进程均收到 HTTP 402，错误为 `payment_required`、参数 `quota`。主批次已完成 1,102/2,000 条；CoT-SC 完成 33/500 题，下一题已缓存 13/21 次采样。两进程均已停止，不循环重试付费接口；需要网关账单/额度恢复后用原 run_id 续跑，成功请求直接复用缓存。原始记录及百科页面另行形成私有远端 checkpoint 归档，哈希、请求与用量见 `records/billing_checkpoint.json`。预算不设上限不等于网关账户拥有可用额度，实付金额仍待对账。
 
 不依赖 API 的准备继续：WebShop 三份完整数据已下载并核验，正在流式验证 JSON 与商品数量；安装作者服务所需依赖和 en_core_web_sm 3.3.0，锁定实际版本，Java/索引尚待完成。ALFWorld 根据作者 notebook 新增执行循环，保留稀疏 think、49 次决策及环境 won 判据；在 seen split 两题上分别完成 Act/ReAct 的无模型 reset 检查，并通过离线步数、稀疏思考与终止条件测试。上述检查不是模型实验成绩。
+
+### WebShop 检索环境准备
+
+在项目 envs/java 内安装 Temurin Java 11，下载包 SHA-256 与供应方元数据一致，java -version 通过；不修改系统级 Java 配置。安装和导入检查发现作者额外要求的 FAISS 与 PyTorch 尚未齐备，补齐 faiss-cpu 1.7.4、CPU torch 1.11.0，并将 Transformers 固定到作者 requirements.txt 的 4.19.2。
+
+全商品索引导出采用每批 1000 条调用作者原始 load_products，复用相同属性和人工目标映射；检索文本拼接与保存字段沿用作者 convert_product_file_format.py。该改动仅用于限制内存峰值，不缩小商品库。导出后记录实际商品数与文档哈希，使用作者 Lucene 参数构建全索引，并与作者原始转换循环核对前 1000 条文档。构建与一致性检查尚待运行完成，不将脚本创建记作环境验收通过。
