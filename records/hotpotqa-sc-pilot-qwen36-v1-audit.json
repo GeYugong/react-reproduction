@@ -1,0 +1,31 @@
+{
+  "status": "passed",
+  "run_id": "hotpotqa-sc-pilot-qwen36-v1",
+  "model": "qwen3.6-35b-a3b",
+  "recorded_at_utc": "2026-09-29T06:01:46.730194+00:00",
+  "episodes": 2,
+  "planned": 2,
+  "api_successes_observed": 42,
+  "native_reasoning_fields_observed": {},
+  "native_reasoning_anomalies": 0,
+  "missing_telemetry_means_unknown": true,
+  "environment_steps_replayed": 0,
+  "wiki_reads_replayed": 0,
+  "model_observation_blocks_ignored": 0,
+  "invalid_answers": [],
+  "terminations": {
+    "answer": 2
+  },
+  "usage": {
+    "prompt_tokens": 23205,
+    "completion_tokens": 3465,
+    "total_tokens": 26670
+  },
+  "cost_status": "pending_reconciliation",
+  "actual_cost_cny": null,
+  "archive": {
+    "path": "artifacts/hotpotqa-sc-pilot-qwen36-v1.zip",
+    "bytes": 96339,
+    "sha256": "6addb0e36dae920a677c0fde5b3b87c18796ff130a49c310c64847665de6bbc3"
+  }
+}

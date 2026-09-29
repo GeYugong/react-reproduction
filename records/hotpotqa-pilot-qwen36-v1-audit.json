@@ -1,0 +1,51 @@
+{
+  "status": "passed",
+  "run_id": "hotpotqa-pilot-qwen36-v1",
+  "model": "qwen3.6-35b-a3b",
+  "recorded_at_utc": "2026-09-29T06:01:37.507395+00:00",
+  "episodes": 80,
+  "planned": 80,
+  "api_successes_observed": 215,
+  "native_reasoning_fields_observed": {},
+  "native_reasoning_anomalies": 0,
+  "missing_telemetry_means_unknown": true,
+  "environment_steps_replayed": 175,
+  "wiki_reads_replayed": 132,
+  "model_observation_blocks_ignored": 0,
+  "invalid_answers": [
+    {
+      "index": 1571,
+      "method": "cot",
+      "sample": 0,
+      "finish_reason": "length",
+      "contains_answer_marker": false,
+      "completion_tokens": 512
+    },
+    {
+      "index": 5984,
+      "method": "cot",
+      "sample": 0,
+      "finish_reason": "length",
+      "contains_answer_marker": false,
+      "completion_tokens": 512
+    }
+  ],
+  "terminations": {
+    "valid_finish": 35,
+    "invalid_answer": 2,
+    "answer": 38,
+    "step_limit": 5
+  },
+  "usage": {
+    "prompt_tokens": 295276,
+    "completion_tokens": 9151,
+    "total_tokens": 304427
+  },
+  "cost_status": "pending_reconciliation",
+  "actual_cost_cny": null,
+  "archive": {
+    "path": "artifacts/hotpotqa-pilot-qwen36-v1.zip",
+    "bytes": 6102862,
+    "sha256": "a10f7840f2af122802935ddf382954fac882180d5d466f165fbc3268446b76f9"
+  }
+}

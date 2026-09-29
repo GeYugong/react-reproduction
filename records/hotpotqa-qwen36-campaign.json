@@ -1,27 +1,62 @@
 {
   "dataset": "hotpotqa",
   "campaign_id": "qwen36-restart-20260929",
-  "status": "pilot",
-  "updated_at_utc": "2026-09-29T03:58:07.821028+00:00",
-  "audits": [],
-  "active_run_id": "hotpotqa-pilot-qwen36-v1",
+  "status": "formal",
+  "updated_at_utc": "2026-09-29T06:02:14.254058+00:00",
+  "audits": [
+    {
+      "run_id": "hotpotqa-pilot-qwen36-v1",
+      "status": "passed",
+      "episodes": 80,
+      "model": "qwen3.6-35b-a3b",
+      "terminations": {
+        "valid_finish": 35,
+        "invalid_answer": 2,
+        "answer": 38,
+        "step_limit": 5
+      },
+      "requests": 215,
+      "usage": {
+        "prompt_tokens": 295276,
+        "completion_tokens": 9151,
+        "total_tokens": 304427
+      }
+    },
+    {
+      "run_id": "hotpotqa-sc-pilot-qwen36-v1",
+      "status": "passed",
+      "episodes": 2,
+      "model": "qwen3.6-35b-a3b",
+      "terminations": {
+        "answer": 2
+      },
+      "requests": 42,
+      "usage": {
+        "prompt_tokens": 23205,
+        "completion_tokens": 3465,
+        "total_tokens": 26670
+      }
+    }
+  ],
+  "active_run_id": "hotpotqa-formal-qwen36-v1",
   "command": [
     "/mnt/d/0code/Research/feng/react/.venv-qa/bin/python",
     "/mnt/d/0code/Research/feng/react/scripts/run_qa.py",
     "--dataset",
     "hotpotqa",
     "--phase",
-    "pilot",
+    "formal",
     "--methods",
-    "react",
-    "act",
     "standard",
     "cot",
+    "act",
+    "react",
+    "cot_sc",
     "--limit",
-    "20",
+    "500",
     "--run-id",
-    "hotpotqa-pilot-qwen36-v1",
+    "hotpotqa-formal-qwen36-v1",
     "--config",
-    "/mnt/d/0code/Research/feng/react/configs/hotpotqa-qwen36-pilot.json"
+    "/mnt/d/0code/Research/feng/react/configs/hotpotqa-qwen36-formal.json"
   ]
 }

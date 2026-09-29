@@ -1,0 +1,133 @@
+{
+  "recorded_at_utc": "2026-09-29T06:02:04.255110+00:00",
+  "cause": "Three consecutive 60-second gateway ReadTimeout exceptions for hotpotqa/3169/standard/0; FEVER remained healthy",
+  "stopped_progress": {
+    "run_id": "hotpotqa-formal-qwen36-v1",
+    "status": "stopped",
+    "completed": 197,
+    "error_type": "ReadTimeout",
+    "error": "HTTPSConnectionPool(host='aigw.saurlax.com', port=443): Read timed out. (read timeout=60)",
+    "updated_at_utc": "2026-09-29T05:42:41.876606+00:00"
+  },
+  "stopped_controller": {
+    "dataset": "hotpotqa",
+    "campaign_id": "qwen36-restart-20260929",
+    "status": "stopped",
+    "updated_at_utc": "2026-09-29T05:42:42.110953+00:00",
+    "audits": [
+      {
+        "run_id": "hotpotqa-pilot-qwen36-v1",
+        "status": "passed",
+        "episodes": 80,
+        "model": "qwen3.6-35b-a3b",
+        "terminations": {
+          "valid_finish": 35,
+          "invalid_answer": 2,
+          "answer": 38,
+          "step_limit": 5
+        },
+        "requests": 215,
+        "usage": {
+          "prompt_tokens": 295276,
+          "completion_tokens": 9151,
+          "total_tokens": 304427
+        }
+      },
+      {
+        "run_id": "hotpotqa-sc-pilot-qwen36-v1",
+        "status": "passed",
+        "episodes": 2,
+        "model": "qwen3.6-35b-a3b",
+        "terminations": {
+          "answer": 2
+        },
+        "requests": 42,
+        "usage": {
+          "prompt_tokens": 23205,
+          "completion_tokens": 3465,
+          "total_tokens": 26670
+        }
+      }
+    ],
+    "active_run_id": "hotpotqa-formal-qwen36-v1",
+    "command": [
+      "/mnt/d/0code/Research/feng/react/.venv-qa/bin/python",
+      "/mnt/d/0code/Research/feng/react/scripts/run_qa.py",
+      "--dataset",
+      "hotpotqa",
+      "--phase",
+      "formal",
+      "--methods",
+      "standard",
+      "cot",
+      "act",
+      "react",
+      "cot_sc",
+      "--limit",
+      "500",
+      "--run-id",
+      "hotpotqa-formal-qwen36-v1",
+      "--config",
+      "/mnt/d/0code/Research/feng/react/configs/hotpotqa-qwen36-formal.json"
+    ],
+    "error_type": "CalledProcessError",
+    "error": "Command '['/mnt/d/0code/Research/feng/react/.venv-qa/bin/python', '/mnt/d/0code/Research/feng/react/scripts/run_qa.py', '--dataset', 'hotpotqa', '--phase', 'formal', '--methods', 'standard', 'cot', 'act', 'react', 'cot_sc', '--limit', '500', '--run-id', 'hotpotqa-formal-qwen36-v1', '--config', '/mnt/d/0code/Research/feng/react/configs/hotpotqa-qwen36-formal.json']' returned non-zero exit status 1."
+  },
+  "recovery": "Resume identical run ID/config/code, preserve 197 completed episodes; no timeout or generation parameter changes",
+  "timed_out_request_cost": "unknown; retained in original ledger",
+  "status": "resumed_original_request_succeeded",
+  "verified_at_utc": "2026-09-29T06:03:51.200429+00:00",
+  "post_recovery_calls": [
+    {
+      "event": "api_response",
+      "call_id": "hotpotqa/3169/standard/0",
+      "http_status": 200
+    },
+    {
+      "event": "api_response",
+      "call_id": "hotpotqa/1727/standard/0",
+      "http_status": 200
+    },
+    {
+      "event": "api_response",
+      "call_id": "hotpotqa/1490/standard/0",
+      "http_status": 200
+    },
+    {
+      "event": "api_response",
+      "call_id": "hotpotqa/3317/standard/0",
+      "http_status": 200
+    },
+    {
+      "event": "api_response",
+      "call_id": "hotpotqa/5821/standard/0",
+      "http_status": 200
+    },
+    {
+      "event": "api_response",
+      "call_id": "hotpotqa/1496/standard/0",
+      "http_status": 200
+    },
+    {
+      "event": "api_response",
+      "call_id": "hotpotqa/2702/standard/0",
+      "http_status": 200
+    },
+    {
+      "event": "api_response",
+      "call_id": "hotpotqa/3388/standard/0",
+      "http_status": 200
+    },
+    {
+      "event": "api_response",
+      "call_id": "hotpotqa/2674/standard/0",
+      "http_status": 200
+    },
+    {
+      "event": "api_response",
+      "call_id": "hotpotqa/3352/standard/0",
+      "http_status": 200
+    }
+  ],
+  "completed_at_verification": 207
+}

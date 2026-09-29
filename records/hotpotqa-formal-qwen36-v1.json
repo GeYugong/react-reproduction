@@ -1,0 +1,14 @@
+{
+  "run_id": "hotpotqa-formal-qwen36-v1",
+  "phase": "formal",
+  "status": "running",
+  "completed": 207,
+  "planned": 2500,
+  "last": {
+    "index": 3352,
+    "method": "standard",
+    "correct": true,
+    "termination": "answer"
+  },
+  "updated_at_utc": "2026-09-29T06:03:45.838111+00:00"
+}

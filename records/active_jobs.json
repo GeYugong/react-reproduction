@@ -1,5 +1,5 @@
 {
-  "recorded_at_utc": "2026-09-29T04:40:51.125576+00:00",
+  "recorded_at_utc": "2026-09-29T06:03:51.191729+00:00",
   "campaign_id": "qwen36-restart-20260929",
   "model": "qwen3.6-35b-a3b",
   "old_model_policy": "All Qwen 3.8 runs retired; never resume or import their outputs into this campaign",
@@ -7,7 +7,7 @@
     {
       "dataset": "hotpotqa",
       "controller": "scripts/run_restart_campaign.py",
-      "status": "pilot",
+      "status": "formal",
       "progress": "records/hotpotqa-qwen36-campaign.json",
       "pilot_config": "configs/hotpotqa-qwen36-pilot.json",
       "stages": [
@@ -16,12 +16,15 @@
         "automatic protocol/score/vote audit",
         "500 questions x five generated methods"
       ],
-      "active_run_id": "hotpotqa-pilot-qwen36-v1",
+      "active_run_id": "hotpotqa-formal-qwen36-v1",
       "logs": [
         "data/cache/hotpotqa-qwen36-campaign.stdout.log",
-        "data/cache/hotpotqa-qwen36-campaign.stderr.log"
+        "data/cache/hotpotqa-qwen36-campaign.stderr.log",
+        "data/cache/hotpotqa-qwen36-recovery-0601.stdout.log",
+        "data/cache/hotpotqa-qwen36-recovery-0601.stderr.log"
       ],
-      "current_config": "/mnt/d/0code/Research/feng/react/configs/hotpotqa-qwen36-pilot.json"
+      "current_config": "/mnt/d/0code/Research/feng/react/configs/hotpotqa-qwen36-formal.json",
+      "recovery_record": "records/hotpotqa-qwen36-timeout-recovery-20260929T0601.json"
     },
     {
       "dataset": "fever",
@@ -45,10 +48,10 @@
   ],
   "concurrency_cap": 2,
   "later_stages": [
-    "offline new-model hybrids",
+    "complete both running QA batches and generate offline hybrids/statistics",
     "new-model ALFWorld pilot and 134-game Act/ReAct",
-    "WebShop index acceptance and environment checks then new-model 500-goal Act/ReAct",
-    "full audit, paired statistics, cost and final report"
+    "new-model WebShop pilot and 500-goal Act/ReAct",
+    "final audit, archive and report"
   ],
   "environment_preparation": {
     "webshop_index": "accepted_existing_index",
