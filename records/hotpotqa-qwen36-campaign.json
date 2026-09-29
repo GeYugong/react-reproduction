@@ -2,7 +2,7 @@
   "dataset": "hotpotqa",
   "campaign_id": "qwen36-restart-20260929",
   "status": "formal",
-  "updated_at_utc": "2026-09-29T13:45:42.366488+00:00",
+  "updated_at_utc": "2026-09-29T14:47:33.332841+00:00",
   "audits": [
     {
       "run_id": "hotpotqa-pilot-qwen36-v1",

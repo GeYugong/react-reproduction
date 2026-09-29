@@ -1,0 +1,155 @@
+{
+  "timestamp_utc": "2026-09-29T14:47:15.0694875Z",
+  "event": "wikipedia_connection_recovery",
+  "datasets": {
+    "hotpotqa": {
+      "controller": {
+        "dataset": "hotpotqa",
+        "campaign_id": "qwen36-restart-20260929",
+        "status": "stopped",
+        "updated_at_utc": "2026-09-29T21:51:48.366116+08:00",
+        "audits": [
+          {
+            "run_id": "hotpotqa-pilot-qwen36-v1",
+            "status": "passed",
+            "episodes": 80,
+            "model": "qwen3.6-35b-a3b",
+            "terminations": {
+              "valid_finish": 35,
+              "invalid_answer": 2,
+              "answer": 38,
+              "step_limit": 5
+            },
+            "requests": 215,
+            "usage": {
+              "prompt_tokens": 295276,
+              "completion_tokens": 9151,
+              "total_tokens": 304427
+            }
+          },
+          {
+            "run_id": "hotpotqa-sc-pilot-qwen36-v1",
+            "status": "passed",
+            "episodes": 2,
+            "model": "qwen3.6-35b-a3b",
+            "terminations": {
+              "answer": 2
+            },
+            "requests": 42,
+            "usage": {
+              "prompt_tokens": 23205,
+              "completion_tokens": 3465,
+              "total_tokens": 26670
+            }
+          }
+        ],
+        "active_run_id": "hotpotqa-formal-qwen36-v1",
+        "command": [
+          "/mnt/d/0code/Research/feng/react/.venv-qa/bin/python",
+          "/mnt/d/0code/Research/feng/react/scripts/run_qa.py",
+          "--dataset",
+          "hotpotqa",
+          "--phase",
+          "formal",
+          "--methods",
+          "standard",
+          "cot",
+          "act",
+          "react",
+          "cot_sc",
+          "--limit",
+          "500",
+          "--run-id",
+          "hotpotqa-formal-qwen36-v1",
+          "--config",
+          "/mnt/d/0code/Research/feng/react/configs/hotpotqa-qwen36-formal.json"
+        ],
+        "error_type": "CalledProcessError",
+        "error": "Command '['/mnt/d/0code/Research/feng/react/.venv-qa/bin/python', '/mnt/d/0code/Research/feng/react/scripts/run_qa.py', '--dataset', 'hotpotqa', '--phase', 'formal', '--methods', 'standard', 'cot', 'act', 'react', 'cot_sc', '--limit', '500', '--run-id', 'hotpotqa-formal-qwen36-v1', '--config', '/mnt/d/0code/Research/feng/react/configs/hotpotqa-qwen36-formal.json']' returned non-zero exit status 1."
+      },
+      "progress": {
+        "run_id": "hotpotqa-formal-qwen36-v1",
+        "status": "stopped",
+        "completed": 1280,
+        "error_type": "ConnectionError",
+        "error": "HTTPSConnectionPool(host='en.wikipedia.org', port=443): Max retries exceeded with url: /w/index.php?search=Sonerila (Caused by NewConnectionError(\"HTTPSConnection(host='en.wikipedia.org', port=443): Failed to establish a new connection: [Errno 101] Network is unreachable\"))",
+        "updated_at_utc": "2026-09-29T21:51:48.222498+08:00"
+      }
+    },
+    "fever": {
+      "controller": {
+        "dataset": "fever",
+        "campaign_id": "qwen36-restart-20260929",
+        "status": "stopped",
+        "updated_at_utc": "2026-09-29T21:51:32.319465+08:00",
+        "audits": [
+          {
+            "run_id": "fever-pilot-qwen36-v1",
+            "status": "passed",
+            "episodes": 80,
+            "model": "qwen3.6-35b-a3b",
+            "terminations": {
+              "step_limit": 4,
+              "answer": 40,
+              "valid_finish": 36
+            },
+            "requests": 146,
+            "usage": {
+              "prompt_tokens": 109642,
+              "completion_tokens": 4950,
+              "total_tokens": 114592
+            }
+          },
+          {
+            "run_id": "fever-sc-pilot-qwen36-v1",
+            "status": "passed",
+            "episodes": 2,
+            "model": "qwen3.6-35b-a3b",
+            "terminations": {
+              "answer": 2
+            },
+            "requests": 42,
+            "usage": {
+              "prompt_tokens": 9954,
+              "completion_tokens": 1698,
+              "total_tokens": 11652
+            }
+          }
+        ],
+        "active_run_id": "fever-formal-qwen36-v1",
+        "command": [
+          "/mnt/d/0code/Research/feng/react/.venv-qa/bin/python",
+          "/mnt/d/0code/Research/feng/react/scripts/run_qa.py",
+          "--dataset",
+          "fever",
+          "--phase",
+          "formal",
+          "--methods",
+          "standard",
+          "cot",
+          "act",
+          "react",
+          "cot_sc",
+          "--limit",
+          "500",
+          "--run-id",
+          "fever-formal-qwen36-v1",
+          "--config",
+          "/mnt/d/0code/Research/feng/react/configs/fever-qwen36-formal.json"
+        ],
+        "error_type": "CalledProcessError",
+        "error": "Command '['/mnt/d/0code/Research/feng/react/.venv-qa/bin/python', '/mnt/d/0code/Research/feng/react/scripts/run_qa.py', '--dataset', 'fever', '--phase', 'formal', '--methods', 'standard', 'cot', 'act', 'react', 'cot_sc', '--limit', '500', '--run-id', 'fever-formal-qwen36-v1', '--config', '/mnt/d/0code/Research/feng/react/configs/fever-qwen36-formal.json']' returned non-zero exit status 1."
+      },
+      "progress": {
+        "run_id": "fever-formal-qwen36-v1",
+        "status": "stopped",
+        "completed": 1553,
+        "error_type": "ConnectionError",
+        "error": "HTTPSConnectionPool(host='en.wikipedia.org', port=443): Max retries exceeded with url: /w/index.php?search=Island+Def+Jam+Music+Group+owner (Caused by NewConnectionError(\"HTTPSConnection(host='en.wikipedia.org', port=443): Failed to establish a new connection: [Errno 101] Network is unreachable\"))",
+        "updated_at_utc": "2026-09-29T21:51:32.116242+08:00"
+      }
+    }
+  },
+  "verification": "Both failed URLs returned HTTP 200 through the same .venv-qa requests client before resume; Sonerila 195291 bytes, Island Def Jam query 89529 bytes",
+  "policy": "Resume unchanged configurations and run IDs; retain cached successful model responses and prior failures"
+}

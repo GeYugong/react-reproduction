@@ -302,3 +302,6 @@ WebShop 服务与生成均使用 `.venv-webshop/bin/python`，保持作者 Beaut
 
 2026-09-29 13:44 UTC 检查：两路正式任务均在 13:35 UTC 连续三次读取超时后停止，HotpotQA 保留 1,279 条、FEVER 保留 1,552 条完整 episode。时间高度接近，怀疑共同网络或网关链路中断，尚不能独立定位根因。中断快照见 records/qa-timeout-recovery-20260929T1344.json；按原模型、配置和 run_id 恢复，已有成功调用与完整轨迹复用。恢复期间进度文件先遍历已有 episode，短暂计数下降不代表已保存结果丢失。超时请求费用保持未知。
 13:49 UTC，两路原中断题均已成功完成，分别达到 1,280 和 1,553 条，并开始下一题。恢复期间仍出现读取超时，表明链路尚不稳定；网关首页在 Windows 与 WSL 均返回 HTTP 200，不等同于模型端点健康。
+
+2026-09-29 14:46 UTC 检查：上次恢复后，两路分别于 13:51 UTC 在 Wikipedia 检索遇到 Network is unreachable，中断时保留 1,280 与 1,553 条完整 episode。使用同一 Python requests 环境访问两条失败 URL，均恢复 HTTP 200；保留中断快照后按原配置与 run_id 恢复，复用已成功的模型响应。未更改提示、步数、采样或评分。证据见 records/qa-wikipedia-recovery-20260929T1446.json。
+14:48 UTC，两路均通过原先失败的 Wikipedia 动作，回放成功缓存后进入后续模型生成步骤，检索恢复得到实际轨迹确认。

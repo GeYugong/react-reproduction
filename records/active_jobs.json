@@ -1,5 +1,5 @@
 {
-  "recorded_at_utc": "2026-09-29T13:46:12.7919801Z",
+  "recorded_at_utc": "2026-09-29T14:47:56.6966467Z",
   "campaign_id": "qwen36-restart-20260929",
   "model": "qwen3.6-35b-a3b",
   "old_model_policy": "All Qwen 3.8 runs retired; never resume or import their outputs into this campaign",
@@ -23,10 +23,12 @@
         "data/cache/hotpotqa-qwen36-recovery-0601.stdout.log",
         "data/cache/hotpotqa-qwen36-recovery-0601.stderr.log",
         "data/cache/hotpotqa-qwen36-recovery-1344.stdout.log",
-        "data/cache/hotpotqa-qwen36-recovery-1344.stderr.log"
+        "data/cache/hotpotqa-qwen36-recovery-1344.stderr.log",
+        "data/cache/hotpotqa-qwen36-recovery-1446.stdout.log",
+        "data/cache/hotpotqa-qwen36-recovery-1446.stderr.log"
       ],
       "current_config": "/mnt/d/0code/Research/feng/react/configs/hotpotqa-qwen36-formal.json",
-      "recovery_record": "records/qa-timeout-recovery-20260929T1344.json"
+      "recovery_record": "records/qa-wikipedia-recovery-20260929T1446.json"
     },
     {
       "dataset": "fever",
@@ -45,10 +47,12 @@
         "data/cache/fever-qwen36-campaign.stdout.log",
         "data/cache/fever-qwen36-campaign.stderr.log",
         "data/cache/fever-qwen36-recovery-1344.stdout.log",
-        "data/cache/fever-qwen36-recovery-1344.stderr.log"
+        "data/cache/fever-qwen36-recovery-1344.stderr.log",
+        "data/cache/fever-qwen36-recovery-1446.stdout.log",
+        "data/cache/fever-qwen36-recovery-1446.stderr.log"
       ],
       "current_config": "/mnt/d/0code/Research/feng/react/configs/fever-qwen36-formal.json",
-      "recovery_record": "records/qa-timeout-recovery-20260929T1344.json"
+      "recovery_record": "records/qa-wikipedia-recovery-20260929T1446.json"
     }
   ],
   "concurrency_cap": 2,
