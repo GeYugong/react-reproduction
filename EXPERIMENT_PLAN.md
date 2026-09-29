@@ -308,3 +308,5 @@ WebShop 服务与生成均使用 `.venv-webshop/bin/python`，保持作者 Beaut
 
 2026-09-29 15:46 UTC 状态核验：HotpotQA 在 1,296 条后触发作者 clean_str 的 UnicodeDecodeError；已冻结的 Greek alphabet 页面含不完整反斜线 Unicode 转义。兼容修复保留原转换成功时的行为，仅在 UnicodeError 时原样返回已解析的 Unicode 正文，不丢弃段落或换题。该页 170 个原成功段落输出一致，1 个原失败段落保留原文后 Search 成功。修复依据运行时异常，与成绩无关。FEVER 状态记录为 1,672 条，但操作系统未发现原 runner，故不能以 running 字段作为存活证据。所有恢复必须保留旧 manifest，并登记源文件哈希修订；已完成轨迹离线回放验收后再续跑。
 修复后回放验收：HotpotQA 1,296 条、1,373 个环境动作，FEVER 1,672 条、2,016 个环境动作均与既有轨迹一致，评分和响应协议复核通过。两个正式 run 的原 manifest 完整保存在各自 unicode-revision.json，源文件旧副本保存在原始运行目录；只登记 wikienv.py 的兼容修复哈希，配置、样本、提示、主执行器不变。此为运行异常修复，不是按正式成绩调参。正式恢复直接使用 run_qa.py；历史 pilot manifest 保持原版本，不再经旧 campaign 控制器重放。WebShop 服务进程也未找到，重新启动后健康端点通过，冻结数据库与目标哈希一致。
+
+2026-09-29 20:00 UTC 方法覆盖检查：FEVER 的 Standard、CoT、Act、ReAct 各 500 条已生成，原执行器已自动进入 CoT-SC；已完成的首 14 题均包含 21 个采样序号，投票复算一致。HotpotQA 的 Standard、CoT、Act 各 500 条已生成，正在 ReAct。此检查仅确认覆盖与已完成 SC 投票，不代表完整七方法验收。证据见 records/qa-method-transition-20260929T2000.json。
