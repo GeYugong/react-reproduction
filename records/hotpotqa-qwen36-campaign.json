@@ -1,8 +1,8 @@
 {
   "dataset": "hotpotqa",
   "campaign_id": "qwen36-restart-20260929",
-  "status": "formal",
-  "updated_at_utc": "2026-09-29T14:47:33.332841+00:00",
+  "status": "stopped",
+  "updated_at_utc": "2026-09-29T15:08:38.102759+00:00",
   "audits": [
     {
       "run_id": "hotpotqa-pilot-qwen36-v1",
@@ -58,5 +58,7 @@
     "hotpotqa-formal-qwen36-v1",
     "--config",
     "/mnt/d/0code/Research/feng/react/configs/hotpotqa-qwen36-formal.json"
-  ]
+  ],
+  "error_type": "CalledProcessError",
+  "error": "Command '['/mnt/d/0code/Research/feng/react/.venv-qa/bin/python', '/mnt/d/0code/Research/feng/react/scripts/run_qa.py', '--dataset', 'hotpotqa', '--phase', 'formal', '--methods', 'standard', 'cot', 'act', 'react', 'cot_sc', '--limit', '500', '--run-id', 'hotpotqa-formal-qwen36-v1', '--config', '/mnt/d/0code/Research/feng/react/configs/hotpotqa-qwen36-formal.json']' returned non-zero exit status 1."
 }

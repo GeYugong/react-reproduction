@@ -1,12 +1,12 @@
 {
-  "recorded_at_utc": "2026-09-29T14:47:56.6966467Z",
+  "recorded_at_utc": "2026-09-29T15:53:19.299137+00:00",
   "campaign_id": "qwen36-restart-20260929",
   "model": "qwen3.6-35b-a3b",
   "old_model_policy": "All Qwen 3.8 runs retired; never resume or import their outputs into this campaign",
   "jobs": [
     {
       "dataset": "hotpotqa",
-      "controller": "scripts/run_restart_campaign.py",
+      "controller": "scripts/run_qa.py",
       "status": "formal",
       "progress": "records/hotpotqa-qwen36-campaign.json",
       "pilot_config": "configs/hotpotqa-qwen36-pilot.json",
@@ -25,14 +25,17 @@
         "data/cache/hotpotqa-qwen36-recovery-1344.stdout.log",
         "data/cache/hotpotqa-qwen36-recovery-1344.stderr.log",
         "data/cache/hotpotqa-qwen36-recovery-1446.stdout.log",
-        "data/cache/hotpotqa-qwen36-recovery-1446.stderr.log"
+        "data/cache/hotpotqa-qwen36-recovery-1446.stderr.log",
+        "data/cache/hotpotqa-qwen36-recovery-unicode.stdout.log",
+        "data/cache/hotpotqa-qwen36-recovery-unicode.stderr.log"
       ],
       "current_config": "/mnt/d/0code/Research/feng/react/configs/hotpotqa-qwen36-formal.json",
-      "recovery_record": "records/qa-wikipedia-recovery-20260929T1446.json"
+      "recovery_record": "records/hotpotqa-formal-qwen36-v1-unicode-revision.json",
+      "resume_policy": "Direct formal runner with unchanged arguments. Do not replay pilot controller after explicit Unicode source revision; historical pilot manifests remain unchanged."
     },
     {
       "dataset": "fever",
-      "controller": "scripts/run_restart_campaign.py",
+      "controller": "scripts/run_qa.py",
       "status": "formal",
       "progress": "records/fever-qwen36-campaign.json",
       "pilot_config": "configs/fever-qwen36-pilot.json",
@@ -49,10 +52,13 @@
         "data/cache/fever-qwen36-recovery-1344.stdout.log",
         "data/cache/fever-qwen36-recovery-1344.stderr.log",
         "data/cache/fever-qwen36-recovery-1446.stdout.log",
-        "data/cache/fever-qwen36-recovery-1446.stderr.log"
+        "data/cache/fever-qwen36-recovery-1446.stderr.log",
+        "data/cache/fever-qwen36-recovery-unicode.stdout.log",
+        "data/cache/fever-qwen36-recovery-unicode.stderr.log"
       ],
       "current_config": "/mnt/d/0code/Research/feng/react/configs/fever-qwen36-formal.json",
-      "recovery_record": "records/qa-wikipedia-recovery-20260929T1446.json"
+      "recovery_record": "records/fever-formal-qwen36-v1-unicode-revision.json",
+      "resume_policy": "Direct formal runner with unchanged arguments. Do not replay pilot controller after explicit Unicode source revision; historical pilot manifests remain unchanged."
     }
   ],
   "concurrency_cap": 2,

@@ -2,24 +2,364 @@
   "status": "checkpoint_passed",
   "run_id": "hotpotqa-formal-qwen36-v1",
   "model": "qwen3.6-35b-a3b",
-  "recorded_at_utc": "2026-09-29T06:02:38.584072+00:00",
-  "episodes": 199,
+  "recorded_at_utc": "2026-09-29T15:49:51.866411+00:00",
+  "episodes": 1296,
   "planned": 2500,
-  "api_successes_observed": 199,
+  "api_successes_observed": 2375,
   "native_reasoning_fields_observed": {},
   "native_reasoning_anomalies": 0,
   "missing_telemetry_means_unknown": true,
-  "environment_steps_replayed": 0,
-  "wiki_reads_replayed": 0,
-  "model_observation_blocks_ignored": 0,
-  "invalid_answers": [],
+  "environment_steps_replayed": 1373,
+  "wiki_reads_replayed": 1057,
+  "model_observation_blocks_ignored": 6,
+  "invalid_answers": [
+    {
+      "index": 1781,
+      "method": "cot",
+      "sample": 0,
+      "finish_reason": "stop",
+      "contains_answer_marker": false,
+      "completion_tokens": 85
+    },
+    {
+      "index": 1917,
+      "method": "cot",
+      "sample": 0,
+      "finish_reason": "length",
+      "contains_answer_marker": false,
+      "completion_tokens": 512
+    },
+    {
+      "index": 2208,
+      "method": "cot",
+      "sample": 0,
+      "finish_reason": "length",
+      "contains_answer_marker": false,
+      "completion_tokens": 512
+    },
+    {
+      "index": 2294,
+      "method": "cot",
+      "sample": 0,
+      "finish_reason": "length",
+      "contains_answer_marker": false,
+      "completion_tokens": 512
+    },
+    {
+      "index": 251,
+      "method": "cot",
+      "sample": 0,
+      "finish_reason": "stop",
+      "contains_answer_marker": false,
+      "completion_tokens": 10
+    },
+    {
+      "index": 2662,
+      "method": "cot",
+      "sample": 0,
+      "finish_reason": "length",
+      "contains_answer_marker": false,
+      "completion_tokens": 512
+    },
+    {
+      "index": 2930,
+      "method": "cot",
+      "sample": 0,
+      "finish_reason": "length",
+      "contains_answer_marker": false,
+      "completion_tokens": 512
+    },
+    {
+      "index": 2965,
+      "method": "cot",
+      "sample": 0,
+      "finish_reason": "length",
+      "contains_answer_marker": false,
+      "completion_tokens": 512
+    },
+    {
+      "index": 3023,
+      "method": "cot",
+      "sample": 0,
+      "finish_reason": "length",
+      "contains_answer_marker": false,
+      "completion_tokens": 512
+    },
+    {
+      "index": 3188,
+      "method": "cot",
+      "sample": 0,
+      "finish_reason": "length",
+      "contains_answer_marker": false,
+      "completion_tokens": 512
+    },
+    {
+      "index": 3388,
+      "method": "cot",
+      "sample": 0,
+      "finish_reason": "length",
+      "contains_answer_marker": false,
+      "completion_tokens": 512
+    },
+    {
+      "index": 3578,
+      "method": "cot",
+      "sample": 0,
+      "finish_reason": "length",
+      "contains_answer_marker": false,
+      "completion_tokens": 512
+    },
+    {
+      "index": 3687,
+      "method": "cot",
+      "sample": 0,
+      "finish_reason": "length",
+      "contains_answer_marker": false,
+      "completion_tokens": 512
+    },
+    {
+      "index": 3824,
+      "method": "cot",
+      "sample": 0,
+      "finish_reason": "length",
+      "contains_answer_marker": false,
+      "completion_tokens": 512
+    },
+    {
+      "index": 3991,
+      "method": "cot",
+      "sample": 0,
+      "finish_reason": "length",
+      "contains_answer_marker": false,
+      "completion_tokens": 512
+    },
+    {
+      "index": 4025,
+      "method": "cot",
+      "sample": 0,
+      "finish_reason": "length",
+      "contains_answer_marker": false,
+      "completion_tokens": 512
+    },
+    {
+      "index": 4052,
+      "method": "cot",
+      "sample": 0,
+      "finish_reason": "length",
+      "contains_answer_marker": false,
+      "completion_tokens": 512
+    },
+    {
+      "index": 4073,
+      "method": "cot",
+      "sample": 0,
+      "finish_reason": "length",
+      "contains_answer_marker": false,
+      "completion_tokens": 512
+    },
+    {
+      "index": 4152,
+      "method": "cot",
+      "sample": 0,
+      "finish_reason": "length",
+      "contains_answer_marker": false,
+      "completion_tokens": 512
+    },
+    {
+      "index": 416,
+      "method": "cot",
+      "sample": 0,
+      "finish_reason": "length",
+      "contains_answer_marker": false,
+      "completion_tokens": 512
+    },
+    {
+      "index": 4213,
+      "method": "cot",
+      "sample": 0,
+      "finish_reason": "length",
+      "contains_answer_marker": false,
+      "completion_tokens": 512
+    },
+    {
+      "index": 4739,
+      "method": "cot",
+      "sample": 0,
+      "finish_reason": "length",
+      "contains_answer_marker": false,
+      "completion_tokens": 512
+    },
+    {
+      "index": 4758,
+      "method": "cot",
+      "sample": 0,
+      "finish_reason": "length",
+      "contains_answer_marker": false,
+      "completion_tokens": 512
+    },
+    {
+      "index": 4897,
+      "method": "cot",
+      "sample": 0,
+      "finish_reason": "length",
+      "contains_answer_marker": false,
+      "completion_tokens": 512
+    },
+    {
+      "index": 4997,
+      "method": "cot",
+      "sample": 0,
+      "finish_reason": "length",
+      "contains_answer_marker": false,
+      "completion_tokens": 512
+    },
+    {
+      "index": 5071,
+      "method": "cot",
+      "sample": 0,
+      "finish_reason": "length",
+      "contains_answer_marker": false,
+      "completion_tokens": 512
+    },
+    {
+      "index": 5274,
+      "method": "cot",
+      "sample": 0,
+      "finish_reason": "length",
+      "contains_answer_marker": false,
+      "completion_tokens": 512
+    },
+    {
+      "index": 5615,
+      "method": "cot",
+      "sample": 0,
+      "finish_reason": "length",
+      "contains_answer_marker": false,
+      "completion_tokens": 512
+    },
+    {
+      "index": 5704,
+      "method": "cot",
+      "sample": 0,
+      "finish_reason": "length",
+      "contains_answer_marker": false,
+      "completion_tokens": 512
+    },
+    {
+      "index": 5801,
+      "method": "cot",
+      "sample": 0,
+      "finish_reason": "length",
+      "contains_answer_marker": false,
+      "completion_tokens": 512
+    },
+    {
+      "index": 5962,
+      "method": "cot",
+      "sample": 0,
+      "finish_reason": "length",
+      "contains_answer_marker": false,
+      "completion_tokens": 512
+    },
+    {
+      "index": 6014,
+      "method": "cot",
+      "sample": 0,
+      "finish_reason": "length",
+      "contains_answer_marker": false,
+      "completion_tokens": 512
+    },
+    {
+      "index": 6151,
+      "method": "cot",
+      "sample": 0,
+      "finish_reason": "length",
+      "contains_answer_marker": false,
+      "completion_tokens": 512
+    },
+    {
+      "index": 6586,
+      "method": "cot",
+      "sample": 0,
+      "finish_reason": "length",
+      "contains_answer_marker": false,
+      "completion_tokens": 512
+    },
+    {
+      "index": 6709,
+      "method": "cot",
+      "sample": 0,
+      "finish_reason": "length",
+      "contains_answer_marker": false,
+      "completion_tokens": 512
+    },
+    {
+      "index": 6781,
+      "method": "cot",
+      "sample": 0,
+      "finish_reason": "length",
+      "contains_answer_marker": false,
+      "completion_tokens": 512
+    },
+    {
+      "index": 6849,
+      "method": "cot",
+      "sample": 0,
+      "finish_reason": "length",
+      "contains_answer_marker": false,
+      "completion_tokens": 512
+    },
+    {
+      "index": 734,
+      "method": "cot",
+      "sample": 0,
+      "finish_reason": "length",
+      "contains_answer_marker": false,
+      "completion_tokens": 512
+    },
+    {
+      "index": 851,
+      "method": "cot",
+      "sample": 0,
+      "finish_reason": "length",
+      "contains_answer_marker": false,
+      "completion_tokens": 512
+    },
+    {
+      "index": 88,
+      "method": "cot",
+      "sample": 0,
+      "finish_reason": "length",
+      "contains_answer_marker": false,
+      "completion_tokens": 512
+    },
+    {
+      "index": 924,
+      "method": "cot",
+      "sample": 0,
+      "finish_reason": "stop",
+      "contains_answer_marker": false,
+      "completion_tokens": 108
+    },
+    {
+      "index": 953,
+      "method": "cot",
+      "sample": 0,
+      "finish_reason": "length",
+      "contains_answer_marker": false,
+      "completion_tokens": 512
+    }
+  ],
   "terminations": {
-    "answer": 199
+    "valid_finish": 221,
+    "answer": 958,
+    "step_limit": 75,
+    "invalid_answer": 42
   },
   "usage": {
-    "prompt_tokens": 48321,
-    "completion_tokens": 995,
-    "total_tokens": 49316
+    "prompt_tokens": 2171731,
+    "completion_tokens": 80798,
+    "total_tokens": 2252529
   },
   "cost_status": "pending_reconciliation",
   "actual_cost_cny": null

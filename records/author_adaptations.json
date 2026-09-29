@@ -3,7 +3,7 @@
   "source_commit": "6bdb3a1fd38b8188fc7ba4102969fe483df8fdc9",
   "license": "src/react_reproduction/author/LICENSE",
   "adaptations": {
-    "wikienv.py": "HTTP injection for cached audited requests; original search and lookup semantics retained.",
+    "wikienv.py": "HTTP injection for cached audited requests; original search and lookup semantics retained. On UnicodeError in original clean_str, retain already-Unicode paragraph verbatim; source revision audited against completed formal trajectories.",
     "wrappers.py": "Parameterize FEVER data directory; original answer normalization and scoring retained.",
     "qa.py": "Adapt hotpotqa.ipynb webthink loop for shared Act/ReAct execution and complete logs.",
     "alfworld.py": "Adapt alfworld.ipynb alfworld_run loop; preserve sparse thoughts and 49 decisions.",
@@ -35,7 +35,7 @@
   "adaptation_status": "QA, ALFWorld and WebShop adapters implemented; new-model QA pilots running; interactive model pilots pending",
   "current_artifacts": "scripts/run_qa.py, scripts/run_alfworld.py and scripts/run_webshop.py preserve pinned author loops. WebShop notebook environment extracted with injectable audited HTTP and loopback URL; original engine, templates, goal and reward modules imported from pinned vendor.",
   "author_file_hashes": {
-    "wikienv.py": "0de8f4429b3c94bbb0cf826171109faee2b8f04863bcc032cac1dbb4f4fccb30",
+    "wikienv.py": "22ae2603b66a0b303f5d6adbddae57e9bb456ae4848d2d8b4ac3828aa98ecafa",
     "wrappers.py": "60fb59bf1ae615c18f0db86f4ad2beb67bd2419d74b87a57f6bb18eb28e58d5a",
     "LICENSE": "cd2d341de1d3781e993e9859b1a36e8bfe12c84507c0a52f21c0220743af475b"
   },

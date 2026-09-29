@@ -305,3 +305,6 @@ WebShop 服务与生成均使用 `.venv-webshop/bin/python`，保持作者 Beaut
 
 2026-09-29 14:46 UTC 检查：上次恢复后，两路分别于 13:51 UTC 在 Wikipedia 检索遇到 Network is unreachable，中断时保留 1,280 与 1,553 条完整 episode。使用同一 Python requests 环境访问两条失败 URL，均恢复 HTTP 200；保留中断快照后按原配置与 run_id 恢复，复用已成功的模型响应。未更改提示、步数、采样或评分。证据见 records/qa-wikipedia-recovery-20260929T1446.json。
 14:48 UTC，两路均通过原先失败的 Wikipedia 动作，回放成功缓存后进入后续模型生成步骤，检索恢复得到实际轨迹确认。
+
+2026-09-29 15:46 UTC 状态核验：HotpotQA 在 1,296 条后触发作者 clean_str 的 UnicodeDecodeError；已冻结的 Greek alphabet 页面含不完整反斜线 Unicode 转义。兼容修复保留原转换成功时的行为，仅在 UnicodeError 时原样返回已解析的 Unicode 正文，不丢弃段落或换题。该页 170 个原成功段落输出一致，1 个原失败段落保留原文后 Search 成功。修复依据运行时异常，与成绩无关。FEVER 状态记录为 1,672 条，但操作系统未发现原 runner，故不能以 running 字段作为存活证据。所有恢复必须保留旧 manifest，并登记源文件哈希修订；已完成轨迹离线回放验收后再续跑。
+修复后回放验收：HotpotQA 1,296 条、1,373 个环境动作，FEVER 1,672 条、2,016 个环境动作均与既有轨迹一致，评分和响应协议复核通过。两个正式 run 的原 manifest 完整保存在各自 unicode-revision.json，源文件旧副本保存在原始运行目录；只登记 wikienv.py 的兼容修复哈希，配置、样本、提示、主执行器不变。此为运行异常修复，不是按正式成绩调参。正式恢复直接使用 run_qa.py；历史 pilot manifest 保持原版本，不再经旧 campaign 控制器重放。WebShop 服务进程也未找到，重新启动后健康端点通过，冻结数据库与目标哈希一致。
