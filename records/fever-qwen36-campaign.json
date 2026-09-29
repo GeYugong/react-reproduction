@@ -2,7 +2,7 @@
   "dataset": "fever",
   "campaign_id": "qwen36-restart-20260929",
   "status": "formal",
-  "updated_at_utc": "2026-09-29T04:37:30.572216+00:00",
+  "updated_at_utc": "2026-09-29T13:45:51.146041+00:00",
   "audits": [
     {
       "run_id": "fever-pilot-qwen36-v1",

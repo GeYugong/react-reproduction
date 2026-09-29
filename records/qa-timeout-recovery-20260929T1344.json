@@ -1,0 +1,287 @@
+{
+  "timestamp_utc": "2026-09-29T13:45:07.5135607Z",
+  "event": "simultaneous_transport_timeout_recovery",
+  "cause": "Both runners exhausted three 60-second read attempts at approximately the same UTC time; shared network or gateway disruption suspected, not independently localized",
+  "datasets": {
+    "fever": {
+      "controller": {
+        "dataset": "fever",
+        "campaign_id": "qwen36-restart-20260929",
+        "status": "stopped",
+        "updated_at_utc": "2026-09-29T21:35:56.106292+08:00",
+        "audits": [
+          {
+            "run_id": "fever-pilot-qwen36-v1",
+            "status": "passed",
+            "episodes": 80,
+            "model": "qwen3.6-35b-a3b",
+            "terminations": {
+              "step_limit": 4,
+              "answer": 40,
+              "valid_finish": 36
+            },
+            "requests": 146,
+            "usage": {
+              "prompt_tokens": 109642,
+              "completion_tokens": 4950,
+              "total_tokens": 114592
+            }
+          },
+          {
+            "run_id": "fever-sc-pilot-qwen36-v1",
+            "status": "passed",
+            "episodes": 2,
+            "model": "qwen3.6-35b-a3b",
+            "terminations": {
+              "answer": 2
+            },
+            "requests": 42,
+            "usage": {
+              "prompt_tokens": 9954,
+              "completion_tokens": 1698,
+              "total_tokens": 11652
+            }
+          }
+        ],
+        "active_run_id": "fever-formal-qwen36-v1",
+        "command": [
+          "/mnt/d/0code/Research/feng/react/.venv-qa/bin/python",
+          "/mnt/d/0code/Research/feng/react/scripts/run_qa.py",
+          "--dataset",
+          "fever",
+          "--phase",
+          "formal",
+          "--methods",
+          "standard",
+          "cot",
+          "act",
+          "react",
+          "cot_sc",
+          "--limit",
+          "500",
+          "--run-id",
+          "fever-formal-qwen36-v1",
+          "--config",
+          "/mnt/d/0code/Research/feng/react/configs/fever-qwen36-formal.json"
+        ],
+        "error_type": "CalledProcessError",
+        "error": "Command '['/mnt/d/0code/Research/feng/react/.venv-qa/bin/python', '/mnt/d/0code/Research/feng/react/scripts/run_qa.py', '--dataset', 'fever', '--phase', 'formal', '--methods', 'standard', 'cot', 'act', 'react', 'cot_sc', '--limit', '500', '--run-id', 'fever-formal-qwen36-v1', '--config', '/mnt/d/0code/Research/feng/react/configs/fever-qwen36-formal.json']' returned non-zero exit status 1."
+      },
+      "events": [
+        {
+          "timestamp_utc": "2026-09-29T21:32:48.429492+08:00",
+          "event": "episode_start",
+          "call_id": null,
+          "attempt": null,
+          "error": null,
+          "cost_status": null
+        },
+        {
+          "timestamp_utc": "2026-09-29T21:32:48.442769+08:00",
+          "event": "api_dispatch",
+          "call_id": "fever/7078/react/1",
+          "attempt": 0,
+          "error": null,
+          "cost_status": null
+        },
+        {
+          "timestamp_utc": "2026-09-29T21:33:49.249841+08:00",
+          "event": "api_transport_error",
+          "call_id": "fever/7078/react/1",
+          "attempt": 0,
+          "error": "ReadTimeout",
+          "cost_status": "unknown"
+        },
+        {
+          "timestamp_utc": "2026-09-29T21:33:50.256179+08:00",
+          "event": "api_dispatch",
+          "call_id": "fever/7078/react/1",
+          "attempt": 1,
+          "error": null,
+          "cost_status": null
+        },
+        {
+          "timestamp_utc": "2026-09-29T21:34:51.849344+08:00",
+          "event": "api_transport_error",
+          "call_id": "fever/7078/react/1",
+          "attempt": 1,
+          "error": "ReadTimeout",
+          "cost_status": "unknown"
+        },
+        {
+          "timestamp_utc": "2026-09-29T21:34:53.875628+08:00",
+          "event": "api_dispatch",
+          "call_id": "fever/7078/react/1",
+          "attempt": 2,
+          "error": null,
+          "cost_status": null
+        },
+        {
+          "timestamp_utc": "2026-09-29T21:35:55.752084+08:00",
+          "event": "api_transport_error",
+          "call_id": "fever/7078/react/1",
+          "attempt": 2,
+          "error": "ReadTimeout",
+          "cost_status": "unknown"
+        },
+        {
+          "timestamp_utc": "2026-09-29T21:35:55.773624+08:00",
+          "event": "batch_stopped",
+          "call_id": null,
+          "attempt": null,
+          "error": "HTTPSConnectionPool(host='aigw.saurlax.com', port=443): Read timed out. (read timeout=60)",
+          "cost_status": null
+        }
+      ],
+      "progress": {
+        "run_id": "fever-formal-qwen36-v1",
+        "status": "stopped",
+        "completed": 1552,
+        "error_type": "ReadTimeout",
+        "error": "HTTPSConnectionPool(host='aigw.saurlax.com', port=443): Read timed out. (read timeout=60)",
+        "updated_at_utc": "2026-09-29T21:35:55.775438+08:00"
+      }
+    },
+    "hotpotqa": {
+      "controller": {
+        "dataset": "hotpotqa",
+        "campaign_id": "qwen36-restart-20260929",
+        "status": "stopped",
+        "updated_at_utc": "2026-09-29T21:35:56.102518+08:00",
+        "audits": [
+          {
+            "run_id": "hotpotqa-pilot-qwen36-v1",
+            "status": "passed",
+            "episodes": 80,
+            "model": "qwen3.6-35b-a3b",
+            "terminations": {
+              "valid_finish": 35,
+              "invalid_answer": 2,
+              "answer": 38,
+              "step_limit": 5
+            },
+            "requests": 215,
+            "usage": {
+              "prompt_tokens": 295276,
+              "completion_tokens": 9151,
+              "total_tokens": 304427
+            }
+          },
+          {
+            "run_id": "hotpotqa-sc-pilot-qwen36-v1",
+            "status": "passed",
+            "episodes": 2,
+            "model": "qwen3.6-35b-a3b",
+            "terminations": {
+              "answer": 2
+            },
+            "requests": 42,
+            "usage": {
+              "prompt_tokens": 23205,
+              "completion_tokens": 3465,
+              "total_tokens": 26670
+            }
+          }
+        ],
+        "active_run_id": "hotpotqa-formal-qwen36-v1",
+        "command": [
+          "/mnt/d/0code/Research/feng/react/.venv-qa/bin/python",
+          "/mnt/d/0code/Research/feng/react/scripts/run_qa.py",
+          "--dataset",
+          "hotpotqa",
+          "--phase",
+          "formal",
+          "--methods",
+          "standard",
+          "cot",
+          "act",
+          "react",
+          "cot_sc",
+          "--limit",
+          "500",
+          "--run-id",
+          "hotpotqa-formal-qwen36-v1",
+          "--config",
+          "/mnt/d/0code/Research/feng/react/configs/hotpotqa-qwen36-formal.json"
+        ],
+        "error_type": "CalledProcessError",
+        "error": "Command '['/mnt/d/0code/Research/feng/react/.venv-qa/bin/python', '/mnt/d/0code/Research/feng/react/scripts/run_qa.py', '--dataset', 'hotpotqa', '--phase', 'formal', '--methods', 'standard', 'cot', 'act', 'react', 'cot_sc', '--limit', '500', '--run-id', 'hotpotqa-formal-qwen36-v1', '--config', '/mnt/d/0code/Research/feng/react/configs/hotpotqa-qwen36-formal.json']' returned non-zero exit status 1."
+      },
+      "events": [
+        {
+          "timestamp_utc": "2026-09-29T21:32:48.481682+08:00",
+          "event": "environment_step",
+          "call_id": null,
+          "attempt": null,
+          "error": null,
+          "cost_status": null
+        },
+        {
+          "timestamp_utc": "2026-09-29T21:32:48.493987+08:00",
+          "event": "api_dispatch",
+          "call_id": "hotpotqa/4334/act/5",
+          "attempt": 0,
+          "error": null,
+          "cost_status": null
+        },
+        {
+          "timestamp_utc": "2026-09-29T21:33:49.322153+08:00",
+          "event": "api_transport_error",
+          "call_id": "hotpotqa/4334/act/5",
+          "attempt": 0,
+          "error": "ReadTimeout",
+          "cost_status": "unknown"
+        },
+        {
+          "timestamp_utc": "2026-09-29T21:33:50.3306+08:00",
+          "event": "api_dispatch",
+          "call_id": "hotpotqa/4334/act/5",
+          "attempt": 1,
+          "error": null,
+          "cost_status": null
+        },
+        {
+          "timestamp_utc": "2026-09-29T21:34:51.905018+08:00",
+          "event": "api_transport_error",
+          "call_id": "hotpotqa/4334/act/5",
+          "attempt": 1,
+          "error": "ReadTimeout",
+          "cost_status": "unknown"
+        },
+        {
+          "timestamp_utc": "2026-09-29T21:34:53.920658+08:00",
+          "event": "api_dispatch",
+          "call_id": "hotpotqa/4334/act/5",
+          "attempt": 2,
+          "error": null,
+          "cost_status": null
+        },
+        {
+          "timestamp_utc": "2026-09-29T21:35:55.764125+08:00",
+          "event": "api_transport_error",
+          "call_id": "hotpotqa/4334/act/5",
+          "attempt": 2,
+          "error": "ReadTimeout",
+          "cost_status": "unknown"
+        },
+        {
+          "timestamp_utc": "2026-09-29T21:35:55.782092+08:00",
+          "event": "batch_stopped",
+          "call_id": null,
+          "attempt": null,
+          "error": "HTTPSConnectionPool(host='aigw.saurlax.com', port=443): Read timed out. (read timeout=60)",
+          "cost_status": null
+        }
+      ],
+      "progress": {
+        "run_id": "hotpotqa-formal-qwen36-v1",
+        "status": "stopped",
+        "completed": 1279,
+        "error_type": "ReadTimeout",
+        "error": "HTTPSConnectionPool(host='aigw.saurlax.com', port=443): Read timed out. (read timeout=60)",
+        "updated_at_utc": "2026-09-29T21:35:55.78466+08:00"
+      }
+    }
+  },
+  "policy": "Resume unchanged run_id/config/model using successful cache; retain transport errors and unknown billing"
+}
