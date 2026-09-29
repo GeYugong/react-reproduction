@@ -1,0 +1,7 @@
+{
+  "recorded_at_utc": "2026-09-29T03:26:45.272475+00:00",
+  "status": "requires_user_billing_action",
+  "test": "explicitly authorized retry of unfinished experiment request; success cached",
+  "call_id": "hotpotqa/2319/act/1",
+  "error": "402 Client Error: Payment Required for url: https://aigw.saurlax.com/v1/chat/completions"
+}
