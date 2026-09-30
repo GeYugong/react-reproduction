@@ -1,0 +1,23 @@
+{
+  "runs": {
+    "hotpotqa": {
+      "run_id": "hotpotqa-formal-qwen36-v1",
+      "status": "stopped",
+      "completed": 2080,
+      "error_type": "HTTPError",
+      "error": "502 Server Error: Bad Gateway for url: https://aigw.saurlax.com/v1/chat/completions",
+      "updated_at_utc": "2026-09-30T20:03:06.536623+08:00"
+    },
+    "fever": {
+      "run_id": "fever-formal-qwen36-v1",
+      "status": "stopped",
+      "completed": 2262,
+      "error_type": "HTTPError",
+      "error": "502 Server Error: Bad Gateway for url: https://aigw.saurlax.com/v1/chat/completions",
+      "updated_at_utc": "2026-09-30T20:03:07.424532+08:00"
+    }
+  },
+  "timestamp_utc": "2026-09-30T12:14:52.5204474Z",
+  "event": "simultaneous_gateway_502",
+  "policy": "One bounded restart per run, unchanged config and cached samples; retain HTTP errors and unknown cost"
+}

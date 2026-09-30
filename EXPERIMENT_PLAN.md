@@ -319,3 +319,6 @@ WebShop 服务与生成均使用 `.venv-webshop/bin/python`，保持作者 Beaut
 
 2026-09-30 10:13 UTC 检查：HotpotQA 在第 59 题 CoT-SC 的采样索引 20 连续读取超时，58 题完整结果及当前题成功采样保留；FEVER 持续运行。中断快照记录后，使用相同 run_id、冻结配置和成功响应缓存恢复，未改变生成参数；失败请求费用仍未知。证据见 records/hotpotqa-timeout-recovery-20260930T1013.json。
 10:15 UTC，原中断题完成，HotpotQA 达到 2,059 条，下一题已返回成功响应并继续采样。
+
+2026-09-30 12:14 UTC 检查：两路在约 12:03 UTC 同时收到网关 502，分别保留 HotpotQA 80 题及 FEVER 262 题完整 CoT-SC，当前题成功响应仍在缓存。保存中断快照后各启动一次有限重试恢复，使用原配置与 run_id，不改变采样与模型。证据见 records/qa-502-recovery-20260930T1214.json。
+12:17 UTC，两路均越过原失败采样，后续采样返回 HTTP 200，恢复得到原始日志确认。
