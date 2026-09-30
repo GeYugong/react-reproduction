@@ -1,0 +1,15 @@
+{
+  "failed_call": "hotpotqa/3395/cot_sc/14",
+  "before": {
+    "run_id": "hotpotqa-formal-qwen36-v1",
+    "status": "stopped",
+    "completed": 2025,
+    "error_type": "SSLError",
+    "error": "HTTPSConnectionPool(host='aigw.saurlax.com', port=443): Max retries exceeded with url: /v1/chat/completions (Caused by SSLError(SSLEOFError(8, '[SSL: UNEXPECTED_EOF_WHILE_READING] EOF occurred in violation of protocol (_ssl.c:1016)')))",
+    "updated_at_utc": "2026-09-30T13:54:16.731065+08:00"
+  },
+  "event": "hotpotqa_tls_recovery",
+  "policy": "Resume same run_id/config with successful sample cache, TLS verification unchanged, no fallback",
+  "timestamp_utc": "2026-09-30T06:09:36.2235958Z",
+  "evidence": "FEVER same-model pathway continues returning HTTP 200; transport failure rather than protocol or model error"
+}

@@ -313,3 +313,6 @@ WebShop 服务与生成均使用 `.venv-webshop/bin/python`，保持作者 Beaut
 
 2026-09-30 04:08 UTC 检查：两路均已进入 CoT-SC，但状态文件停留在 04:02 UTC，最新请求约 04:06 UTC 后无后续，操作系统未找到两个 runner 或 WebShop 服务，也无新的 Python 异常退出记录。中断原因未确定，不能将 running 字段视为进程存活。保留现场快照后，按原配置和 run_id 直接恢复，复用已完成 episode 及未完成题的成功 SC 采样缓存，另行恢复 WebShop 服务。
 恢复验收：两路均收到新的 HTTP 200 响应并继续 SC 采样，WebShop 健康端点通过且冻结哈希一致。覆盖检查确认两个数据集的四种基础方法各 500 条均已生成，快照中的 HotpotQA 6 题及 FEVER 138 题 CoT-SC 均为 21 次采样且投票复算一致；此为阶段覆盖检查，不是整批验收。
+
+2026-09-30 06:09 UTC 检查：HotpotQA 在 25 题完整 CoT-SC 后，下一题第 15 次采样（索引 14）遇到 TLS unexpected EOF，原始异常与未知费用记录保留。FEVER 同模型接口仍持续返回 HTTP 200。按原 run_id 和冻结配置恢复 HotpotQA，复用已成功采样；未关闭 TLS 校验，也未切换模型或修改采样参数。证据见 records/hotpotqa-tls-recovery-20260930T0609.json。
+06:10 UTC，原失败采样返回 HTTP 200，已继续下一次采样，恢复得到实际日志确认。
