@@ -316,3 +316,6 @@ WebShop 服务与生成均使用 `.venv-webshop/bin/python`，保持作者 Beaut
 
 2026-09-30 06:09 UTC 检查：HotpotQA 在 25 题完整 CoT-SC 后，下一题第 15 次采样（索引 14）遇到 TLS unexpected EOF，原始异常与未知费用记录保留。FEVER 同模型接口仍持续返回 HTTP 200。按原 run_id 和冻结配置恢复 HotpotQA，复用已成功采样；未关闭 TLS 校验，也未切换模型或修改采样参数。证据见 records/hotpotqa-tls-recovery-20260930T0609.json。
 06:10 UTC，原失败采样返回 HTTP 200，已继续下一次采样，恢复得到实际日志确认。
+
+2026-09-30 10:13 UTC 检查：HotpotQA 在第 59 题 CoT-SC 的采样索引 20 连续读取超时，58 题完整结果及当前题成功采样保留；FEVER 持续运行。中断快照记录后，使用相同 run_id、冻结配置和成功响应缓存恢复，未改变生成参数；失败请求费用仍未知。证据见 records/hotpotqa-timeout-recovery-20260930T1013.json。
+10:15 UTC，原中断题完成，HotpotQA 达到 2,059 条，下一题已返回成功响应并继续采样。

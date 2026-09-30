@@ -1,0 +1,14 @@
+{
+  "policy": "Same configuration and run ID; successful samples cached; no parameter changes; failed attempt cost unknown",
+  "failed_call": "hotpotqa/6849/cot_sc/20",
+  "before": {
+    "run_id": "hotpotqa-formal-qwen36-v1",
+    "status": "stopped",
+    "completed": 2058,
+    "error_type": "ReadTimeout",
+    "error": "HTTPSConnectionPool(host='aigw.saurlax.com', port=443): Read timed out. (read timeout=60)",
+    "updated_at_utc": "2026-09-30T17:37:07.688009+08:00"
+  },
+  "event": "hotpotqa_read_timeout_recovery",
+  "timestamp_utc": "2026-09-30T10:13:41.5897906Z"
+}
