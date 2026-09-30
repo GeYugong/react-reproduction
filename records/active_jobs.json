@@ -1,5 +1,5 @@
 {
-  "recorded_at_utc": "2026-09-30T12:15:31.8702582Z",
+  "recorded_at_utc": "2026-09-30T16:20:04.5433693Z",
   "campaign_id": "qwen36-restart-20260929",
   "model": "qwen3.6-35b-a3b",
   "old_model_policy": "All Qwen 3.8 runs retired; never resume or import their outputs into this campaign",
@@ -35,10 +35,12 @@
         "data/cache/hotpotqa-qwen36-recovery-1013.stdout.log",
         "data/cache/hotpotqa-qwen36-recovery-1013.stderr.log",
         "data/cache/hotpotqa-qwen36-recovery-1214.stdout.log",
-        "data/cache/hotpotqa-qwen36-recovery-1214.stderr.log"
+        "data/cache/hotpotqa-qwen36-recovery-1214.stderr.log",
+        "data/cache/hotpotqa-qwen36-recovery-1618.stdout.log",
+        "data/cache/hotpotqa-qwen36-recovery-1618.stderr.log"
       ],
       "current_config": "/mnt/d/0code/Research/feng/react/configs/hotpotqa-qwen36-formal.json",
-      "recovery_record": "records/qa-502-recovery-20260930T1214.json",
+      "recovery_record": "records/qa-timeout-recovery-20260930T1618.json",
       "resume_policy": "Direct formal runner with unchanged arguments. Do not replay pilot controller after explicit Unicode source revision; historical pilot manifests remain unchanged."
     },
     {
@@ -66,10 +68,12 @@
         "data/cache/fever-qwen36-recovery-0408.stdout.log",
         "data/cache/fever-qwen36-recovery-0408.stderr.log",
         "data/cache/fever-qwen36-recovery-1214.stdout.log",
-        "data/cache/fever-qwen36-recovery-1214.stderr.log"
+        "data/cache/fever-qwen36-recovery-1214.stderr.log",
+        "data/cache/fever-qwen36-recovery-1618.stdout.log",
+        "data/cache/fever-qwen36-recovery-1618.stderr.log"
       ],
       "current_config": "/mnt/d/0code/Research/feng/react/configs/fever-qwen36-formal.json",
-      "recovery_record": "records/qa-502-recovery-20260930T1214.json",
+      "recovery_record": "records/qa-timeout-recovery-20260930T1618.json",
       "resume_policy": "Direct formal runner with unchanged arguments. Do not replay pilot controller after explicit Unicode source revision; historical pilot manifests remain unchanged."
     }
   ],

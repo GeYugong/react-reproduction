@@ -1,0 +1,22 @@
+{
+  "timestamp_utc": "2026-09-30T16:19:27.0385411Z",
+  "event": "paired_timeout_recovery",
+  "hotpotqa": {
+    "run_id": "hotpotqa-formal-qwen36-v1",
+    "status": "stopped",
+    "completed": 2122,
+    "error_type": "ReadTimeout",
+    "error": "HTTPSConnectionPool(host='aigw.saurlax.com', port=443): Read timed out. (read timeout=60)",
+    "updated_at_utc": "2026-10-01T00:05:22.508778+08:00"
+  },
+  "fever": {
+    "run_id": "fever-formal-qwen36-v1",
+    "status": "stopped",
+    "completed": 2323,
+    "error_type": "ReadTimeout",
+    "error": "HTTPSConnectionPool(host='aigw.saurlax.com', port=443): Read timed out. (read timeout=60)",
+    "updated_at_utc": "2026-10-01T00:05:30.371438+08:00"
+  },
+  "cause": "Both runners exhausted transport retries within eight seconds; shared gateway/network failure suspected, root cause unverified",
+  "policy": "One bounded restart each with unchanged frozen config and run_id; successful samples reused; failed-request billing unknown"
+}
