@@ -1,0 +1,26 @@
+{
+  "timestamp_utc": "2026-09-30T04:09:49.542085+00:00",
+  "scope": "coverage and completed CoT-SC votes only, not full audit",
+  "runs": {
+    "hotpotqa-formal-qwen36-v1": {
+      "counts": {
+        "act": 500,
+        "cot": 500,
+        "react": 500,
+        "standard": 500,
+        "cot_sc": 6
+      },
+      "sc_votes_checked": 6
+    },
+    "fever-formal-qwen36-v1": {
+      "counts": {
+        "act": 500,
+        "cot": 500,
+        "react": 500,
+        "standard": 500,
+        "cot_sc": 138
+      },
+      "sc_votes_checked": 138
+    }
+  }
+}

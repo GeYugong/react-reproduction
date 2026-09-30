@@ -1,5 +1,5 @@
 {
-  "recorded_at_utc": "2026-09-29T15:53:19.299137+00:00",
+  "recorded_at_utc": "2026-09-30T04:10:12.3954239Z",
   "campaign_id": "qwen36-restart-20260929",
   "model": "qwen3.6-35b-a3b",
   "old_model_policy": "All Qwen 3.8 runs retired; never resume or import their outputs into this campaign",
@@ -27,10 +27,12 @@
         "data/cache/hotpotqa-qwen36-recovery-1446.stdout.log",
         "data/cache/hotpotqa-qwen36-recovery-1446.stderr.log",
         "data/cache/hotpotqa-qwen36-recovery-unicode.stdout.log",
-        "data/cache/hotpotqa-qwen36-recovery-unicode.stderr.log"
+        "data/cache/hotpotqa-qwen36-recovery-unicode.stderr.log",
+        "data/cache/hotpotqa-qwen36-recovery-0408.stdout.log",
+        "data/cache/hotpotqa-qwen36-recovery-0408.stderr.log"
       ],
       "current_config": "/mnt/d/0code/Research/feng/react/configs/hotpotqa-qwen36-formal.json",
-      "recovery_record": "records/hotpotqa-formal-qwen36-v1-unicode-revision.json",
+      "recovery_record": "records/process-recovery-20260930T0408.json",
       "resume_policy": "Direct formal runner with unchanged arguments. Do not replay pilot controller after explicit Unicode source revision; historical pilot manifests remain unchanged."
     },
     {
@@ -54,10 +56,12 @@
         "data/cache/fever-qwen36-recovery-1446.stdout.log",
         "data/cache/fever-qwen36-recovery-1446.stderr.log",
         "data/cache/fever-qwen36-recovery-unicode.stdout.log",
-        "data/cache/fever-qwen36-recovery-unicode.stderr.log"
+        "data/cache/fever-qwen36-recovery-unicode.stderr.log",
+        "data/cache/fever-qwen36-recovery-0408.stdout.log",
+        "data/cache/fever-qwen36-recovery-0408.stderr.log"
       ],
       "current_config": "/mnt/d/0code/Research/feng/react/configs/fever-qwen36-formal.json",
-      "recovery_record": "records/fever-formal-qwen36-v1-unicode-revision.json",
+      "recovery_record": "records/process-recovery-20260930T0408.json",
       "resume_policy": "Direct formal runner with unchanged arguments. Do not replay pilot controller after explicit Unicode source revision; historical pilot manifests remain unchanged."
     }
   ],

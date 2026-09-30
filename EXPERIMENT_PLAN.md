@@ -310,3 +310,6 @@ WebShop 服务与生成均使用 `.venv-webshop/bin/python`，保持作者 Beaut
 修复后回放验收：HotpotQA 1,296 条、1,373 个环境动作，FEVER 1,672 条、2,016 个环境动作均与既有轨迹一致，评分和响应协议复核通过。两个正式 run 的原 manifest 完整保存在各自 unicode-revision.json，源文件旧副本保存在原始运行目录；只登记 wikienv.py 的兼容修复哈希，配置、样本、提示、主执行器不变。此为运行异常修复，不是按正式成绩调参。正式恢复直接使用 run_qa.py；历史 pilot manifest 保持原版本，不再经旧 campaign 控制器重放。WebShop 服务进程也未找到，重新启动后健康端点通过，冻结数据库与目标哈希一致。
 
 2026-09-29 20:00 UTC 方法覆盖检查：FEVER 的 Standard、CoT、Act、ReAct 各 500 条已生成，原执行器已自动进入 CoT-SC；已完成的首 14 题均包含 21 个采样序号，投票复算一致。HotpotQA 的 Standard、CoT、Act 各 500 条已生成，正在 ReAct。此检查仅确认覆盖与已完成 SC 投票，不代表完整七方法验收。证据见 records/qa-method-transition-20260929T2000.json。
+
+2026-09-30 04:08 UTC 检查：两路均已进入 CoT-SC，但状态文件停留在 04:02 UTC，最新请求约 04:06 UTC 后无后续，操作系统未找到两个 runner 或 WebShop 服务，也无新的 Python 异常退出记录。中断原因未确定，不能将 running 字段视为进程存活。保留现场快照后，按原配置和 run_id 直接恢复，复用已完成 episode 及未完成题的成功 SC 采样缓存，另行恢复 WebShop 服务。
+恢复验收：两路均收到新的 HTTP 200 响应并继续 SC 采样，WebShop 健康端点通过且冻结哈希一致。覆盖检查确认两个数据集的四种基础方法各 500 条均已生成，快照中的 HotpotQA 6 题及 FEVER 138 题 CoT-SC 均为 21 次采样且投票复算一致；此为阶段覆盖检查，不是整批验收。

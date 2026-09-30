@@ -1,0 +1,35 @@
+{
+  "runs": {
+    "fever": {
+      "run_id": "fever-formal-qwen36-v1",
+      "phase": "formal",
+      "status": "running",
+      "completed": 2138,
+      "planned": 2500,
+      "last": {
+        "index": 4485,
+        "method": "cot_sc",
+        "correct": false,
+        "termination": "answer"
+      },
+      "updated_at_utc": "2026-09-30T12:02:03.649338+08:00"
+    },
+    "hotpotqa": {
+      "run_id": "hotpotqa-formal-qwen36-v1",
+      "phase": "formal",
+      "status": "running",
+      "completed": 2006,
+      "planned": 2500,
+      "last": {
+        "index": 2866,
+        "method": "cot_sc",
+        "correct": false,
+        "termination": "answer"
+      },
+      "updated_at_utc": "2026-09-30T12:02:00.326635+08:00"
+    }
+  },
+  "cause": "Unknown; both QA runners and loopback service absent despite running progress records; no new Python traceback",
+  "timestamp_utc": "2026-09-30T04:08:53.9977395Z",
+  "event": "processes_absent_without_batch_stop"
+}
