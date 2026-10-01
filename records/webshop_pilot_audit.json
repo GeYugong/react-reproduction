@@ -1,0 +1,21 @@
+{
+  "status": "passed",
+  "run_id": "webshop-pilot-qwen36-v1",
+  "dataset": "webshop",
+  "model": "qwen3.6-35b-a3b",
+  "recorded_at_utc": "2026-10-01T04:38:34.724433+00:00",
+  "episodes": 4,
+  "requests": 20,
+  "usage": {
+    "prompt_tokens": 18548,
+    "completion_tokens": 497,
+    "total_tokens": 19045
+  },
+  "cost_status": "pending_reconciliation",
+  "actual_cost_cny": null,
+  "max_decisions": 14,
+  "native_reasoning_anomalies_observed": 0,
+  "absent_reasoning_telemetry": "unknown",
+  "manifest_sha256": "b4f0c56d963dc8dd2a59f68aa0fc78bd358e8661054b89e9b71d0d03d8ad44d5",
+  "gate": "Protocol, environment evidence, controls and accounting; no accuracy threshold"
+}

@@ -1,0 +1,9 @@
+{
+  "status": "stopped",
+  "phase": "formal",
+  "completed": 0,
+  "planned": 268,
+  "error_type": "RuntimeError",
+  "error": "Environment game order mismatch",
+  "updated_at_utc": "2026-10-01T04:30:40.303588+00:00"
+}

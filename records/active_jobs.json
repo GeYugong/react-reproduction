@@ -1,5 +1,5 @@
 {
-  "recorded_at_utc": "2026-10-01T04:30:39.037334+00:00",
+  "recorded_at_utc": "2026-10-01T04:39:34.596582+00:00",
   "campaign_id": "qwen36-restart-20260929",
   "model": "qwen3.6-35b-a3b",
   "old_model_policy": "All Qwen 3.8 runs retired; never resume or import their outputs into this campaign",
@@ -82,16 +82,35 @@
       "dataset": "alfworld",
       "controller": "scripts/run_alfworld.py",
       "status": "formal",
-      "active_run_id": "alfworld-formal-qwen36-v1",
-      "progress": "records/alfworld-formal-qwen36-v1.json",
+      "active_run_id": "alfworld-formal-qwen36-v2",
+      "progress": "records/alfworld-formal-qwen36-v2.json",
       "current_config": "configs/alfworld-qwen36-formal.json",
       "logs": [
         "data/cache/alfworld-pilot-qwen36-v1.stdout.log",
         "data/cache/alfworld-pilot-qwen36-v1.stderr.log",
         "data/cache/alfworld-formal-qwen36-v1.stdout.log",
-        "data/cache/alfworld-formal-qwen36-v1.stderr.log"
+        "data/cache/alfworld-formal-qwen36-v1.stderr.log",
+        "data/cache/alfworld-formal-qwen36-v2.stdout.log",
+        "data/cache/alfworld-formal-qwen36-v2.stderr.log"
       ],
-      "audit": "records/alfworld_pilot_audit.json"
+      "audit": "records/alfworld_pilot_audit.json",
+      "order_check": "records/alfworld-formal-order-check-v2.json",
+      "next": "Resume v2 only with fixed source/config; original v1 zero-call failure retained"
+    },
+    {
+      "dataset": "webshop",
+      "controller": "scripts/run_webshop.py",
+      "status": "pilot_audited_formal_queued",
+      "active_run_id": "webshop-pilot-qwen36-v1",
+      "current_config": "configs/webshop-qwen36-pilot.json",
+      "progress": "records/webshop-pilot-qwen36-v1.json",
+      "logs": [
+        "data/cache/webshop-pilot-qwen36-v1.stdout.log",
+        "data/cache/webshop-pilot-qwen36-v1.stderr.log"
+      ],
+      "audit": "records/webshop_pilot_audit.json",
+      "formal_config": "configs/webshop-qwen36-formal.json",
+      "next": "When model slot free, run .venv-webshop/bin/python scripts/run_webshop.py --phase formal --run-id webshop-formal-qwen36-v1 --config configs/webshop-qwen36-formal.json"
     }
   ],
   "concurrency_cap": 2,
@@ -108,13 +127,13 @@
     "webshop_service": "records/webshop_service.json",
     "webshop_generator_python": ".venv-webshop/bin/python",
     "alfworld_dry_run": "records/alfworld-dry-pilot-qwen36-v1.json",
-    "interactive_model_pilots": "ALFWorld pilot passed and formal 134 x 2 started; WebShop pilot queued while both model slots occupied"
+    "interactive_model_pilots": "Both pilots passed and archived. ALFWorld formal v2 running after complete offline order validation; WebShop formal queued."
   },
   "offline_archive": {
     "run_id": "fever-formal-qwen36-v1",
-    "status": "completed_and_verified",
+    "status": "verified_and_pushed_1069ec7",
     "path": "artifacts/fever-formal-qwen36-v1.zip",
     "record": "records/fever-formal-qwen36-v1-archive.json",
-    "next": "Push four part files and manifest; full ZIP remains local"
+    "next": "complete"
   }
 }

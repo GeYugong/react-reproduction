@@ -83,11 +83,16 @@ def main():
     completed=0
     for method in ['act','react']:
         env=manager.init_env(batch_size=1)
+        env.seed(api_config['evaluation']['bootstrap_seed'])
+        expected_paths={Path(p).resolve() for p in manager.game_files}
+        seen_paths=set()
         try:
             for idx,path in enumerate(manager.game_files):
                 ob,info=env.reset()
                 actual=Path(info['extra.gamefile'][0])
-                if actual.resolve()!=Path(path).resolve():raise RuntimeError('Environment game order mismatch')
+                if actual.resolve() not in expected_paths or actual.resolve() in seen_paths:
+                    raise RuntimeError('Environment game membership or uniqueness mismatch')
+                seen_paths.add(actual.resolve())
                 name='/'.join(actual.parts[-3:-1])
                 key=next(v for k,v in PREFIXES.items() if name.startswith(k))
                 prompt='Interact with a household to solve a task. Here are two examples.\n'+prompts[f'{method}_{key}_1']+prompts[f'{method}_{key}_0']+'\nHere is the task.\n'

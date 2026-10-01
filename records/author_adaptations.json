@@ -41,7 +41,7 @@
   },
   "adapted_source_hashes": {
     "scripts/run_qa.py": "215d6277874034c4f4842a4792e3bdb7eaa3142fab8131d236cccbf9cf3285fd",
-    "scripts/run_alfworld.py": "7ae8bb7dbf97a84e18b94df1dd446f25b107bbac8fea784c186ec5cea5c7b743",
+    "scripts/run_alfworld.py": "822f4ffa23326801e0125be37b817278f8789ae39553a3ea3d1d8072940e6275",
     "scripts/run_webshop.py": "1d12375cbf8ce2290116e3d4c148f0a4ff3d33105d93b164119a014708a05233",
     "scripts/webshop_runtime.py": "8bb67d8efccf19e9fba11d070a45b9c232f983978b5427d65d14f8eb3262521e",
     "src/react_reproduction/author/webshop_env.py": "6beaf2b9837fdb9d9cad09bf6f00c966158bcc1418dd36d6df5d8476267067c1"

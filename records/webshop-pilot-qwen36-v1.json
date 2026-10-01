@@ -1,0 +1,13 @@
+{
+  "status": "completed",
+  "run_id": "webshop-pilot-qwen36-v1",
+  "phase": "pilot",
+  "model": "qwen3.6-35b-a3b",
+  "completed": 4,
+  "planned": 4,
+  "updated_at_utc": "2026-10-01T04:37:18.779564+00:00",
+  "last": {
+    "index": 501,
+    "method": "react"
+  }
+}

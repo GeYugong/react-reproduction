@@ -329,3 +329,7 @@ WebShop 服务与生成均使用 `.venv-webshop/bin/python`，保持作者 Beaut
 2026-10-01 03:34 UTC，FEVER 正式批次五种生成方法各 500 条全部完成，全量离线验收通过：14,368 次成功响应、2,868 个环境动作、1,963 次检索回放，未发现已返回字段中的原生 reasoning 异常；缺失遥测仍不能证明上游完全关闭内部推理。准确率为 Standard 51.0%、CoT 63.4%、CoT-SC 63.6%、Act 56.0%、ReAct 61.2%、CoT-SC→ReAct 64.2%、ReAct→CoT-SC 65.4%。固定样本配对 bootstrap 区间和逐题分支见 results/qwen36/fever.json 及 fever-episodes.json。137 条步数耗尽与 1 条无效答案均保留于分母。累计已返回 token 6,057,248；83 次传输异常和缺失用量的失败响应费用仍未知，金额待对账。完整原始运行及 Wikipedia 证据正在归档，大文件采用有序二进制分片与 SHA256 记录。FEVER 模型进程退出后启动 ALFWorld 独立联调，与仍在运行的 HotpotQA 保持两路并发；ALFWorld 尚未通过联调，不启动正式批次。
 
 2026-10-01 04:29 UTC，ALFWorld 独立联调 4 条轨迹通过协议、样本隔离、环境奖励、Act 控制及用量验收；156 次成功响应的 finish_reason 均为 stop，未发现已返回字段中的原生 reasoning 异常。Act 与 ReAct 各成功 1/2，失败轨迹保留，不以成绩作为放行门槛。模型生成的环境反馈式文字仅作为动作提交，真实观察仍来自环境；未据此调整提示或参数。已冻结 configs/alfworld-qwen36-formal.json，启动 alfworld-formal-qwen36-v1，覆盖 134 个 unseen games 的两种方法。联调全轨迹已归档。FEVER 全量归档为 157,022,689 字节，拆为 4 个有序分片；分片 SHA256、合并后的完整 SHA256 与 ZIP 成员 CRC 全部验证通过。索引见 records/fever-formal-qwen36-v1-archive.json。
+
+04:30 UTC，ALFWorld 正式 v1 在首次 reset 顺序断言失败，完成 0 条且模型调用为 0；上述启动记录不代表成功生成。根因是 TextWorld 默认打乱游戏顺序，而执行器错误要求字典序。修复为两种方法均 seed=233，并验证每个实际游戏属于冻结集合且不重复；模型提示、步数、奖励和 134 个游戏不变。失败 v1 保留，使用新的 v2 run_id，放行前执行全部 268 次无模型 reset 检查。核验期间仅 HotpotQA 与 WebShop 独立联调占用模型名额。
+
+04:38 UTC，268 次离线 reset 全部通过，两组均无重复地覆盖冻结 134 个游戏且顺序完全相同，记录见 records/alfworld-order-revision.json。正式 v2 使用修复后的源码重新启动，旧 v1 的零调用失败证据保留。WebShop 联调 4 条轨迹与 20 次响应全部通过审计，目标 500/501 的实际奖励在 Act 和 ReAct 下均为 0.6/1.0；包含真实搜索、商品查看、选项选择与购买终止。联调轨迹已归档，正式配置冻结，等待 HotpotQA 或 ALFWorld 释放并发名额。
