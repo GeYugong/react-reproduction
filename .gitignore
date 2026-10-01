@@ -19,3 +19,6 @@ __pycache__/
 # Planning records, sample IDs, summaries, and artifact manifests remain tracked.
 runs/raw/
 *.partial
+
+# Full FEVER archive is backed up as verified Git-compatible parts.
+/artifacts/fever-formal-qwen36-v1.zip

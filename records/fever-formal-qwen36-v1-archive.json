@@ -1,0 +1,32 @@
+{
+  "run_id": "fever-formal-qwen36-v1",
+  "archive": "artifacts/fever-formal-qwen36-v1.zip",
+  "bytes": 157022689,
+  "sha256": "6a8e30488dca170b393610abffd857e3286cf6aeadbbdd80cb02f2012f3f5d78",
+  "files": 18004,
+  "scope": "Full raw run and every logged frozen Wikipedia artifact; no new API calls",
+  "parts": [
+    {
+      "path": "artifacts/fever-formal-qwen36-v1.zip.part000",
+      "bytes": 47185920,
+      "sha256": "de266f2fb985d69c138872323c1b5054dd679832e26efeaa53c250d9534991b4"
+    },
+    {
+      "path": "artifacts/fever-formal-qwen36-v1.zip.part001",
+      "bytes": 47185920,
+      "sha256": "cb1bb13791d871115a1803c402db6ec4e0a0eccb5967bcedbf7ccc17faccbbab"
+    },
+    {
+      "path": "artifacts/fever-formal-qwen36-v1.zip.part002",
+      "bytes": 47185920,
+      "sha256": "c49bbe43c65c3a6c670a15282077153c73c0cea8b755b2f7155afef3f99af4ed"
+    },
+    {
+      "path": "artifacts/fever-formal-qwen36-v1.zip.part003",
+      "bytes": 15464929,
+      "sha256": "1cea7345febc1027b3e9b03ea909a07147c558f39ec3c6425ff53914c470fb8a"
+    }
+  ],
+  "restore": "Concatenate part files in listed order as binary bytes; verify archive SHA256 before extracting.",
+  "verification": "All part hashes, concatenated archive hash and ZIP member CRCs verified"
+}

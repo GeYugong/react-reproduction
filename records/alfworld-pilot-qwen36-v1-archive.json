@@ -1,0 +1,9 @@
+{
+  "run_id": "alfworld-pilot-qwen36-v1",
+  "archive": "artifacts/alfworld-pilot-qwen36-v1.zip",
+  "bytes": 349432,
+  "sha256": "da642e92aba08f510f7a5a39e3919be821ba6ef9008909ba0e230de5aa991b80",
+  "pilot_outcomes": "Act and ReAct each 1/2; all four retained; no accuracy threshold",
+  "observation_like_model_outputs": "Passed verbatim as environment actions; never used as observations. Real environment returned Nothing happens; failures retained.",
+  "review": "All trajectories structurally audited; first/last actions, sparse thoughts and actual reward checked; no protocol change based on scores"
+}

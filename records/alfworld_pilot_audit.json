@@ -1,0 +1,21 @@
+{
+  "status": "passed",
+  "run_id": "alfworld-pilot-qwen36-v1",
+  "dataset": "alfworld",
+  "model": "qwen3.6-35b-a3b",
+  "recorded_at_utc": "2026-10-01T04:28:55.965599+00:00",
+  "episodes": 4,
+  "requests": 156,
+  "usage": {
+    "prompt_tokens": 290950,
+    "completion_tokens": 1597,
+    "total_tokens": 292547
+  },
+  "cost_status": "pending_reconciliation",
+  "actual_cost_cny": null,
+  "max_decisions": 49,
+  "native_reasoning_anomalies_observed": 0,
+  "absent_reasoning_telemetry": "unknown",
+  "manifest_sha256": "dd751809497556945a90bbc52507e18d7be177960463f81e10f2d0fba4fd4c9d",
+  "gate": "Protocol, environment evidence, controls and accounting; no accuracy threshold"
+}

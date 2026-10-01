@@ -1,5 +1,5 @@
 {
-  "recorded_at_utc": "2026-10-01T03:29:25.943617+00:00",
+  "recorded_at_utc": "2026-10-01T04:30:39.037334+00:00",
   "campaign_id": "qwen36-restart-20260929",
   "model": "qwen3.6-35b-a3b",
   "old_model_policy": "All Qwen 3.8 runs retired; never resume or import their outputs into this campaign",
@@ -46,7 +46,7 @@
     {
       "dataset": "fever",
       "controller": "scripts/run_qa.py",
-      "status": "audited_complete_archive_running",
+      "status": "audited_complete_archived",
       "progress": "records/fever-formal-qwen36-v1.json",
       "pilot_config": "configs/fever-qwen36-pilot.json",
       "stages": [
@@ -81,14 +81,17 @@
     {
       "dataset": "alfworld",
       "controller": "scripts/run_alfworld.py",
-      "status": "pilot",
-      "active_run_id": "alfworld-pilot-qwen36-v1",
-      "progress": "records/alfworld-pilot-qwen36-v1.json",
-      "current_config": "configs/alfworld-qwen36-pilot.json",
+      "status": "formal",
+      "active_run_id": "alfworld-formal-qwen36-v1",
+      "progress": "records/alfworld-formal-qwen36-v1.json",
+      "current_config": "configs/alfworld-qwen36-formal.json",
       "logs": [
         "data/cache/alfworld-pilot-qwen36-v1.stdout.log",
-        "data/cache/alfworld-pilot-qwen36-v1.stderr.log"
-      ]
+        "data/cache/alfworld-pilot-qwen36-v1.stderr.log",
+        "data/cache/alfworld-formal-qwen36-v1.stdout.log",
+        "data/cache/alfworld-formal-qwen36-v1.stderr.log"
+      ],
+      "audit": "records/alfworld_pilot_audit.json"
     }
   ],
   "concurrency_cap": 2,
@@ -105,13 +108,13 @@
     "webshop_service": "records/webshop_service.json",
     "webshop_generator_python": ".venv-webshop/bin/python",
     "alfworld_dry_run": "records/alfworld-dry-pilot-qwen36-v1.json",
-    "interactive_model_pilots": "ALFWorld model pilot started after FEVER generator exited; WebShop model pilot queued"
+    "interactive_model_pilots": "ALFWorld pilot passed and formal 134 x 2 started; WebShop pilot queued while both model slots occupied"
   },
   "offline_archive": {
     "run_id": "fever-formal-qwen36-v1",
-    "status": "running",
+    "status": "completed_and_verified",
     "path": "artifacts/fever-formal-qwen36-v1.zip",
     "record": "records/fever-formal-qwen36-v1-archive.json",
-    "next": "After archive completes, run scripts/split_archive.py with archive and record, verify parts, push parts. Do not stage full ZIP above 100 MiB."
+    "next": "Push four part files and manifest; full ZIP remains local"
   }
 }
