@@ -1,0 +1,15 @@
+{
+  "timestamp_utc": "2026-10-01T18:44:26.876809+00:00",
+  "run_id": "hotpotqa-formal-qwen36-v1",
+  "call_id": "hotpotqa/6781/cot_sc/6",
+  "http_status": 200,
+  "body_sha256": "00cc0c0e15043bd9a7928c7c892bc2113e32713afcb57d35fc158724f88b122a",
+  "parse_failure": {
+    "message": "Extra data",
+    "position": 2384
+  },
+  "bad_response_cached": false,
+  "completed": 2417,
+  "diagnosis": "Appended websocket close 1006 unexpected EOF JSON; non_json_response lacks model field, generic mismatch exception is not evidence of model substitution. Rejected before cache or trajectory.",
+  "recovery": "One bounded same-config same-run restart; retain raw failure; unknown failed-request billing"
+}

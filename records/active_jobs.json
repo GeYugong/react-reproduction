@@ -37,10 +37,12 @@
         "data/cache/hotpotqa-qwen36-recovery-1214.stdout.log",
         "data/cache/hotpotqa-qwen36-recovery-1214.stderr.log",
         "data/cache/hotpotqa-qwen36-recovery-1618.stdout.log",
-        "data/cache/hotpotqa-qwen36-recovery-1618.stderr.log"
+        "data/cache/hotpotqa-qwen36-recovery-1618.stderr.log",
+        "data/cache/hotpotqa-recovery-1843.stdout.log",
+        "data/cache/hotpotqa-recovery-1843.stderr.log"
       ],
       "current_config": "/mnt/d/0code/Research/feng/react/configs/hotpotqa-qwen36-formal.json",
-      "recovery_record": "records/qa-timeout-recovery-20260930T1618.json",
+      "recovery_record": "records/hotpotqa-malformed-response-20261001T1843.json",
       "resume_policy": "Direct formal runner with unchanged arguments. Do not replay pilot controller after explicit Unicode source revision; historical pilot manifests remain unchanged."
     },
     {

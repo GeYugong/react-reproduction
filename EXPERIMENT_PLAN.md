@@ -336,3 +336,6 @@ WebShop 服务与生成均使用 `.venv-webshop/bin/python`，保持作者 Beaut
 
 2026-10-01 15:38 UTC 检查：ALFWorld v2 在 77 条完整结果后停止。HTTP 200 返回体末尾拼接 WebSocket abnormal closure 错误对象，JSON 在偏移 665 处出现 Extra data；执行器将其保存为 non_json_response 后触发通用模型别名异常，不构成模型被替换的证据。异常响应未进入成功缓存或环境动作，原始日志保留；见 records/alfworld-malformed-response-20261001T1538.json。以相同 run_id、冻结源码和配置执行一次有限恢复，复用已完成轨迹及当前题成功采样，失败请求费用仍待对账。
 15:42 UTC，原失败步骤已通过，后续步骤 36 返回 HTTP 200 并执行真实环境动作，恢复得到日志确认。
+
+2026-10-01 18:43 UTC，HotpotQA 在 2,417 条后遭遇畸形 HTTP 200：返回体末尾拼接 WebSocket close 1006 错误对象，JSON 偏移 2384 处 Extra data。异常未缓存或执行，不属于已确认的模型切换。保留记录 records/hotpotqa-malformed-response-20261001T1843.json，以原配置和 run_id 恢复。离线 QA 审计将无法解析的 HTTP 200 单独列入拒收证据（哈希、调用、时间、未知费用），正常 JSON 仍严格核验模型身份，完整轨迹仍必须对应成功响应。
+18:49 UTC，恢复已越过原失败采样，后续采样 12 返回 HTTP 200，采样 13 已派发；既有成功采样复用缓存。离线拒收分类与语法检查通过，整批验收仍待运行完成。

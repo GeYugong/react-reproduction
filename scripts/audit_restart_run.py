@@ -28,7 +28,16 @@ def audit(run_id, partial=False, archive=False):
     with (folder/'events.jsonl').open() as f:
         for line in f:
             if line.endswith('\n'):rows.append(json.loads(line))
-    calls=[r for r in rows if r['event']=='api_response' and r['http_status']==200]
+    rejected=[r for r in rows if r['event']=='api_response' and r['http_status']==200 and 'non_json_response' in r['response']]
+    for r in rejected:
+        # The live client rejects malformed bodies before caching or executing them.
+        try:
+            json.loads(r['response']['non_json_response'])
+        except json.JSONDecodeError:
+            pass
+        else:
+            raise AssertionError('Non-JSON evidence unexpectedly parses')
+    calls=[r for r in rows if r['event']=='api_response' and r['http_status']==200 and 'non_json_response' not in r['response']]
     by_call={r['call_id']:r for r in calls}
     telemetry=Counter()
     def check_fields(obj, path=''):
@@ -93,6 +102,7 @@ def audit(run_id, partial=False, archive=False):
         elif answers:assert answers[-1]==e['final_answer']
     result={'status':'checkpoint_passed' if partial else 'passed','run_id':run_id,'model':'qwen3.6-35b-a3b',
             'recorded_at_utc':now(),'episodes':len(episodes),'planned':len(expected),'api_successes_observed':len(calls),
+            'rejected_malformed_http200':[{'call_id':r['call_id'],'timestamp_utc':r['timestamp_utc'],'body_sha256':digest(r['response']['non_json_response'].encode()),'cost_status':'unknown'} for r in rejected],
             'native_reasoning_fields_observed':dict(telemetry),'native_reasoning_anomalies':0,
             'missing_telemetry_means_unknown':True,'environment_steps_replayed':replayed,
             'wiki_reads_replayed':len(wiki_reads),'model_observation_blocks_ignored':invented,
