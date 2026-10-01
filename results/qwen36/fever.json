@@ -1,0 +1,223 @@
+{
+  "dataset": "fever",
+  "status": "complete",
+  "run_id": "fever-formal-qwen36-v1",
+  "recorded_at_utc": "2026-10-01T03:32:59.879397+00:00",
+  "table": [
+    {
+      "dataset": "fever",
+      "method": "standard",
+      "model": "qwen3.6-35b-a3b",
+      "n": 500,
+      "paper_percent": 57.1,
+      "percent": 51.0,
+      "ci95": [
+        46.6,
+        55.400000000000006
+      ],
+      "logical_usage": {
+        "prompt_tokens": 73415,
+        "completion_tokens": 2044,
+        "total_tokens": 75459,
+        "response_attempts": 500
+      }
+    },
+    {
+      "dataset": "fever",
+      "method": "cot",
+      "model": "qwen3.6-35b-a3b",
+      "n": 500,
+      "paper_percent": 56.3,
+      "percent": 63.4,
+      "ci95": [
+        59.199999999999996,
+        67.60000000000001
+      ],
+      "logical_usage": {
+        "prompt_tokens": 119415,
+        "completion_tokens": 23043,
+        "total_tokens": 142458,
+        "response_attempts": 500
+      }
+    },
+    {
+      "dataset": "fever",
+      "method": "cot_sc",
+      "model": "qwen3.6-35b-a3b",
+      "n": 500,
+      "paper_percent": 60.4,
+      "percent": 63.6,
+      "ci95": [
+        59.4,
+        67.80000000000001
+      ],
+      "logical_usage": {
+        "prompt_tokens": 2507715,
+        "completion_tokens": 513379,
+        "total_tokens": 3021094,
+        "response_attempts": 10503
+      }
+    },
+    {
+      "dataset": "fever",
+      "method": "act",
+      "model": "qwen3.6-35b-a3b",
+      "n": 500,
+      "paper_percent": 58.9,
+      "percent": 56.00000000000001,
+      "ci95": [
+        51.800000000000004,
+        60.4
+      ],
+      "logical_usage": {
+        "prompt_tokens": 1320780,
+        "completion_tokens": 20312,
+        "total_tokens": 1341092,
+        "response_attempts": 1582
+      }
+    },
+    {
+      "dataset": "fever",
+      "method": "react",
+      "model": "qwen3.6-35b-a3b",
+      "n": 500,
+      "paper_percent": 60.9,
+      "percent": 61.199999999999996,
+      "ci95": [
+        56.8,
+        65.4
+      ],
+      "logical_usage": {
+        "prompt_tokens": 1405583,
+        "completion_tokens": 71562,
+        "total_tokens": 1477145,
+        "response_attempts": 1287
+      }
+    },
+    {
+      "dataset": "fever",
+      "method": "cot_sc_to_react",
+      "model": "qwen3.6-35b-a3b",
+      "n": 500,
+      "paper_percent": 64.6,
+      "percent": 64.2,
+      "ci95": [
+        60.0,
+        68.4
+      ],
+      "logical_usage": {
+        "prompt_tokens": 2534877,
+        "completion_tokens": 514903,
+        "total_tokens": 3049780,
+        "response_attempts": 10529
+      }
+    },
+    {
+      "dataset": "fever",
+      "method": "react_to_cot_sc",
+      "model": "qwen3.6-35b-a3b",
+      "n": 500,
+      "paper_percent": 62.0,
+      "percent": 65.4,
+      "ci95": [
+        61.199999999999996,
+        69.6
+      ],
+      "logical_usage": {
+        "prompt_tokens": 1576775,
+        "completion_tokens": 111335,
+        "total_tokens": 1688110,
+        "response_attempts": 2001
+      }
+    }
+  ],
+  "comparisons": [
+    {
+      "comparison": "react minus act",
+      "difference_pp": 5.2,
+      "paired_ci95": [
+        1.6,
+        8.799999999999999
+      ]
+    },
+    {
+      "comparison": "cot minus standard",
+      "difference_pp": 12.4,
+      "paired_ci95": [
+        7.199999999999999,
+        17.599999999999998
+      ]
+    },
+    {
+      "comparison": "react minus cot",
+      "difference_pp": -2.1999999999999997,
+      "paired_ci95": [
+        -6.800000000000001,
+        2.4
+      ]
+    },
+    {
+      "comparison": "cot_sc minus cot",
+      "difference_pp": 0.2,
+      "paired_ci95": [
+        -1.2,
+        1.6
+      ]
+    },
+    {
+      "comparison": "cot_sc_to_react minus cot_sc",
+      "difference_pp": 0.6,
+      "paired_ci95": [
+        -0.2,
+        1.6
+      ]
+    },
+    {
+      "comparison": "react_to_cot_sc minus react",
+      "difference_pp": 4.2,
+      "paired_ci95": [
+        2.6,
+        6.0
+      ]
+    }
+  ],
+  "usage": {
+    "prompt_tokens": 5426908,
+    "completion_tokens": 630340,
+    "total_tokens": 6057248
+  },
+  "http_status_counts": {
+    "200": 14368,
+    "525": 1,
+    "502": 3
+  },
+  "missing_usage_responses": [
+    {
+      "call_id": "fever/2497/react/3",
+      "http_status": 525,
+      "attempt": 0
+    },
+    {
+      "call_id": "fever/2181/cot_sc/14",
+      "http_status": 502,
+      "attempt": 0
+    },
+    {
+      "call_id": "fever/2181/cot_sc/14",
+      "http_status": 502,
+      "attempt": 1
+    },
+    {
+      "call_id": "fever/2181/cot_sc/14",
+      "http_status": 502,
+      "attempt": 2
+    }
+  ],
+  "transport_errors": 83,
+  "usage_scope": "Sum of supplied usage over all response attempts, including retries; missing usage is unknown and not claimed as zero",
+  "cost_status": "pending_reconciliation",
+  "actual_cost_cny": null,
+  "audit_record": "records/fever-formal-qwen36-v1-audit.json",
+  "bootstrap": "10000 paired resamples of the same 500 IDs; seed 233; percentile 95%",
+  "hybrids": "Reuse only this new-model run; route by votes/finish, never correctness; logical branch usage includes both branches when invoked"
+}

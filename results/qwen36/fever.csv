@@ -1,0 +1,8 @@
+dataset,method,model,n,paper_percent,percent,ci95_low,ci95_high
+fever,standard,qwen3.6-35b-a3b,500,57.1,51.0,46.6,55.400000000000006
+fever,cot,qwen3.6-35b-a3b,500,56.3,63.4,59.199999999999996,67.60000000000001
+fever,cot_sc,qwen3.6-35b-a3b,500,60.4,63.6,59.4,67.80000000000001
+fever,act,qwen3.6-35b-a3b,500,58.9,56.00000000000001,51.800000000000004,60.4
+fever,react,qwen3.6-35b-a3b,500,60.9,61.199999999999996,56.8,65.4
+fever,cot_sc_to_react,qwen3.6-35b-a3b,500,64.6,64.2,60.0,68.4
+fever,react_to_cot_sc,qwen3.6-35b-a3b,500,62.0,65.4,61.199999999999996,69.6

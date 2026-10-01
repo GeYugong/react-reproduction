@@ -325,3 +325,5 @@ WebShop 服务与生成均使用 `.venv-webshop/bin/python`，保持作者 Beaut
 
 2026-09-30 16:18 UTC 检查：两路于 16:05 UTC 连续读取超时后停止，保留 HotpotQA 122 题与 FEVER 323 题完整 CoT-SC。停止时间相差约 8 秒，共同链路异常为推测，具体根因未验证。中断记录见 records/qa-timeout-recovery-20260930T1618.json；按原配置与 run_id 各执行一次有限恢复，复用当前题成功采样，失败请求费用仍未知。
 16:21 UTC，两路均越过原失败采样并返回 HTTP 200；FEVER 原中断题完成，后续题开始采样。恢复日志确认成功，保留失败记录。
+
+2026-10-01 03:34 UTC，FEVER 正式批次五种生成方法各 500 条全部完成，全量离线验收通过：14,368 次成功响应、2,868 个环境动作、1,963 次检索回放，未发现已返回字段中的原生 reasoning 异常；缺失遥测仍不能证明上游完全关闭内部推理。准确率为 Standard 51.0%、CoT 63.4%、CoT-SC 63.6%、Act 56.0%、ReAct 61.2%、CoT-SC→ReAct 64.2%、ReAct→CoT-SC 65.4%。固定样本配对 bootstrap 区间和逐题分支见 results/qwen36/fever.json 及 fever-episodes.json。137 条步数耗尽与 1 条无效答案均保留于分母。累计已返回 token 6,057,248；83 次传输异常和缺失用量的失败响应费用仍未知，金额待对账。完整原始运行及 Wikipedia 证据正在归档，大文件采用有序二进制分片与 SHA256 记录。FEVER 模型进程退出后启动 ALFWorld 独立联调，与仍在运行的 HotpotQA 保持两路并发；ALFWorld 尚未通过联调，不启动正式批次。

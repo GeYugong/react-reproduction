@@ -1,5 +1,5 @@
 {
-  "recorded_at_utc": "2026-09-30T16:20:04.5433693Z",
+  "recorded_at_utc": "2026-10-01T03:29:25.943617+00:00",
   "campaign_id": "qwen36-restart-20260929",
   "model": "qwen3.6-35b-a3b",
   "old_model_policy": "All Qwen 3.8 runs retired; never resume or import their outputs into this campaign",
@@ -46,8 +46,8 @@
     {
       "dataset": "fever",
       "controller": "scripts/run_qa.py",
-      "status": "formal",
-      "progress": "records/fever-qwen36-campaign.json",
+      "status": "audited_complete_archive_running",
+      "progress": "records/fever-formal-qwen36-v1.json",
       "pilot_config": "configs/fever-qwen36-pilot.json",
       "stages": [
         "20 questions x four methods",
@@ -74,7 +74,21 @@
       ],
       "current_config": "/mnt/d/0code/Research/feng/react/configs/fever-qwen36-formal.json",
       "recovery_record": "records/qa-timeout-recovery-20260930T1618.json",
-      "resume_policy": "Direct formal runner with unchanged arguments. Do not replay pilot controller after explicit Unicode source revision; historical pilot manifests remain unchanged."
+      "resume_policy": "Direct formal runner with unchanged arguments. Do not replay pilot controller after explicit Unicode source revision; historical pilot manifests remain unchanged.",
+      "audit": "records/fever-formal-qwen36-v1-audit.json",
+      "report": "results/qwen36/fever.json"
+    },
+    {
+      "dataset": "alfworld",
+      "controller": "scripts/run_alfworld.py",
+      "status": "pilot",
+      "active_run_id": "alfworld-pilot-qwen36-v1",
+      "progress": "records/alfworld-pilot-qwen36-v1.json",
+      "current_config": "configs/alfworld-qwen36-pilot.json",
+      "logs": [
+        "data/cache/alfworld-pilot-qwen36-v1.stdout.log",
+        "data/cache/alfworld-pilot-qwen36-v1.stderr.log"
+      ]
     }
   ],
   "concurrency_cap": 2,
@@ -91,6 +105,13 @@
     "webshop_service": "records/webshop_service.json",
     "webshop_generator_python": ".venv-webshop/bin/python",
     "alfworld_dry_run": "records/alfworld-dry-pilot-qwen36-v1.json",
-    "interactive_model_pilots": "waiting for a model slot; no API calls made"
+    "interactive_model_pilots": "ALFWorld model pilot started after FEVER generator exited; WebShop model pilot queued"
+  },
+  "offline_archive": {
+    "run_id": "fever-formal-qwen36-v1",
+    "status": "running",
+    "path": "artifacts/fever-formal-qwen36-v1.zip",
+    "record": "records/fever-formal-qwen36-v1-archive.json",
+    "next": "After archive completes, run scripts/split_archive.py with archive and record, verify parts, push parts. Do not stage full ZIP above 100 MiB."
   }
 }

@@ -1,14 +1,36 @@
 {
   "run_id": "fever-formal-qwen36-v1",
   "phase": "formal",
-  "status": "running",
-  "completed": 536,
+  "status": "completed",
+  "completed": 2500,
   "planned": 2500,
   "last": {
-    "index": 4685,
-    "method": "cot",
+    "index": 1005,
+    "method": "cot_sc",
     "correct": true,
     "termination": "answer"
   },
-  "updated_at_utc": "2026-09-29T06:03:49.242521+00:00"
+  "updated_at_utc": "2026-10-01T03:13:11.160157+00:00",
+  "per_method": {
+    "standard": {
+      "n": 500,
+      "correct": 255
+    },
+    "cot": {
+      "n": 500,
+      "correct": 317
+    },
+    "act": {
+      "n": 500,
+      "correct": 280
+    },
+    "react": {
+      "n": 500,
+      "correct": 306
+    },
+    "cot_sc": {
+      "n": 500,
+      "correct": 318
+    }
+  }
 }
