@@ -1,0 +1,16 @@
+{
+  "timestamp_utc": "2026-10-01T19:46:15.9025035Z",
+  "run_id": "hotpotqa-formal-qwen36-v1",
+  "call_id": "hotpotqa/2930/cot_sc/5",
+  "completed": 2426,
+  "error": "ReadTimeout",
+  "attempts": 3,
+  "timeout_seconds": 60,
+  "diagnosis": "Three consecutive transport read timeouts; no HTTP quota or model identity error observed. ALFWorld same endpoint remains active.",
+  "recovery": "One bounded restart with unchanged frozen configuration and run_id; retain all failed attempts and reuse successful cache.",
+  "cost_status": "Failed request billing unknown",
+  "logs": [
+    "data/cache/hotpotqa-recovery-1945.stdout.log",
+    "data/cache/hotpotqa-recovery-1945.stderr.log"
+  ]
+}

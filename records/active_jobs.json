@@ -1,5 +1,5 @@
 {
-  "recorded_at_utc": "2026-10-01T15:41:51.407501+00:00",
+  "recorded_at_utc": "2026-10-01T19:46:16.0414799Z",
   "campaign_id": "qwen36-restart-20260929",
   "model": "qwen3.6-35b-a3b",
   "old_model_policy": "All Qwen 3.8 runs retired; never resume or import their outputs into this campaign",
@@ -39,10 +39,12 @@
         "data/cache/hotpotqa-qwen36-recovery-1618.stdout.log",
         "data/cache/hotpotqa-qwen36-recovery-1618.stderr.log",
         "data/cache/hotpotqa-recovery-1843.stdout.log",
-        "data/cache/hotpotqa-recovery-1843.stderr.log"
+        "data/cache/hotpotqa-recovery-1843.stderr.log",
+        "data/cache/hotpotqa-recovery-1945.stdout.log",
+        "data/cache/hotpotqa-recovery-1945.stderr.log"
       ],
       "current_config": "/mnt/d/0code/Research/feng/react/configs/hotpotqa-qwen36-formal.json",
-      "recovery_record": "records/hotpotqa-malformed-response-20261001T1843.json",
+      "recovery_record": "records/hotpotqa-timeout-recovery-20261001T1945.json",
       "resume_policy": "Direct formal runner with unchanged arguments. Do not replay pilot controller after explicit Unicode source revision; historical pilot manifests remain unchanged."
     },
     {

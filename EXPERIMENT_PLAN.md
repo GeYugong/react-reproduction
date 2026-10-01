@@ -339,3 +339,5 @@ WebShop 服务与生成均使用 `.venv-webshop/bin/python`，保持作者 Beaut
 
 2026-10-01 18:43 UTC，HotpotQA 在 2,417 条后遭遇畸形 HTTP 200：返回体末尾拼接 WebSocket close 1006 错误对象，JSON 偏移 2384 处 Extra data。异常未缓存或执行，不属于已确认的模型切换。保留记录 records/hotpotqa-malformed-response-20261001T1843.json，以原配置和 run_id 恢复。离线 QA 审计将无法解析的 HTTP 200 单独列入拒收证据（哈希、调用、时间、未知费用），正常 JSON 仍严格核验模型身份，完整轨迹仍必须对应成功响应。
 18:49 UTC，恢复已越过原失败采样，后续采样 12 返回 HTTP 200，采样 13 已派发；既有成功采样复用缓存。离线拒收分类与语法检查通过，整批验收仍待运行完成。
+
+2026-10-01 19:45 UTC，HotpotQA 在 2,426 条后因同一 CoT-SC 采样三次 60 秒读取超时停止；未返回额度或模型身份错误。保留全部失败日志，以相同配置和 run_id 有限恢复，成功缓存复用。19:47:30 UTC 原失败采样 5 返回 HTTP 200，后续采样 6 已派发；恢复得到原始日志确认。失败请求费用未知，记录见 records/hotpotqa-timeout-recovery-20261001T1945.json。
