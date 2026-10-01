@@ -1,0 +1,17 @@
+{
+  "timestamp_utc": "2026-10-01T15:40:36.695797+00:00",
+  "run_id": "alfworld-formal-qwen36-v2",
+  "call_id": "alfworld/2b23987f0760c41a/act/35",
+  "http_status": 200,
+  "body_bytes": 733,
+  "body_sha256": "95c30699ff90cff47afe8761b91d54a08b50795f2126a3e519f2d522a974ea45",
+  "parse_failure": {
+    "message": "Extra data",
+    "position": 665,
+    "tail": "0051275101}}{\"error\":\"websocket: close 1006 (abnormal closure): unexpected EOF\"}"
+  },
+  "cached_bad_response": false,
+  "completed": 77,
+  "diagnosis": "Malformed JSON wrapped as non_json_response; no response model was parsed. Generic model-mismatch exception does not establish different model identity. Rejected before cache or environment action.",
+  "recovery": "One bounded same-config restart; preserve raw failed response and successful partial episode cache; no model fallback"
+}

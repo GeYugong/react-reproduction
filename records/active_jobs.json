@@ -1,5 +1,5 @@
 {
-  "recorded_at_utc": "2026-10-01T04:39:34.596582+00:00",
+  "recorded_at_utc": "2026-10-01T15:41:51.407501+00:00",
   "campaign_id": "qwen36-restart-20260929",
   "model": "qwen3.6-35b-a3b",
   "old_model_policy": "All Qwen 3.8 runs retired; never resume or import their outputs into this campaign",
@@ -91,11 +91,14 @@
         "data/cache/alfworld-formal-qwen36-v1.stdout.log",
         "data/cache/alfworld-formal-qwen36-v1.stderr.log",
         "data/cache/alfworld-formal-qwen36-v2.stdout.log",
-        "data/cache/alfworld-formal-qwen36-v2.stderr.log"
+        "data/cache/alfworld-formal-qwen36-v2.stderr.log",
+        "data/cache/alfworld-recovery-1538.stdout.log",
+        "data/cache/alfworld-recovery-1538.stderr.log"
       ],
       "audit": "records/alfworld_pilot_audit.json",
       "order_check": "records/alfworld-formal-order-check-v2.json",
-      "next": "Resume v2 only with fixed source/config; original v1 zero-call failure retained"
+      "next": "Resume v2 only with fixed source/config; original v1 zero-call failure retained",
+      "recovery_record": "records/alfworld-malformed-response-20261001T1538.json"
     },
     {
       "dataset": "webshop",

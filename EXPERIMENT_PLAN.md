@@ -333,3 +333,6 @@ WebShop 服务与生成均使用 `.venv-webshop/bin/python`，保持作者 Beaut
 04:30 UTC，ALFWorld 正式 v1 在首次 reset 顺序断言失败，完成 0 条且模型调用为 0；上述启动记录不代表成功生成。根因是 TextWorld 默认打乱游戏顺序，而执行器错误要求字典序。修复为两种方法均 seed=233，并验证每个实际游戏属于冻结集合且不重复；模型提示、步数、奖励和 134 个游戏不变。失败 v1 保留，使用新的 v2 run_id，放行前执行全部 268 次无模型 reset 检查。核验期间仅 HotpotQA 与 WebShop 独立联调占用模型名额。
 
 04:38 UTC，268 次离线 reset 全部通过，两组均无重复地覆盖冻结 134 个游戏且顺序完全相同，记录见 records/alfworld-order-revision.json。正式 v2 使用修复后的源码重新启动，旧 v1 的零调用失败证据保留。WebShop 联调 4 条轨迹与 20 次响应全部通过审计，目标 500/501 的实际奖励在 Act 和 ReAct 下均为 0.6/1.0；包含真实搜索、商品查看、选项选择与购买终止。联调轨迹已归档，正式配置冻结，等待 HotpotQA 或 ALFWorld 释放并发名额。
+
+2026-10-01 15:38 UTC 检查：ALFWorld v2 在 77 条完整结果后停止。HTTP 200 返回体末尾拼接 WebSocket abnormal closure 错误对象，JSON 在偏移 665 处出现 Extra data；执行器将其保存为 non_json_response 后触发通用模型别名异常，不构成模型被替换的证据。异常响应未进入成功缓存或环境动作，原始日志保留；见 records/alfworld-malformed-response-20261001T1538.json。以相同 run_id、冻结源码和配置执行一次有限恢复，复用已完成轨迹及当前题成功采样，失败请求费用仍待对账。
+15:42 UTC，原失败步骤已通过，后续步骤 36 返回 HTTP 200 并执行真实环境动作，恢复得到日志确认。
