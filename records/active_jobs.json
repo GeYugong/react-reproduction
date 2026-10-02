@@ -7,7 +7,7 @@
     {
       "dataset": "hotpotqa",
       "controller": "scripts/run_qa.py",
-      "status": "formal",
+      "status": "generation_complete_audit_running",
       "progress": "records/hotpotqa-qwen36-campaign.json",
       "pilot_config": "configs/hotpotqa-qwen36-pilot.json",
       "stages": [
@@ -107,17 +107,22 @@
     {
       "dataset": "webshop",
       "controller": "scripts/run_webshop.py",
-      "status": "pilot_audited_formal_queued",
-      "active_run_id": "webshop-pilot-qwen36-v1",
-      "current_config": "configs/webshop-qwen36-pilot.json",
-      "progress": "records/webshop-pilot-qwen36-v1.json",
+      "status": "formal",
+      "active_run_id": "webshop-formal-qwen36-v1",
+      "current_config": "configs/webshop-qwen36-formal.json",
+      "progress": "records/webshop-formal-qwen36-v1.json",
       "logs": [
         "data/cache/webshop-pilot-qwen36-v1.stdout.log",
-        "data/cache/webshop-pilot-qwen36-v1.stderr.log"
+        "data/cache/webshop-pilot-qwen36-v1.stderr.log",
+        "data/cache/webshop-formal-qwen36-v1.stdout.log",
+        "data/cache/webshop-formal-qwen36-v1.stderr.log",
+        "data/cache/webshop-formal-url-recovery.stdout.log",
+        "data/cache/webshop-formal-url-recovery.stderr.log"
       ],
       "audit": "records/webshop_pilot_audit.json",
       "formal_config": "configs/webshop-qwen36-formal.json",
-      "next": "When model slot free, run .venv-webshop/bin/python scripts/run_webshop.py --phase formal --run-id webshop-formal-qwen36-v1 --config configs/webshop-qwen36-formal.json"
+      "next": "Complete 500 fixed goals for both methods; retain URL revision evidence and same-batch cache",
+      "recovery_record": "records/webshop-url-encoding-revision.json"
     }
   ],
   "concurrency_cap": 2,

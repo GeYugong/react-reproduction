@@ -5,6 +5,7 @@ import json
 from pathlib import Path
 import re
 import requests
+from urllib.parse import quote
 from run_qa import ROOT, Client, Journal, digest, now, write_json
 from react_reproduction.author import webshop_env as original
 
@@ -80,7 +81,7 @@ def main():
             dst=folder/'source'/f;dst.parent.mkdir(parents=True,exist_ok=True);dst.write_bytes((ROOT/f).read_bytes())
     client=Client(config,folder,journal)
     def get(url):
-        response=requests.get(url,timeout=60)
+        response=requests.get(quote(url, safe=":/"),timeout=60)
         journal.add(event='webshop_http',url=url,resolved_url=response.url,http_status=response.status_code,
                     html=response.text,html_sha256=digest(response.content))
         return response

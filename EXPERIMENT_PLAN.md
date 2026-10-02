@@ -341,3 +341,5 @@ WebShop 服务与生成均使用 `.venv-webshop/bin/python`，保持作者 Beaut
 18:49 UTC，恢复已越过原失败采样，后续采样 12 返回 HTTP 200，采样 13 已派发；既有成功采样复用缓存。离线拒收分类与语法检查通过，整批验收仍待运行完成。
 
 2026-10-01 19:45 UTC，HotpotQA 在 2,426 条后因同一 CoT-SC 采样三次 60 秒读取超时停止；未返回额度或模型身份错误。保留全部失败日志，以相同配置和 run_id 有限恢复，成功缓存复用。19:47:30 UTC 原失败采样 5 返回 HTTP 200，后续采样 6 已派发；恢复得到原始日志确认。失败请求费用未知，记录见 records/hotpotqa-timeout-recovery-20261001T1945.json。
+
+2026-10-02 02:52 UTC，HotpotQA 五种生成方法各 500 条完成，启动全量离线审计、两种 hybrid 和统计区间生成，并归档完整原始运行及检索证据。释放的并发名额用于 WebShop 正式 v1（同一 500 目标的 Act/ReAct）。首题选项 natural black #1b 未编码的井号被 HTTP 客户端当作 fragment，导致服务端 literal_eval 收到截断文本并返回 500；修复为 HTTP URL 编码，不修改模型提示、动作或评分。精确失败 URL 返回 200；旧源码和 manifest 保留于修订记录，使用同批缓存恢复，至 02:57 UTC 完成 4 条。记录见 records/webshop-url-encoding-revision.json。
