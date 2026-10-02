@@ -145,9 +145,9 @@
   },
   "offline_archive": {
     "run_id": "hotpotqa-formal-qwen36-v1",
-    "status": "verified_pending_push",
+    "status": "verified_and_pushed_e4e1d9a",
     "path": "artifacts/hotpotqa-formal-qwen36-v1.zip",
     "record": "records/hotpotqa-formal-qwen36-v1-archive.json",
-    "next": "Push verified parts and record"
+    "next": "complete"
   }
 }
