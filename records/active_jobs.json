@@ -7,7 +7,7 @@
     {
       "dataset": "hotpotqa",
       "controller": "scripts/run_qa.py",
-      "status": "audited_complete_archiving",
+      "status": "audited_complete_archived",
       "progress": "records/hotpotqa-qwen36-campaign.json",
       "pilot_config": "configs/hotpotqa-qwen36-pilot.json",
       "stages": [
@@ -87,7 +87,7 @@
     {
       "dataset": "alfworld",
       "controller": "scripts/run_alfworld.py",
-      "status": "formal",
+      "status": "stopped_protocol_violation",
       "active_run_id": "alfworld-formal-qwen36-v2",
       "progress": "records/alfworld-formal-qwen36-v2.json",
       "current_config": "configs/alfworld-qwen36-formal.json",
@@ -103,8 +103,8 @@
       ],
       "audit": "records/alfworld_pilot_audit.json",
       "order_check": "records/alfworld-formal-order-check-v2.json",
-      "next": "Resume v2 only with fixed source/config; original v1 zero-call failure retained",
-      "recovery_record": "records/alfworld-malformed-response-20261001T1538.json"
+      "next": "Keep ALFWorld stopped pending upstream control resolution and explicit recovery decision; preserve same-batch evidence. WebShop separate batch continues with strict guard.",
+      "recovery_record": "records/alfworld-reasoning-stop-20261002T0352.json"
     },
     {
       "dataset": "webshop",
@@ -145,10 +145,9 @@
   },
   "offline_archive": {
     "run_id": "hotpotqa-formal-qwen36-v1",
-    "status": "running",
-    "pid": 7387,
+    "status": "verified_pending_push",
     "path": "artifacts/hotpotqa-formal-qwen36-v1.zip",
     "record": "records/hotpotqa-formal-qwen36-v1-archive.json",
-    "next": "Existing offline process writes full raw/wiki ZIP, verifies member CRC and SHA256, creates 45MiB parts. Check process and record before resuming; do not overwrite incomplete archive. Once complete, commit parts and archive record, mark archived."
+    "next": "Push verified parts and record"
   }
 }

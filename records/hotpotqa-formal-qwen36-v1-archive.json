@@ -1,0 +1,36 @@
+{
+  "run_id": "hotpotqa-formal-qwen36-v1",
+  "archive": "artifacts/hotpotqa-formal-qwen36-v1.zip",
+  "bytes": 194420244,
+  "sha256": "3b16558948e9009f3c25fdce1bc75c18054bae0c4bb55a496c040bff7c82f33a",
+  "files": 21027,
+  "scope": "Full raw run and every logged frozen Wikipedia artifact; no new API calls; ZIP CRC verified",
+  "parts": [
+    {
+      "path": "artifacts/hotpotqa-formal-qwen36-v1.zip.part000",
+      "bytes": 47185920,
+      "sha256": "bcd221574d661509958e1b1ac68c483c307a86abe298e44b76c8e5fd3f577ad7"
+    },
+    {
+      "path": "artifacts/hotpotqa-formal-qwen36-v1.zip.part001",
+      "bytes": 47185920,
+      "sha256": "5d1d6fb6b8b4506d8f74937f22bf26fc1dd2f9384c3bc0a583bec27fccb5f1be"
+    },
+    {
+      "path": "artifacts/hotpotqa-formal-qwen36-v1.zip.part002",
+      "bytes": 47185920,
+      "sha256": "41fbbbc46c01188b84acfa5d925f73994ecd751707fb28312f6a0e587e8fdc11"
+    },
+    {
+      "path": "artifacts/hotpotqa-formal-qwen36-v1.zip.part003",
+      "bytes": 47185920,
+      "sha256": "ab3decf7c6d0cef1fced78d2d1f6089249b1aabcf8a92f66774d703d449157e9"
+    },
+    {
+      "path": "artifacts/hotpotqa-formal-qwen36-v1.zip.part004",
+      "bytes": 5676564,
+      "sha256": "201c62ba36b9b5febaff250fbc23993960e858eb59605579cbcef53f3db6a6e8"
+    }
+  ],
+  "restore": "Concatenate part files in listed order as binary bytes; verify archive SHA256 before extracting."
+}

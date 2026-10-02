@@ -1,0 +1,53 @@
+{
+  "run_id": "alfworld-formal-qwen36-v2",
+  "completed": 166,
+  "status": "stopped_protocol_violation",
+  "response_evidence": {
+    "timestamp_utc": "2026-10-02T03:52:08.472999+00:00",
+    "event": "api_response",
+    "call_id": "alfworld/2d7e1b6fcf7210c1/react/30",
+    "attempt": 0,
+    "http_status": 200,
+    "elapsed_seconds": 11.463342414004728,
+    "response": {
+      "choices": [
+        {
+          "finish_reason": "stop",
+          "index": 0,
+          "message": {
+            "role": "assistant",
+            "content": "<think>"
+          }
+        }
+      ],
+      "created": 1790913146,
+      "model": "qwen3.6-35b-a3b",
+      "system_fingerprint": "b0-unknown",
+      "object": "chat.completion",
+      "usage": {
+        "completion_tokens": 2,
+        "prompt_tokens": 3798,
+        "total_tokens": 3800,
+        "prompt_tokens_details": {
+          "cached_tokens": 24
+        }
+      },
+      "id": "chatcmpl-02XA54c6mlXi8ySvs5cAjR5evSwGSLYZ",
+      "timings": {
+        "cache_n": 24,
+        "prompt_n": 3774,
+        "prompt_ms": 7474.373,
+        "prompt_per_token_ms": 1.980490990990991,
+        "prompt_per_second": 504.9252960750019,
+        "predicted_n": 2,
+        "predicted_ms": 27.796,
+        "predicted_per_token_ms": 13.898,
+        "predicted_per_second": 71.9527989638797
+      }
+    },
+    "cost_status": "pending_reconciliation"
+  },
+  "assessment": "Literal <think> marker violates frozen no-native-reasoning protocol. Bare marker alone does not establish actual hidden reasoning; no reasoning field returned. Do not filter, silently drop, or retry this response to obtain a compliant sample.",
+  "next": "Keep ALFWorld stopped pending upstream control resolution and explicit recovery decision; preserve same-batch evidence. WebShop separate batch continues with strict guard.",
+  "cost_status": "pending_reconciliation"
+}
