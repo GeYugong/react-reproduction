@@ -144,10 +144,11 @@
     "interactive_model_pilots": "Both pilots passed and archived. ALFWorld formal v2 running after complete offline order validation; WebShop formal queued."
   },
   "offline_archive": {
-    "run_id": "fever-formal-qwen36-v1",
-    "status": "verified_and_pushed_1069ec7",
-    "path": "artifacts/fever-formal-qwen36-v1.zip",
-    "record": "records/fever-formal-qwen36-v1-archive.json",
-    "next": "complete"
+    "run_id": "hotpotqa-formal-qwen36-v1",
+    "status": "running",
+    "pid": 7387,
+    "path": "artifacts/hotpotqa-formal-qwen36-v1.zip",
+    "record": "records/hotpotqa-formal-qwen36-v1-archive.json",
+    "next": "Existing offline process writes full raw/wiki ZIP, verifies member CRC and SHA256, creates 45MiB parts. Check process and record before resuming; do not overwrite incomplete archive. Once complete, commit parts and archive record, mark archived."
   }
 }
