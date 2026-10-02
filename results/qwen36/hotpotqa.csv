@@ -1,0 +1,8 @@
+dataset,method,model,n,paper_percent,percent,ci95_low,ci95_high
+hotpotqa,standard,qwen3.6-35b-a3b,500,28.7,27.400000000000002,23.595000000000002,31.4
+hotpotqa,cot,qwen3.6-35b-a3b,500,29.4,33.0,28.799999999999997,37.2
+hotpotqa,cot_sc,qwen3.6-35b-a3b,500,33.4,34.4,30.2,38.6
+hotpotqa,act,qwen3.6-35b-a3b,500,25.7,40.0,35.6,44.4
+hotpotqa,react,qwen3.6-35b-a3b,500,27.4,42.6,38.2,47.0
+hotpotqa,cot_sc_to_react,qwen3.6-35b-a3b,500,34.2,41.4,37.0,45.800000000000004
+hotpotqa,react_to_cot_sc,qwen3.6-35b-a3b,500,35.1,45.4,41.0,49.8

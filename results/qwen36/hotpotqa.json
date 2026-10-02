@@ -1,0 +1,222 @@
+{
+  "dataset": "hotpotqa",
+  "status": "complete",
+  "run_id": "hotpotqa-formal-qwen36-v1",
+  "recorded_at_utc": "2026-10-02T02:59:46.198802+00:00",
+  "table": [
+    {
+      "dataset": "hotpotqa",
+      "method": "standard",
+      "model": "qwen3.6-35b-a3b",
+      "n": 500,
+      "paper_percent": 28.7,
+      "percent": 27.400000000000002,
+      "ci95": [
+        23.595000000000002,
+        31.4
+      ],
+      "logical_usage": {
+        "prompt_tokens": 121709,
+        "completion_tokens": 2444,
+        "total_tokens": 124153,
+        "response_attempts": 500
+      }
+    },
+    {
+      "dataset": "hotpotqa",
+      "method": "cot",
+      "model": "qwen3.6-35b-a3b",
+      "n": 500,
+      "paper_percent": 29.4,
+      "percent": 33.0,
+      "ci95": [
+        28.799999999999997,
+        37.2
+      ],
+      "logical_usage": {
+        "prompt_tokens": 278709,
+        "completion_tokens": 58994,
+        "total_tokens": 337703,
+        "response_attempts": 500
+      }
+    },
+    {
+      "dataset": "hotpotqa",
+      "method": "cot_sc",
+      "model": "qwen3.6-35b-a3b",
+      "n": 500,
+      "paper_percent": 33.4,
+      "percent": 34.4,
+      "ci95": [
+        30.2,
+        38.6
+      ],
+      "logical_usage": {
+        "prompt_tokens": 5852889,
+        "completion_tokens": 1358497,
+        "total_tokens": 7211386,
+        "response_attempts": 10504
+      }
+    },
+    {
+      "dataset": "hotpotqa",
+      "method": "act",
+      "model": "qwen3.6-35b-a3b",
+      "n": 500,
+      "paper_percent": 25.7,
+      "percent": 40.0,
+      "ci95": [
+        35.6,
+        44.4
+      ],
+      "logical_usage": {
+        "prompt_tokens": 3012372,
+        "completion_tokens": 32443,
+        "total_tokens": 3044815,
+        "response_attempts": 2325
+      }
+    },
+    {
+      "dataset": "hotpotqa",
+      "method": "react",
+      "model": "qwen3.6-35b-a3b",
+      "n": 500,
+      "paper_percent": 27.4,
+      "percent": 42.6,
+      "ci95": [
+        38.2,
+        47.0
+      ],
+      "logical_usage": {
+        "prompt_tokens": 4311889,
+        "completion_tokens": 137557,
+        "total_tokens": 4449446,
+        "response_attempts": 2161
+      }
+    },
+    {
+      "dataset": "hotpotqa",
+      "method": "cot_sc_to_react",
+      "model": "qwen3.6-35b-a3b",
+      "n": 500,
+      "paper_percent": 34.2,
+      "percent": 41.4,
+      "ci95": [
+        37.0,
+        45.800000000000004
+      ],
+      "logical_usage": {
+        "prompt_tokens": 8085047,
+        "completion_tokens": 1437394,
+        "total_tokens": 9522441,
+        "response_attempts": 11597
+      }
+    },
+    {
+      "dataset": "hotpotqa",
+      "method": "react_to_cot_sc",
+      "model": "qwen3.6-35b-a3b",
+      "n": 500,
+      "paper_percent": 35.1,
+      "percent": 45.4,
+      "ci95": [
+        41.0,
+        49.8
+      ],
+      "logical_usage": {
+        "prompt_tokens": 5662399,
+        "completion_tokens": 598153,
+        "total_tokens": 6260552,
+        "response_attempts": 4577
+      }
+    }
+  ],
+  "comparisons": [
+    {
+      "comparison": "react minus act",
+      "difference_pp": 2.6,
+      "paired_ci95": [
+        -0.6,
+        5.800000000000001
+      ]
+    },
+    {
+      "comparison": "cot minus standard",
+      "difference_pp": 5.6000000000000005,
+      "paired_ci95": [
+        2.4,
+        9.0
+      ]
+    },
+    {
+      "comparison": "react minus cot",
+      "difference_pp": 9.6,
+      "paired_ci95": [
+        5.6000000000000005,
+        13.600000000000001
+      ]
+    },
+    {
+      "comparison": "cot_sc minus cot",
+      "difference_pp": 1.4000000000000001,
+      "paired_ci95": [
+        -0.4,
+        3.2
+      ]
+    },
+    {
+      "comparison": "cot_sc_to_react minus cot_sc",
+      "difference_pp": 7.000000000000001,
+      "paired_ci95": [
+        4.3999999999999995,
+        9.8
+      ]
+    },
+    {
+      "comparison": "react_to_cot_sc minus react",
+      "difference_pp": 2.8000000000000003,
+      "paired_ci95": [
+        1.4000000000000001,
+        4.2
+      ]
+    }
+  ],
+  "usage": {
+    "prompt_tokens": 13577568,
+    "completion_tokens": 1589935,
+    "total_tokens": 15167503
+  },
+  "http_status_counts": {
+    "200": 15987,
+    "502": 3
+  },
+  "missing_usage_responses": [
+    {
+      "call_id": "hotpotqa/3124/cot_sc/5",
+      "http_status": 502,
+      "attempt": 0
+    },
+    {
+      "call_id": "hotpotqa/3124/cot_sc/5",
+      "http_status": 502,
+      "attempt": 1
+    },
+    {
+      "call_id": "hotpotqa/3124/cot_sc/5",
+      "http_status": 502,
+      "attempt": 2
+    },
+    {
+      "call_id": "hotpotqa/6781/cot_sc/6",
+      "http_status": 200,
+      "attempt": 0
+    }
+  ],
+  "transport_errors": 111,
+  "usage_scope": "Sum of supplied usage over all response attempts, including retries; missing usage is unknown and not claimed as zero",
+  "cost_status": "pending_reconciliation",
+  "actual_cost_cny": null,
+  "audit_record": "records/hotpotqa-formal-qwen36-v1-audit.json",
+  "bootstrap": "10000 paired resamples of the same 500 IDs; seed 233; percentile 95%",
+  "hybrids": "Reuse only this new-model run; route by votes/finish, never correctness; logical branch usage includes both branches when invoked"
+}

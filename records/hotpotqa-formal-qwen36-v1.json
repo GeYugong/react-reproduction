@@ -1,14 +1,36 @@
 {
   "run_id": "hotpotqa-formal-qwen36-v1",
   "phase": "formal",
-  "status": "running",
-  "completed": 207,
+  "status": "completed",
+  "completed": 2500,
   "planned": 2500,
   "last": {
-    "index": 3352,
-    "method": "standard",
+    "index": 4082,
+    "method": "cot_sc",
     "correct": true,
     "termination": "answer"
   },
-  "updated_at_utc": "2026-09-29T06:03:45.838111+00:00"
+  "updated_at_utc": "2026-10-02T02:36:09.717449+00:00",
+  "per_method": {
+    "standard": {
+      "n": 500,
+      "correct": 137
+    },
+    "cot": {
+      "n": 500,
+      "correct": 165
+    },
+    "act": {
+      "n": 500,
+      "correct": 200
+    },
+    "react": {
+      "n": 500,
+      "correct": 213
+    },
+    "cot_sc": {
+      "n": 500,
+      "correct": 172
+    }
+  }
 }

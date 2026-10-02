@@ -7,7 +7,7 @@
     {
       "dataset": "hotpotqa",
       "controller": "scripts/run_qa.py",
-      "status": "generation_complete_audit_running",
+      "status": "audited_complete_archiving",
       "progress": "records/hotpotqa-qwen36-campaign.json",
       "pilot_config": "configs/hotpotqa-qwen36-pilot.json",
       "stages": [
@@ -45,7 +45,9 @@
       ],
       "current_config": "/mnt/d/0code/Research/feng/react/configs/hotpotqa-qwen36-formal.json",
       "recovery_record": "records/hotpotqa-timeout-recovery-20261001T1945.json",
-      "resume_policy": "Direct formal runner with unchanged arguments. Do not replay pilot controller after explicit Unicode source revision; historical pilot manifests remain unchanged."
+      "resume_policy": "Direct formal runner with unchanged arguments. Do not replay pilot controller after explicit Unicode source revision; historical pilot manifests remain unchanged.",
+      "audit": "records/hotpotqa-formal-qwen36-v1-audit.json",
+      "report": "results/qwen36/hotpotqa.json"
     },
     {
       "dataset": "fever",
