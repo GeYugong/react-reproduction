@@ -3,7 +3,8 @@ import argparse
 import json
 import os
 from pathlib import Path
-from run_qa import ROOT, Client, Journal, digest, now, write_json, scrub
+from run_qa import ROOT, Journal, digest, now, write_json, scrub
+from interactive_protocol import InteractiveClient as Client
 
 PREFIXES={'pick_and_place':'put','pick_clean_then_place':'clean','pick_heat_then_place':'heat',
           'pick_cool_then_place':'cool','look_at_obj':'examine','pick_two_obj':'puttwo'}
@@ -73,12 +74,14 @@ def main():
     fingerprint={'phase':args.phase,'dry_run':args.dry_run,'gamefiles':manager.game_files,
                  'game_sha256':{str(Path(p).relative_to(ROOT)):digest(Path(p).read_bytes()) for p in manager.game_files},
                  'config':config,'api_config':api_config,'client_sha256':digest((ROOT/'scripts/run_qa.py').read_bytes()),
-                 'source_sha256':digest(Path(__file__).read_bytes()),'prompts_sha256':digest((ROOT/'prompts/alfworld_3prompts.json').read_bytes())}
+                 'source_sha256':digest(Path(__file__).read_bytes()),'prompts_sha256':digest((ROOT/'prompts/alfworld_3prompts.json').read_bytes()),
+                 'interactive_protocol_sha256':digest((ROOT/'scripts/interactive_protocol.py').read_bytes())}
     if (folder/'manifest.json').exists():
         assert json.loads((folder/'manifest.json').read_text())['fingerprint']==fingerprint
     else:
         write_json(folder/'manifest.json',{'started_at_utc':now(),'fingerprint':fingerprint,'dry_run':args.dry_run})
         (folder/'run_alfworld.source.py').write_bytes(Path(__file__).read_bytes())
+        (folder/'interactive_protocol.source.py').write_bytes((ROOT/'scripts/interactive_protocol.py').read_bytes())
     client=None if args.dry_run else Client(api_config,folder,journal)
     completed=0
     for method in ['act','react']:

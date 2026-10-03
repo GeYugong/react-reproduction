@@ -87,7 +87,7 @@
     {
       "dataset": "alfworld",
       "controller": "scripts/run_alfworld.py",
-      "status": "stopped_protocol_violation",
+      "status": "resuming_after_documented_protocol_revision",
       "active_run_id": "alfworld-formal-qwen36-v2",
       "progress": "records/alfworld-formal-qwen36-v2.json",
       "current_config": "configs/alfworld-qwen36-formal.json",
@@ -99,12 +99,14 @@
         "data/cache/alfworld-formal-qwen36-v2.stdout.log",
         "data/cache/alfworld-formal-qwen36-v2.stderr.log",
         "data/cache/alfworld-recovery-1538.stdout.log",
-        "data/cache/alfworld-recovery-1538.stderr.log"
+        "data/cache/alfworld-recovery-1538.stderr.log",
+        "data/cache/alfworld-marker-recovery-20261003.stdout.log",
+        "data/cache/alfworld-marker-recovery-20261003.stderr.log"
       ],
       "audit": "records/alfworld_pilot_audit.json",
       "order_check": "records/alfworld-formal-order-check-v2.json",
-      "next": "Keep ALFWorld stopped pending upstream control resolution and explicit recovery decision; preserve same-batch evidence. WebShop separate batch continues with strict guard.",
-      "recovery_record": "records/alfworld-reasoning-stop-20261002T0352.json"
+      "next": "Continue same batch with original isolated marker consumed literally as an invalid action. No resampling; substantive reasoning/identity violations still stop. Full formal audit must disclose revision and count rejected responses once.",
+      "recovery_record": "records/alfworld-isolated-marker-revision.json"
     },
     {
       "dataset": "webshop",

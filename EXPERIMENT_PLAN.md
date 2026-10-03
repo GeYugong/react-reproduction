@@ -352,3 +352,5 @@ WebShop 服务与生成均使用 `.venv-webshop/bin/python`，保持作者 Beaut
 
 2026-10-03 11:18 UTC，WebShop 在 642 条完整轨迹后因同一 ReAct 目标 142 的步骤 2 连续三次 60 秒网关读取超时停止；环境健康端点与冻结哈希正常。保留原始异常及停止快照，以同一 run_id、冻结配置和源码执行一次有限恢复，复用成功响应缓存，失败请求费用待对账。记录见 records/webshop-timeout-recovery-20261003T1118.json。
 11:21 UTC，恢复已越过原失败步骤，目标 142 的后续步骤 3 返回 HTTP 200 并执行真实环境动作，恢复得到原始日志确认。
+
+2026-10-03 15:15 UTC，经请求排查 ALFWorld 停机后登记协议兼容性修订：仅对正文精确为 <think>、finish_reason=stop、模型名一致且所有已返回 reasoning/thinking/analysis 字段为空的响应，保留原文并作为无效动作消耗一次原定决策；不剥离标记、不重新采样、不补零结束题目。其他推理正文、非空原生 reasoning 遥测及模型身份异常仍停止。修订适用于 ALFWorld 的 Act/ReAct；WebShop 运行代码未变。缺失遥测不能证明上游推理完全关闭，孤立标记也不足以证明它已开启。本项属于冻结后的明确协议修订，最终报告必须披露。原始异常仍保留于日志及独立拒收缓存，费用计入原始请求且不重复累计回放。无模型回放验证前 29 步逐项一致，第 30 步得到真实 Nothing happens.、reward=0、done=false；既有 166 条轨迹哈希未改变。扫描 7,644 条正常响应、1 条孤立标记及 1 条既有畸形 HTTP200，未发现其他已返回原生 reasoning 异常。旧 manifest、旧源码和验证结果见 records/alfworld-isolated-marker-revision.json。以相同 run_id、模型、提示、参数及成功缓存续跑，完整阶段验收仍待完成。
