@@ -1,12 +1,16 @@
-# ReAct 主线复现
+# ReAct 复现
 
-使用同一个非 GPT 模型复现 ReAct 在 HotpotQA、FEVER、ALFWorld 和 WebShop 上的主要实验。研究范围包括七种知识问答策略，以及交互任务中的 Act / ReAct 对照。
+使用 `qwen3.6-35b-a3b` 复现 [ReAct](https://github.com/ysymyth/ReAct) 在知识问答、事实验证和交互式任务上的主要实验。基于作者代码与提示，保存模型响应、环境交互轨迹、评估结果和用量记录。
 
-- [实验方案](EXPERIMENT_PLAN.md)：研究问题、实验矩阵、方法、用量记录和执行顺序。
-- [实验配置](configs/experiment.json)：与方案对应的参数和运行门槛。
-- [过程记录](records/worklog.jsonl)、[API 预检](records/api_preflight.jsonl)、[来源清单](records/source_manifest.json)。
-- [评估样本清单](data/eval_manifest.json)、[原始论文](paper/Yao_et_al_2023_ReAct.pdf)。
+| 任务 | 评估规模 | 方法 |
+| --- | --- | --- |
+| HotpotQA | 500 题 | Standard、CoT、CoT-SC、Act、ReAct 及两种 hybrid |
+| FEVER | 500 题 | Standard、CoT、CoT-SC、Act、ReAct 及两种 hybrid |
+| ALFWorld | 134 个 unseen games | Act、ReAct |
+| WebShop | 完整商品库、500 个固定目标 | Act、ReAct |
 
-当前状态：按新模型 `qwen3.6-35b-a3b` 全量重启，旧 Qwen 3.8 结果仅保留审计。HotpotQA / FEVER 新联调通过后自动进入各自正式 500 题；见 `records/model_restart.json` 和 `records/active_jobs.json`。
-
-远端：[GeYugong/react-reproduction](https://github.com/GeYugong/react-reproduction)，private，跟踪分支 `origin/main`。
+- [实验方案](EXPERIMENT_PLAN.md)：方法、环境、运行方式、评估口径与限制。
+- [实验配置](configs/)与[运行脚本](scripts/)：各任务的固定参数和执行入口。
+- [评估结果](results/qwen36/)：已完成评估的指标、配对置信区间与用量统计。
+- [样本清单](data/eval_manifest.json)、[来源清单](records/source_manifest.json)与[原始产物索引](records/)。
+- [论文](paper/Yao_et_al_2023_ReAct.pdf)：*ReAct: Synergizing Reasoning and Acting in Language Models*。
