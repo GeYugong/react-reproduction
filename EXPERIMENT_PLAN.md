@@ -349,3 +349,6 @@ WebShop 服务与生成均使用 `.venv-webshop/bin/python`，保持作者 Beaut
 2026-10-02 03:52 UTC，ALFWorld 正式 v2 在 166 条后返回正文 <think>（2 completion tokens，finish_reason=stop），触发冻结的 reasoning 标记检查。仅此标记不足以证明隐藏推理，但属于明确输出协议异常；响应未作为环境动作执行，保持停止，不过滤或选择性重试。记录见 records/alfworld-reasoning-stop-20261002T0352.json。需上游控制问题得到处理及明确恢复决策后继续；WebShop 独立批次仍由同一严格检查保护。HotpotQA 全部原始轨迹及检索归档为 194,420,244 字节、21,027 个文件，ZIP CRC 验证通过，5 个有序分片逐一及合并 SHA256 验证通过（3b16558948e9009f3c25fdce1bc75c18054bae0c4bb55a496c040bff7c82f33a）。
 
 2026-10-02 23:07 UTC，WebShop 正式批次 Act 已生成全部 500 个固定目标（0..499），目标哈希、模型标识及逐题文件覆盖检查通过，原进程已自动进入 ReAct。逐题 SHA256 与终止类型计数见 records/webshop-act-coverage-20261002T2307.json。此为覆盖检查，不代表完整响应协议、环境回放或整批验收；正式参数未改变。ALFWorld 仍保持此前协议异常停止状态。
+
+2026-10-03 11:18 UTC，WebShop 在 642 条完整轨迹后因同一 ReAct 目标 142 的步骤 2 连续三次 60 秒网关读取超时停止；环境健康端点与冻结哈希正常。保留原始异常及停止快照，以同一 run_id、冻结配置和源码执行一次有限恢复，复用成功响应缓存，失败请求费用待对账。记录见 records/webshop-timeout-recovery-20261003T1118.json。
+11:21 UTC，恢复已越过原失败步骤，目标 142 的后续步骤 3 返回 HTTP 200 并执行真实环境动作，恢复得到原始日志确认。

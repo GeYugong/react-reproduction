@@ -1,0 +1,31 @@
+{
+  "timestamp_utc": "2026-10-03T11:18:42.8330967Z",
+  "run_id": "webshop-formal-qwen36-v1",
+  "event": "transport_timeout_recovery",
+  "prior_state": {
+    "status": "stopped",
+    "run_id": "webshop-formal-qwen36-v1",
+    "phase": "formal",
+    "model": "qwen3.6-35b-a3b",
+    "completed": 642,
+    "planned": 1000,
+    "updated_at_utc": "2026-10-03T19:06:22.485764+08:00",
+    "last": {
+      "index": 141,
+      "method": "react"
+    },
+    "error_type": "ReadTimeout",
+    "error": "HTTPSConnectionPool(host='aigw.saurlax.com', port=443): Read timed out. (read timeout=60)"
+  },
+  "failed_call": "webshop/webshop-formal-qwen36-v1_react_fixed_142/2",
+  "attempts": 3,
+  "cause": "Gateway read timeout after 60 seconds on each attempt; underlying upstream cause unverified",
+  "stderr_sha256": "C8FDC205816DF1BA99E6AE0484BEEBD861176D77D1B5DD53846DA975246F8BDD",
+  "recovery": "One bounded restart using unchanged config/run_id/source and successful response cache; no model or sampling changes",
+  "failed_request_cost": "unknown_pending_reconciliation",
+  "logs": [
+    "data/cache/webshop-recovery-1118.stdout.log",
+    "data/cache/webshop-recovery-1118.stderr.log"
+  ],
+  "recovery_verified": "2026-10-03T11:21Z: subsequent step 3 HTTP200 and real environment step observed; PID 11367 running"
+}

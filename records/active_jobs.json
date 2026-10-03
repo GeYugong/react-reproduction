@@ -119,12 +119,14 @@
         "data/cache/webshop-formal-qwen36-v1.stdout.log",
         "data/cache/webshop-formal-qwen36-v1.stderr.log",
         "data/cache/webshop-formal-url-recovery.stdout.log",
-        "data/cache/webshop-formal-url-recovery.stderr.log"
+        "data/cache/webshop-formal-url-recovery.stderr.log",
+        "data/cache/webshop-recovery-1118.stdout.log",
+        "data/cache/webshop-recovery-1118.stderr.log"
       ],
       "audit": "records/webshop_pilot_audit.json",
       "formal_config": "configs/webshop-qwen36-formal.json",
       "next": "Complete 500 fixed goals for both methods; retain URL revision evidence and same-batch cache",
-      "recovery_record": "records/webshop-url-encoding-revision.json"
+      "recovery_record": "records/webshop-timeout-recovery-20261003T1118.json"
     }
   ],
   "concurrency_cap": 2,
