@@ -1,0 +1,90 @@
+{
+  "timestamp_utc": "2026-10-03T15:23:00.125662+00:00",
+  "run_id": "alfworld-formal-qwen36-v2",
+  "status": "resume_verified",
+  "original_marker_api_dispatches": 1,
+  "original_marker_api_responses": 1,
+  "resampled": false,
+  "successful_response_cache_contains_marker": false,
+  "marker_execution": {
+    "timestamp_utc": "2026-10-03T15:20:52.324395+00:00",
+    "event": "alfworld_step",
+    "episode_id": "2d7e1b6fcf7210c1",
+    "method": "react",
+    "step": 30,
+    "raw_output": "<think>",
+    "action": "<think>",
+    "raw_observation": "Nothing happens.",
+    "observation": "Nothing happens.",
+    "executed_action": "<think>",
+    "reward": 0.0,
+    "info": {
+      "extra.gamefile": [
+        null
+      ],
+      "won": [
+        false
+      ],
+      "admissible_commands": [
+        [
+          "examine garbagecan 1",
+          "examine potato 1",
+          "go to cabinet 1",
+          "go to cabinet 2",
+          "go to cabinet 3",
+          "go to cabinet 4",
+          "go to cabinet 5",
+          "go to cabinet 6",
+          "go to coffeemachine 1",
+          "go to countertop 1",
+          "go to countertop 2",
+          "go to countertop 3",
+          "go to drawer 1",
+          "go to drawer 2",
+          "go to drawer 3",
+          "go to fridge 1",
+          "go to microwave 1",
+          "go to shelf 1",
+          "go to shelf 2",
+          "go to shelf 3",
+          "go to sinkbasin 1",
+          "go to stoveburner 1",
+          "go to stoveburner 2",
+          "go to stoveburner 3",
+          "go to stoveburner 4",
+          "go to toaster 1",
+          "help",
+          "inventory",
+          "look",
+          "move potato 1 to garbagecan 1"
+        ]
+      ]
+    },
+    "won": false,
+    "done": false
+  },
+  "subsequent_successful_calls": [
+    {
+      "call_id": "alfworld/2d7e1b6fcf7210c1/react/31",
+      "timestamp_utc": "2026-10-03T15:21:13.827800+00:00",
+      "http_status": 200,
+      "response_sha256": "3d098d0f19bb1294cc088efeafa4ee0cd2d2e910f4f054ae29cbecd332546169"
+    },
+    {
+      "call_id": "alfworld/2d7e1b6fcf7210c1/react/32",
+      "timestamp_utc": "2026-10-03T15:21:29.414550+00:00",
+      "http_status": 200,
+      "response_sha256": "75c35f86cf36d9984f18d5bbfaafc721cc1c4005e9ecb84f5929f6debeea96a3"
+    },
+    {
+      "call_id": "alfworld/2d7e1b6fcf7210c1/react/33",
+      "timestamp_utc": "2026-10-03T15:21:51.555062+00:00",
+      "http_status": 200,
+      "response_sha256": "db6f98954f4ddca989b26583924a1ae770098206a24b67dc3843f742840ea7f5"
+    }
+  ],
+  "runner_pid": 11959,
+  "config": "configs/alfworld-qwen36-formal.json",
+  "revision": "records/alfworld-isolated-marker-revision.json",
+  "scope": "Recovery checkpoint; not full formal batch acceptance"
+}

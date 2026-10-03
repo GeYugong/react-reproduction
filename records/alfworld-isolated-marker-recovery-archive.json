@@ -1,0 +1,22 @@
+{
+  "timestamp_utc": "2026-10-03T15:17:45.991469+00:00",
+  "archive": "artifacts/alfworld-isolated-marker-recovery.zip",
+  "bytes": 70157,
+  "sha256": "d49412bf62df3568afcb5928ebff1c070572566e18afc4aa4c7bff87c0f7575f",
+  "files": [
+    "records/alfworld-isolated-marker-revision.json",
+    "records/alfworld-reasoning-stop-20261002T0352.json",
+    "runs/raw/alfworld-formal-qwen36-v2/protocol_rejections/46d650a15b934c108a77b42b02282b8b129284bb76261a69441fc34c89864725.json",
+    "configs/alfworld-qwen36-formal.json",
+    "scripts/interactive_protocol.py",
+    "scripts/check_interactive_protocol.py",
+    "scripts/recover_alfworld_marker.py",
+    "runs/raw/alfworld-formal-qwen36-v2/run_alfworld.before-isolated-marker.py",
+    "runs/raw/alfworld-formal-qwen36-v2/run_alfworld.source.py",
+    "runs/raw/alfworld-formal-qwen36-v2/interactive_protocol.source.py",
+    "runs/raw/alfworld-formal-qwen36-v2/manifest.json"
+  ],
+  "episode_snapshot_lines": 89,
+  "scope": "Protocol recovery evidence snapshot; not full formal batch archive or acceptance",
+  "zip_crc_verified": true
+}

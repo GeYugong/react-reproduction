@@ -87,7 +87,7 @@
     {
       "dataset": "alfworld",
       "controller": "scripts/run_alfworld.py",
-      "status": "resuming_after_documented_protocol_revision",
+      "status": "formal",
       "active_run_id": "alfworld-formal-qwen36-v2",
       "progress": "records/alfworld-formal-qwen36-v2.json",
       "current_config": "configs/alfworld-qwen36-formal.json",
@@ -106,7 +106,10 @@
       "audit": "records/alfworld_pilot_audit.json",
       "order_check": "records/alfworld-formal-order-check-v2.json",
       "next": "Continue same batch with original isolated marker consumed literally as an invalid action. No resampling; substantive reasoning/identity violations still stop. Full formal audit must disclose revision and count rejected responses once.",
-      "recovery_record": "records/alfworld-isolated-marker-revision.json"
+      "recovery_record": "records/alfworld-isolated-marker-revision.json",
+      "recovery_pid": 11959,
+      "progress_note": "Same-batch recovery verified through original step 30 without resampling, followed by successful responses and real environment steps 31-33.",
+      "recovery_verification": "records/alfworld-isolated-marker-resume.json"
     },
     {
       "dataset": "webshop",
