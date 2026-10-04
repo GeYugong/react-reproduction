@@ -1,5 +1,5 @@
 {
-  "recorded_at_utc": "2026-10-04T15:16:37.005274+00:00",
+  "recorded_at_utc": "2026-10-04T16:16:39.733792+00:00",
   "campaign_id": "qwen36-restart-20260929",
   "model": "qwen3.6-35b-a3b",
   "old_model_policy": "All Qwen 3.8 runs retired; never resume or import their outputs into this campaign",
@@ -87,7 +87,7 @@
     {
       "dataset": "alfworld",
       "controller": "scripts/run_alfworld.py",
-      "status": "recovery_startup",
+      "status": "formal",
       "active_run_id": "alfworld-formal-qwen36-v2",
       "progress": "records/alfworld-formal-qwen36-v2.json",
       "current_config": "configs/alfworld-qwen36-formal.json",
@@ -114,8 +114,9 @@
       "next": "Continue same batch with original isolated marker consumed literally as an invalid action. No resampling; substantive reasoning/identity violations still stop. Full formal audit must disclose revision and count rejected responses once.",
       "recovery_record": "records/alfworld-timeout-recovery-20261004T1514.json",
       "recovery_pid": 15384,
-      "progress_note": "Restart launched with identical source/config and preserved cache; original failed step 34 recovery not yet verified.",
-      "protocol_revision": "records/alfworld-isolated-marker-revision.json"
+      "progress_note": "Original step 34 and subsequent step 35 HTTP200 and real environment actions verified; prior 249 episode hashes unchanged.",
+      "protocol_revision": "records/alfworld-isolated-marker-revision.json",
+      "recovery_verification": "records/alfworld-timeout-recovery-20261004T1514-verification.json"
     },
     {
       "dataset": "webshop",
