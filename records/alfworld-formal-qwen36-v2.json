@@ -1,9 +1,8 @@
 {
-  "status": "stopped",
+  "status": "completed",
   "phase": "formal",
-  "completed": 166,
+  "completed": 268,
   "planned": 268,
-  "error_type": "ProtocolError",
-  "error": "Unexpected reasoning markup; batch stopped",
-  "updated_at_utc": "2026-10-02T03:52:08.524180+00:00"
+  "dry_run": false,
+  "updated_at_utc": "2026-10-04T17:58:25.185585+00:00"
 }
