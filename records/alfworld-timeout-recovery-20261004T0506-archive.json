@@ -1,0 +1,15 @@
+{
+  "recorded_at_utc": "2026-10-04T05:14:58.864311+00:00",
+  "path": "artifacts/alfworld-timeout-recovery-20261004T0506.zip",
+  "bytes": 27296,
+  "sha256": "de73dc2f0424a251d6cfa6e134cf95ef57e88c075d0a0fc4bb9b2ad98e1ad37d",
+  "crc_verified": true,
+  "members": [
+    "records/alfworld-timeout-recovery-20261004T0506.json",
+    "data/cache/alfworld-recovery-20261004T0354.stderr.log",
+    "configs/alfworld-qwen36-formal.json",
+    "runs/raw/alfworld-formal-qwen36-v2/manifest.json",
+    "recovery-events/alfworld.jsonl"
+  ],
+  "scope": "Timeout/recovery evidence snapshot; not full formal archive"
+}

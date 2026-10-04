@@ -1,5 +1,5 @@
 {
-  "recorded_at_utc": "2026-10-04T04:03:05.323913+00:00",
+  "recorded_at_utc": "2026-10-04T05:14:58.864311+00:00",
   "campaign_id": "qwen36-restart-20260929",
   "model": "qwen3.6-35b-a3b",
   "old_model_policy": "All Qwen 3.8 runs retired; never resume or import their outputs into this campaign",
@@ -103,16 +103,18 @@
         "data/cache/alfworld-marker-recovery-20261003.stdout.log",
         "data/cache/alfworld-marker-recovery-20261003.stderr.log",
         "data/cache/alfworld-recovery-20261004T0354.stdout.log",
-        "data/cache/alfworld-recovery-20261004T0354.stderr.log"
+        "data/cache/alfworld-recovery-20261004T0354.stderr.log",
+        "data/cache/alfworld-recovery-20261004T0506.stdout.log",
+        "data/cache/alfworld-recovery-20261004T0506.stderr.log"
       ],
       "audit": "records/alfworld_pilot_audit.json",
       "order_check": "records/alfworld-formal-order-check-v2.json",
       "next": "Continue same batch with original isolated marker consumed literally as an invalid action. No resampling; substantive reasoning/identity violations still stop. Full formal audit must disclose revision and count rejected responses once.",
-      "recovery_record": "records/interactive-timeout-recovery-20261004T0354.json",
-      "recovery_pid": 13232,
-      "progress_note": "Recovery verified: original timeout call and subsequent call HTTP200; actual environment step continued. Original run/config/source and successful caches retained.",
+      "recovery_record": "records/alfworld-timeout-recovery-20261004T0506.json",
+      "recovery_pid": 14110,
+      "progress_note": "Original timed-out step 26 and subsequent step 27 returned HTTP200 and continued real environment actions. Same run/config/source and caches retained.",
       "protocol_revision": "records/alfworld-isolated-marker-revision.json",
-      "recovery_verification": "records/interactive-timeout-recovery-20261004T0354.json"
+      "recovery_verification": "records/alfworld-timeout-recovery-20261004T0506.json"
     },
     {
       "dataset": "webshop",

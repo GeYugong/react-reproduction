@@ -1,0 +1,114 @@
+{
+  "timestamp_utc": "2026-10-04T05:06:36.805503+00:00",
+  "run_id": "alfworld-formal-qwen36-v2",
+  "event": "transport_timeout_recovery",
+  "prior_state": {
+    "status": "stopped",
+    "phase": "formal",
+    "completed": 189,
+    "planned": 268,
+    "error_type": "ReadTimeout",
+    "error": "HTTPSConnectionPool(host='aigw.saurlax.com', port=443): Read timed out. (read timeout=60)",
+    "updated_at_utc": "2026-10-04T04:56:16.667347+00:00"
+  },
+  "failed_call": "alfworld/98cd028b9db52105/react/26",
+  "failed_attempt_events": [
+    {
+      "timestamp_utc": "2026-10-04T04:54:10.629046+00:00",
+      "event": "api_transport_error",
+      "call_id": "alfworld/98cd028b9db52105/react/26",
+      "attempt": 0,
+      "error": "ReadTimeout",
+      "cost_status": "unknown"
+    },
+    {
+      "timestamp_utc": "2026-10-04T04:55:12.763171+00:00",
+      "event": "api_transport_error",
+      "call_id": "alfworld/98cd028b9db52105/react/26",
+      "attempt": 1,
+      "error": "ReadTimeout",
+      "cost_status": "unknown"
+    },
+    {
+      "timestamp_utc": "2026-10-04T04:56:16.646696+00:00",
+      "event": "api_transport_error",
+      "call_id": "alfworld/98cd028b9db52105/react/26",
+      "attempt": 2,
+      "error": "ReadTimeout",
+      "cost_status": "unknown"
+    }
+  ],
+  "config": "configs/alfworld-qwen36-formal.json",
+  "config_sha256": "d070085937fd840212aadbb4f6838e924aa6be9d9b90557d4da2f15f979f2a93",
+  "sources_verified": {
+    "scripts/run_alfworld.py": "c278861f65c70f68146bb7f2144626ae757f8a9baef344d7cd15d9eb413d6c33",
+    "scripts/run_qa.py": "215d6277874034c4f4842a4792e3bdb7eaa3142fab8131d236cccbf9cf3285fd",
+    "scripts/interactive_protocol.py": "9d242171e90fe485909e25c2bee9302d2d9e6d6f3714ba6066afb455d0c65e36",
+    "prompts/alfworld_3prompts.json": "a10976b4ae99f4802aa9e621933bb71065ae103f2bd273a24466ab1005fbc45a"
+  },
+  "original_stderr": "data/cache/alfworld-recovery-20261004T0354.stderr.log",
+  "stderr_sha256": "b56db14a971cf3893a26b0cd5b3d6da768b9d309a221038d64371e8138cc9107",
+  "cause": "Gateway ReadTimeout on three attempts; exact upstream cause unverified. WebShop using same model continues independently.",
+  "recovery": "One bounded restart with unchanged run/config/source and successful response cache; preserve isolated marker protocol revision",
+  "failed_request_cost": "unknown_pending_reconciliation",
+  "logs": [
+    "data/cache/alfworld-recovery-20261004T0506.stdout.log",
+    "data/cache/alfworld-recovery-20261004T0506.stderr.log"
+  ],
+  "status": "recovery_verified",
+  "runner_pid": 14110,
+  "incremental_response_check": {
+    "since_utc": "2026-10-04T04:05:39",
+    "results": {
+      "alfworld-formal-qwen36-v2": {
+        "recent_event_counts": {
+          "api_response": 264,
+          "alfworld_step": 264,
+          "api_dispatch": 266,
+          "api_transport_error": 3,
+          "batch_stopped": 1
+        },
+        "finish_reasons": {
+          "stop": 247,
+          "length": 17
+        },
+        "isolated_marker_responses": 0,
+        "nonempty_native_telemetry_observed": false,
+        "last_event_utc": "2026-10-04T04:56:16.665854+00:00",
+        "scope": "Incremental response check, not full acceptance"
+      },
+      "webshop-formal-qwen36-v1": {
+        "recent_event_counts": {
+          "webshop_http": 96,
+          "webshop_step": 88,
+          "webshop_context": 87,
+          "api_dispatch": 87,
+          "api_response": 87,
+          "webshop_reset": 13
+        },
+        "finish_reasons": {
+          "stop": 86,
+          "length": 1
+        },
+        "isolated_marker_responses": 0,
+        "nonempty_native_telemetry_observed": false,
+        "last_event_utc": "2026-10-04T05:08:31.110449+00:00",
+        "scope": "Incremental response check, not full acceptance"
+      }
+    }
+  },
+  "historical_episodes_sha256_reverified": {
+    "count": 166,
+    "baseline": "records/alfworld-isolated-marker-revision.json",
+    "result": "all_unchanged"
+  },
+  "recovery_verification": {
+    "verified_at_utc": "2026-10-04T05:14:58.864311+00:00",
+    "failed_call_response_at_utc": "2026-10-04T05:13:34.319643+00:00",
+    "http_status": 200,
+    "environment_step_at_utc": "2026-10-04T05:13:34.445781+00:00",
+    "subsequent_call": "alfworld/98cd028b9db52105/react/27",
+    "subsequent_response_at_utc": "2026-10-04T05:13:50.704168+00:00",
+    "scope": "Recovery checkpoint, not full formal acceptance"
+  }
+}
