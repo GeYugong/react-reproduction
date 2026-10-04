@@ -1,0 +1,19 @@
+{
+  "recorded_at_utc": "2026-10-04T04:03:05.323913+00:00",
+  "path": "artifacts/interactive-timeout-recovery-20261004T0354.zip",
+  "bytes": 91666,
+  "sha256": "7b3fe11b17d39698c47f6903159146256fbc7d89d97825161628578dcb92504d",
+  "crc_verified": true,
+  "members": [
+    "records/interactive-timeout-recovery-20261004T0354.json",
+    "data/cache/alfworld-marker-recovery-20261003.stderr.log",
+    "configs/alfworld-qwen36-formal.json",
+    "runs/raw/alfworld-formal-qwen36-v2/manifest.json",
+    "data/cache/webshop-recovery-1118.stderr.log",
+    "configs/webshop-qwen36-formal.json",
+    "runs/raw/webshop-formal-qwen36-v1/manifest.json",
+    "recovery-events/alfworld-formal-qwen36-v2.jsonl",
+    "recovery-events/webshop-formal-qwen36-v1.jsonl"
+  ],
+  "scope": "Timeout/recovery evidence snapshot, not full formal batch archive"
+}

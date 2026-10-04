@@ -1,0 +1,186 @@
+{
+  "timestamp_utc": "2026-10-04T03:55:35.458874+00:00",
+  "event": "interactive_transport_timeout_recovery",
+  "runs": [
+    {
+      "dataset": "alfworld",
+      "run_id": "alfworld-formal-qwen36-v2",
+      "prior_state": {
+        "status": "stopped",
+        "phase": "formal",
+        "completed": 183,
+        "planned": 268,
+        "error_type": "ReadTimeout",
+        "error": "HTTPSConnectionPool(host='aigw.saurlax.com', port=443): Read timed out. (read timeout=60)",
+        "updated_at_utc": "2026-10-03T18:02:30.439857+00:00"
+      },
+      "failed_call": "alfworld/e303aaf3dca6ab4c/react/27",
+      "failed_attempt_events": [
+        {
+          "timestamp_utc": "2026-10-03T18:00:27.220678+00:00",
+          "event": "api_transport_error",
+          "call_id": "alfworld/e303aaf3dca6ab4c/react/27",
+          "attempt": 0,
+          "error": "ReadTimeout",
+          "cost_status": "unknown"
+        },
+        {
+          "timestamp_utc": "2026-10-03T18:01:28.325257+00:00",
+          "event": "api_transport_error",
+          "call_id": "alfworld/e303aaf3dca6ab4c/react/27",
+          "attempt": 1,
+          "error": "ReadTimeout",
+          "cost_status": "unknown"
+        },
+        {
+          "timestamp_utc": "2026-10-03T18:02:30.422621+00:00",
+          "event": "api_transport_error",
+          "call_id": "alfworld/e303aaf3dca6ab4c/react/27",
+          "attempt": 2,
+          "error": "ReadTimeout",
+          "cost_status": "unknown"
+        }
+      ],
+      "config": "configs/alfworld-qwen36-formal.json",
+      "config_sha256": "d070085937fd840212aadbb4f6838e924aa6be9d9b90557d4da2f15f979f2a93",
+      "sources_verified": {
+        "scripts/run_alfworld.py": "c278861f65c70f68146bb7f2144626ae757f8a9baef344d7cd15d9eb413d6c33",
+        "scripts/run_qa.py": "215d6277874034c4f4842a4792e3bdb7eaa3142fab8131d236cccbf9cf3285fd",
+        "scripts/interactive_protocol.py": "9d242171e90fe485909e25c2bee9302d2d9e6d6f3714ba6066afb455d0c65e36",
+        "prompts/alfworld_3prompts.json": "a10976b4ae99f4802aa9e621933bb71065ae103f2bd273a24466ab1005fbc45a"
+      },
+      "original_stderr": "data/cache/alfworld-marker-recovery-20261003.stderr.log",
+      "stderr_sha256": "b37c9b9051a9343c6e32fb9c32eec5aa78b93c678d5d8b84ac7c60744de3aa58",
+      "recovery_logs": [
+        "data/cache/alfworld-recovery-20261004T0354.stdout.log",
+        "data/cache/alfworld-recovery-20261004T0354.stderr.log"
+      ],
+      "complete_episode_count": 183,
+      "recovery_verification": {
+        "original_failed_call_http_status": 200,
+        "recovered_response_at_utc": "2026-10-04T04:01:26.312888+00:00",
+        "environment_step_at_utc": "2026-10-04T04:01:26.375841+00:00",
+        "subsequent_successful_call": "alfworld/e303aaf3dca6ab4c/react/28",
+        "subsequent_response_at_utc": "2026-10-04T04:01:40.346051+00:00",
+        "current_progress": {
+          "status": "running",
+          "phase": "formal",
+          "completed": 183,
+          "planned": 268,
+          "dry_run": false,
+          "updated_at_utc": "2026-10-04T04:01:02.585642+00:00"
+        },
+        "returned_native_reasoning_anomalies": 0,
+        "absent_native_telemetry": "unknown",
+        "scope": "Recovery checkpoint, not full batch acceptance"
+      }
+    },
+    {
+      "dataset": "webshop",
+      "run_id": "webshop-formal-qwen36-v1",
+      "prior_state": {
+        "status": "stopped",
+        "run_id": "webshop-formal-qwen36-v1",
+        "phase": "formal",
+        "model": "qwen3.6-35b-a3b",
+        "completed": 709,
+        "planned": 1000,
+        "updated_at_utc": "2026-10-03T18:02:52.742390+00:00",
+        "last": {
+          "index": 208,
+          "method": "react"
+        },
+        "error_type": "ReadTimeout",
+        "error": "HTTPSConnectionPool(host='aigw.saurlax.com', port=443): Read timed out. (read timeout=60)"
+      },
+      "failed_call": "webshop/webshop-formal-qwen36-v1_react_fixed_209/6",
+      "failed_attempt_events": [
+        {
+          "timestamp_utc": "2026-10-03T18:00:37.682195+00:00",
+          "event": "api_transport_error",
+          "call_id": "webshop/webshop-formal-qwen36-v1_react_fixed_209/6",
+          "attempt": 0,
+          "error": "ReadTimeout",
+          "cost_status": "unknown"
+        },
+        {
+          "timestamp_utc": "2026-10-03T18:01:45.164814+00:00",
+          "event": "api_transport_error",
+          "call_id": "webshop/webshop-formal-qwen36-v1_react_fixed_209/6",
+          "attempt": 1,
+          "error": "ReadTimeout",
+          "cost_status": "unknown"
+        },
+        {
+          "timestamp_utc": "2026-10-03T18:02:52.738260+00:00",
+          "event": "api_transport_error",
+          "call_id": "webshop/webshop-formal-qwen36-v1_react_fixed_209/6",
+          "attempt": 2,
+          "error": "ReadTimeout",
+          "cost_status": "unknown"
+        }
+      ],
+      "config": "configs/webshop-qwen36-formal.json",
+      "config_sha256": "021c6077874f9bd51ee6372e5c86fe879d16168c1244571fd7eb9560f0148dc1",
+      "sources_verified": {
+        "scripts/run_webshop.py": "1ac3bf6ed1de91411cd3a32f7aec1fca7c2b6c5ca9cc954c057e9e269486337c",
+        "scripts/run_qa.py": "215d6277874034c4f4842a4792e3bdb7eaa3142fab8131d236cccbf9cf3285fd",
+        "scripts/webshop_runtime.py": "8bb67d8efccf19e9fba11d070a45b9c232f983978b5427d65d14f8eb3262521e",
+        "scripts/serve_webshop.py": "cb84d79d56ca478936d9b7dd747be7196bdc28c8304c9e2009d00976136f43c8",
+        "src/react_reproduction/author/webshop_env.py": "6beaf2b9837fdb9d9cad09bf6f00c966158bcc1418dd36d6df5d8476267067c1",
+        "prompts/webshop.json": "2d665de5dc99cb69a03c9045e69641f78ab0fdc83300ccb33657f4643299aa9f"
+      },
+      "original_stderr": "data/cache/webshop-recovery-1118.stderr.log",
+      "stderr_sha256": "428bb05f212581bb7c93d87c36babaffad222e66f37eadea487a2de40070566e",
+      "recovery_logs": [
+        "data/cache/webshop-recovery-20261004T0354.stdout.log",
+        "data/cache/webshop-recovery-20261004T0354.stderr.log"
+      ],
+      "complete_episode_count": 709,
+      "recovery_verification": {
+        "original_failed_call_http_status": 200,
+        "recovered_response_at_utc": "2026-10-04T03:58:59.463424+00:00",
+        "environment_step_at_utc": "2026-10-04T03:59:14.567670+00:00",
+        "subsequent_successful_call": "webshop/webshop-formal-qwen36-v1_react_fixed_209/7",
+        "subsequent_response_at_utc": "2026-10-04T03:59:38.449904+00:00",
+        "current_progress": {
+          "status": "running",
+          "run_id": "webshop-formal-qwen36-v1",
+          "phase": "formal",
+          "model": "qwen3.6-35b-a3b",
+          "completed": 710,
+          "planned": 1000,
+          "updated_at_utc": "2026-10-04T04:01:09.040803+00:00",
+          "last": {
+            "index": 209,
+            "method": "react"
+          }
+        },
+        "returned_native_reasoning_anomalies": 0,
+        "absent_native_telemetry": "unknown",
+        "scope": "Recovery checkpoint, not full batch acceptance"
+      }
+    }
+  ],
+  "cause": "Both gateway calls exceeded three 60-second read timeouts at 2026-10-03 18:02 UTC; correlated timing suggests shared connection or upstream outage, exact root cause unverified",
+  "preflight": "No generator processes alive. Existing WebShop server PID 765 ready, frozen DB and goals hashes match; gateway homepage HTTP200 does not establish model endpoint health",
+  "recovery": "One bounded restart per run with original run_id, frozen config and source, successful response cache; keep documented ALFWorld marker revision",
+  "failed_request_cost": "unknown_pending_reconciliation",
+  "status": "recovery_verified",
+  "runner_pids": {
+    "alfworld": 13232,
+    "webshop": 13261
+  },
+  "verified_at_utc": "2026-10-04T04:03:05.323913+00:00",
+  "completed_episode_checkpoint": {
+    "alfworld": {
+      "act": 134,
+      "react": 49
+    },
+    "webshop": {
+      "act": 500,
+      "react": 209
+    },
+    "checks": "Identity, phase, step numbering/bounds and stored outcome consistency passed; not full acceptance"
+  }
+}
