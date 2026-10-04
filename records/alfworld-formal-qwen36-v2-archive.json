@@ -1,0 +1,16 @@
+{
+  "path": "artifacts/alfworld-formal-qwen36-v2.zip",
+  "bytes": 33980330,
+  "files": 12609,
+  "sha256": "338d1d243c76811bd3b00f37b2eaf1aa63a4e83b5697d41b034b461364bf556b",
+  "crc_verified": true,
+  "scope": "Full raw run, responses, trajectories, protocol revisions, audit, report and frozen config; environment resources separately frozen",
+  "parts": [
+    {
+      "path": "artifacts/alfworld-formal-qwen36-v2.zip.part000",
+      "bytes": 33980330,
+      "sha256": "338d1d243c76811bd3b00f37b2eaf1aa63a4e83b5697d41b034b461364bf556b"
+    }
+  ],
+  "restore": "Concatenate part files in listed order as binary bytes; verify archive SHA256 before extracting."
+}
