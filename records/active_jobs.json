@@ -1,5 +1,5 @@
 {
-  "recorded_at_utc": "2026-10-04T18:20:35.693652+00:00",
+  "recorded_at_utc": "2026-10-04T19:22:28.282524+00:00",
   "campaign_id": "qwen36-restart-20260929",
   "model": "qwen3.6-35b-a3b",
   "old_model_policy": "All Qwen 3.8 runs retired; never resume or import their outputs into this campaign",
@@ -87,7 +87,7 @@
     {
       "dataset": "alfworld",
       "controller": "scripts/run_alfworld.py",
-      "status": "generated_complete_audit_running",
+      "status": "audited_complete_archive_running",
       "active_run_id": "alfworld-formal-qwen36-v2",
       "progress": "records/alfworld-formal-qwen36-v2.json",
       "current_config": "configs/alfworld-qwen36-formal.json",
@@ -111,14 +111,15 @@
       ],
       "audit": "records/alfworld-formal-qwen36-v2-audit.json",
       "order_check": "records/alfworld-formal-order-check-v2.json",
-      "next": "Complete all 268 offline environment replays, statistics and raw archive; do not call generation again.",
+      "next": "Verify full archive and parts, then push; model generation complete.",
       "recovery_record": "records/alfworld-timeout-recovery-20261004T1514.json",
       "recovery_pid": 15384,
       "progress_note": "Original step 34 and subsequent step 35 HTTP200 and real environment actions verified; prior 249 episode hashes unchanged.",
       "protocol_revision": "records/alfworld-isolated-marker-revision.json",
       "recovery_verification": "records/alfworld-timeout-recovery-20261004T1514-verification.json",
       "audit_progress": "records/alfworld-formal-qwen36-v2-audit-progress.json",
-      "audit_pid": 16282
+      "audit_pid": 16282,
+      "report": "results/qwen36/alfworld.json"
     },
     {
       "dataset": "webshop",

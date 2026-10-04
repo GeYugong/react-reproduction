@@ -1,0 +1,126 @@
+{
+  "run_id": "alfworld-formal-qwen36-v2",
+  "model": "qwen3.6-35b-a3b",
+  "timestamp_utc": "2026-10-04T19:20:18.528123+00:00",
+  "table": [
+    {
+      "method": "act",
+      "n": 134,
+      "successes": 10,
+      "percent": 7.462686567164178,
+      "ci95": [
+        3.731343283582089,
+        11.940298507462686
+      ],
+      "terminations": {
+        "decision_limit": 124,
+        "environment_done": 10
+      }
+    },
+    {
+      "method": "react",
+      "n": 134,
+      "successes": 17,
+      "percent": 12.686567164179104,
+      "ci95": [
+        7.462686567164178,
+        18.65671641791045
+      ],
+      "terminations": {
+        "decision_limit": 117,
+        "environment_done": 17
+      }
+    }
+  ],
+  "react_minus_act_pp": 5.223880597014925,
+  "paired_ci95": [
+    1.4925373134328357,
+    9.701492537313433
+  ],
+  "task_categories": {
+    "pick_and_place": {
+      "act": {
+        "n": 24,
+        "successes": 0
+      },
+      "react": {
+        "n": 24,
+        "successes": 0
+      }
+    },
+    "pick_clean_then_place": {
+      "act": {
+        "n": 31,
+        "successes": 1
+      },
+      "react": {
+        "n": 31,
+        "successes": 0
+      }
+    },
+    "pick_heat_then_place": {
+      "act": {
+        "n": 23,
+        "successes": 1
+      },
+      "react": {
+        "n": 23,
+        "successes": 1
+      }
+    },
+    "pick_cool_then_place": {
+      "act": {
+        "n": 21,
+        "successes": 1
+      },
+      "react": {
+        "n": 21,
+        "successes": 2
+      }
+    },
+    "look_at_obj": {
+      "act": {
+        "n": 18,
+        "successes": 7
+      },
+      "react": {
+        "n": 18,
+        "successes": 14
+      }
+    },
+    "pick_two_obj": {
+      "act": {
+        "n": 17,
+        "successes": 0
+      },
+      "react": {
+        "n": 17,
+        "successes": 0
+      }
+    }
+  },
+  "bootstrap": {
+    "resamples": 10000,
+    "seed": 233,
+    "unit": "paired game",
+    "confidence": 0.95
+  },
+  "usage": {
+    "prompt_tokens": 28219156,
+    "completion_tokens": 327835,
+    "total_tokens": 28546991
+  },
+  "transport_errors": 26,
+  "malformed_http200": 1,
+  "actual_cost_cny": null,
+  "cost_status": "pending_reconciliation; failed-request charges unknown",
+  "audit_record": "records/alfworld-formal-qwen36-v2-audit.json",
+  "limitations": [
+    "Gateway alias, immutable weights unverified",
+    "Missing native reasoning telemetry is unknown",
+    "One isolated <think> retained as an invalid action under a documented post-freeze compatibility revision",
+    "Single fixed prompt order and seed; paired intervals cover game sampling, not generation variability",
+    "All failures and length-terminated responses retained; no formal score tuning"
+  ],
+  "representative_selection": "First sorted episode ID per method and success/failure outcome"
+}
