@@ -1,0 +1,8 @@
+method,hotpotqa,fever
+standard,27.400000000000002,51.0
+cot,33.0,63.4
+cot_sc,34.4,63.6
+act,40.0,56.00000000000001
+react,42.6,61.199999999999996
+cot_sc_to_react,41.4,64.2
+react_to_cot_sc,45.4,65.4

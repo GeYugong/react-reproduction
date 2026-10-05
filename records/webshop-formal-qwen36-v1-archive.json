@@ -1,0 +1,16 @@
+{
+  "path": "artifacts/webshop-formal-qwen36-v1.zip",
+  "bytes": 24102859,
+  "files": 7081,
+  "sha256": "9746cafa58766fece569929580c0644f072e45be36b58608289b10385419a088",
+  "crc_verified": true,
+  "scope": "Full raw formal run, responses, HTTP evidence, trajectories, audit, report and config; full store separately backed up",
+  "parts": [
+    {
+      "path": "artifacts/webshop-formal-qwen36-v1.zip.part000",
+      "bytes": 24102859,
+      "sha256": "9746cafa58766fece569929580c0644f072e45be36b58608289b10385419a088"
+    }
+  ],
+  "restore": "Concatenate part files in listed order as binary bytes; verify archive SHA256 before extracting."
+}

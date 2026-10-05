@@ -1,0 +1,12 @@
+{
+  "timestamp_utc": "2026-10-05T09:29:36.387416+00:00",
+  "status": "complete",
+  "generated_episodes": 6268,
+  "all_four_audits_passed": true,
+  "all_archive_parts_verified": true,
+  "webshop_archive_inner_evidence_verified": true,
+  "model_generation_active": false,
+  "results": "results/qwen36/summary.json",
+  "remaining": [],
+  "automation_action": "Delete completed hourly monitor after final push"
+}

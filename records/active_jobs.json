@@ -1,5 +1,5 @@
 {
-  "recorded_at_utc": "2026-10-05T08:29:43.277755+00:00",
+  "recorded_at_utc": "2026-10-05T09:29:36.387416+00:00",
   "campaign_id": "qwen36-restart-20260929",
   "model": "qwen3.6-35b-a3b",
   "old_model_policy": "All Qwen 3.8 runs retired; never resume or import their outputs into this campaign",
@@ -47,7 +47,8 @@
       "recovery_record": "records/hotpotqa-timeout-recovery-20261001T1945.json",
       "resume_policy": "Direct formal runner with unchanged arguments. Do not replay pilot controller after explicit Unicode source revision; historical pilot manifests remain unchanged.",
       "audit": "records/hotpotqa-formal-qwen36-v1-audit.json",
-      "report": "results/qwen36/hotpotqa.json"
+      "report": "results/qwen36/hotpotqa.json",
+      "next": "complete"
     },
     {
       "dataset": "fever",
@@ -82,7 +83,8 @@
       "recovery_record": "records/qa-timeout-recovery-20260930T1618.json",
       "resume_policy": "Direct formal runner with unchanged arguments. Do not replay pilot controller after explicit Unicode source revision; historical pilot manifests remain unchanged.",
       "audit": "records/fever-formal-qwen36-v1-audit.json",
-      "report": "results/qwen36/fever.json"
+      "report": "results/qwen36/fever.json",
+      "next": "complete"
     },
     {
       "dataset": "alfworld",
@@ -125,7 +127,7 @@
     {
       "dataset": "webshop",
       "controller": "scripts/run_webshop.py",
-      "status": "audited_complete_archive_running",
+      "status": "audited_complete_archived",
       "active_run_id": "webshop-formal-qwen36-v1",
       "current_config": "configs/webshop-qwen36-formal.json",
       "progress": "records/webshop-formal-qwen36-v1.json",
@@ -145,7 +147,7 @@
       ],
       "audit": "records/webshop-formal-qwen36-v1-audit.json",
       "formal_config": "configs/webshop-qwen36-formal.json",
-      "next": "Verify archive and parts, push, then final synthesis; no generation.",
+      "next": "complete",
       "recovery_record": "records/webshop-timeout-recovery-20261005T0527.json",
       "recovery_pid": 17780,
       "progress_note": "Original failed step 14 HTTP200 and real environment step verified; goal 483 completed; 983 previous episode hashes unchanged.",
@@ -156,12 +158,7 @@
     }
   ],
   "concurrency_cap": 2,
-  "later_stages": [
-    "complete both running QA batches and generate offline hybrids/statistics",
-    "new-model ALFWorld pilot and 134-game Act/ReAct",
-    "new-model WebShop pilot and 500-goal Act/ReAct",
-    "final audit, archive and report"
-  ],
+  "later_stages": [],
   "environment_preparation": {
     "webshop_index": "accepted_existing_index",
     "webshop_store": "completed",
@@ -177,5 +174,6 @@
     "path": "artifacts/hotpotqa-formal-qwen36-v1.zip",
     "record": "records/hotpotqa-formal-qwen36-v1-archive.json",
     "next": "complete"
-  }
+  },
+  "completion_status": "all_benchmarks_audited_archived"
 }

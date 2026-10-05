@@ -1,0 +1,99 @@
+{
+  "model": "qwen3.6-35b-a3b",
+  "generated_episodes": 6268,
+  "qa_table": [
+    {
+      "method": "standard",
+      "hotpotqa": 27.400000000000002,
+      "fever": 51.0
+    },
+    {
+      "method": "cot",
+      "hotpotqa": 33.0,
+      "fever": 63.4
+    },
+    {
+      "method": "cot_sc",
+      "hotpotqa": 34.4,
+      "fever": 63.6
+    },
+    {
+      "method": "act",
+      "hotpotqa": 40.0,
+      "fever": 56.00000000000001
+    },
+    {
+      "method": "react",
+      "hotpotqa": 42.6,
+      "fever": 61.199999999999996
+    },
+    {
+      "method": "cot_sc_to_react",
+      "hotpotqa": 41.4,
+      "fever": 64.2
+    },
+    {
+      "method": "react_to_cot_sc",
+      "hotpotqa": 45.4,
+      "fever": 65.4
+    }
+  ],
+  "interactive_table": [
+    {
+      "method": "act",
+      "alfworld_success": 7.462686567164178,
+      "webshop_score": 71.26666666666667,
+      "webshop_success": 43.6
+    },
+    {
+      "method": "react",
+      "alfworld_success": 12.686567164179104,
+      "webshop_score": 57.71833333333333,
+      "webshop_success": 35.6
+    }
+  ],
+  "formal_usage_by_dataset": {
+    "hotpotqa": {
+      "prompt_tokens": 13577568,
+      "completion_tokens": 1589935,
+      "total_tokens": 15167503
+    },
+    "fever": {
+      "prompt_tokens": 5426908,
+      "completion_tokens": 630340,
+      "total_tokens": 6057248
+    },
+    "alfworld": {
+      "prompt_tokens": 28219156,
+      "completion_tokens": 327835,
+      "total_tokens": 28546991
+    },
+    "webshop": {
+      "prompt_tokens": 6226185,
+      "completion_tokens": 219715,
+      "total_tokens": 6445900
+    }
+  },
+  "formal_usage_total": {
+    "prompt_tokens": 53449817,
+    "completion_tokens": 2767825,
+    "total_tokens": 56217642
+  },
+  "cost_status": "pending_reconciliation",
+  "actual_cost_cny": null,
+  "cost_scope": "Returned formal usage only; pilot usage separately indexed; failed/missing telemetry unknown, never zero",
+  "run_ids": {
+    "hotpotqa": "hotpotqa-formal-qwen36-v1",
+    "fever": "fever-formal-qwen36-v1",
+    "alfworld": "alfworld-formal-qwen36-v2",
+    "webshop": "webshop-formal-qwen36-v1"
+  },
+  "archive_sha256": {
+    "hotpotqa": "3b16558948e9009f3c25fdce1bc75c18054bae0c4bb55a496c040bff7c82f33a",
+    "fever": "6a8e30488dca170b393610abffd857e3286cf6aeadbbdd80cb02f2012f3f5d78",
+    "alfworld": "338d1d243c76811bd3b00f37b2eaf1aa63a4e83b5697d41b034b461364bf556b",
+    "webshop": "9746cafa58766fece569929580c0644f072e45be36b58608289b10385419a088"
+  },
+  "intervals": "See per-dataset JSON for 10000 paired bootstrap intervals, seed 233",
+  "representative_selection": "First numerical ID per method/outcome; see representative trajectory artifacts"
+}

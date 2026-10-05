@@ -11,6 +11,6 @@
 
 - [实验方案](EXPERIMENT_PLAN.md)：方法、环境、运行方式、评估口径与限制。
 - [实验配置](configs/)与[运行脚本](scripts/)：各任务的固定参数和执行入口。
-- [评估结果](results/qwen36/)：已完成评估的指标、配对置信区间与用量统计。
+- [结果汇总](results/qwen36/summary.json)：两张主表、正式用量与原始归档索引；[完整结果](results/qwen36/)包含配对置信区间和代表性轨迹。
 - [样本清单](data/eval_manifest.json)、[来源清单](records/source_manifest.json)与[原始产物索引](records/)。
 - [论文](paper/Yao_et_al_2023_ReAct.pdf)：*ReAct: Synergizing Reasoning and Acting in Language Models*。
