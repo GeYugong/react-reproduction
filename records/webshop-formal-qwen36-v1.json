@@ -1,0 +1,13 @@
+{
+  "status": "completed",
+  "run_id": "webshop-formal-qwen36-v1",
+  "phase": "formal",
+  "model": "qwen3.6-35b-a3b",
+  "completed": 1000,
+  "planned": 1000,
+  "updated_at_utc": "2026-10-05T06:47:11.350072+00:00",
+  "last": {
+    "index": 499,
+    "method": "react"
+  }
+}
