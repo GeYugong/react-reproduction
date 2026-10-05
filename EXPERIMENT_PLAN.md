@@ -371,3 +371,4 @@ WebShop 服务与生成均使用 `.venv-webshop/bin/python`，保持作者 Beaut
 2026-10-04 20:19 UTC，ALFWorld 原始归档完成：33,980,330 字节、12,609 个文件，ZIP CRC、归档/分片 SHA256、归档内审计源码、事件和全部轨迹哈希均核验通过。索引见 records/alfworld-formal-qwen36-v2-archive.json。
 
 2026-10-05 05:27 UTC，WebShop 在 983/1000 条后因目标 483 第 14 步连续三次网关读取超时停止。环境健康、冻结哈希与源码配置一致；保存 983 条轨迹哈希和原始异常，使用同批缓存执行一次有限恢复。新进程已启动，原失败步骤尚待验证，失败调用费用未知。记录见 records/webshop-timeout-recovery-20261005T0527.json。
+2026-10-05 06:28 UTC，恢复核验通过：原超时目标 483 第 14 步于 05:34:43 UTC 返回 HTTP200，执行环境动作并形成完整轨迹；此前 983 条轨迹哈希全部不变。此为恢复检查，尚非整批验收。证据见 records/webshop-timeout-recovery-20261005T0527-verification.json。

@@ -1,5 +1,5 @@
 {
-  "recorded_at_utc": "2026-10-05T05:29:01.352297+00:00",
+  "recorded_at_utc": "2026-10-05T06:27:58.929501+00:00",
   "campaign_id": "qwen36-restart-20260929",
   "model": "qwen3.6-35b-a3b",
   "old_model_policy": "All Qwen 3.8 runs retired; never resume or import their outputs into this campaign",
@@ -125,7 +125,7 @@
     {
       "dataset": "webshop",
       "controller": "scripts/run_webshop.py",
-      "status": "recovery_startup",
+      "status": "formal",
       "active_run_id": "webshop-formal-qwen36-v1",
       "current_config": "configs/webshop-qwen36-formal.json",
       "progress": "records/webshop-formal-qwen36-v1.json",
@@ -148,7 +148,8 @@
       "next": "Complete 500 fixed goals for both methods; retain URL revision evidence and same-batch cache",
       "recovery_record": "records/webshop-timeout-recovery-20261005T0527.json",
       "recovery_pid": 17780,
-      "progress_note": "Original goal 483 step 14 recovery pending verification; same run and frozen config."
+      "progress_note": "Original failed step 14 HTTP200 and real environment step verified; goal 483 completed; 983 previous episode hashes unchanged.",
+      "recovery_verification": "records/webshop-timeout-recovery-20261005T0527-verification.json"
     }
   ],
   "concurrency_cap": 2,
