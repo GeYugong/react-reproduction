@@ -1,0 +1,1028 @@
+[
+  {
+    "dataset": "webshop",
+    "index": 0,
+    "method": "act",
+    "model": "qwen3.6-35b-a3b",
+    "goal_sha256": "673c5b9b51fa66264efb4a679080e1e9b9c73954d5b1787d409dbc1492c39994",
+    "phase": "formal",
+    "task": "\nWebShop \nInstruction:  \ni need a long clip-in hair extension which is natural looking, and price lower than 30.00 dollars \n[Search] ",
+    "reward": 0.5,
+    "success": false,
+    "termination": "environment_done",
+    "trajectory": [
+      {
+        "step": 1,
+        "raw_output": "search[long clip in hair extension natural looking]",
+        "action": "search[long clip in hair extension natural looking]",
+        "state_before": {
+          "session": "webshop-formal-qwen36-v1_act_fixed_0",
+          "page_type": "init"
+        },
+        "state_after": {
+          "session": "webshop-formal-qwen36-v1_act_fixed_0",
+          "page_type": "search",
+          "query_string": "long clip in hair extension natural looking",
+          "page_num": 1,
+          "asins": [
+            "B09QQLDJ93",
+            "B09QQKPZJR",
+            "B08H5DCD65",
+            "B093BKWHFK",
+            "B09MFQTNQ5",
+            "B09MFJ95ZB",
+            "B09C337K8S",
+            "B09KL5W7R2",
+            "B09PYJFR97",
+            "B09PYJTQCK"
+          ]
+        },
+        "raw_observation": "\n[Back to Search] \nPage 1 (Total results: 50) \n[Next >] \n[B09QQLDJ93] \nLroveb Fashion Long Curly Wig Head Dyed Black Gradient Golden Long Straight Wig African Long Curly Hair Wigs Ladies Gradient Color Chemical Fiber Silk Corn Perm Wig for Women \n$34.89 \n[B09QQKPZJR] \nLroveb Beanie Hat Knit with Long Wavy Curly Hair Extensions Wig Winter Warm Fashion Long Curly Hair Hat Wig Wool Curl Corn Perm Curl Knitted Cap Attached Synthetic Hairpiece \n$36.06 \n[B08H5DCD65] \nCorn Wave Ponytail Extension Clip in - 22 Inch Long Wavy Curly Wrap Around Pony Tail Heat Resistant Synthetic Hairpiece for Women (Natural Black #1B) \n$9.98 ",
+        "observation": "\n[Back to Search] \nPage 1 (Total results: 50) \n[Next >] \n[B09QQLDJ93] \nLroveb Fashion Long Curly Wig Head Dyed Black Gradient Golden Long Straight Wig African Long Curly Hair Wigs Ladies Gradient Color Chemical Fiber Silk Corn Perm Wig for Women \n$34.89 \n[B09QQKPZJR] \nLroveb Beanie Hat Knit with Long Wavy Curly Hair Extensions Wig Winter Warm Fashion Long Curly Hair Hat Wig Wool Curl Corn Perm Curl Knitted Cap Attached Synthetic Hairpiece \n$36.06 \n[B08H5DCD65] \nCorn Wave Ponytail Extension Clip in - 22 Inch Long Wavy Curly Wrap Around Pony Tail Heat Resistant Synthetic Hairpiece for Women (Natural Black #1B) \n$9.98 ",
+        "reward": 0.0,
+        "done": false,
+        "error": null
+      },
+      {
+        "step": 2,
+        "raw_output": "click[B08H5DCD65]",
+        "action": "click[B08H5DCD65]",
+        "state_before": {
+          "session": "webshop-formal-qwen36-v1_act_fixed_0",
+          "page_type": "search",
+          "query_string": "long clip in hair extension natural looking",
+          "page_num": 1,
+          "asins": [
+            "B09QQLDJ93",
+            "B09QQKPZJR",
+            "B08H5DCD65",
+            "B093BKWHFK",
+            "B09MFQTNQ5",
+            "B09MFJ95ZB",
+            "B09C337K8S",
+            "B09KL5W7R2",
+            "B09PYJFR97",
+            "B09PYJTQCK"
+          ]
+        },
+        "state_after": {
+          "session": "webshop-formal-qwen36-v1_act_fixed_0",
+          "page_type": "item",
+          "query_string": "long clip in hair extension natural looking",
+          "page_num": 1,
+          "asins": [
+            "B09QQLDJ93",
+            "B09QQKPZJR",
+            "B08H5DCD65",
+            "B093BKWHFK",
+            "B09MFQTNQ5",
+            "B09MFJ95ZB",
+            "B09C337K8S",
+            "B09KL5W7R2",
+            "B09PYJFR97",
+            "B09PYJTQCK"
+          ],
+          "asin": "B08H5DCD65",
+          "option_types": {
+            "black brown #2": "color",
+            "black mixed auburn brown #2-33": "color",
+            "brown mixed blonde #12h24": "color",
+            "brown mixed blonde #8h27": "color",
+            "brown mixed light auburn #8h30": "color",
+            "brown to blonde #6t27": "color",
+            "medium brown #4": "color",
+            "natural black #1b": "color",
+            "natural black to auburn #1bt30": "color",
+            "tie up #2 | 33": "color",
+            "wine red #99j": "color"
+          }
+        },
+        "raw_observation": "\n[Back to Search] \n[< Prev] \ncolor [black brown #2][black mixed auburn brown #2-33][brown mixed blonde #12h24][brown mixed blonde #8h27][brown mixed light auburn #8h30][brown to blonde #6t27][medium brown #4][natural black #1b][natural black to auburn #1bt30][tie up #2 | 33][wine red #99j]\nCorn Wave Ponytail Extension Clip in - 22 Inch Long Wavy Curly Wrap Around Pony Tail Heat Resistant Synthetic Hairpiece for Women (Natural Black #1B) \nPrice: $9.98 \nRating: N.A. \n[Description] \n[Features] \n[Reviews] \n[Buy Now] ",
+        "observation": "\n[Back to Search] \n[< Prev] \ncolor [black brown #2][black mixed auburn brown #2-33][brown mixed blonde #12h24][brown mixed blonde #8h27][brown mixed light auburn #8h30][brown to blonde #6t27][medium brown #4][natural black #1b][natural black to auburn #1bt30][tie up #2 | 33][wine red #99j]\nCorn Wave Ponytail Extension Clip in - 22 Inch Long Wavy Curly Wrap Around Pony Tail Heat Resistant Synthetic Hairpiece for Women (Natural Black #1B) \nPrice: $9.98 \nRating: N.A. \n[Description] \n[Features] \n[Reviews] \n[Buy Now] ",
+        "reward": 0.0,
+        "done": false,
+        "error": null
+      },
+      {
+        "step": 3,
+        "raw_output": "click[natural black #1b]",
+        "action": "click[natural black #1b]",
+        "state_before": {
+          "session": "webshop-formal-qwen36-v1_act_fixed_0",
+          "page_type": "item",
+          "query_string": "long clip in hair extension natural looking",
+          "page_num": 1,
+          "asins": [
+            "B09QQLDJ93",
+            "B09QQKPZJR",
+            "B08H5DCD65",
+            "B093BKWHFK",
+            "B09MFQTNQ5",
+            "B09MFJ95ZB",
+            "B09C337K8S",
+            "B09KL5W7R2",
+            "B09PYJFR97",
+            "B09PYJTQCK"
+          ],
+          "asin": "B08H5DCD65",
+          "option_types": {
+            "black brown #2": "color",
+            "black mixed auburn brown #2-33": "color",
+            "brown mixed blonde #12h24": "color",
+            "brown mixed blonde #8h27": "color",
+            "brown mixed light auburn #8h30": "color",
+            "brown to blonde #6t27": "color",
+            "medium brown #4": "color",
+            "natural black #1b": "color",
+            "natural black to auburn #1bt30": "color",
+            "tie up #2 | 33": "color",
+            "wine red #99j": "color"
+          }
+        },
+        "state_after": {
+          "session": "webshop-formal-qwen36-v1_act_fixed_0",
+          "page_type": "item",
+          "query_string": "long clip in hair extension natural looking",
+          "page_num": 1,
+          "asins": [
+            "B09QQLDJ93",
+            "B09QQKPZJR",
+            "B08H5DCD65",
+            "B093BKWHFK",
+            "B09MFQTNQ5",
+            "B09MFJ95ZB",
+            "B09C337K8S",
+            "B09KL5W7R2",
+            "B09PYJFR97",
+            "B09PYJTQCK"
+          ],
+          "asin": "B08H5DCD65",
+          "option_types": {
+            "black brown #2": "color",
+            "black mixed auburn brown #2-33": "color",
+            "brown mixed blonde #12h24": "color",
+            "brown mixed blonde #8h27": "color",
+            "brown mixed light auburn #8h30": "color",
+            "brown to blonde #6t27": "color",
+            "medium brown #4": "color",
+            "natural black #1b": "color",
+            "natural black to auburn #1bt30": "color",
+            "tie up #2 | 33": "color",
+            "wine red #99j": "color"
+          },
+          "options": {
+            "color": "natural black #1b"
+          }
+        },
+        "raw_observation": "You have clicked natural black #1b.",
+        "observation": "You have clicked natural black #1b.",
+        "reward": 0.0,
+        "done": false,
+        "error": null
+      },
+      {
+        "step": 4,
+        "raw_output": "click[Buy Now]",
+        "action": "click[Buy Now]",
+        "state_before": {
+          "session": "webshop-formal-qwen36-v1_act_fixed_0",
+          "page_type": "item",
+          "query_string": "long clip in hair extension natural looking",
+          "page_num": 1,
+          "asins": [
+            "B09QQLDJ93",
+            "B09QQKPZJR",
+            "B08H5DCD65",
+            "B093BKWHFK",
+            "B09MFQTNQ5",
+            "B09MFJ95ZB",
+            "B09C337K8S",
+            "B09KL5W7R2",
+            "B09PYJFR97",
+            "B09PYJTQCK"
+          ],
+          "asin": "B08H5DCD65",
+          "option_types": {
+            "black brown #2": "color",
+            "black mixed auburn brown #2-33": "color",
+            "brown mixed blonde #12h24": "color",
+            "brown mixed blonde #8h27": "color",
+            "brown mixed light auburn #8h30": "color",
+            "brown to blonde #6t27": "color",
+            "medium brown #4": "color",
+            "natural black #1b": "color",
+            "natural black to auburn #1bt30": "color",
+            "tie up #2 | 33": "color",
+            "wine red #99j": "color"
+          },
+          "options": {
+            "color": "natural black #1b"
+          }
+        },
+        "state_after": {
+          "session": "webshop-formal-qwen36-v1_act_fixed_0",
+          "page_type": "end",
+          "query_string": "long clip in hair extension natural looking",
+          "page_num": 1,
+          "asins": [
+            "B09QQLDJ93",
+            "B09QQKPZJR",
+            "B08H5DCD65",
+            "B093BKWHFK",
+            "B09MFQTNQ5",
+            "B09MFJ95ZB",
+            "B09C337K8S",
+            "B09KL5W7R2",
+            "B09PYJFR97",
+            "B09PYJTQCK"
+          ],
+          "asin": "B08H5DCD65",
+          "option_types": {
+            "black brown #2": "color",
+            "black mixed auburn brown #2-33": "color",
+            "brown mixed blonde #12h24": "color",
+            "brown mixed blonde #8h27": "color",
+            "brown mixed light auburn #8h30": "color",
+            "brown to blonde #6t27": "color",
+            "medium brown #4": "color",
+            "natural black #1b": "color",
+            "natural black to auburn #1bt30": "color",
+            "tie up #2 | 33": "color",
+            "wine red #99j": "color"
+          },
+          "options": {
+            "color": "natural black #1b"
+          },
+          "reward": 0.5
+        },
+        "raw_observation": "Your score (min 0.0, max 1.0): 0.5",
+        "observation": "Your score (min 0.0, max 1.0): 0.5",
+        "reward": 0.5,
+        "done": true,
+        "error": null
+      }
+    ]
+  },
+  {
+    "dataset": "webshop",
+    "index": 1,
+    "method": "act",
+    "model": "qwen3.6-35b-a3b",
+    "goal_sha256": "cb861fed9592252d590e8497ddb23cf8f65cce6c9c0336d75032798a4a4b3907",
+    "phase": "formal",
+    "task": "\nWebShop \nInstruction:  \ni want a noise cancelling cosycost usb microphone, and price lower than 60.00 dollars \n[Search] ",
+    "reward": 1.0,
+    "success": true,
+    "termination": "environment_done",
+    "trajectory": [
+      {
+        "step": 1,
+        "raw_output": "search[noise cancelling cosycost usb microphone]",
+        "action": "search[noise cancelling cosycost usb microphone]",
+        "state_before": {
+          "session": "webshop-formal-qwen36-v1_act_fixed_1",
+          "page_type": "init"
+        },
+        "state_after": {
+          "session": "webshop-formal-qwen36-v1_act_fixed_1",
+          "page_type": "search",
+          "query_string": "noise cancelling cosycost usb microphone",
+          "page_num": 1,
+          "asins": [
+            "B0972Q1T8T",
+            "B072L2D6LY",
+            "B071H84LTJ",
+            "B08GLJSWJ9",
+            "B09M75DDSV",
+            "B08SGMQYS4",
+            "B01M7SHQNO",
+            "B08FMK8XV5",
+            "B09KZN3G83",
+            "B085M2ZQ35"
+          ]
+        },
+        "raw_observation": "\n[Back to Search] \nPage 1 (Total results: 50) \n[Next >] \n[B0972Q1T8T] \nCosycost USB Microphone,Condenser Computer PC Gaming Microphone for PS4/5 Laptop Windows Mac OS Android Phone,Noise Cancelling Instant Mute,Studio Mic for Voice,Music Recording,Podcasting,Streaming \n$32.99 \n[B072L2D6LY] \nAndrea Communications NC-255VM USB On-Ear Stereo USB Computer Headset with Noise-Canceling Microphone, in-Line Volume/Mute Controls, and Plug \n$34.59 \n[B071H84LTJ] \nAndrea Communications NC-455VM USB Over-Ear Circumaural Stereo USB Computer Headset with Noise-Canceling Microphone, in-Line Volume/Mute Controls, and Plug \n$49.24 ",
+        "observation": "\n[Back to Search] \nPage 1 (Total results: 50) \n[Next >] \n[B0972Q1T8T] \nCosycost USB Microphone,Condenser Computer PC Gaming Microphone for PS4/5 Laptop Windows Mac OS Android Phone,Noise Cancelling Instant Mute,Studio Mic for Voice,Music Recording,Podcasting,Streaming \n$32.99 \n[B072L2D6LY] \nAndrea Communications NC-255VM USB On-Ear Stereo USB Computer Headset with Noise-Canceling Microphone, in-Line Volume/Mute Controls, and Plug \n$34.59 \n[B071H84LTJ] \nAndrea Communications NC-455VM USB Over-Ear Circumaural Stereo USB Computer Headset with Noise-Canceling Microphone, in-Line Volume/Mute Controls, and Plug \n$49.24 ",
+        "reward": 0.0,
+        "done": false,
+        "error": null
+      },
+      {
+        "step": 2,
+        "raw_output": "click[B0972Q1T8T]",
+        "action": "click[B0972Q1T8T]",
+        "state_before": {
+          "session": "webshop-formal-qwen36-v1_act_fixed_1",
+          "page_type": "search",
+          "query_string": "noise cancelling cosycost usb microphone",
+          "page_num": 1,
+          "asins": [
+            "B0972Q1T8T",
+            "B072L2D6LY",
+            "B071H84LTJ",
+            "B08GLJSWJ9",
+            "B09M75DDSV",
+            "B08SGMQYS4",
+            "B01M7SHQNO",
+            "B08FMK8XV5",
+            "B09KZN3G83",
+            "B085M2ZQ35"
+          ]
+        },
+        "state_after": {
+          "session": "webshop-formal-qwen36-v1_act_fixed_1",
+          "page_type": "item",
+          "query_string": "noise cancelling cosycost usb microphone",
+          "page_num": 1,
+          "asins": [
+            "B0972Q1T8T",
+            "B072L2D6LY",
+            "B071H84LTJ",
+            "B08GLJSWJ9",
+            "B09M75DDSV",
+            "B08SGMQYS4",
+            "B01M7SHQNO",
+            "B08FMK8XV5",
+            "B09KZN3G83",
+            "B085M2ZQ35"
+          ],
+          "asin": "B0972Q1T8T"
+        },
+        "raw_observation": "\n[Back to Search] \n[< Prev] \nCosycost USB Microphone,Condenser Computer PC Gaming Microphone for PS4/5 Laptop Windows Mac OS Android Phone,Noise Cancelling Instant Mute,Studio Mic for Voice,Music Recording,Podcasting,Streaming \nPrice: $32.99 \nRating: N.A. \n[Description] \n[Features] \n[Reviews] \n[Buy Now] ",
+        "observation": "\n[Back to Search] \n[< Prev] \nCosycost USB Microphone,Condenser Computer PC Gaming Microphone for PS4/5 Laptop Windows Mac OS Android Phone,Noise Cancelling Instant Mute,Studio Mic for Voice,Music Recording,Podcasting,Streaming \nPrice: $32.99 \nRating: N.A. \n[Description] \n[Features] \n[Reviews] \n[Buy Now] ",
+        "reward": 0.0,
+        "done": false,
+        "error": null
+      },
+      {
+        "step": 3,
+        "raw_output": "click[Buy Now]",
+        "action": "click[Buy Now]",
+        "state_before": {
+          "session": "webshop-formal-qwen36-v1_act_fixed_1",
+          "page_type": "item",
+          "query_string": "noise cancelling cosycost usb microphone",
+          "page_num": 1,
+          "asins": [
+            "B0972Q1T8T",
+            "B072L2D6LY",
+            "B071H84LTJ",
+            "B08GLJSWJ9",
+            "B09M75DDSV",
+            "B08SGMQYS4",
+            "B01M7SHQNO",
+            "B08FMK8XV5",
+            "B09KZN3G83",
+            "B085M2ZQ35"
+          ],
+          "asin": "B0972Q1T8T"
+        },
+        "state_after": {
+          "session": "webshop-formal-qwen36-v1_act_fixed_1",
+          "page_type": "end",
+          "query_string": "noise cancelling cosycost usb microphone",
+          "page_num": 1,
+          "asins": [
+            "B0972Q1T8T",
+            "B072L2D6LY",
+            "B071H84LTJ",
+            "B08GLJSWJ9",
+            "B09M75DDSV",
+            "B08SGMQYS4",
+            "B01M7SHQNO",
+            "B08FMK8XV5",
+            "B09KZN3G83",
+            "B085M2ZQ35"
+          ],
+          "asin": "B0972Q1T8T",
+          "reward": 1.0
+        },
+        "raw_observation": "Your score (min 0.0, max 1.0): 1.0",
+        "observation": "Your score (min 0.0, max 1.0): 1.0",
+        "reward": 1.0,
+        "done": true,
+        "error": null
+      }
+    ]
+  },
+  {
+    "dataset": "webshop",
+    "index": 0,
+    "method": "react",
+    "model": "qwen3.6-35b-a3b",
+    "goal_sha256": "673c5b9b51fa66264efb4a679080e1e9b9c73954d5b1787d409dbc1492c39994",
+    "phase": "formal",
+    "task": "\nWebShop \nInstruction:  \ni need a long clip-in hair extension which is natural looking, and price lower than 30.00 dollars \n[Search] ",
+    "reward": 0.5,
+    "success": false,
+    "termination": "environment_done",
+    "trajectory": [
+      {
+        "step": 1,
+        "raw_output": "search[long clip-in hair extension natural looking]",
+        "action": "search[long clip-in hair extension natural looking]",
+        "state_before": {
+          "session": "webshop-formal-qwen36-v1_react_fixed_0",
+          "page_type": "init"
+        },
+        "state_after": {
+          "session": "webshop-formal-qwen36-v1_react_fixed_0",
+          "page_type": "search",
+          "query_string": "long clip-in hair extension natural looking",
+          "page_num": 1,
+          "asins": [
+            "B09QQLDJ93",
+            "B09QQKPZJR",
+            "B08H5DCD65",
+            "B093BKWHFK",
+            "B09MFQTNQ5",
+            "B09MFJ95ZB",
+            "B09C337K8S",
+            "B09KL5W7R2",
+            "B09PYJFR97",
+            "B09PYJTQCK"
+          ]
+        },
+        "raw_observation": "\n[Back to Search] \nPage 1 (Total results: 50) \n[Next >] \n[B09QQLDJ93] \nLroveb Fashion Long Curly Wig Head Dyed Black Gradient Golden Long Straight Wig African Long Curly Hair Wigs Ladies Gradient Color Chemical Fiber Silk Corn Perm Wig for Women \n$34.89 \n[B09QQKPZJR] \nLroveb Beanie Hat Knit with Long Wavy Curly Hair Extensions Wig Winter Warm Fashion Long Curly Hair Hat Wig Wool Curl Corn Perm Curl Knitted Cap Attached Synthetic Hairpiece \n$36.06 \n[B08H5DCD65] \nCorn Wave Ponytail Extension Clip in - 22 Inch Long Wavy Curly Wrap Around Pony Tail Heat Resistant Synthetic Hairpiece for Women (Natural Black #1B) \n$9.98 ",
+        "observation": "\n[Back to Search] \nPage 1 (Total results: 50) \n[Next >] \n[B09QQLDJ93] \nLroveb Fashion Long Curly Wig Head Dyed Black Gradient Golden Long Straight Wig African Long Curly Hair Wigs Ladies Gradient Color Chemical Fiber Silk Corn Perm Wig for Women \n$34.89 \n[B09QQKPZJR] \nLroveb Beanie Hat Knit with Long Wavy Curly Hair Extensions Wig Winter Warm Fashion Long Curly Hair Hat Wig Wool Curl Corn Perm Curl Knitted Cap Attached Synthetic Hairpiece \n$36.06 \n[B08H5DCD65] \nCorn Wave Ponytail Extension Clip in - 22 Inch Long Wavy Curly Wrap Around Pony Tail Heat Resistant Synthetic Hairpiece for Women (Natural Black #1B) \n$9.98 ",
+        "reward": 0.0,
+        "done": false,
+        "error": null
+      },
+      {
+        "step": 2,
+        "raw_output": "think[B08H5DCD65 is a long clip-in hair extension, looks natural (Natural Black #1B), and is $9.98 which is lower than 30.00 dollars. I should check this item first.]",
+        "action": "think[B08H5DCD65 is a long clip-in hair extension, looks natural (Natural Black #1B), and is $9.98 which is lower than 30.00 dollars. I should check this item first.]",
+        "state_before": {
+          "session": "webshop-formal-qwen36-v1_react_fixed_0",
+          "page_type": "search",
+          "query_string": "long clip-in hair extension natural looking",
+          "page_num": 1,
+          "asins": [
+            "B09QQLDJ93",
+            "B09QQKPZJR",
+            "B08H5DCD65",
+            "B093BKWHFK",
+            "B09MFQTNQ5",
+            "B09MFJ95ZB",
+            "B09C337K8S",
+            "B09KL5W7R2",
+            "B09PYJFR97",
+            "B09PYJTQCK"
+          ]
+        },
+        "state_after": {
+          "session": "webshop-formal-qwen36-v1_react_fixed_0",
+          "page_type": "search",
+          "query_string": "long clip-in hair extension natural looking",
+          "page_num": 1,
+          "asins": [
+            "B09QQLDJ93",
+            "B09QQKPZJR",
+            "B08H5DCD65",
+            "B093BKWHFK",
+            "B09MFQTNQ5",
+            "B09MFJ95ZB",
+            "B09C337K8S",
+            "B09KL5W7R2",
+            "B09PYJFR97",
+            "B09PYJTQCK"
+          ]
+        },
+        "raw_observation": "\n[Back to Search] \nPage 1 (Total results: 50) \n[Next >] \n[B09QQLDJ93] \nLroveb Fashion Long Curly Wig Head Dyed Black Gradient Golden Long Straight Wig African Long Curly Hair Wigs Ladies Gradient Color Chemical Fiber Silk Corn Perm Wig for Women \n$34.89 \n[B09QQKPZJR] \nLroveb Beanie Hat Knit with Long Wavy Curly Hair Extensions Wig Winter Warm Fashion Long Curly Hair Hat Wig Wool Curl Corn Perm Curl Knitted Cap Attached Synthetic Hairpiece \n$36.06 \n[B08H5DCD65] \nCorn Wave Ponytail Extension Clip in - 22 Inch Long Wavy Curly Wrap Around Pony Tail Heat Resistant Synthetic Hairpiece for Women (Natural Black #1B) \n$9.98 ",
+        "observation": "OK.",
+        "reward": 0.0,
+        "done": false,
+        "error": null
+      },
+      {
+        "step": 3,
+        "raw_output": "click[B08H5DCD65]",
+        "action": "click[B08H5DCD65]",
+        "state_before": {
+          "session": "webshop-formal-qwen36-v1_react_fixed_0",
+          "page_type": "search",
+          "query_string": "long clip-in hair extension natural looking",
+          "page_num": 1,
+          "asins": [
+            "B09QQLDJ93",
+            "B09QQKPZJR",
+            "B08H5DCD65",
+            "B093BKWHFK",
+            "B09MFQTNQ5",
+            "B09MFJ95ZB",
+            "B09C337K8S",
+            "B09KL5W7R2",
+            "B09PYJFR97",
+            "B09PYJTQCK"
+          ]
+        },
+        "state_after": {
+          "session": "webshop-formal-qwen36-v1_react_fixed_0",
+          "page_type": "item",
+          "query_string": "long clip-in hair extension natural looking",
+          "page_num": 1,
+          "asins": [
+            "B09QQLDJ93",
+            "B09QQKPZJR",
+            "B08H5DCD65",
+            "B093BKWHFK",
+            "B09MFQTNQ5",
+            "B09MFJ95ZB",
+            "B09C337K8S",
+            "B09KL5W7R2",
+            "B09PYJFR97",
+            "B09PYJTQCK"
+          ],
+          "asin": "B08H5DCD65",
+          "option_types": {
+            "black brown #2": "color",
+            "black mixed auburn brown #2-33": "color",
+            "brown mixed blonde #12h24": "color",
+            "brown mixed blonde #8h27": "color",
+            "brown mixed light auburn #8h30": "color",
+            "brown to blonde #6t27": "color",
+            "medium brown #4": "color",
+            "natural black #1b": "color",
+            "natural black to auburn #1bt30": "color",
+            "tie up #2 | 33": "color",
+            "wine red #99j": "color"
+          }
+        },
+        "raw_observation": "\n[Back to Search] \n[< Prev] \ncolor [black brown #2][black mixed auburn brown #2-33][brown mixed blonde #12h24][brown mixed blonde #8h27][brown mixed light auburn #8h30][brown to blonde #6t27][medium brown #4][natural black #1b][natural black to auburn #1bt30][tie up #2 | 33][wine red #99j]\nCorn Wave Ponytail Extension Clip in - 22 Inch Long Wavy Curly Wrap Around Pony Tail Heat Resistant Synthetic Hairpiece for Women (Natural Black #1B) \nPrice: $9.98 \nRating: N.A. \n[Description] \n[Features] \n[Reviews] \n[Buy Now] ",
+        "observation": "\n[Back to Search] \n[< Prev] \ncolor [black brown #2][black mixed auburn brown #2-33][brown mixed blonde #12h24][brown mixed blonde #8h27][brown mixed light auburn #8h30][brown to blonde #6t27][medium brown #4][natural black #1b][natural black to auburn #1bt30][tie up #2 | 33][wine red #99j]\nCorn Wave Ponytail Extension Clip in - 22 Inch Long Wavy Curly Wrap Around Pony Tail Heat Resistant Synthetic Hairpiece for Women (Natural Black #1B) \nPrice: $9.98 \nRating: N.A. \n[Description] \n[Features] \n[Reviews] \n[Buy Now] ",
+        "reward": 0.0,
+        "done": false,
+        "error": null
+      },
+      {
+        "step": 4,
+        "raw_output": "think[The item is a long clip-in hair extension, looks natural (Natural Black #1B), and is $9.98 which is lower than 30.00 dollars. I should select the 'natural black #1b' color option and then buy it.]",
+        "action": "think[The item is a long clip-in hair extension, looks natural (Natural Black #1B), and is $9.98 which is lower than 30.00 dollars. I should select the 'natural black #1b' color option and then buy it.]",
+        "state_before": {
+          "session": "webshop-formal-qwen36-v1_react_fixed_0",
+          "page_type": "item",
+          "query_string": "long clip-in hair extension natural looking",
+          "page_num": 1,
+          "asins": [
+            "B09QQLDJ93",
+            "B09QQKPZJR",
+            "B08H5DCD65",
+            "B093BKWHFK",
+            "B09MFQTNQ5",
+            "B09MFJ95ZB",
+            "B09C337K8S",
+            "B09KL5W7R2",
+            "B09PYJFR97",
+            "B09PYJTQCK"
+          ],
+          "asin": "B08H5DCD65",
+          "option_types": {
+            "black brown #2": "color",
+            "black mixed auburn brown #2-33": "color",
+            "brown mixed blonde #12h24": "color",
+            "brown mixed blonde #8h27": "color",
+            "brown mixed light auburn #8h30": "color",
+            "brown to blonde #6t27": "color",
+            "medium brown #4": "color",
+            "natural black #1b": "color",
+            "natural black to auburn #1bt30": "color",
+            "tie up #2 | 33": "color",
+            "wine red #99j": "color"
+          }
+        },
+        "state_after": {
+          "session": "webshop-formal-qwen36-v1_react_fixed_0",
+          "page_type": "item",
+          "query_string": "long clip-in hair extension natural looking",
+          "page_num": 1,
+          "asins": [
+            "B09QQLDJ93",
+            "B09QQKPZJR",
+            "B08H5DCD65",
+            "B093BKWHFK",
+            "B09MFQTNQ5",
+            "B09MFJ95ZB",
+            "B09C337K8S",
+            "B09KL5W7R2",
+            "B09PYJFR97",
+            "B09PYJTQCK"
+          ],
+          "asin": "B08H5DCD65",
+          "option_types": {
+            "black brown #2": "color",
+            "black mixed auburn brown #2-33": "color",
+            "brown mixed blonde #12h24": "color",
+            "brown mixed blonde #8h27": "color",
+            "brown mixed light auburn #8h30": "color",
+            "brown to blonde #6t27": "color",
+            "medium brown #4": "color",
+            "natural black #1b": "color",
+            "natural black to auburn #1bt30": "color",
+            "tie up #2 | 33": "color",
+            "wine red #99j": "color"
+          }
+        },
+        "raw_observation": "\n[Back to Search] \n[< Prev] \ncolor [black brown #2][black mixed auburn brown #2-33][brown mixed blonde #12h24][brown mixed blonde #8h27][brown mixed light auburn #8h30][brown to blonde #6t27][medium brown #4][natural black #1b][natural black to auburn #1bt30][tie up #2 | 33][wine red #99j]\nCorn Wave Ponytail Extension Clip in - 22 Inch Long Wavy Curly Wrap Around Pony Tail Heat Resistant Synthetic Hairpiece for Women (Natural Black #1B) \nPrice: $9.98 \nRating: N.A. \n[Description] \n[Features] \n[Reviews] \n[Buy Now] ",
+        "observation": "OK.",
+        "reward": 0.0,
+        "done": false,
+        "error": null
+      },
+      {
+        "step": 5,
+        "raw_output": "click[natural black #1b]",
+        "action": "click[natural black #1b]",
+        "state_before": {
+          "session": "webshop-formal-qwen36-v1_react_fixed_0",
+          "page_type": "item",
+          "query_string": "long clip-in hair extension natural looking",
+          "page_num": 1,
+          "asins": [
+            "B09QQLDJ93",
+            "B09QQKPZJR",
+            "B08H5DCD65",
+            "B093BKWHFK",
+            "B09MFQTNQ5",
+            "B09MFJ95ZB",
+            "B09C337K8S",
+            "B09KL5W7R2",
+            "B09PYJFR97",
+            "B09PYJTQCK"
+          ],
+          "asin": "B08H5DCD65",
+          "option_types": {
+            "black brown #2": "color",
+            "black mixed auburn brown #2-33": "color",
+            "brown mixed blonde #12h24": "color",
+            "brown mixed blonde #8h27": "color",
+            "brown mixed light auburn #8h30": "color",
+            "brown to blonde #6t27": "color",
+            "medium brown #4": "color",
+            "natural black #1b": "color",
+            "natural black to auburn #1bt30": "color",
+            "tie up #2 | 33": "color",
+            "wine red #99j": "color"
+          }
+        },
+        "state_after": {
+          "session": "webshop-formal-qwen36-v1_react_fixed_0",
+          "page_type": "item",
+          "query_string": "long clip-in hair extension natural looking",
+          "page_num": 1,
+          "asins": [
+            "B09QQLDJ93",
+            "B09QQKPZJR",
+            "B08H5DCD65",
+            "B093BKWHFK",
+            "B09MFQTNQ5",
+            "B09MFJ95ZB",
+            "B09C337K8S",
+            "B09KL5W7R2",
+            "B09PYJFR97",
+            "B09PYJTQCK"
+          ],
+          "asin": "B08H5DCD65",
+          "option_types": {
+            "black brown #2": "color",
+            "black mixed auburn brown #2-33": "color",
+            "brown mixed blonde #12h24": "color",
+            "brown mixed blonde #8h27": "color",
+            "brown mixed light auburn #8h30": "color",
+            "brown to blonde #6t27": "color",
+            "medium brown #4": "color",
+            "natural black #1b": "color",
+            "natural black to auburn #1bt30": "color",
+            "tie up #2 | 33": "color",
+            "wine red #99j": "color"
+          },
+          "options": {
+            "color": "natural black #1b"
+          }
+        },
+        "raw_observation": "You have clicked natural black #1b.",
+        "observation": "You have clicked natural black #1b.",
+        "reward": 0.0,
+        "done": false,
+        "error": null
+      },
+      {
+        "step": 6,
+        "raw_output": "click[Buy Now]",
+        "action": "click[Buy Now]",
+        "state_before": {
+          "session": "webshop-formal-qwen36-v1_react_fixed_0",
+          "page_type": "item",
+          "query_string": "long clip-in hair extension natural looking",
+          "page_num": 1,
+          "asins": [
+            "B09QQLDJ93",
+            "B09QQKPZJR",
+            "B08H5DCD65",
+            "B093BKWHFK",
+            "B09MFQTNQ5",
+            "B09MFJ95ZB",
+            "B09C337K8S",
+            "B09KL5W7R2",
+            "B09PYJFR97",
+            "B09PYJTQCK"
+          ],
+          "asin": "B08H5DCD65",
+          "option_types": {
+            "black brown #2": "color",
+            "black mixed auburn brown #2-33": "color",
+            "brown mixed blonde #12h24": "color",
+            "brown mixed blonde #8h27": "color",
+            "brown mixed light auburn #8h30": "color",
+            "brown to blonde #6t27": "color",
+            "medium brown #4": "color",
+            "natural black #1b": "color",
+            "natural black to auburn #1bt30": "color",
+            "tie up #2 | 33": "color",
+            "wine red #99j": "color"
+          },
+          "options": {
+            "color": "natural black #1b"
+          }
+        },
+        "state_after": {
+          "session": "webshop-formal-qwen36-v1_react_fixed_0",
+          "page_type": "end",
+          "query_string": "long clip-in hair extension natural looking",
+          "page_num": 1,
+          "asins": [
+            "B09QQLDJ93",
+            "B09QQKPZJR",
+            "B08H5DCD65",
+            "B093BKWHFK",
+            "B09MFQTNQ5",
+            "B09MFJ95ZB",
+            "B09C337K8S",
+            "B09KL5W7R2",
+            "B09PYJFR97",
+            "B09PYJTQCK"
+          ],
+          "asin": "B08H5DCD65",
+          "option_types": {
+            "black brown #2": "color",
+            "black mixed auburn brown #2-33": "color",
+            "brown mixed blonde #12h24": "color",
+            "brown mixed blonde #8h27": "color",
+            "brown mixed light auburn #8h30": "color",
+            "brown to blonde #6t27": "color",
+            "medium brown #4": "color",
+            "natural black #1b": "color",
+            "natural black to auburn #1bt30": "color",
+            "tie up #2 | 33": "color",
+            "wine red #99j": "color"
+          },
+          "options": {
+            "color": "natural black #1b"
+          },
+          "reward": 0.5
+        },
+        "raw_observation": "Your score (min 0.0, max 1.0): 0.5",
+        "observation": "Your score (min 0.0, max 1.0): 0.5",
+        "reward": 0.5,
+        "done": true,
+        "error": null
+      }
+    ]
+  },
+  {
+    "dataset": "webshop",
+    "index": 1,
+    "method": "react",
+    "model": "qwen3.6-35b-a3b",
+    "goal_sha256": "cb861fed9592252d590e8497ddb23cf8f65cce6c9c0336d75032798a4a4b3907",
+    "phase": "formal",
+    "task": "\nWebShop \nInstruction:  \ni want a noise cancelling cosycost usb microphone, and price lower than 60.00 dollars \n[Search] ",
+    "reward": 1.0,
+    "success": true,
+    "termination": "environment_done",
+    "trajectory": [
+      {
+        "step": 1,
+        "raw_output": "search[noise cancelling cosycost usb microphone]",
+        "action": "search[noise cancelling cosycost usb microphone]",
+        "state_before": {
+          "session": "webshop-formal-qwen36-v1_react_fixed_1",
+          "page_type": "init"
+        },
+        "state_after": {
+          "session": "webshop-formal-qwen36-v1_react_fixed_1",
+          "page_type": "search",
+          "query_string": "noise cancelling cosycost usb microphone",
+          "page_num": 1,
+          "asins": [
+            "B0972Q1T8T",
+            "B072L2D6LY",
+            "B071H84LTJ",
+            "B08GLJSWJ9",
+            "B09M75DDSV",
+            "B08SGMQYS4",
+            "B01M7SHQNO",
+            "B08FMK8XV5",
+            "B09KZN3G83",
+            "B085M2ZQ35"
+          ]
+        },
+        "raw_observation": "\n[Back to Search] \nPage 1 (Total results: 50) \n[Next >] \n[B0972Q1T8T] \nCosycost USB Microphone,Condenser Computer PC Gaming Microphone for PS4/5 Laptop Windows Mac OS Android Phone,Noise Cancelling Instant Mute,Studio Mic for Voice,Music Recording,Podcasting,Streaming \n$32.99 \n[B072L2D6LY] \nAndrea Communications NC-255VM USB On-Ear Stereo USB Computer Headset with Noise-Canceling Microphone, in-Line Volume/Mute Controls, and Plug \n$34.59 \n[B071H84LTJ] \nAndrea Communications NC-455VM USB Over-Ear Circumaural Stereo USB Computer Headset with Noise-Canceling Microphone, in-Line Volume/Mute Controls, and Plug \n$49.24 ",
+        "observation": "\n[Back to Search] \nPage 1 (Total results: 50) \n[Next >] \n[B0972Q1T8T] \nCosycost USB Microphone,Condenser Computer PC Gaming Microphone for PS4/5 Laptop Windows Mac OS Android Phone,Noise Cancelling Instant Mute,Studio Mic for Voice,Music Recording,Podcasting,Streaming \n$32.99 \n[B072L2D6LY] \nAndrea Communications NC-255VM USB On-Ear Stereo USB Computer Headset with Noise-Canceling Microphone, in-Line Volume/Mute Controls, and Plug \n$34.59 \n[B071H84LTJ] \nAndrea Communications NC-455VM USB Over-Ear Circumaural Stereo USB Computer Headset with Noise-Canceling Microphone, in-Line Volume/Mute Controls, and Plug \n$49.24 ",
+        "reward": 0.0,
+        "done": false,
+        "error": null
+      },
+      {
+        "step": 2,
+        "raw_output": "think[B0972Q1T8T is a Cosycost USB microphone with noise cancelling and costs $32.99, which is lower than 60.00 dollars. This matches the instruction.]",
+        "action": "think[B0972Q1T8T is a Cosycost USB microphone with noise cancelling and costs $32.99, which is lower than 60.00 dollars. This matches the instruction.]",
+        "state_before": {
+          "session": "webshop-formal-qwen36-v1_react_fixed_1",
+          "page_type": "search",
+          "query_string": "noise cancelling cosycost usb microphone",
+          "page_num": 1,
+          "asins": [
+            "B0972Q1T8T",
+            "B072L2D6LY",
+            "B071H84LTJ",
+            "B08GLJSWJ9",
+            "B09M75DDSV",
+            "B08SGMQYS4",
+            "B01M7SHQNO",
+            "B08FMK8XV5",
+            "B09KZN3G83",
+            "B085M2ZQ35"
+          ]
+        },
+        "state_after": {
+          "session": "webshop-formal-qwen36-v1_react_fixed_1",
+          "page_type": "search",
+          "query_string": "noise cancelling cosycost usb microphone",
+          "page_num": 1,
+          "asins": [
+            "B0972Q1T8T",
+            "B072L2D6LY",
+            "B071H84LTJ",
+            "B08GLJSWJ9",
+            "B09M75DDSV",
+            "B08SGMQYS4",
+            "B01M7SHQNO",
+            "B08FMK8XV5",
+            "B09KZN3G83",
+            "B085M2ZQ35"
+          ]
+        },
+        "raw_observation": "\n[Back to Search] \nPage 1 (Total results: 50) \n[Next >] \n[B0972Q1T8T] \nCosycost USB Microphone,Condenser Computer PC Gaming Microphone for PS4/5 Laptop Windows Mac OS Android Phone,Noise Cancelling Instant Mute,Studio Mic for Voice,Music Recording,Podcasting,Streaming \n$32.99 \n[B072L2D6LY] \nAndrea Communications NC-255VM USB On-Ear Stereo USB Computer Headset with Noise-Canceling Microphone, in-Line Volume/Mute Controls, and Plug \n$34.59 \n[B071H84LTJ] \nAndrea Communications NC-455VM USB Over-Ear Circumaural Stereo USB Computer Headset with Noise-Canceling Microphone, in-Line Volume/Mute Controls, and Plug \n$49.24 ",
+        "observation": "OK.",
+        "reward": 0.0,
+        "done": false,
+        "error": null
+      },
+      {
+        "step": 3,
+        "raw_output": "click[B0972Q1T8T]",
+        "action": "click[B0972Q1T8T]",
+        "state_before": {
+          "session": "webshop-formal-qwen36-v1_react_fixed_1",
+          "page_type": "search",
+          "query_string": "noise cancelling cosycost usb microphone",
+          "page_num": 1,
+          "asins": [
+            "B0972Q1T8T",
+            "B072L2D6LY",
+            "B071H84LTJ",
+            "B08GLJSWJ9",
+            "B09M75DDSV",
+            "B08SGMQYS4",
+            "B01M7SHQNO",
+            "B08FMK8XV5",
+            "B09KZN3G83",
+            "B085M2ZQ35"
+          ]
+        },
+        "state_after": {
+          "session": "webshop-formal-qwen36-v1_react_fixed_1",
+          "page_type": "item",
+          "query_string": "noise cancelling cosycost usb microphone",
+          "page_num": 1,
+          "asins": [
+            "B0972Q1T8T",
+            "B072L2D6LY",
+            "B071H84LTJ",
+            "B08GLJSWJ9",
+            "B09M75DDSV",
+            "B08SGMQYS4",
+            "B01M7SHQNO",
+            "B08FMK8XV5",
+            "B09KZN3G83",
+            "B085M2ZQ35"
+          ],
+          "asin": "B0972Q1T8T"
+        },
+        "raw_observation": "\n[Back to Search] \n[< Prev] \nCosycost USB Microphone,Condenser Computer PC Gaming Microphone for PS4/5 Laptop Windows Mac OS Android Phone,Noise Cancelling Instant Mute,Studio Mic for Voice,Music Recording,Podcasting,Streaming \nPrice: $32.99 \nRating: N.A. \n[Description] \n[Features] \n[Reviews] \n[Buy Now] ",
+        "observation": "\n[Back to Search] \n[< Prev] \nCosycost USB Microphone,Condenser Computer PC Gaming Microphone for PS4/5 Laptop Windows Mac OS Android Phone,Noise Cancelling Instant Mute,Studio Mic for Voice,Music Recording,Podcasting,Streaming \nPrice: $32.99 \nRating: N.A. \n[Description] \n[Features] \n[Reviews] \n[Buy Now] ",
+        "reward": 0.0,
+        "done": false,
+        "error": null
+      },
+      {
+        "step": 4,
+        "raw_output": "think[The item B0972Q1T8T is a Cosycost USB microphone with noise cancelling, priced at $32.99, which is lower than $60.00. It matches all the requirements in the instruction.]",
+        "action": "think[The item B0972Q1T8T is a Cosycost USB microphone with noise cancelling, priced at $32.99, which is lower than $60.00. It matches all the requirements in the instruction.]",
+        "state_before": {
+          "session": "webshop-formal-qwen36-v1_react_fixed_1",
+          "page_type": "item",
+          "query_string": "noise cancelling cosycost usb microphone",
+          "page_num": 1,
+          "asins": [
+            "B0972Q1T8T",
+            "B072L2D6LY",
+            "B071H84LTJ",
+            "B08GLJSWJ9",
+            "B09M75DDSV",
+            "B08SGMQYS4",
+            "B01M7SHQNO",
+            "B08FMK8XV5",
+            "B09KZN3G83",
+            "B085M2ZQ35"
+          ],
+          "asin": "B0972Q1T8T"
+        },
+        "state_after": {
+          "session": "webshop-formal-qwen36-v1_react_fixed_1",
+          "page_type": "item",
+          "query_string": "noise cancelling cosycost usb microphone",
+          "page_num": 1,
+          "asins": [
+            "B0972Q1T8T",
+            "B072L2D6LY",
+            "B071H84LTJ",
+            "B08GLJSWJ9",
+            "B09M75DDSV",
+            "B08SGMQYS4",
+            "B01M7SHQNO",
+            "B08FMK8XV5",
+            "B09KZN3G83",
+            "B085M2ZQ35"
+          ],
+          "asin": "B0972Q1T8T"
+        },
+        "raw_observation": "\n[Back to Search] \n[< Prev] \nCosycost USB Microphone,Condenser Computer PC Gaming Microphone for PS4/5 Laptop Windows Mac OS Android Phone,Noise Cancelling Instant Mute,Studio Mic for Voice,Music Recording,Podcasting,Streaming \nPrice: $32.99 \nRating: N.A. \n[Description] \n[Features] \n[Reviews] \n[Buy Now] ",
+        "observation": "OK.",
+        "reward": 0.0,
+        "done": false,
+        "error": null
+      },
+      {
+        "step": 5,
+        "raw_output": "click[Buy Now]",
+        "action": "click[Buy Now]",
+        "state_before": {
+          "session": "webshop-formal-qwen36-v1_react_fixed_1",
+          "page_type": "item",
+          "query_string": "noise cancelling cosycost usb microphone",
+          "page_num": 1,
+          "asins": [
+            "B0972Q1T8T",
+            "B072L2D6LY",
+            "B071H84LTJ",
+            "B08GLJSWJ9",
+            "B09M75DDSV",
+            "B08SGMQYS4",
+            "B01M7SHQNO",
+            "B08FMK8XV5",
+            "B09KZN3G83",
+            "B085M2ZQ35"
+          ],
+          "asin": "B0972Q1T8T"
+        },
+        "state_after": {
+          "session": "webshop-formal-qwen36-v1_react_fixed_1",
+          "page_type": "end",
+          "query_string": "noise cancelling cosycost usb microphone",
+          "page_num": 1,
+          "asins": [
+            "B0972Q1T8T",
+            "B072L2D6LY",
+            "B071H84LTJ",
+            "B08GLJSWJ9",
+            "B09M75DDSV",
+            "B08SGMQYS4",
+            "B01M7SHQNO",
+            "B08FMK8XV5",
+            "B09KZN3G83",
+            "B085M2ZQ35"
+          ],
+          "asin": "B0972Q1T8T",
+          "reward": 1.0
+        },
+        "raw_observation": "Your score (min 0.0, max 1.0): 1.0",
+        "observation": "Your score (min 0.0, max 1.0): 1.0",
+        "reward": 1.0,
+        "done": true,
+        "error": null
+      }
+    ]
+  }
+]

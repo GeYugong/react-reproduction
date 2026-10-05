@@ -1,5 +1,5 @@
 {
-  "recorded_at_utc": "2026-10-05T07:29:19.621144+00:00",
+  "recorded_at_utc": "2026-10-05T08:29:43.277755+00:00",
   "campaign_id": "qwen36-restart-20260929",
   "model": "qwen3.6-35b-a3b",
   "old_model_policy": "All Qwen 3.8 runs retired; never resume or import their outputs into this campaign",
@@ -125,7 +125,7 @@
     {
       "dataset": "webshop",
       "controller": "scripts/run_webshop.py",
-      "status": "generated_complete_audit_running",
+      "status": "audited_complete_archive_running",
       "active_run_id": "webshop-formal-qwen36-v1",
       "current_config": "configs/webshop-qwen36-formal.json",
       "progress": "records/webshop-formal-qwen36-v1.json",
@@ -145,13 +145,14 @@
       ],
       "audit": "records/webshop-formal-qwen36-v1-audit.json",
       "formal_config": "configs/webshop-qwen36-formal.json",
-      "next": "Complete evidence replay and terminal reward recomputation, statistics, archive and final tables; no more model generation.",
+      "next": "Verify archive and parts, push, then final synthesis; no generation.",
       "recovery_record": "records/webshop-timeout-recovery-20261005T0527.json",
       "recovery_pid": 17780,
       "progress_note": "Original failed step 14 HTTP200 and real environment step verified; goal 483 completed; 983 previous episode hashes unchanged.",
       "recovery_verification": "records/webshop-timeout-recovery-20261005T0527-verification.json",
       "audit_progress": "records/webshop-formal-qwen36-v1-audit-progress.json",
-      "audit_pid": 18046
+      "audit_pid": 18046,
+      "report": "results/qwen36/webshop.json"
     }
   ],
   "concurrency_cap": 2,
